@@ -1,16 +1,35 @@
 //- index.pug
 doctype html
 html
-head
-  meta(charset="UTF-8")
-  meta(name="viewport", content="width=device-width, initial-scale=1")
-  meta(name="description", content="Collection of CSS loaders.")
-  title CSS Loaders
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        meta(name="description", content="Collection of CSS loaders.")
+        title CSS Loaders
 
-  link(rel="stylesheet", href="css/main.css")
+        link(rel="stylesheet", href="css/main.css")
+        link(href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700", rel="stylesheet")
+        link(rel="stylesheet", href="css/atom-one-light.css")
+        script(src="/js/highlight.pack.js")
+        script.
+            hljs.initHighlightingOnLoad()
+    body
+        section#loader-container
+            h1 CSS Loader 1
+            #animation-wrapper
+                .pulseLoader
+                    .pulse
+                    .pulse
+            p View Source
+        section#code-container
+            details 
+                summary HTML
+                pre
 
-  body.body
-    section#loader-container
-        p   LOADER
-    section#code-container
-        p   CODE
+            details 
+                summary CSS
+                pre
+                    code.css
+                        |   .cheese {
+                        |       display: flex;
+                        |   }
