@@ -7,29 +7,21 @@ html
         meta(name="description", content="Collection of CSS loaders.")
         title CSS Loaders
 
-        link(rel="stylesheet", href="css/main.css")
+        link(rel="stylesheet", type="text/css", href="css/main.css",)
         link(href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700", rel="stylesheet")
-        link(rel="stylesheet", href="css/atom-one-light.css")
-        script(src="/js/highlight.pack.js")
-        script.
-            hljs.initHighlightingOnLoad()
+        link(rel="stylesheet", type="text/css", href="css/prism.css")
+        script(async src="/js/prism.js", type="text/javascript")
+        script(async src="/js/main.js", type="text/javascript")
     body
         section#loader-container
-            h1 CSS Loader 1
-            #animation-wrapper
-                .pulseLoader
-                    .pulse
-                    .pulse
+            h1#animation-name
             p View Source
         section#code-container
             details 
                 summary HTML
                 pre
-
+                    code#html-code.language-markup
             details 
                 summary CSS
                 pre
-                    code.css
-                        |   .cheese {
-                        |       display: flex;
-                        |   }
+                    code#css-code.language-css
