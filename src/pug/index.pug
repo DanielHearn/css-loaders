@@ -12,10 +12,16 @@ html
         link(rel="stylesheet", type="text/css", href="css/prism.css")
     body
         section#loader-container
+            div#loader-name
+                h1  Loader Name
             div#loader-content
-            div#loader-controls
-                button#prevButton Left
-                button#nextButton Right
+                a#prevButton
+                    .arrow
+                div#loader
+                a#nextButton
+                    .arrow
+            div#loader-links
+                a#loader-source View Source
         section#code-container
             .tabs
                 .tab.selected

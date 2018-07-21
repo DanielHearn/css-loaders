@@ -3,7 +3,8 @@
   --accent-darkish: #d3463a;
   --accent-dark: #bd3c30;
   --white: #fefefe;
-  --grey: #fbfbfb; }
+  --grey: #fbfbfb;
+  --transition-time: 0.25s; }
 
 .pulseLoader {
   width: 4em;
@@ -143,29 +144,42 @@ button, a {
   justify-content: space-around;
   align-content: center;
   text-align: center;
-  transition: background-color 0.3s ease-in-out; }
+  transition: background-color var(--transition-time) ease-in-out; }
+  #loader-container #loader-name, #loader-container #loader-links {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+    align-items: center; }
   #loader-container #loader-controls {
     display: none; }
   #loader-container #loader-content {
     display: flex;
     flex: 1;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
-    align-content: center; }
-    #loader-container #loader-content #animation-wrapper {
+    align-items: center; }
+    #loader-container #loader-content #loader {
       display: flex;
       justify-content: center;
-      align-content: center; }
+      align-items: center;
+      flex: 1; }
+      #loader-container #loader-content #loader #animation-wrapper {
+        display: flex;
+        justify-content: center;
+        align-content: center; }
   #loader-container a {
     text-decoration: underline;
     color: var(--white);
     font-weight: 600;
-    font-size: 1.1em; }
+    font-size: 1.1em;
+    flex: 1; }
 
 #code-container {
   flex: 1;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  width: 50%; }
   #code-container .tabs {
     display: flex;
     flex-direction: row; }
@@ -174,7 +188,7 @@ button, a {
       display: flex;
       flex: 1;
       user-select: none;
-      transition: background-colour 0.2s ease-in-out; }
+      transition: background-color var(--transition-time) ease-in-out; }
       #code-container .tabs .tab:hover {
         background-color: var(--accent-darkish); }
       #code-container .tabs .tab.selected {
@@ -208,7 +222,7 @@ button, a {
           font-weight: 400;
           font-size: 1em;
           text-align: center;
-          transition: background-color 0.3s ease-in-out;
+          transition: background-color var(--transition-time) ease-in-out;
           cursor: pointer;
           user-select: none; }
           #code-container .code .code-element .copy-container .copy:hover {
@@ -224,6 +238,37 @@ button, a {
         display: flex;
         flex: 1; }
 
+#prevButton, #nextButton {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+#prevButton .arrow {
+  transform: rotate(-135deg); }
+
+#nextButton .arrow {
+  transform: rotate(45deg); }
+
+.arrow {
+  width: 2em;
+  height: 2em;
+  box-sizing: border-box;
+  cursor: pointer; }
+  .arrow::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-width: .4em .4em 0 0;
+    border-style: solid;
+    border-color: var(--white);
+    transition: var(--transition-time) ease;
+    display: block;
+    transform-origin: 100% 0; }
+  .arrow:hover::before {
+    border-color: var(--grey); }
+
 @media screen and (max-width: 50em) {
   body {
-    flex-direction: column; } }
+    flex-direction: column; }
+    body #code-container {
+      width: 100%; } }
