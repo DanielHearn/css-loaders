@@ -8,8 +8,7 @@ const loaders = [
     <div class='square'></div>
     <div class='square'></div>
     <div class='square'></div>
-</div>
-        `,
+</div>`,
     css:
 `.loader {
     width: 3em;
@@ -50,10 +49,11 @@ const loaders = [
     100% {
         transform: rotate(90deg);
     }
-}      
-    `,
+}`,
     scss:
-`.squareLoader {
+`$squareTiming: 0.3s;
+
+.squareLoader {
     max-width: 60px;
     .square {
         height: 30px;
@@ -66,7 +66,7 @@ const loaders = [
         }
         @for $i from 1 to 5 {
             &:nth-child(#{$i}) {
-                animation-delay: $animationTiming*$i;
+                animation-delay: $squareTiming*$i;
             }
         }
     }
@@ -78,8 +78,7 @@ const loaders = [
     50% {opacity: 0;}
     90% {opacity: 1;}
     100% {opacity: 1;}
-}
-    `
+}`
   },
   {
     name: '2: Heartbeat',
@@ -88,8 +87,7 @@ const loaders = [
 `<div class="pulseLoader">
     <div class="pulse"></div>
     <div class="pulse"></div>
-</div>
-        `,
+</div>`,
     css:
 `.pulseLoader {
     width: 4em;
@@ -117,19 +115,21 @@ const loaders = [
         transform: scale(1);
         opacity: 0;
     }
-}      
-    `,
+}`,
     scss:
-`.pulseLoader {
-    width: $pulseSize;
-    height: $pulseSize;
+`$heartbeatSize: 4em;
+$heartbeatTiming: 1.2s;
+
+.pulseLoader {
+    width: $heartbeatSize;
+    height: $heartbeatSize;
     .pulse {
-        width: $pulseSize;
-        height: $pulseSize;
-        border-radius: $pulseSize;
+        width: $heartbeatSize;
+        height: $heartbeatSize;
+        border-radius: $heartbeatSize;
         position: absolute;
         background-color: white;
-        animation: pulseanim 1.2s ease-in-out infinite;
+        animation: heartbeatanim heartbeatTiming ease-in-out infinite;
         transform: scale(0);
         outline: 1px solid transparent;
         &:nth-child(2) {
@@ -138,11 +138,10 @@ const loaders = [
     }
 }
     
-@keyframes pulseanim {
+@keyframes heartbeatanim {
     0% { transform: scale(0);}
     100% { transform: scale(1); opacity: 0;}
-}
-    `
+}`
   },
   {
     name: '3: Rectangle',
@@ -201,10 +200,11 @@ const loaders = [
     100% {
         transform: scaleY(1);
     }
-}      
-    `,
+}`,
     scss:
-`.sliderloader {
+`$rectangleTiming: 0.15s;
+
+.sliderloader {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -217,7 +217,7 @@ const loaders = [
         margin-right: 4px;
         @for $i from 1 to 6 {
         &:nth-child(#{$i}) {
-            animation-delay: $animationTiming*$i;
+            animation-delay: $rectangleTiming*$i;
         }
         }
     }
@@ -228,8 +228,7 @@ const loaders = [
     25% {transform: scaleY(3);}
     50% {transform: scaleY(1);}
     100% {transform: scaleY(1);}
-}
-`
+}`
   },
   {
     name: '4: Hollow Box',
@@ -279,8 +278,7 @@ const loaders = [
     100% {
       transform: rotate(90deg);
     }
-}  
-        `,
+}`,
     scss:
 `$cubeSize: 3em;
 $light: #ECECEC;
@@ -317,8 +315,7 @@ $dark: #34495e;
 @keyframes hollowboxAnim {
     0% {transform: rotate(0deg);}
     100% {transform: rotate(90deg);}
-}
-`
+}`
   }
 ]
 
@@ -330,6 +327,9 @@ const nextButton = loaderContainer.querySelector('#nextButton')
 const htmlElement = document.querySelector('#html-code')
 const cssElement = document.querySelector('#css-code')
 const scssElement = document.querySelector('#scss-code')
+const htmlButton = document.querySelector('#html .copy')
+const cssButton = document.querySelector('#css .copy')
+const scssButton = document.querySelector('#scss .copy')
 
 let loaderIndex = 0
 
@@ -340,6 +340,18 @@ nextButton.addEventListener('click', function () {
   changeLoader(1)
 })
 
+htmlButton.addEventListener('click', function() {
+  copyToClipboard(htmlElement)
+})
+
+cssButton.addEventListener('click', function() {
+  copyToClipboard(cssElement)
+})
+
+scssButton.addEventListener('click', function() {
+  copyToClipboard(scssElement)
+})
+  
 function loadSlide (loader) {
   root.setProperty('--accent', loader.colour)
   const slideName = document.createElement('h1')
@@ -422,3 +434,25 @@ function toggleTab (e) {
   tab.classList.add('selected')
   content.classList.add('selected')
 }
+
+//Function from https://hackernoon.com/copying-text-to-clipboard-with-javascript-df4d4988697f
+function copyToClipboard(element) {
+    const el = document.createElement('textarea');  // Create a <textarea> element
+    el.value = element.textContent;                                 // Set its value to the string that you want copied
+    el.setAttribute('readonly', '');                // Make it readonly to be tamper-proof
+    el.style.position = 'absolute';                 
+    el.style.left = '-9999px';                      // Move outside the screen to make it invisible
+    document.body.appendChild(el);                  // Append the <textarea> element to the HTML document
+    const selected =            
+      document.getSelection().rangeCount > 0        // Check if there is any content selected previously
+        ? document.getSelection().getRangeAt(0)     // Store selection if found
+        : false;                                    // Mark as false to know no selection existed before
+    el.select();                                    // Select the <textarea> content
+    document.execCommand('copy');                   // Copy - only works as a result of a user action (e.g. click events)
+    document.body.removeChild(el);                  // Remove the <textarea> element
+    if (selected) {                                 // If a selection existed before copying
+      document.getSelection().removeAllRanges();    // Unselect everything on the HTML document
+      document.getSelection().addRange(selected);   // Restore the original selection
+    }
+  };
+

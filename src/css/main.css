@@ -1,6 +1,9 @@
 :root {
   --accent: #de4e40;
-  --white: #fefefe; }
+  --accent-darkish: #d3463a;
+  --accent-dark: #bd3c30;
+  --white: #fefefe;
+  --grey: #fbfbfb; }
 
 .pulseLoader {
   width: 4em;
@@ -128,6 +131,9 @@ body {
   width: 100vw;
   overflow: hidden; }
 
+button, a {
+  font-family: 'Poppins', sans-serif; }
+
 #loader-container {
   display: flex;
   flex-direction: column;
@@ -138,6 +144,8 @@ body {
   align-content: center;
   text-align: center;
   transition: background-color 0.3s ease-in-out; }
+  #loader-container #loader-controls {
+    display: none; }
   #loader-container #loader-content {
     display: flex;
     flex: 1;
@@ -162,14 +170,15 @@ body {
     display: flex;
     flex-direction: row; }
     #code-container .tabs .tab {
-      background-color: #bd3c30;
+      background-color: var(--accent-dark);
       display: flex;
       flex: 1;
+      user-select: none;
       transition: background-colour 0.2s ease-in-out; }
       #code-container .tabs .tab:hover {
-        background-color: #d3463a; }
+        background-color: var(--accent-darkish); }
       #code-container .tabs .tab.selected {
-        background-color: #de4e40; }
+        background-color: var(--accent); }
       #code-container .tabs .tab a {
         padding: 1em 2em;
         text-decoration: none;
@@ -181,12 +190,36 @@ body {
     background-color: var(--white);
     padding: 0; }
     #code-container .code .code-element {
-      display: none; }
+      display: none;
+      overflow: hidden;
+      flex-direction: column; }
+      #code-container .code .code-element .copy-container {
+        display: flex;
+        justify-content: flex-start;
+        padding: 1em;
+        background: var(--grey); }
+        #code-container .code .code-element .copy-container .copy {
+          -webkit-appearance: none;
+          border: 0;
+          border-radius: 0;
+          background-color: var(--accent);
+          color: var(--white);
+          padding: 0.6em 1em;
+          font-weight: 400;
+          font-size: 1em;
+          text-align: center;
+          transition: background-color 0.3s ease-in-out;
+          cursor: pointer;
+          user-select: none; }
+          #code-container .code .code-element .copy-container .copy:hover {
+            background-color: var(--accent-darkish); }
       #code-container .code .code-element pre {
         margin: 0;
         display: flex;
         flex: 1;
-        overflow-y: scroll; }
+        overflow: scroll;
+        padding: 1em;
+        background: var(--grey); }
       #code-container .code .code-element.selected {
         display: flex;
         flex: 1; }

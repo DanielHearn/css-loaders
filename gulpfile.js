@@ -52,11 +52,15 @@ gulp.task('favicons', function(){
 });
 
 gulp.task('pug', function buildHTML() {
-  return gulp.src('src/pug/*.pug')
+  try {
+    return gulp.src('src/pug/*.pug')
     .pipe(pug().on('error', function(err) {
       console.log(err);
     }))
     .pipe(gulp.dest("src/"))
+  } catch(e) {
+    console.log(e)
+  }  
 });
 
 gulp.task('clean:dist', function() {

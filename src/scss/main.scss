@@ -1,11 +1,10 @@
 :root {
   --accent: #de4e40;
+  --accent-darkish: #d3463a;
+  --accent-dark: #bd3c30;
   --white: #fefefe;
+  --grey: #fbfbfb;
 }
-
-$accent: #de4e40;
-$accent-darkish: #d3463a;
-$accent-dark: #bd3c30;
 
 @import 'loaders/1_heartbeat';
 @import 'loaders/2_square';
@@ -22,6 +21,10 @@ body {
   overflow: hidden;
 }
 
+button, a {
+  font-family: 'Poppins', sans-serif;
+}
+
 #loader-container {
   display: flex;
   flex-direction: column;
@@ -32,6 +35,9 @@ body {
   align-content: center;
   text-align: center;
   transition: background-color 0.3s ease-in-out;
+  #loader-controls {
+    display: none;
+  }
   #loader-content {
     display: flex;
     flex: 1;
@@ -57,18 +63,19 @@ body {
   display: flex;
   flex-direction: column;
   .tabs {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
     .tab {
-      background-color: $accent-dark;
+      background-color: var(--accent-dark);
       display: flex;
       flex: 1;
+      user-select: none;
       transition: background-colour 0.2s ease-in-out;
       &:hover {
-        background-color: $accent-darkish;
+        background-color: var(--accent-darkish);
       }
       &.selected {
-        background-color: $accent;
+        background-color: var(--accent);
       }
       a {
         padding: 1em 2em;
@@ -85,11 +92,38 @@ body {
     padding: 0;
     .code-element {
       display: none;
+      overflow: hidden;
+      flex-direction: column;
+      .copy-container {
+        display: flex;
+        justify-content: flex-start;
+        padding: 1em;
+        background: var(--grey);
+        .copy {
+          -webkit-appearance: none;
+          border: 0;
+          border-radius: 0;
+          background-color: var(--accent);
+          color: var(--white);
+          padding: 0.6em 1em;
+          font-weight: 400;
+          font-size: 1em;
+          text-align: center;
+          transition: background-color 0.3s ease-in-out;
+          cursor: pointer;
+          user-select: none;
+          &:hover {
+            background-color: var(--accent-darkish);
+          }
+        }
+      }
       pre {
         margin: 0;
         display: flex;
         flex: 1;
-        overflow-y: scroll;
+        overflow: scroll;
+        padding: 1em;
+        background: var(--grey);
       }
       &.selected {
         display: flex;
