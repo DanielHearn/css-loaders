@@ -6,6 +6,18 @@
   --grey: #fbfbfb;
   --transition-time: 0.25s; }
 
+@media screen and (max-width: 50em) {
+  body {
+    flex-direction: column !important; }
+    body #prevButton {
+      margin-left: 1em; }
+    body #nextButton {
+      margin-right: 1em; }
+    body #loader-container {
+      max-width: 100%; }
+    body #code-container {
+      max-width: 100%; } }
+
 .pulseLoader {
   width: 4em;
   height: 4em; }
@@ -123,6 +135,48 @@
   100% {
     transform: rotate(90deg); } }
 
+.pulse {
+  width: 4em;
+  height: 4em;
+  border-radius: 4em;
+  background-color: white;
+  outline: 1px solid transparent;
+  animation: pulseanim 1.2s ease-in-out infinite; }
+
+@keyframes pulseanim {
+  0% {
+    transform: scale(0); }
+  100% {
+    transform: scale(1);
+    opacity: 0; } }
+
+.twoCircleLoader {
+  margin: 0 auto;
+  width: 60px;
+  height: 60px; }
+  .twoCircleLoader .circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    position: absolute;
+    animation: load 3s infinite cubic-bezier(0.65, 0.05, 0.36, 1); }
+    .twoCircleLoader .circle:nth-child(1) {
+      background-color: #f1c40f;
+      transform: scale(0);
+      animation-delay: 1.5s; }
+    .twoCircleLoader .circle:nth-child(2) {
+      background-color: #de4e40; }
+
+@keyframes load {
+  0% {
+    transform: scale(0); }
+  46% {
+    transform: scale(1); }
+  54% {
+    transform: scale(1); }
+  100% {
+    transform: scale(0); } }
+
 body {
   display: flex;
   flex-direction: row;
@@ -144,6 +198,7 @@ button, a {
   justify-content: space-around;
   align-content: center;
   text-align: center;
+  max-width: 50%;
   transition: background-color var(--transition-time) ease-in-out; }
   #loader-container #loader-name, #loader-container #loader-links {
     display: flex;
@@ -182,7 +237,7 @@ button, a {
   flex: 1;
   display: flex;
   flex-direction: column;
-  width: 50%; }
+  max-width: 50%; }
   #code-container .tabs {
     display: flex;
     flex-direction: row; }
@@ -295,13 +350,3 @@ button, a {
       background-color: var(--white); }
     #loader-dots .loader-dot:hover {
       background-color: var(--grey); }
-
-@media screen and (max-width: 50em) {
-  body {
-    flex-direction: column; }
-    body #prevButton {
-      margin-left: 1em; }
-    body #nextButton {
-      margin-right: 1em; }
-    body #code-container {
-      width: 100%; } }

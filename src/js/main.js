@@ -316,6 +316,115 @@ $dark: #34495e;
     0% {transform: rotate(0deg);}
     100% {transform: rotate(90deg);}
 }`
+  },
+  {
+    name: '5: Pulse',
+    colour: '#CB6651',
+    html:
+`<div class='pulse'></div>
+        `,
+    css:
+`.pulse {
+  width: 4em;
+  height: 4em;
+  border-radius: 4em;
+  background-color: white;
+  outline: 1px solid transparent;
+  animation: pulseanim 1.2s ease-in-out infinite;
+}
+
+@keyframes pulseanim {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}`,
+    scss:
+`$pulseSize: 4em;
+$pulseTiming: 1.2s;
+
+.pulse {
+    width: $pulseSize;
+    height: $pulseSize;
+    border-radius: $pulseSize;
+    background-color: white;
+    outline: 1px solid transparent;
+    animation: pulseanim $pulseTiming ease-in-out infinite;
+}
+  
+@keyframes pulseanim {
+    0% { transform: scale(0);}
+    100% { transform: scale(1); opacity: 0;}
+}`
+  },
+  {
+    name: '5: Two Circles',
+    colour: '#323d4a',
+    html:
+`<div class='twoCircleLoader'>
+    <div class='circle'></div>
+    <div class='circle'></div>
+</div>
+        `,
+    css:
+`.twoCircleLoader {
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+    .circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 60px;
+      position: absolute;
+      animation: load 3s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
+      &:nth-child(1) {
+        background-color: #f1c40f;
+        transform: scale(0);
+        animation-delay: 1.5s;
+      }
+      &:nth-child(2) {
+        background-color: #de4e40;
+      }
+   }
+}
+
+@keyframes load {
+  0% { transform: scale(0); }
+  46% { transform: scale(1); }
+  54% { transform: scale(1); }
+  100% { transform: scale(0); }
+}`,
+    scss:
+`.twoCircleLoader {
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+    .circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 60px;
+      position: absolute;
+      animation: load 3s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
+      &:nth-child(1) {
+        background-color: #f1c40f;
+        transform: scale(0);
+        animation-delay: 1.5s;
+      }
+      &:nth-child(2) {
+        background-color: #de4e40;
+      }
+   }
+}
+
+@keyframes load {
+  0% { transform: scale(0); }
+  46% { transform: scale(1); }
+  54% { transform: scale(1); }
+  100% { transform: scale(0); }
+}`
   }
 ]
 

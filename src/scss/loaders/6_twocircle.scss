@@ -1,0 +1,27 @@
+.twoCircleLoader {
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+    .circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 60px;
+      position: absolute;
+      animation: load 3s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
+      &:nth-child(1) {
+        background-color: #f1c40f;
+        transform: scale(0);
+        animation-delay: 1.5s;
+      }
+      &:nth-child(2) {
+        background-color: #de4e40;
+      }
+   }
+}
+
+@keyframes load {
+  0% { transform: scale(0); }
+  46% { transform: scale(1); }
+  54% { transform: scale(1); }
+  100% { transform: scale(0); }
+}

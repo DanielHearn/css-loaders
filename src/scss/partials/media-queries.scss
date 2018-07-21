@@ -1,0 +1,17 @@
+@media screen and (max-width: 50em) { 
+    body {
+      flex-direction: column !important;
+      #prevButton {
+        margin-left: 1em;
+      }
+      #nextButton {
+        margin-right: 1em;
+      }
+      #loader-container {
+        max-width: 100%;
+      }
+      #code-container {
+        max-width: 100%;
+      }
+    }
+  }

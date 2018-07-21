@@ -7,10 +7,13 @@
   --transition-time: 0.25s;
 }
 
+@import 'partials/media-queries';
 @import 'loaders/1_heartbeat';
 @import 'loaders/2_square';
 @import 'loaders/3_rectangle';
 @import 'loaders/4_hollowbox';
+@import 'loaders/5_pulse';
+@import 'loaders/6_twocircle';
 
 body {
   display: flex;
@@ -35,6 +38,7 @@ button, a {
   justify-content: space-around;
   align-content: center;
   text-align: center;
+  max-width: 50%;
   transition: background-color var(--transition-time) ease-in-out;
   #loader-name, #loader-links {
     display: flex;
@@ -82,7 +86,7 @@ button, a {
   flex: 1;
   display: flex;
   flex-direction: column;
-  width: 50%;
+  max-width: 50%;
   .tabs {
     display: flex;
     flex-direction: row;
@@ -217,21 +221,6 @@ button, a {
     }
     &:hover {
       background-color: var(--grey);
-    }
-  }
-}
-
-@media screen and (max-width: 50em) { 
-  body {
-    flex-direction: column;
-    #prevButton {
-      margin-left: 1em;
-    }
-    #nextButton {
-      margin-right: 1em;
-    }
-    #code-container {
-      width: 100%;
     }
   }
 }
