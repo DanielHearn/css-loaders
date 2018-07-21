@@ -148,9 +148,13 @@ button, a {
   #loader-container #loader-name, #loader-container #loader-links {
     display: flex;
     flex: 1;
-    justify-content: center;
+    flex-direction: column;
     text-align: center;
     align-items: center; }
+  #loader-container #loader-name {
+    justify-content: center; }
+  #loader-container #loader-links {
+    justify-content: space-evenly; }
   #loader-container #loader-controls {
     display: none; }
   #loader-container #loader-content {
@@ -172,8 +176,7 @@ button, a {
     text-decoration: underline;
     color: var(--white);
     font-weight: 600;
-    font-size: 1.1em;
-    flex: 1; }
+    font-size: 1.1em; }
 
 #code-container {
   flex: 1;
@@ -255,15 +258,14 @@ button, a {
   cursor: pointer; }
   #nextButton:hover, #prevButton:hover {
     background-color: var(--accent-dark); }
-
-.arrow {
-  border: solid var(--white);
-  border-width: 0 0.4em 0.4em 0;
-  display: inline-block;
-  padding: 0.8em; }
+  #nextButton .arrow, #prevButton .arrow {
+    border: solid var(--white);
+    border-width: 0 0.4em 0.4em 0;
+    display: inline-block;
+    padding: 0.6em; }
 
 #prevButton {
-  margin-left: 4em; }
+  margin-left: 3em; }
   #prevButton .arrow {
     margin-left: 0.35em;
     transform: rotate(135deg);
@@ -271,15 +273,35 @@ button, a {
     -moz-transform: rotate(135deg); }
 
 #nextButton {
-  margin-right: 4em; }
+  margin-right: 3em; }
   #nextButton .arrow {
     margin-right: 0.35em;
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg); }
 
+#loader-dots {
+  display: flex;
+  flex-direction: row;
+  margin: 1em; }
+  #loader-dots .loader-dot {
+    padding: 0.5em;
+    background-color: var(--accent-darkish);
+    border-radius: 50%;
+    margin: 0.5em;
+    cursor: pointer;
+    transition: background-color var(--transition-time) ease-in-out; }
+    #loader-dots .loader-dot.selected {
+      background-color: var(--white); }
+    #loader-dots .loader-dot:hover {
+      background-color: var(--grey); }
+
 @media screen and (max-width: 50em) {
   body {
     flex-direction: column; }
+    body #prevButton {
+      margin-left: 1em; }
+    body #nextButton {
+      margin-right: 1em; }
     body #code-container {
       width: 100%; } }

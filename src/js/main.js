@@ -322,7 +322,7 @@ $dark: #34495e;
 const root = document.documentElement.style
 const loaderContainer = document.querySelector('#loader-container')
 const loaderContent = loaderContainer.querySelector('#loader-content #loader')
-const loaderName = loaderContainer.querySelector('#loader-name h1')
+const loaderName = loaderContainer.querySelector('#loader-name h2')
 const loaderSource = loaderContainer.querySelector('#loader-source')
 const prevButton = loaderContainer.querySelector('#prevButton')
 const nextButton = loaderContainer.querySelector('#nextButton')
@@ -333,6 +333,15 @@ const htmlButton = document.querySelector('#html .copy')
 const cssButton = document.querySelector('#css .copy')
 const scssButton = document.querySelector('#scss .copy')
 
+const tabbedComponent = document.querySelector('#code-container')
+const tabContainer = tabbedComponent.querySelector('.tabs')
+const tabs = tabContainer.querySelectorAll('.tab')
+const contentContainer = tabbedComponent.querySelector('.code')
+const contents = contentContainer.querySelectorAll('.code-element')
+
+const dotContainer = document.querySelector('#loader-dots')
+
+let dots = []
 let loaderIndex = 0
 
 prevButton.addEventListener('click', function () {
@@ -354,6 +363,19 @@ scssButton.addEventListener('click', function() {
   copyToClipboard(scssElement)
 })
   
+tabContainer.addEventListener('click', toggleTab)
+
+dotContainer.addEventListener('click', toggleDot)
+
+document.addEventListener('DOMContentLoaded', function() {
+  loadApp()
+})
+
+function loadApp () {
+  showLoader(0)
+  createDots()
+}
+
 function loadSlide (loader) {
   root.setProperty('--accent', loader.colour)
   root.setProperty('--accent-dark', shadeColor(loader.colour,-0.2))
@@ -377,6 +399,7 @@ function changeLoader (indexChange) {
     loaderIndex = newIndex
   }
   showLoader(loaderIndex)
+  selectDot(loaderIndex)
 }
 
 function showLoader (index) {
@@ -384,10 +407,6 @@ function showLoader (index) {
   loaderContent.innerHTML = ''
   loadSlide(loader)
   showLoaderCode(loader)
-}
-
-function setAnimationElement (animElement, loader) {
-  animElement.innerHTML = loader.html
 }
 
 function showLoaderCode (loader) {
@@ -411,16 +430,6 @@ function setScssElement (code) {
   Prism.highlightElement(scssElement)
 }
 
-showLoader(0)
-
-const tabbedComponent = document.querySelector('#code-container')
-const tabContainer = tabbedComponent.querySelector('.tabs')
-const tabs = tabContainer.querySelectorAll('.tab')
-const contentContainer = tabbedComponent.querySelector('.code')
-const contents = contentContainer.querySelectorAll('.code-element')
-
-tabContainer.addEventListener('click', toggleTab)
-
 function toggleTab (e) {
   e.preventDefault()
   const tabLink = e.target.closest('a')
@@ -433,6 +442,36 @@ function toggleTab (e) {
 
   tab.classList.add('selected')
   content.classList.add('selected')
+}
+
+function createDots () {
+    for (const dot in loaders) {
+      const dotElement = document.createElement('a')
+      dotElement.classList.add('loader-dot')
+      dotElement.href = dot
+      if(dot == 0) {
+          dotElement.classList.add('selected')
+      }
+      dotContainer.appendChild(dotElement)
+      dots[dots.length] = dotElement
+    }
+}
+
+function selectDot (dotIndex) {
+    dots.forEach(dot => dot.classList.remove('selected'))
+    dots[dotIndex].classList.add('selected')
+    showLoader(dotIndex)
+}
+
+function toggleDot (e) {
+  e.preventDefault()
+  if(dots) {
+    const currentDot = e.target.closest('a')
+    if(currentDot) {
+        const dotHref = currentDot.getAttribute('href')
+        selectDot(parseInt(dotHref))
+    }
+  }
 }
 
 //Function from https://hackernoon.com/copying-text-to-clipboard-with-javascript-df4d4988697f
