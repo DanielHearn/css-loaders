@@ -1,0 +1,27 @@
+$squareTiming: 0.3s;
+
+.squareLoader {
+  max-width: 60px;
+  .square {
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    float: right;
+    animation: squareanim 3s infinite; 
+    &:nth-child(1) {
+      float: left; }
+    @for $i from 1 to 5 {
+      &:nth-child(#{$i}) {
+        animation-delay: $squareTiming*$i;
+      }
+    }
+  }
+}
+
+@keyframes squareanim {
+  0% {opacity: 1;}
+  40% {opacity: 0;}
+  50% {opacity: 0;}
+  90% {opacity: 1;}
+  100% {opacity: 1;}
+}

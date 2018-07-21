@@ -1,9 +1,16 @@
 :root {
-  --accent-color: #ffa91f;
+  --accent: #de4e40;
   --white: #fefefe;
 }
 
-@import 'loaders/heartbeat';
+$accent: #de4e40;
+$accent-darkish: #d3463a;
+$accent-dark: #bd3c30;
+
+@import 'loaders/1_heartbeat';
+@import 'loaders/2_square';
+@import 'loaders/3_rectangle';
+@import 'loaders/4_hollowbox';
 
 body {
   display: flex;
@@ -12,27 +19,86 @@ body {
   margin: 0;
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
 
 #loader-container {
   display: flex;
   flex-direction: column;
   flex: 1;
-  background: var(--accent-color);
+  background-color: var(--accent);
   color: var(--white);
   justify-content: space-around;
   align-content: center;
   text-align: center;
-  #animation-wrapper {
+  transition: background-color 0.3s ease-in-out;
+  #loader-content {
     display: flex;
-    justify-content: center;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-around;
     align-content: center;
+    #animation-wrapper {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+    }
+  }
+  a {
+    text-decoration: underline;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.1em;
   }
 }
 
 #code-container {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  .tabs {
+  display: flex;
+  flex-direction: row;
+    .tab {
+      background-color: $accent-dark;
+      display: flex;
+      flex: 1;
+      transition: background-colour 0.2s ease-in-out;
+      &:hover {
+        background-color: $accent-darkish;
+      }
+      &.selected {
+        background-color: $accent;
+      }
+      a {
+        padding: 1em 2em;
+        text-decoration: none;
+        width: 100%;
+        color: var(--white);
+      }
+    }
+  }
+  .code {
+    display: flex;
+    flex: 1;
+    background-color: var(--white);
+    padding: 0;
+    .code-element {
+      display: none;
+      pre {
+        margin: 0;
+        display: flex;
+        flex: 1;
+        overflow-y: scroll;
+      }
+      &.selected {
+        display: flex;
+        flex: 1;
+      }
+    }
+  }
 }
+
 
 
 @media screen and (max-width: 50em) { 
