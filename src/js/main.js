@@ -569,6 +569,7 @@ function createDots () {
 function selectDot (dotIndex) {
     dots.forEach(dot => dot.classList.remove('selected'))
     dots[dotIndex].classList.add('selected')
+    loaderIndex = dotIndex
     showLoader(dotIndex)
 }
 
