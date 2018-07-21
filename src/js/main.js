@@ -361,7 +361,7 @@ $pulseTiming: 1.2s;
 }`
   },
   {
-    name: '5: Two Circles',
+    name: '6: Two Circles',
     colour: '#323d4a',
     html:
 `<div class='twoCircleLoader'>
