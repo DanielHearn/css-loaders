@@ -28,11 +28,11 @@ gulp.task('sass', function() {
   return gulp.src(scssSource)
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(cssDest))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream())
 })
 
 gulp.task('useref', function(){
-  return gulp.src('src/*.html')
+  return gulp.src('src/**/*.+(html|css|js)')
     .pipe(useref())
     .pipe(gulpIf('*.js', gulp.dest('dist')))
     .pipe(gulpIf('*.css', cssnano({zindex: false})))
@@ -68,15 +68,15 @@ gulp.task('clean:dist', function() {
 });
 
 gulp.task('watch', ['browserSync', 'pug', 'sass'], function (){
-  gulp.watch('src/pug/*.pug', ['pug']);
-  gulp.watch(scssSource, ['sass']);
-  gulp.watch('src/*.html').on('change', browserSync.reload);
-  gulp.watch('src/js/*.js', browserSync.reload);
+  gulp.watch('src/pug/*.pug', ['pug'])
+  gulp.watch(scssSource, ['sass'])
+  gulp.watch('src/*.html').on('change', browserSync.reload)
+  gulp.watch('src/js/*.js', browserSync.reload)
 })
 
 gulp.task('build', function (callback) {
   runSequence('clean:dist',
-    ['pug', 'sass', 'images', 'favicons'], 'useref',
+    ['pug', 'sass'], ['useref', 'favicons'],
     callback
   )
 })
@@ -88,7 +88,7 @@ gulp.task('default', function(callback) {
 })
 
 gulp.task('deploytopages', function() {
-  ghpages.publish('dist', function(err) {console.log(err)});
+  ghpages.publish('dist', function(err) {console.log(err)})
 });
 
 gulp.task('deploy', function(callback) {
