@@ -7,7 +7,6 @@
   --transition-time: 0.25s;
 }
 
-@import 'partials/media-queries';
 @import 'loaders/1_heartbeat';
 @import 'loaders/2_square';
 @import 'loaders/3_rectangle';
@@ -221,6 +220,27 @@ button, a {
     }
     &:hover {
       background-color: var(--grey);
+    }
+  }
+}
+
+@media screen and (max-width: 50em) { 
+  body {
+    flex-direction: column !important;
+    #prevButton {
+      margin-left: 1em;
+    }
+    #nextButton {
+      margin-right: 1em;
+    }
+    #loader-container {
+      max-width: 100%;
+    }
+    #code-container {
+      max-width: 100%;
+    }
+    h1, h2 {
+       margin: 0;
     }
   }
 }

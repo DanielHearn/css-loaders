@@ -6,18 +6,6 @@
   --grey: #fbfbfb;
   --transition-time: 0.25s; }
 
-@media screen and (max-width: 50em) {
-  body {
-    flex-direction: column !important; }
-    body #prevButton {
-      margin-left: 1em; }
-    body #nextButton {
-      margin-right: 1em; }
-    body #loader-container {
-      max-width: 100%; }
-    body #code-container {
-      max-width: 100%; } }
-
 .pulseLoader {
   width: 4em;
   height: 4em; }
@@ -350,3 +338,17 @@ button, a {
       background-color: var(--white); }
     #loader-dots .loader-dot:hover {
       background-color: var(--grey); }
+
+@media screen and (max-width: 50em) {
+  body {
+    flex-direction: column !important; }
+    body #prevButton {
+      margin-left: 1em; }
+    body #nextButton {
+      margin-right: 1em; }
+    body #loader-container {
+      max-width: 100%; }
+    body #code-container {
+      max-width: 100%; }
+    body h1, body h2 {
+      margin: 0; } }
