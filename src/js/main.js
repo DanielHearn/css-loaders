@@ -526,16 +526,19 @@ function showLoaderCode (loader) {
 
 function setHtmlElement (code) {
   htmlElement.textContent = code
+  htmlElement.parentElement.scrollTop = 0
   Prism.highlightElement(htmlElement)
 }
 
 function setCssElement (code) {
   cssElement.textContent = code
+  cssElement.parentElement.scrollTop = 0
   Prism.highlightElement(cssElement)
 }
 
 function setScssElement (code) {
   scssElement.textContent = code
+  scssElement.parentElement.scrollTop = 0
   Prism.highlightElement(scssElement)
 }
 
