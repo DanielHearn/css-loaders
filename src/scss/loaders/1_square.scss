@@ -1,10 +1,11 @@
 $squareTiming: 0.3s;
+$squareSize: 4em;
 
 .squareLoader {
-  max-width: 60px;
+  max-width: $squareSize;
   .square {
-    height: 30px;
-    width: 30px;
+    height: $squareSize/2;
+    width: $squareSize/2;
     background-color: white;
     float: right;
     animation: squareanim 3s infinite; 

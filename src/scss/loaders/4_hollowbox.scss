@@ -1,36 +1,37 @@
-$cubeSize: 3em;
-$light: #ECECEC;
-$dark: #34495e;
+$hollowBoxSize: 3em;
+$hollowLight: #ECECEC;
+$hollowDark: #34495e;
+$hollowTiming: 1.25s;
 
-.loader {
-    width: $cubeSize;
-    height: $cubeSize;
-    animation: hollowboxAnim 1.25s infinite ease-in-out;
+.hollowLoader {
+  width: $hollowBoxSize;
+  height: $hollowBoxSize;
+  animation: loaderAnim $hollowTiming infinite ease-in-out;
+  outline: 1px solid transparent;
+  .largeBox {
+    height: $hollowBoxSize;
+    width: $hollowBoxSize;
+    background-color: $hollowLight;
     outline: 1px solid transparent;
-    .largeBox {
-        height: $cubeSize;
-        width: $cubeSize;
-        background-color: $light;
-        outline: 1px solid transparent;
-        position: fixed;
-    }
-    .smallBox {
-        height: $cubeSize;
-        width: $cubeSize;
-        background-color: $dark;
-        position: fixed;
-        z-index: 1;
-        outline: 1px solid transparent;
-        animation: smallBoxAnim 1.25s alternate infinite ease-in-out;
-    }
+    position: fixed;
+  }
+  .smallBox {
+    height: $hollowBoxSize;
+    width: $hollowBoxSize;
+    background-color: $hollowDark;
+    position: fixed;
+    z-index: 1;
+    outline: 1px solid transparent;
+    animation: smallBoxAnim $hollowTiming alternate infinite ease-in-out;
+  }
 }
-      
+
 @keyframes smallBoxAnim {
-    0% {transform: scale(0.2);}
-    100% {transform: scale(0.75);}
+  0% {transform: scale(0.2);}
+  100% {transform: scale(0.75);}
 }
-      
-@keyframes hollowboxAnim {
-    0% {transform: rotate(0deg);}
-    100% {transform: rotate(90deg);}
+
+@keyframes loaderAnim {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(90deg);}
 }

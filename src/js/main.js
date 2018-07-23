@@ -10,321 +10,352 @@ const loaders = [
     <div class='square'></div>
 </div>`,
     css:
-`.loader {
-    width: 3em;
-    height: 3em;
-    animation: loaderAnim 1.25s infinite ease-in-out;
-    outline: 1px solid transparent;
+`.squareLoader {
+  max-width: 4em;
 }
-.loader .largeBox {
-    height: 3em;
-    width: 3em;
-    background-color: #ECECEC;
-    outline: 1px solid transparent;
-    position: fixed;
+.squareLoader .square {
+  height: 2em;
+  width: 2em;
+  background-color: white;
+  float: right;
+  animation: squareanim 3s infinite;
 }
-.loader .smallBox {
-    height: 3em;
-    width: 3em;
-    background-color: #34495e;
-    position: fixed;
-    z-index: 1;
-    outline: 1px solid transparent;
-    animation: smallBoxAnim 1.25s alternate infinite ease-in-out;
+.squareLoader .square:nth-child(1) {
+  float: left;
 }
-    
-@keyframes smallBoxAnim {
-    0% {
-        transform: scale(0.2);
-    }
-    100% {
-        transform: scale(0.75);
-    }
+.squareLoader .square:nth-child(1) {
+  animation-delay: 0.3s;
 }
-
-@keyframes loaderAnim {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(90deg);
-    }
+.squareLoader .square:nth-child(2) {
+  animation-delay: 0.6s;
+}
+.squareLoader .square:nth-child(3) {
+  animation-delay: 0.9s;
+}
+.squareLoader .square:nth-child(4) {
+  animation-delay: 1.2s;
+}
+  
+@keyframes squareanim {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }`,
     scss:
 `$squareTiming: 0.3s;
+$squareSize: 4em;
 
 .squareLoader {
-    max-width: 60px;
-    .square {
-        height: 30px;
-        width: 30px;
-        background-color: white;
-        float: right;
-        animation: squareanim 3s infinite; 
-        &:nth-child(1) {
-            float: left; 
-        }
-        @for $i from 1 to 5 {
-            &:nth-child(#{$i}) {
-                animation-delay: $squareTiming*$i;
-            }
-        }
+  max-width: $squareSize;
+  .square {
+    height: $squareSize/2;
+    width: $squareSize/2;
+    background-color: white;
+    float: right;
+    animation: squareanim 3s infinite; 
+    &:nth-child(1) {
+      float: left; }
+    @for $i from 1 to 5 {
+      &:nth-child(#{$i}) {
+        animation-delay: $squareTiming*$i;
+      }
     }
+  }
 }
-    
+
 @keyframes squareanim {
-    0% {opacity: 1;}
-    40% {opacity: 0;}
-    50% {opacity: 0;}
-    90% {opacity: 1;}
-    100% {opacity: 1;}
+  0% {opacity: 1;}
+  40% {opacity: 0;}
+  50% {opacity: 0;}
+  90% {opacity: 1;}
+  100% {opacity: 1;}
 }`
   },
   {
     name: '2: Heartbeat',
     colour: '#25a78d',
     html:
-`<div class="pulseLoader">
+`<div class="heartbeatLoader">
     <div class="pulse"></div>
     <div class="pulse"></div>
 </div>`,
     css:
-`.pulseLoader {
-    width: 4em;
-    height: 4em;
+`.heartbeatLoader {
+  width: 4em;
+  height: 4em;
 }
-.pulseLoader .pulse {
-    width: 4em;
-    height: 4em;
-    border-radius: 4em;
-    position: absolute;
-    background-color: white;
-    animation: pulseanim 1.2s ease-in-out infinite;
-     transform: scale(0);
-    outline: 1px solid transparent;
+.heartbeatLoader .pulse {
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  position: absolute;
+  background-color: white;
+  animation: heartbeatanim 1.2s ease-in-out infinite;
+  transform: scale(0);
+  outline: 1px solid transparent;
 }
-.pulseLoader .pulse:nth-child(2) {
-    animation-delay: 0.22s;
+.heartbeatLoader .pulse:nth-child(2) {
+  animation-delay: 0.22s;
 }
-    
-@keyframes pulseanim {
-    0% {
-        transform: scale(0);
-    }
-    100% {
-        transform: scale(1);
-        opacity: 0;
-    }
+  
+@keyframes heartbeatanim {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
 }`,
     scss:
 `$heartbeatSize: 4em;
 $heartbeatTiming: 1.2s;
 
-.pulseLoader {
+.heartbeatLoader {
+  width: $heartbeatSize;
+  height: $heartbeatSize;
+  .pulse {
     width: $heartbeatSize;
     height: $heartbeatSize;
-    .pulse {
-        width: $heartbeatSize;
-        height: $heartbeatSize;
-        border-radius: $heartbeatSize;
-        position: absolute;
-        background-color: white;
-        animation: heartbeatanim heartbeatTiming ease-in-out infinite;
-        transform: scale(0);
-        outline: 1px solid transparent;
-        &:nth-child(2) {
-            animation-delay: 0.22s;
-        }
+    border-radius: 50%;
+    position: absolute;
+    background-color: white;
+    animation: heartbeatanim $heartbeatTiming ease-in-out infinite;
+    transform: scale(0);
+    outline: 1px solid transparent;
+    &:nth-child(2) {
+      animation-delay: 0.22s;
     }
+  }
 }
-    
+
 @keyframes heartbeatanim {
-    0% { transform: scale(0);}
-    100% { transform: scale(1); opacity: 0;}
+  0% { transform: scale(0);}
+  100% { transform: scale(1); opacity: 0;}
 }`
   },
   {
-    name: '3: Rectangle',
+    name: '3: Slider',
     colour: '#9b59b6',
     html:
-`<div class='sliderloader'>
-        <div class='rect'></div>
-        <div class='rect'></div>
-        <div class='rect'></div>
-        <div class='rect'></div>
-        <div class='rect'></div>
-    </div>
+`<div class='sliderLoader'>
+    <div class='rect'></div>
+    <div class='rect'></div>
+    <div class='rect'></div>
+    <div class='rect'></div>
+    <div class='rect'></div>
+</div>
         `,
     css:
-`.sliderloader {
-    padding-top: 40vh;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+`.sliderLoader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.sliderloader .rect {
-    height: 20px;
-    width: 8px;
-    background-color: #FFF;
-    display: inline-block;
-    animation: slideranim 1.4s ease-in-out infinite;
-    margin-right: 4px;
+.sliderLoader .rect {
+  height: 20px;
+  width: 8px;
+  background-color: white;
+  display: inline-block;
+  animation: slideranim 1.4s ease-in-out infinite;
+  margin-right: 4px;
 }
-.sliderloader .rect:nth-child(1) {
-    animation-delay: 0.15s;
-    }
-.sliderloader .rect:nth-child(2) {
-    animation-delay: 0.3s;
-    }
-.sliderloader .rect:nth-child(3) {
-    animation-delay: 0.45s;
+.sliderLoader .rect:nth-child(1) {
+  animation-delay: 0.15s;
 }
-.sliderloader .rect:nth-child(4) {
-    animation-delay: 0.6s;
+.sliderLoader .rect:nth-child(2) {
+  animation-delay: 0.3s;
 }
-.sliderloader .rect:nth-child(5) {
-    animation-delay: 0.75s;
+.sliderLoader .rect:nth-child(3) {
+  animation-delay: 0.45s;
 }
-      
+.sliderLoader .rect:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.sliderLoader .rect:nth-child(5) {
+  animation-delay: 0.75s;
+}
+
 @keyframes slideranim {
-    0% {
-        transform: scaleY(1);
-    }
-    25% {
-        transform: scaleY(3);
-    }
-    50% {
-        transform: scaleY(1);
-    }
-    100% {
-        transform: scaleY(1);
-    }
+  0% {
+    transform: scaleY(1);
+  }
+  25% {
+    transform: scaleY(3);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
 }`,
     scss:
-`$rectangleTiming: 0.15s;
+`$sliderTiming: 1.4s;
+$sliderRectTiming: 0.15s;
+$sliderRectHeight: 20px;
+$sliderRectWidth: 8px;
 
-.sliderloader {
+.sliderLoader {
     display: flex;
     justify-content: center;
     align-items: center;
     .rect {
-        height: 20px;
-        width: 8px;
-        background-color: #FFF;
-        display: inline-block;
-        animation: slideranim 1.4s ease-in-out infinite;
-        margin-right: 4px;
-        @for $i from 1 to 6 {
+      height: $sliderRectHeight;
+      width: $sliderRectWidth;
+      background-color: white;
+      display: inline-block;
+      animation: slideranim $sliderTiming ease-in-out infinite;
+      margin-right: 4px;
+      @for $i from 1 to 6 {
         &:nth-child(#{$i}) {
-            animation-delay: $rectangleTiming*$i;
+          animation-delay: $sliderRectTiming*$i;
         }
-        }
+      }
     }
 }
 
 @keyframes slideranim {
-    0% {transform: scaleY(1);}
-    25% {transform: scaleY(3);}
-    50% {transform: scaleY(1);}
-    100% {transform: scaleY(1);}
+  0% {transform: scaleY(1);}
+  25% {transform: scaleY(3);}
+  50% {transform: scaleY(1);}
+  100% {transform: scaleY(1);}
 }`
   },
   {
     name: '4: Hollow Box',
     colour: '#34495e',
     html:
-`<div class="loader">
-    <div class="largeBox"></div>
-    <div class="smallBox"></div>
-</div>
-        `,
+`<div class="hollowLoader">
+  <div class="largeBox"></div>
+  <div class="smallBox"></div>
+</div>`,
     css:
-`.loader {
-    width: 3em;
-    height: 3em;
-    animation: loaderAnim 1.25s infinite ease-in-out;
-    outline: 1px solid transparent;
+`.hollowLoader {
+  width: 3em;
+  height: 3em;
+  -webkit-animation: loaderAnim 1.25s infinite ease-in-out;
+        animation: loaderAnim 1.25s infinite ease-in-out;
+  outline: 1px solid transparent;
 }
-.loader .largeBox {
-    height: 3em;
-    width: 3em;
-    background-color: #ECECEC;
+.hollowLoader .largeBox {
+   height: 3em;
+  width: 3em;
+  background-color: #ECECEC;
+  outline: 1px solid transparent;
+  position: fixed;
+}
+.hollowLoader .smallBox {
+  height: 3em;
+  width: 3em;
+  background-color: #34495e;
+  position: fixed;
+  z-index: 1;
+  outline: 1px solid transparent;
+  -webkit-animation: smallBoxAnim 1.25s alternate infinite ease-in-out;
+        animation: smallBoxAnim 1.25s alternate infinite ease-in-out;
+}
+
+@-webkit-keyframes smallBoxAnim {
+  0% {
+    -webkit-transform: scale(0.2);
+        transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(0.75);
+        transform: scale(0.75);
+  }
+}
+
+@keyframes smallBoxAnim {
+  0% {
+    -webkit-transform: scale(0.2);
+        transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(0.75);
+        transform: scale(0.75);
+  }
+}
+@-webkit-keyframes loaderAnim {
+  0% {
+    -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+  }
+}
+@keyframes loaderAnim {
+  0% {
+    -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+  }
+}`,
+    scss:
+`$hollowBoxSize: 3em;
+$hollowLight: #ECECEC;
+$hollowDark: #34495e;
+$hollowTiming: 1.25s;
+
+.hollowLoader {
+  width: $hollowBoxSize;
+  height: $hollowBoxSize;
+  animation: loaderAnim $hollowTiming infinite ease-in-out;
+  outline: 1px solid transparent;
+  .largeBox {
+    height: $hollowBoxSize;
+    width: $hollowBoxSize;
+    background-color: $hollowLight;
     outline: 1px solid transparent;
     position: fixed;
-}
-.loader .smallBox {
-    height: 3em;
-    width: 3em;
-    background-color: #34495e;
+  }
+  .smallBox {
+    height: $hollowBoxSize;
+    width: $hollowBoxSize;
+    background-color: $hollowDark;
     position: fixed;
     z-index: 1;
     outline: 1px solid transparent;
-    animation: smallBoxAnim 1.25s alternate infinite ease-in-out;
+    animation: smallBoxAnim $hollowTiming alternate infinite ease-in-out;
+  }
 }
-  
-@keyframes smallBoxAnim {
-    0% {
-      transform: scale(0.2);
-    }
-    100% {
-      transform: scale(0.75);
-    }
-}
-@keyframes loaderAnim {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(90deg);
-    }
-}`,
-    scss:
-`$cubeSize: 3em;
-$light: #ECECEC;
-$dark: #34495e;
 
-.loader {
-    width: $cubeSize;
-    height: $cubeSize;
-    animation: hollowboxAnim 1.25s infinite ease-in-out;
-    outline: 1px solid transparent;
-    .largeBox {
-        height: $cubeSize;
-        width: $cubeSize;
-        background-color: $light;
-        outline: 1px solid transparent;
-        position: fixed;
-    }
-    .smallBox {
-        height: $cubeSize;
-        width: $cubeSize;
-        background-color: $dark;
-        position: fixed;
-        z-index: 1;
-        outline: 1px solid transparent;
-        animation: smallBoxAnim 1.25s alternate infinite ease-in-out;
-    }
-}
-    
 @keyframes smallBoxAnim {
-    0% {transform: scale(0.2);}
-    100% {transform: scale(0.75);}
+  0% {transform: scale(0.2);}
+  100% {transform: scale(0.75);}
 }
-    
-@keyframes hollowboxAnim {
-    0% {transform: rotate(0deg);}
-    100% {transform: rotate(90deg);}
+
+@keyframes loaderAnim {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(90deg);}
 }`
   },
   {
     name: '5: Pulse',
     colour: '#CB6651',
     html:
-`<div class='pulse'></div>
+`<div class='pulseLoader'></div>
         `,
     css:
-`.pulse {
+`.pulseLoader {
   width: 4em;
   height: 4em;
   border-radius: 4em;
@@ -332,7 +363,7 @@ $dark: #34495e;
   outline: 1px solid transparent;
   animation: pulseanim 1.2s ease-in-out infinite;
 }
-
+  
 @keyframes pulseanim {
   0% {
     transform: scale(0);
@@ -346,18 +377,18 @@ $dark: #34495e;
 `$pulseSize: 4em;
 $pulseTiming: 1.2s;
 
-.pulse {
-    width: $pulseSize;
-    height: $pulseSize;
-    border-radius: $pulseSize;
-    background-color: white;
-    outline: 1px solid transparent;
-    animation: pulseanim $pulseTiming ease-in-out infinite;
+.pulseLoader {
+  width: $pulseSize;
+  height: $pulseSize;
+  border-radius: $pulseSize;
+  background-color: white;
+  outline: 1px solid transparent;
+  animation: pulseanim $pulseTiming ease-in-out infinite;
 }
-  
+
 @keyframes pulseanim {
-    0% { transform: scale(0);}
-    100% { transform: scale(1); opacity: 0;}
+  0% { transform: scale(0);}
+  100% { transform: scale(1); opacity: 0;}
 }`
   },
   {
@@ -371,50 +402,61 @@ $pulseTiming: 1.2s;
         `,
     css:
 `.twoCircleLoader {
-    margin: 0 auto;
-    width: 60px;
-    height: 60px;
-    .circle {
-      width: 60px;
-      height: 60px;
-      border-radius: 60px;
-      position: absolute;
-      animation: load 3s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
-      &:nth-child(1) {
-        background-color: #f1c40f;
-        transform: scale(0);
-        animation-delay: 1.5s;
-      }
-      &:nth-child(2) {
-        background-color: #de4e40;
-      }
-   }
+  width: 4em;
+  height: 4em;
+}
+.twoCircleLoader .circle {
+  width: 4em;
+  height: 4em;
+  border-radius: 4em;
+  position: absolute;
+  animation: load 3s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.twoCircleLoader .circle:nth-child(1) {
+  background-color: #f1c40f;
+  transform: scale(0);
+  animation-delay: 1.5s;
+}
+.twoCircleLoader .circle:nth-child(2) {
+  background-color: #de4e40;
 }
 
 @keyframes load {
-  0% { transform: scale(0); }
-  46% { transform: scale(1); }
-  54% { transform: scale(1); }
-  100% { transform: scale(0); }
+  0% {
+    transform: scale(0);
+  }
+  46% {
+    transform: scale(1);
+  }
+  54% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
 }`,
     scss:
-`.twoCircleLoader {
-    margin: 0 auto;
-    width: 60px;
-    height: 60px;
+`$twoCircleSize: 4em;
+$twoCircleTiming: 3s;
+$twoCircleColour1: #f1c40f;
+$twoCircleColour2: #de4e40;
+
+.twoCircleLoader {
+    width: $twoCircleSize;
+    height: $twoCircleSize;
     .circle {
-      width: 60px;
-      height: 60px;
-      border-radius: 60px;
+      width: $twoCircleSize;
+      height: $twoCircleSize;
+      border-radius: $twoCircleSize;
       position: absolute;
-      animation: load 3s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
+      animation: load $twoCircleTiming infinite cubic-bezier(0.65, 0.05, 0.36, 1);
       &:nth-child(1) {
-        background-color: #f1c40f;
+        background-color: $twoCircleColour1;
         transform: scale(0);
-        animation-delay: 1.5s;
+        animation-delay: $twoCircleTiming/2;
       }
       &:nth-child(2) {
-        background-color: #de4e40;
+        background-color: $twoCircleColour2;
       }
    }
 }
