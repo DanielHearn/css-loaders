@@ -1,0 +1,30 @@
+$sliderTiming: 1.4s;
+$sliderRectTiming: 0.15s;
+$sliderRectHeight: 20px;
+$sliderRectWidth: 8px;
+
+.sliderLoader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .rect {
+      height: $sliderRectHeight;
+      width: $sliderRectWidth;
+      background-color: white;
+      display: inline-block;
+      animation: slideranim $sliderTiming ease-in-out infinite;
+      margin-right: 4px;
+      @for $i from 1 to 6 {
+        &:nth-child(#{$i}) {
+          animation-delay: $sliderRectTiming*$i;
+        }
+      }
+    }
+}
+
+@keyframes slideranim {
+  0% {transform: scaleY(1);}
+  25% {transform: scaleY(3);}
+  50% {transform: scaleY(1);}
+  100% {transform: scaleY(1);}
+}

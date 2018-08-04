@@ -6,33 +6,11 @@
   --grey: #fbfbfb;
   --transition-time: 0.25s; }
 
-.pulseLoader {
-  width: 4em;
-  height: 4em; }
-  .pulseLoader .pulse {
-    width: 4em;
-    height: 4em;
-    border-radius: 4em;
-    position: absolute;
-    background-color: white;
-    animation: heartbeatanim 1.2s ease-in-out infinite;
-    transform: scale(0);
-    outline: 1px solid transparent; }
-    .pulseLoader .pulse:nth-child(2) {
-      animation-delay: 0.22s; }
-
-@keyframes heartbeatanim {
-  0% {
-    transform: scale(0); }
-  100% {
-    transform: scale(1);
-    opacity: 0; } }
-
 .squareLoader {
-  max-width: 60px; }
+  max-width: 4em; }
   .squareLoader .square {
-    height: 30px;
-    width: 30px;
+    height: 2em;
+    width: 2em;
     background-color: white;
     float: right;
     animation: squareanim 3s infinite; }
@@ -59,26 +37,48 @@
   100% {
     opacity: 1; } }
 
-.sliderloader {
+.heartbeatLoader {
+  width: 4em;
+  height: 4em; }
+  .heartbeatLoader .pulse {
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    position: absolute;
+    background-color: white;
+    animation: heartbeatanim 1.2s ease-in-out infinite;
+    transform: scale(0);
+    outline: 1px solid transparent; }
+    .heartbeatLoader .pulse:nth-child(2) {
+      animation-delay: 0.22s; }
+
+@keyframes heartbeatanim {
+  0% {
+    transform: scale(0); }
+  100% {
+    transform: scale(1);
+    opacity: 0; } }
+
+.sliderLoader {
   display: flex;
   justify-content: center;
   align-items: center; }
-  .sliderloader .rect {
+  .sliderLoader .rect {
     height: 20px;
     width: 8px;
-    background-color: #FFF;
+    background-color: white;
     display: inline-block;
     animation: slideranim 1.4s ease-in-out infinite;
     margin-right: 4px; }
-    .sliderloader .rect:nth-child(1) {
+    .sliderLoader .rect:nth-child(1) {
       animation-delay: 0.15s; }
-    .sliderloader .rect:nth-child(2) {
+    .sliderLoader .rect:nth-child(2) {
       animation-delay: 0.3s; }
-    .sliderloader .rect:nth-child(3) {
+    .sliderLoader .rect:nth-child(3) {
       animation-delay: 0.45s; }
-    .sliderloader .rect:nth-child(4) {
+    .sliderLoader .rect:nth-child(4) {
       animation-delay: 0.6s; }
-    .sliderloader .rect:nth-child(5) {
+    .sliderLoader .rect:nth-child(5) {
       animation-delay: 0.75s; }
 
 @keyframes slideranim {
@@ -91,18 +91,18 @@
   100% {
     transform: scaleY(1); } }
 
-.loader {
+.hollowLoader {
   width: 3em;
   height: 3em;
-  animation: hollowboxAnim 1.25s infinite ease-in-out;
+  animation: loaderAnim 1.25s infinite ease-in-out;
   outline: 1px solid transparent; }
-  .loader .largeBox {
+  .hollowLoader .largeBox {
     height: 3em;
     width: 3em;
     background-color: #ECECEC;
     outline: 1px solid transparent;
     position: fixed; }
-  .loader .smallBox {
+  .hollowLoader .smallBox {
     height: 3em;
     width: 3em;
     background-color: #34495e;
@@ -117,13 +117,13 @@
   100% {
     transform: scale(0.75); } }
 
-@keyframes hollowboxAnim {
+@keyframes loaderAnim {
   0% {
     transform: rotate(0deg); }
   100% {
     transform: rotate(90deg); } }
 
-.pulse {
+.pulseLoader {
   width: 4em;
   height: 4em;
   border-radius: 4em;
@@ -139,13 +139,12 @@
     opacity: 0; } }
 
 .twoCircleLoader {
-  margin: 0 auto;
-  width: 60px;
-  height: 60px; }
+  width: 4em;
+  height: 4em; }
   .twoCircleLoader .circle {
-    width: 60px;
-    height: 60px;
-    border-radius: 60px;
+    width: 4em;
+    height: 4em;
+    border-radius: 4em;
     position: absolute;
     animation: load 3s infinite cubic-bezier(0.65, 0.05, 0.36, 1); }
     .twoCircleLoader .circle:nth-child(1) {
