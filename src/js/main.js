@@ -319,7 +319,7 @@ $dark: #34495e;
   },
   {
     name: '5: Pulse',
-    colour: '#CB6651',
+    colour: '#a03b74',
     html:
 `<div class='pulse'></div>
         `,
@@ -441,11 +441,12 @@ const scssElement = document.querySelector('#scss-code')
 const htmlButton = document.querySelector('#html .copy')
 const cssButton = document.querySelector('#css .copy')
 const scssButton = document.querySelector('#scss .copy')
+const displayCodeButton = document.querySelector('#displayCodeButton')
 
-const tabbedComponent = document.querySelector('#code-container')
-const tabContainer = tabbedComponent.querySelector('.tabs')
+const codeContainer = document.querySelector('#code-container')
+const tabContainer = codeContainer.querySelector('.tabs')
 const tabs = tabContainer.querySelectorAll('.tab')
-const contentContainer = tabbedComponent.querySelector('.code')
+const contentContainer = codeContainer.querySelector('.code')
 const contents = contentContainer.querySelectorAll('.code-element')
 
 const dotContainer = document.querySelector('#loader-dots')
@@ -460,23 +461,27 @@ nextButton.addEventListener('click', function () {
   changeLoader(1)
 })
 
-htmlButton.addEventListener('click', function() {
+htmlButton.addEventListener('click', function () {
   copyToClipboard(htmlElement)
 })
 
-cssButton.addEventListener('click', function() {
+cssButton.addEventListener('click', function () {
   copyToClipboard(cssElement)
 })
 
-scssButton.addEventListener('click', function() {
+scssButton.addEventListener('click', function () {
   copyToClipboard(scssElement)
 })
-  
+
+displayCodeButton.addEventListener('click', function () {
+  toggleCodeSection()
+})
+
 tabContainer.addEventListener('click', toggleTab)
 
 dotContainer.addEventListener('click', toggleDot)
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   loadApp()
 })
 
@@ -487,13 +492,12 @@ function loadApp () {
 
 function loadSlide (loader) {
   root.setProperty('--accent', loader.colour)
-  root.setProperty('--accent-dark', shadeColor(loader.colour,-0.2))
-  root.setProperty('--accent-darkish', shadeColor(loader.colour,-0.1))
+  root.setProperty('--accent-dark', shadeColor(loader.colour, -0.2))
+  root.setProperty('--accent-darkish', shadeColor(loader.colour, -0.1))
   loaderName.textContent = loader.name
   const animationWrapper = document.createElement('div')
   animationWrapper.id = 'animation-wrapper'
   animationWrapper.innerHTML = loader.html
-  const sourceElement = document.createElement('a')
   loaderSource.href = 'https://www.github.com/danielhearn/css-loaders'
   loaderContent.appendChild(animationWrapper)
 }
@@ -542,6 +546,16 @@ function setScssElement (code) {
   Prism.highlightElement(scssElement)
 }
 
+function toggleCodeSection () {
+  codeContainer.classList.toggle('visible')
+  console.log(displayCodeButton.textContent)
+  if (codeContainer.classList.contains('visible')) {
+    displayCodeButton.textContent = 'Hide Code'
+  } else {
+    displayCodeButton.textContent = 'Show Code'
+  }
+}
+
 function toggleTab (e) {
   e.preventDefault()
   const tabLink = e.target.closest('a')
@@ -557,59 +571,59 @@ function toggleTab (e) {
 }
 
 function createDots () {
-    for (const dot in loaders) {
-      const dotElement = document.createElement('a')
-      dotElement.classList.add('loader-dot')
-      dotElement.href = dot
-      if(dot == 0) {
-          dotElement.classList.add('selected')
-      }
-      dotContainer.appendChild(dotElement)
-      dots[dots.length] = dotElement
+  for (const dot in loaders) {
+    const dotElement = document.createElement('a')
+    dotElement.classList.add('loader-dot')
+    dotElement.href = dot
+    if (dot == 0) {
+      dotElement.classList.add('selected')
     }
+    dotContainer.appendChild(dotElement)
+    dots[dots.length] = dotElement
+  }
 }
 
 function selectDot (dotIndex) {
-    dots.forEach(dot => dot.classList.remove('selected'))
-    dots[dotIndex].classList.add('selected')
-    loaderIndex = dotIndex
-    showLoader(dotIndex)
+  dots.forEach(dot => dot.classList.remove('selected'))
+  dots[dotIndex].classList.add('selected')
+  loaderIndex = dotIndex
+  showLoader(dotIndex)
 }
 
 function toggleDot (e) {
   e.preventDefault()
-  if(dots) {
+  if (dots) {
     const currentDot = e.target.closest('a')
-    if(currentDot) {
-        const dotHref = currentDot.getAttribute('href')
-        selectDot(parseInt(dotHref))
+    if (currentDot) {
+      const dotHref = currentDot.getAttribute('href')
+      selectDot(parseInt(dotHref))
     }
   }
 }
 
-//Function from https://hackernoon.com/copying-text-to-clipboard-with-javascript-df4d4988697f
-function copyToClipboard(element) {
-    const el = document.createElement('textarea');  // Create a <textarea> element
-    el.value = element.textContent;                                 // Set its value to the string that you want copied
-    el.setAttribute('readonly', '');                // Make it readonly to be tamper-proof
-    el.style.position = 'absolute';                 
-    el.style.left = '-9999px';                      // Move outside the screen to make it invisible
-    document.body.appendChild(el);                  // Append the <textarea> element to the HTML document
-    const selected =            
-      document.getSelection().rangeCount > 0        // Check if there is any content selected previously
-        ? document.getSelection().getRangeAt(0)     // Store selection if found
-        : false;                                    // Mark as false to know no selection existed before
-    el.select();                                    // Select the <textarea> content
-    document.execCommand('copy');                   // Copy - only works as a result of a user action (e.g. click events)
-    document.body.removeChild(el);                  // Remove the <textarea> element
-    if (selected) {                                 // If a selection existed before copying
-      document.getSelection().removeAllRanges();    // Unselect everything on the HTML document
-      document.getSelection().addRange(selected);   // Restore the original selection
-    }
+// Function from https://hackernoon.com/copying-text-to-clipboard-with-javascript-df4d4988697f
+function copyToClipboard (element) {
+  const el = document.createElement('textarea') // Create a <textarea> element
+  el.value = element.textContent // Set its value to the string that you want copied
+  el.setAttribute('readonly', '') // Make it readonly to be tamper-proof
+  el.style.position = 'absolute'
+  el.style.left = '-9999px' // Move outside the screen to make it invisible
+  document.body.appendChild(el) // Append the <textarea> element to the HTML document
+  const selected =
+      document.getSelection().rangeCount > 0 // Check if there is any content selected previously
+        ? document.getSelection().getRangeAt(0) // Store selection if found
+        : false // Mark as false to know no selection existed before
+  el.select() // Select the <textarea> content
+  document.execCommand('copy') // Copy - only works as a result of a user action (e.g. click events)
+  document.body.removeChild(el) // Remove the <textarea> element
+  if (selected) { // If a selection existed before copying
+    document.getSelection().removeAllRanges() // Unselect everything on the HTML document
+    document.getSelection().addRange(selected) // Restore the original selection
+  }
 }
 
 // Function from https://stackoverflow.com/questions/5560248/programmatically-lighten-or-darken-a-hex-color-or-rgb-and-blend-colors
-function shadeColor(color, percent) {   
-    var f=parseInt(color.slice(1),16),t=percent<0?0:255,p=percent<0?percent*-1:percent,R=f>>16,G=f>>8&0x00FF,B=f&0x0000FF;
-    return "#"+(0x1000000+(Math.round((t-R)*p)+R)*0x10000+(Math.round((t-G)*p)+G)*0x100+(Math.round((t-B)*p)+B)).toString(16).slice(1);
+function shadeColor (color, percent) {
+  let f = parseInt(color.slice(1), 16), t = percent < 0 ? 0 : 255, p = percent < 0 ? percent * -1 : percent, R = f >> 16, G = f >> 8 & 0x00FF, B = f & 0x0000FF
+  return '#' + (0x1000000 + (Math.round((t - R) * p) + R) * 0x10000 + (Math.round((t - G) * p) + G) * 0x100 + (Math.round((t - B) * p) + B)).toString(16).slice(1)
 }

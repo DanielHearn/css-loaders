@@ -177,6 +177,9 @@ body {
 button, a {
   font-family: 'Poppins', sans-serif; }
 
+.visible {
+  display: flex !important; }
+
 #loader-container {
   display: flex;
   flex-direction: column;
@@ -196,6 +199,10 @@ button, a {
     align-items: center; }
   #loader-container #loader-name {
     justify-content: center; }
+    #loader-container #loader-name h1 {
+      font-size: 1.8em; }
+    #loader-container #loader-name h2 {
+      font-size: 1.6em; }
   #loader-container #loader-links {
     justify-content: space-evenly; }
   #loader-container #loader-controls {
@@ -289,6 +296,17 @@ button, a {
   justify-content: center;
   align-items: center; }
 
+#displayCodeButton {
+  display: none;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  padding: 0.5em 1em;
+  background-color: var(--accent-darkish);
+  color: var(--white);
+  transition: background-color var(--transition-time) ease-in-out;
+  cursor: pointer; }
+
 #nextButton, #prevButton {
   display: flex;
   border: none;
@@ -348,7 +366,18 @@ button, a {
       margin-right: 1em; }
     body #loader-container {
       max-width: 100%; }
+      body #loader-container #loader-name h1 {
+        font-size: 1.3em; }
+      body #loader-container #loader-name h2 {
+        font-size: 1.3em; }
+    body #code-container .tabs .tab a {
+      padding: 0.5em 2em; }
+    body #loader-dots {
+      margin: 0; }
     body #code-container {
+      display: none;
       max-width: 100%; }
+    body #displayCodeButton {
+      display: flex; }
     body h1, body h2 {
       margin: 0; } }
