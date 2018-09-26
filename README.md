@@ -8,6 +8,16 @@ Loaders example page is live at http://danielhearn.co.uk/css-loaders
 
 The code for the loaders being shown on the example page can be found within src/js/main.js in the 'loaders' array at the top of the file. With each loader being an individual object in this array with name, colour, html, css, scss keys that contain the loader's information. 
 
+```
+{
+  name: 'Loader name',
+  colour: 'Loader hex code',
+  html: `Loader HTML with formatting preserved via template literals`,
+  css: `Loader CSS with formatting preserved via template literals`,
+  scss: `Loader SCSS with formatting preserved via template literals`
+}
+```
+
 The scss source code for each loader can be found within src/scss/loaders in individual named and numbered files following the x_name.scss format. Each loader scss file is imported into main.scss via @import 'loaders/x_name';
 
 ## Gulp tasks
