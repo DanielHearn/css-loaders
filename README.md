@@ -8,7 +8,7 @@ Loaders example page is live at http://danielhearn.co.uk/css-loaders
 
 The code for the loaders being shown on the example page can be found within src/js/main.js in the 'loaders' array at the top of the file. With each loader being an individual object in this array with name, colour, html, css, scss keys that contain the loader's information. 
 
-```
+```javascript
 {
   name: 'Loader name',
   colour: 'Loader hex code',
