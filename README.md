@@ -4,22 +4,23 @@
 
 Loaders example page is live at http://danielhearn.co.uk/css-loaders
 
-### Loader Code
+## Loader Code
 
 The code for the loaders being shown on the example page can be found within src/js/main.js in the 'loaders' array at the top of the file. With each loader being an individual object in this array with name, colour, html, css, scss keys that contain the loader's information. 
 
 The scss source code for each loader can be found within src/scss/loaders in individual named and numbered files following the x_name.scss format. Each loader scss file is imported into main.scss via @import 'loaders/x_name';
 
-### Gulp tasks
+## Gulp tasks
 - Watch: Use browsersync to reload files and compiles pug, scss.
 - Build: Complies pug, scss and builds files from src to dist, including compressing images, js, css
 
-### TODO:
+## TODO:
+- Add example gifs to readme
 - Add more loaders
 - Make background colours more consistent
 - Improve mobile styling especially on landscape to be more user friendly with more spacing between elements.
 
-### Contributions
+## Contributions
 
 Improvements to the examples page are welcome and so are new loaders.
 To contribute please fork and send a pull request, to request a feature or report bugs please open an issue.
