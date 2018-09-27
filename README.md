@@ -25,9 +25,10 @@ The scss source code for each loader can be found within `src/scss/loaders` in i
 - Build: Complies pug, scss and builds files from src to dist, including compressing images, js, css
 
 ## TODO:
+- Change code font to 'Source Code Pro'
 - Add example gifs to readme
 - Add more loaders
-- Make background colours more consistent
+- Make background colours to have a more consistent palette
 - Improve mobile styling especially on landscape to be more user friendly with more spacing between elements.
 
 ## Contributions
