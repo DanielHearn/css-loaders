@@ -1,6 +1,7 @@
 ## css-loaders
 
 #### Collection of loading animations in CSS
+CSS Loaders is a collection of CSS loading animations that aim to be simple yet effective in keeping users attention while the content loads. Each loader consists of html, scss and then the css built from the scss. SCSS has been used to improve readability and modification through the use of SCSS variables, mixins, and includes.
 
 Loaders example page is live at http://danielhearn.co.uk/css-loaders
 
