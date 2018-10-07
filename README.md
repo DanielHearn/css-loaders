@@ -5,6 +5,9 @@ CSS Loaders is a collection of CSS loading animations that aim to be simple yet 
 
 Loaders example page is live at http://danielhearn.co.uk/css-loaders
 
+![Example image of a loading animation](readme-assets/demo-1.gif)
+![Example image of a loading animation](readme-assets/demo-2.gif)
+
 ## Loader Code
 
 The code for the loaders being shown on the example page can be found within `src/js/main.js` in the `loaders` array at the top of the file. With each loader being an individual object in this array with name, colour, html, css, scss keys that contain the loader's information. 
@@ -26,7 +29,6 @@ The scss source code for each loader can be found within `src/scss/loaders` in i
 - Build: Complies pug, scss and builds files from src to dist, including compressing images, js, css
 
 ## TODO:
-- Change code font to 'Source Code Pro'
 - Add example gifs to readme
 - Add more loaders
 - Make background colours to have a more consistent palette
