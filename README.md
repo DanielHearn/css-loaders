@@ -5,8 +5,8 @@ CSS Loaders is a collection of CSS loading animations that aim to be simple yet 
 
 Loaders example page is live at http://danielhearn.co.uk/css-loaders
 
-![Example image of a loading animation](readme-assets/demo-1.png)
-![Example image of a loading animation](readme-assets/demo-2.png)
+![Example image of a loading animation](readme-assets/demo-1.gif)
+![Example image of a loading animation](readme-assets/demo-2.gif)
 
 ## Loader Code
 
