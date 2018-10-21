@@ -257,6 +257,9 @@ button, a {
     }
     #loader-container {
       max-width: 100%;
+      &.code-visible {
+        display: none;
+      }
       #loader-name {
         h1 {
           font-size: 1.3em;

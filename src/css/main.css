@@ -365,6 +365,8 @@ button, a {
       margin-right: 1em; }
     body #loader-container {
       max-width: 100%; }
+      body #loader-container.code-visible {
+        display: none; }
       body #loader-container #loader-name h1 {
         font-size: 1.3em; }
       body #loader-container #loader-name h2 {
