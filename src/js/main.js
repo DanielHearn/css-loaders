@@ -493,6 +493,8 @@ const contents = contentContainer.querySelectorAll('.code-element')
 
 const dotContainer = document.querySelector('#loader-dots')
 
+const swipeDistance = 50
+
 let dots = []
 let loaderIndex = 0
 
@@ -530,6 +532,27 @@ document.addEventListener('DOMContentLoaded', function () {
 function loadApp () {
   showLoader(0)
   createDots()
+  createMobileSwipe()
+}
+
+function createMobileSwipe () {
+  if ('ontouchstart' in window) {
+    let startX = 0
+    loaderContainer.ontouchstart = function (e) {
+      startX = e.changedTouches[0].pageX
+    }
+    loaderContainer.ontouchmove = function (e) {
+      e.preventDefault()
+    }
+    loaderContainer.ontouchend = function (e) {
+      const touchobj = e.changedTouches[0]
+      const distX = touchobj.pageX - startX
+      // swipe right
+      distX < -swipeDistance && changeLoader(1)
+      // swipe left
+      distX > swipeDistance && changeLoader(-1)
+    }
+  }
 }
 
 function loadSlide (loader) {
