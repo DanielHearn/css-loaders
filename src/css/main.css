@@ -226,9 +226,11 @@ button, a {
   #loader-container #loader-name {
     justify-content: center; }
     #loader-container #loader-name h1 {
-      font-size: 1.8em; }
+      font-size: 1.8em;
+      padding: 0 0.5em; }
     #loader-container #loader-name h2 {
-      font-size: 1.6em; }
+      font-size: 1.6em;
+      padding: 0 0.5em; }
   #loader-container #loader-links {
     justify-content: space-evenly; }
   #loader-container #loader-controls {

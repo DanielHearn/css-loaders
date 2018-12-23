@@ -710,7 +710,6 @@ function setScssElement (code) {
 function toggleCodeSection () {
   codeContainer.classList.toggle('visible')
   loaderContainer.classList.toggle('code-visible')
-  console.log(displayCodeButton.textContent)
   if (codeContainer.classList.contains('visible')) {
     displayCodeButton.textContent = 'Hide Code'
   } else {
