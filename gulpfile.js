@@ -11,6 +11,7 @@ const pug = require('gulp-pug')
 const browserSync = require('browser-sync').create()
 const ghpages = require('gh-pages')
 const babel = require('gulp-babel')
+const concat = require('gulp-concat')
 
 const scssSource = 'src/scss/*.scss'
 const cssDest = 'src/css'
@@ -18,7 +19,7 @@ const cssDest = 'src/css'
 gulp.task('browserSync', function () {
   browserSync.init({
     server: {
-      baseDir: 'src'
+      baseDir: 'dist'
     }
   })
 })
@@ -26,14 +27,14 @@ gulp.task('browserSync', function () {
 gulp.task('sass', function () {
   return gulp.src(scssSource)
     .pipe(sass().on('error', sass.logError))
+    .pipe(concat('cssloaders.css'))
     .pipe(gulp.dest(cssDest))
     .pipe(browserSync.stream())
 })
 
 gulp.task('useref', function () {
-  return gulp.src('src/**/*.+(html|css|js)')
+  return gulp.src('src/**/*.+(html|css)')
     .pipe(useref())
-    .pipe(gulpIf('*.js', gulp.dest('dist')))
     .pipe(gulpIf('*.css', cssnano({zindex: false})))
     .pipe(gulp.dest('dist'))
 })
@@ -53,11 +54,13 @@ gulp.task('favicons', function () {
 gulp.task('js', function () {
   return gulp.src([
     'node_modules/babel-polyfill/dist/polyfill.js',
-    'dist/js/*.js'
+    'src/js/prism.js',
+    'src/js/main.js'
   ])
     .pipe(babel({
       presets: ['@babel/env']
     }))
+    .pipe(concat('cssloaders.js'))
     .pipe(gulp.dest('dist/js'))
 })
 
@@ -67,7 +70,7 @@ gulp.task('pug', function buildHTML () {
       .pipe(pug().on('error', function (err) {
         console.log(err)
       }))
-      .pipe(gulp.dest('src/'))
+      .pipe(gulp.dest('dist/'))
   } catch (e) {
     console.log(e)
   }
@@ -77,7 +80,7 @@ gulp.task('clean:dist', function () {
   return del.sync(['dist/**/*'])
 })
 
-gulp.task('watch', ['browserSync', 'pug', 'sass'], function () {
+gulp.task('watch', ['browserSync', 'build'], function () {
   gulp.watch('src/pug/*.pug', ['pug'])
   gulp.watch(scssSource, ['sass'])
   gulp.watch('src/*.html').on('change', browserSync.reload)
