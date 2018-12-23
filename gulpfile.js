@@ -14,7 +14,7 @@ const babel = require('gulp-babel')
 const concat = require('gulp-concat')
 
 const scssSource = 'src/scss/*.scss'
-const cssDest = 'src/css'
+const cssDest = 'dist/css'
 
 gulp.task('browserSync', function () {
   browserSync.init({
