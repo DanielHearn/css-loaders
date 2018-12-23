@@ -477,8 +477,7 @@ $twoCircleColour2: #de4e40;
 </div>`,
     css:
 `.barLoader {
-  width: 100em;
-  max-width: 10em;
+  width: 10em;
 }
 .barLoader .bar {
   width: 100%;
@@ -519,8 +518,7 @@ $barMaxWidth: 10em;
 $barColor: #fefefe;
 
 .barLoader {
-  width: 100em;
-  max-width: $barMaxWidth;
+  width: $barMaxWidth;
   .bar {
     width: 100%;
     opacity: 0;

@@ -4,8 +4,7 @@ $barMaxWidth: 10em;
 $barColor: #fefefe;
 
 .barLoader {
-  width: 100em;
-  max-width: $barMaxWidth;
+  width: $barMaxWidth;
   .bar {
     width: 100%;
     opacity: 0;
