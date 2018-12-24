@@ -565,20 +565,27 @@ $barColor: #fefefe;
 } */
 
 const root = document.documentElement.style
+
+// Loading animation elements
 const loaderContainer = document.querySelector('#loader-container')
 const loaderContent = loaderContainer.querySelector('#loader-content #loader')
 const loaderName = loaderContainer.querySelector('#loader-name h2')
 const loaderSource = loaderContainer.querySelector('#loader-source')
-const prevButton = loaderContainer.querySelector('#prevButton')
-const nextButton = loaderContainer.querySelector('#nextButton')
+
+// Code elements
 const htmlElement = document.querySelector('#html-code')
 const cssElement = document.querySelector('#css-code')
 const scssElement = document.querySelector('#scss-code')
+
+// Button elements
+const prevButton = loaderContainer.querySelector('#prevButton')
+const nextButton = loaderContainer.querySelector('#nextButton')
 const htmlButton = document.querySelector('#html .copy')
 const cssButton = document.querySelector('#css .copy')
 const scssButton = document.querySelector('#scss .copy')
 const displayCodeButton = document.querySelector('#displayCodeButton')
 
+// Tabbing elements
 const codeContainer = document.querySelector('#code-container')
 const tabContainer = codeContainer.querySelector('.tabs')
 const tabs = tabContainer.querySelectorAll('.tab')
@@ -682,27 +689,15 @@ function showLoader (index) {
 }
 
 function showLoaderCode (loader) {
-  setHtmlElement(loader.html)
-  setCssElement(loader.css)
-  setScssElement(loader.scss)
+  setCodeElement(htmlElement, loader.html)
+  setCodeElement(cssElement, loader.css)
+  setCodeElement(scssElement, loader.scss)
 }
 
-function setHtmlElement (code) {
-  htmlElement.textContent = code
-  htmlElement.parentElement.scrollTop = 0
-  Prism.highlightElement(htmlElement)
-}
-
-function setCssElement (code) {
-  cssElement.textContent = code
-  cssElement.parentElement.scrollTop = 0
-  Prism.highlightElement(cssElement)
-}
-
-function setScssElement (code) {
-  scssElement.textContent = code
-  scssElement.parentElement.scrollTop = 0
-  Prism.highlightElement(scssElement)
+function setCodeElement (element, code) {
+  element.textContent = code
+  element.parentElement.scrollTop = 0
+  Prism.highlightElement(element)
 }
 
 function toggleCodeSection () {

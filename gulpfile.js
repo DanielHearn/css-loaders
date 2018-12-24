@@ -83,8 +83,8 @@ gulp.task('clean:dist', function () {
 gulp.task('watch', ['browserSync', 'build'], function () {
   gulp.watch('src/pug/*.pug', ['pug'])
   gulp.watch(scssSource, ['sass'])
-  gulp.watch('src/*.html').on('change', browserSync.reload)
-  gulp.watch('src/js/*.js', browserSync.reload)
+  gulp.watch('src/*.html', ['build', browserSync.reload])
+  gulp.watch('src/js/*.js', ['build', browserSync.reload])
 })
 
 gulp.task('build', function (callback) {

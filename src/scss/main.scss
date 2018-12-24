@@ -7,6 +7,8 @@
   --transition-time: 0.25s;
 }
 
+@import 'prism/prism';
+
 @import 'loaders/1_square';
 @import 'loaders/2_heartbeat';
 @import 'loaders/3_slider';
