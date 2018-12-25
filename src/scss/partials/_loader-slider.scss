@@ -85,16 +85,22 @@
     margin: 1em;
     .loader-dot {
         padding: 0.5em;
-        background-color: var(--accent-darkish);
-        border-radius: 50%;
-        margin: 0.5em;
-        cursor: pointer;
-        transition: background-color var(--transition-time) ease-in-out;
+        div {
+            padding: 0.5em;
+            background-color: var(--accent-darkish);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color var(--transition-time) ease-in-out;
+        }
         &.selected {
-        background-color: var(--white);
+            div {
+                background-color: var(--white);
+            }
         }
         &:hover {
-        background-color: var(--grey);
+            div {
+                background-color: var(--grey);
+            }
         }
     }
 }

@@ -726,14 +726,17 @@ function toggleTab (e) {
 
 function createDots () {
   for (const dot in loaders) {
-    const dotElement = document.createElement('a')
-    dotElement.classList.add('loader-dot')
-    dotElement.href = dot
-    if (dot == 0) {
-      dotElement.classList.add('selected')
-    }
-    dotContainer.appendChild(dotElement)
-    dots[dots.length] = dotElement
+    const dotButton = document.createElement('a')
+    const dotElement = document.createElement('div')
+    dotButton.classList.add('loader-dot')
+    dotButton.href = dot
+    dotButton.appendChild(dotElement)
+    dotContainer.appendChild(dotButton)
+    dots[dots.length] = dotButton
+  }
+  const firstDot = dotContainer.querySelector('.loader-dot')
+  if (firstDot) {
+    firstDot.classList.add('selected')
   }
 }
 
