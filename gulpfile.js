@@ -1,25 +1,25 @@
-var gulp = require('gulp')
-var sass = require('gulp-sass')
-var useref = require('gulp-useref')
-var del = require('del')
-var runSequence = require('run-sequence')
-var cache = require('gulp-cache')
-var imagemin = require('gulp-imagemin')
-var uglify = require('gulp-uglify')
-var cssnano = require('gulp-cssnano')
-var gulpIf = require('gulp-if')
-var pug = require('gulp-pug')
-var browserSync = require('browser-sync').create()
-var ghpages = require('gh-pages')
-var path = require('path')
+const gulp = require('gulp')
+const sass = require('gulp-sass')
+const useref = require('gulp-useref')
+const del = require('del')
+const runSequence = require('run-sequence')
+const cache = require('gulp-cache')
+const imagemin = require('gulp-imagemin')
+const cssnano = require('gulp-cssnano')
+const gulpIf = require('gulp-if')
+const pug = require('gulp-pug')
+const browserSync = require('browser-sync').create()
+const ghpages = require('gh-pages')
+const babel = require('gulp-babel')
+const concat = require('gulp-concat')
 
 const scssSource = 'src/scss/*.scss'
-const cssDest = 'src/css'
+const cssDest = 'dist/css'
 
 gulp.task('browserSync', function () {
   browserSync.init({
     server: {
-      baseDir: 'src'
+      baseDir: 'dist'
     }
   })
 })
@@ -27,14 +27,14 @@ gulp.task('browserSync', function () {
 gulp.task('sass', function () {
   return gulp.src(scssSource)
     .pipe(sass().on('error', sass.logError))
+    .pipe(concat('cssloaders.css'))
     .pipe(gulp.dest(cssDest))
     .pipe(browserSync.stream())
 })
 
 gulp.task('useref', function () {
-  return gulp.src('src/**/*.+(html|css|js)')
+  return gulp.src('src/**/*.+(html|css)')
     .pipe(useref())
-    .pipe(gulpIf('*.js', gulp.dest('dist')))
     .pipe(gulpIf('*.css', cssnano({zindex: false})))
     .pipe(gulp.dest('dist'))
 })
@@ -51,13 +51,26 @@ gulp.task('favicons', function () {
     .pipe(gulp.dest('dist/favicons'))
 })
 
+gulp.task('js', function () {
+  return gulp.src([
+    'node_modules/babel-polyfill/dist/polyfill.js',
+    'src/js/prism.js',
+    'src/js/main.js'
+  ])
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
+    .pipe(concat('cssloaders.js'))
+    .pipe(gulp.dest('dist/js'))
+})
+
 gulp.task('pug', function buildHTML () {
   try {
     return gulp.src('src/pug/*.pug')
       .pipe(pug().on('error', function (err) {
         console.log(err)
       }))
-      .pipe(gulp.dest('src/'))
+      .pipe(gulp.dest('dist/'))
   } catch (e) {
     console.log(e)
   }
@@ -67,16 +80,16 @@ gulp.task('clean:dist', function () {
   return del.sync(['dist/**/*'])
 })
 
-gulp.task('watch', ['browserSync', 'pug', 'sass'], function () {
+gulp.task('watch', ['browserSync', 'build'], function () {
   gulp.watch('src/pug/*.pug', ['pug'])
   gulp.watch(scssSource, ['sass'])
-  gulp.watch('src/*.html').on('change', browserSync.reload)
-  gulp.watch('src/js/*.js', browserSync.reload)
+  gulp.watch('src/*.html', ['build', browserSync.reload])
+  gulp.watch('src/js/*.js', ['build', browserSync.reload])
 })
 
 gulp.task('build', function (callback) {
   runSequence('clean:dist',
-    ['pug', 'sass'], ['useref', 'favicons'],
+    ['pug', 'sass', 'favicons'], 'useref', 'js',
     callback
   )
 })

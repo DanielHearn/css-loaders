@@ -467,24 +467,125 @@ $twoCircleColour2: #de4e40;
   54% { transform: scale(1); }
   100% { transform: scale(0); }
 }`
+  },
+  {
+    name: '7: Bar',
+    colour: '#4548c3',
+    html:
+`<div class="barLoader">
+  <div class="bar"></div>
+</div>`,
+    css:
+`.barLoader {
+  width: 10em;
+}
+.barLoader .bar {
+  width: 100%;
+  opacity: 0;
+  height: 1.5em;
+  background: #fefefe;
+  animation: baranim 2.5s infinite cubic-bezier(0.61, 0.33, 0.39, 0.79);
+  transform-origin: 0% 50%;
+}
+
+@keyframes baranim {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  5% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  95% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 0;
+  }
+}`,
+    scss:
+`$barTiming: 2.5s;
+$barHeight: 1.5em;
+$barMaxWidth: 10em;
+$barColor: #fefefe;
+
+.barLoader {
+  width: $barMaxWidth;
+  .bar {
+    width: 100%;
+    opacity: 0;
+    height: $barHeight;
+    background: $barColor;
+    animation: baranim $barTiming infinite cubic-bezier(0.61, 0.33, 0.39, 0.79);
+    transform-origin: 0% 50%;
+  }
+}
+
+@keyframes baranim {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  5% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  95% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 0;
+  }
+}`
   }
 ]
 
+// Formatting for css loader objects
+/* {
+  name: 'NUM: Name',
+  colour: 'HEX COLOUR',
+  html: `HTML`,
+  css: `CSS`,
+  scss: `SCSS`
+} */
+
 const root = document.documentElement.style
+
+// Loading animation elements
 const loaderContainer = document.querySelector('#loader-container')
 const loaderContent = loaderContainer.querySelector('#loader-content #loader')
 const loaderName = loaderContainer.querySelector('#loader-name h2')
 const loaderSource = loaderContainer.querySelector('#loader-source')
-const prevButton = loaderContainer.querySelector('#prevButton')
-const nextButton = loaderContainer.querySelector('#nextButton')
+
+// Code elements
 const htmlElement = document.querySelector('#html-code')
 const cssElement = document.querySelector('#css-code')
 const scssElement = document.querySelector('#scss-code')
+
+// Button elements
+const prevButton = loaderContainer.querySelector('#prevButton')
+const nextButton = loaderContainer.querySelector('#nextButton')
 const htmlButton = document.querySelector('#html .copy')
 const cssButton = document.querySelector('#css .copy')
 const scssButton = document.querySelector('#scss .copy')
 const displayCodeButton = document.querySelector('#displayCodeButton')
 
+// Tabbing elements
 const codeContainer = document.querySelector('#code-container')
 const tabContainer = codeContainer.querySelector('.tabs')
 const tabs = tabContainer.querySelectorAll('.tab')
@@ -588,33 +689,20 @@ function showLoader (index) {
 }
 
 function showLoaderCode (loader) {
-  setHtmlElement(loader.html)
-  setCssElement(loader.css)
-  setScssElement(loader.scss)
+  setCodeElement(htmlElement, loader.html)
+  setCodeElement(cssElement, loader.css)
+  setCodeElement(scssElement, loader.scss)
 }
 
-function setHtmlElement (code) {
-  htmlElement.textContent = code
-  htmlElement.parentElement.scrollTop = 0
-  Prism.highlightElement(htmlElement)
-}
-
-function setCssElement (code) {
-  cssElement.textContent = code
-  cssElement.parentElement.scrollTop = 0
-  Prism.highlightElement(cssElement)
-}
-
-function setScssElement (code) {
-  scssElement.textContent = code
-  scssElement.parentElement.scrollTop = 0
-  Prism.highlightElement(scssElement)
+function setCodeElement (element, code) {
+  element.textContent = code
+  element.parentElement.scrollTop = 0
+  Prism.highlightElement(element)
 }
 
 function toggleCodeSection () {
   codeContainer.classList.toggle('visible')
   loaderContainer.classList.toggle('code-visible')
-  console.log(displayCodeButton.textContent)
   if (codeContainer.classList.contains('visible')) {
     displayCodeButton.textContent = 'Hide Code'
   } else {
@@ -638,14 +726,17 @@ function toggleTab (e) {
 
 function createDots () {
   for (const dot in loaders) {
-    const dotElement = document.createElement('a')
-    dotElement.classList.add('loader-dot')
-    dotElement.href = dot
-    if (dot == 0) {
-      dotElement.classList.add('selected')
-    }
-    dotContainer.appendChild(dotElement)
-    dots[dots.length] = dotElement
+    const dotButton = document.createElement('a')
+    const dotElement = document.createElement('div')
+    dotButton.classList.add('loader-dot')
+    dotButton.href = dot
+    dotButton.appendChild(dotElement)
+    dotContainer.appendChild(dotButton)
+    dots[dots.length] = dotButton
+  }
+  const firstDot = dotContainer.querySelector('.loader-dot')
+  if (firstDot) {
+    firstDot.classList.add('selected')
   }
 }
 
