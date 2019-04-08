@@ -258,7 +258,8 @@ button, a {
     #code-container .code .code-element {
       display: none;
       overflow: hidden;
-      flex-direction: column; }
+      flex-direction: column;
+      height: 100%; }
       #code-container .code .code-element .copy-container {
         display: flex;
         justify-content: flex-start;
