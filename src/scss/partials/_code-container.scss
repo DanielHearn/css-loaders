@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     max-width: 50%;
+    height: 100%;
     .tabs {
       display: flex;
       flex-direction: row;
@@ -30,8 +31,10 @@
     .code {
       display: flex;
       flex: 1;
+      flex-direction: column;
       background-color: var(--white);
       padding: 0;
+      height: 100%;
       .code-element {
         display: none;
         overflow: hidden;
