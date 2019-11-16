@@ -2,6 +2,9 @@
   --accent: #de4e40;
   --accent-darkish: #d3463a;
   --accent-dark: #bd3c30;
+  --secondary: #283848;
+  --secondary-darkish: #243241;
+  --secondary-dark: #202d3a;
   --white: #fefefe;
   --grey: #f1f1f1;
   --transition-time: 0.25s;
@@ -13,13 +16,13 @@
 @import 'partials/loader-slider';
 @import 'partials/media-queries';
 
-@import 'loaders/1_square';
-@import 'loaders/2_heartbeat';
-@import 'loaders/3_slider';
-@import 'loaders/4_hollowbox';
-@import 'loaders/5_pulse';
-@import 'loaders/6_twocircle';
-@import 'loaders/7_bar';
+@import 'loaders/square';
+@import 'loaders/heartbeat';
+@import 'loaders/slider';
+@import 'loaders/hollowbox';
+@import 'loaders/pulse';
+@import 'loaders/twocircle';
+@import 'loaders/bar';
 
 html {
   height: 100%;

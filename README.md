@@ -35,7 +35,6 @@ The example page shows each loading animation with their respective HTML, SCSS, 
 ## TODO:
 - Add more loaders
 - Make background colours to have a more consistent palette
-- Improve mobile styling especially on landscape to be more user friendly with more spacing between elements.
 
 ## Dependencies
 Gulp - for workflow automation icnluding scss, pug compiling, building from src to dist

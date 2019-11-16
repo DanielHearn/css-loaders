@@ -1,16 +1,14 @@
 const loaders = [
   {
     name: '1: Square',
-    colour: '#de4e40',
-    html:
-`<div class='squareLoader'>
+    colour: '#d74b48',
+    html: `<div class='squareLoader'>
     <div class='square'></div>
     <div class='square'></div>
     <div class='square'></div>
     <div class='square'></div>
 </div>`,
-    css:
-`.squareLoader {
+    css: `.squareLoader {
   max-width: 4em;
 }
 .squareLoader .square {
@@ -53,8 +51,7 @@ const loaders = [
     opacity: 1;
   }
 }`,
-    scss:
-`$squareTiming: 0.3s;
+    scss: `$squareTiming: 0.3s;
 $squareSize: 4em;
 
 .squareLoader {
@@ -85,14 +82,12 @@ $squareSize: 4em;
   },
   {
     name: '2: Heartbeat',
-    colour: '#25a78d',
-    html:
-`<div class="heartbeatLoader">
+    colour: '#9a40a9',
+    html: `<div class="heartbeatLoader">
     <div class="pulse"></div>
     <div class="pulse"></div>
 </div>`,
-    css:
-`.heartbeatLoader {
+    css: `.heartbeatLoader {
   width: 4em;
   height: 4em;
 }
@@ -119,8 +114,7 @@ $squareSize: 4em;
     opacity: 0;
   }
 }`,
-    scss:
-`$heartbeatSize: 4em;
+    scss: `$heartbeatSize: 4em;
 $heartbeatTiming: 1.2s;
 
 .heartbeatLoader {
@@ -148,9 +142,8 @@ $heartbeatTiming: 1.2s;
   },
   {
     name: '3: Slider',
-    colour: '#9b59b6',
-    html:
-`<div class='sliderLoader'>
+    colour: '#714eaf',
+    html: `<div class='sliderLoader'>
     <div class='rect'></div>
     <div class='rect'></div>
     <div class='rect'></div>
@@ -158,8 +151,7 @@ $heartbeatTiming: 1.2s;
     <div class='rect'></div>
 </div>
         `,
-    css:
-`.sliderLoader {
+    css: `.sliderLoader {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -202,8 +194,7 @@ $heartbeatTiming: 1.2s;
     transform: scaleY(1);
   }
 }`,
-    scss:
-`$sliderTiming: 1.4s;
+    scss: `$sliderTiming: 1.4s;
 $sliderRectTiming: 0.15s;
 $sliderRectHeight: 20px;
 $sliderRectWidth: 8px;
@@ -236,14 +227,12 @@ $sliderRectWidth: 8px;
   },
   {
     name: '4: Hollow Box',
-    colour: '#34495e',
-    html:
-`<div class="hollowLoader">
+    colour: '#22958b',
+    html: `<div class="hollowLoader">
   <div class="largeBox"></div>
   <div class="smallBox"></div>
 </div>`,
-    css:
-`.hollowLoader {
+    css: `.hollowLoader {
   width: 3em;
   height: 3em;
   -webkit-animation: loaderAnim 1.25s infinite ease-in-out;
@@ -309,8 +298,7 @@ $sliderRectWidth: 8px;
         transform: rotate(90deg);
   }
 }`,
-    scss:
-`$hollowBoxSize: 3em;
+    scss: `$hollowBoxSize: 3em;
 $hollowLight: #ECECEC;
 $hollowDark: #34495e;
 $hollowTiming: 1.25s;
@@ -350,12 +338,10 @@ $hollowTiming: 1.25s;
   },
   {
     name: '5: Pulse',
-    colour: '#a03b74',
-    html:
-`<div class='pulseLoader'></div>
+    colour: '#62af65',
+    html: `<div class='pulseLoader'></div>
         `,
-    css:
-`.pulseLoader {
+    css: `.pulseLoader {
   width: 4em;
   height: 4em;
   border-radius: 4em;
@@ -373,8 +359,7 @@ $hollowTiming: 1.25s;
     opacity: 0;
   }
 }`,
-    scss:
-`$pulseSize: 4em;
+    scss: `$pulseSize: 4em;
 $pulseTiming: 1.2s;
 
 .pulseLoader {
@@ -392,91 +377,12 @@ $pulseTiming: 1.2s;
 }`
   },
   {
-    name: '6: Two Circles',
-    colour: '#323d4a',
-    html:
-`<div class='twoCircleLoader'>
-    <div class='circle'></div>
-    <div class='circle'></div>
-</div>
-        `,
-    css:
-`.twoCircleLoader {
-  width: 4em;
-  height: 4em;
-}
-.twoCircleLoader .circle {
-  width: 4em;
-  height: 4em;
-  border-radius: 4em;
-  position: absolute;
-  animation: load 3s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
-}
-.twoCircleLoader .circle:nth-child(1) {
-  background-color: #f1c40f;
-  transform: scale(0);
-  animation-delay: 1.5s;
-}
-.twoCircleLoader .circle:nth-child(2) {
-  background-color: #de4e40;
-}
-
-@keyframes load {
-  0% {
-    transform: scale(0);
-  }
-  46% {
-    transform: scale(1);
-  }
-  54% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}`,
-    scss:
-`$twoCircleSize: 4em;
-$twoCircleTiming: 3s;
-$twoCircleColour1: #f1c40f;
-$twoCircleColour2: #de4e40;
-
-.twoCircleLoader {
-    width: $twoCircleSize;
-    height: $twoCircleSize;
-    .circle {
-      width: $twoCircleSize;
-      height: $twoCircleSize;
-      border-radius: $twoCircleSize;
-      position: absolute;
-      animation: load $twoCircleTiming infinite cubic-bezier(0.65, 0.05, 0.36, 1);
-      &:nth-child(1) {
-        background-color: $twoCircleColour1;
-        transform: scale(0);
-        animation-delay: $twoCircleTiming/2;
-      }
-      &:nth-child(2) {
-        background-color: $twoCircleColour2;
-      }
-   }
-}
-
-@keyframes load {
-  0% { transform: scale(0); }
-  46% { transform: scale(1); }
-  54% { transform: scale(1); }
-  100% { transform: scale(0); }
-}`
-  },
-  {
-    name: '7: Bar',
-    colour: '#4548c3',
-    html:
-`<div class="barLoader">
+    name: '6: Bar',
+    colour: '#e6653c',
+    html: `<div class="barLoader">
   <div class="bar"></div>
 </div>`,
-    css:
-`.barLoader {
+    css: `.barLoader {
   width: 10em;
 }
 .barLoader .bar {
@@ -511,8 +417,7 @@ $twoCircleColour2: #de4e40;
     opacity: 0;
   }
 }`,
-    scss:
-`$barTiming: 2.5s;
+    scss: `$barTiming: 2.5s;
 $barHeight: 1.5em;
 $barMaxWidth: 10em;
 $barColor: #fefefe;
@@ -551,6 +456,80 @@ $barColor: #fefefe;
     transform: scaleX(1);
     opacity: 0;
   }
+}`
+  },
+  {
+    name: '7: Two Circles',
+    colour: '#263238',
+    html: `<div class='twoCircleLoader'>
+    <div class='circle'></div>
+    <div class='circle'></div>
+</div>
+        `,
+    css: `.twoCircleLoader {
+  width: 4em;
+  height: 4em;
+}
+.twoCircleLoader .circle {
+  width: 4em;
+  height: 4em;
+  border-radius: 4em;
+  position: absolute;
+  animation: load 3s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.twoCircleLoader .circle:nth-child(1) {
+  background-color: #f1c40f;
+  transform: scale(0);
+  animation-delay: 1.5s;
+}
+.twoCircleLoader .circle:nth-child(2) {
+  background-color: #de4e40;
+}
+
+@keyframes load {
+  0% {
+    transform: scale(0);
+  }
+  46% {
+    transform: scale(1);
+  }
+  54% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}`,
+    scss: `$twoCircleSize: 4em;
+$twoCircleTiming: 3s;
+$twoCircleColour1: #f1c40f;
+$twoCircleColour2: #de4e40;
+
+.twoCircleLoader {
+    width: $twoCircleSize;
+    height: $twoCircleSize;
+    .circle {
+      width: $twoCircleSize;
+      height: $twoCircleSize;
+      border-radius: $twoCircleSize;
+      position: absolute;
+      animation: load $twoCircleTiming infinite cubic-bezier(0.65, 0.05, 0.36, 1);
+      &:nth-child(1) {
+        background-color: $twoCircleColour1;
+        transform: scale(0);
+        animation-delay: $twoCircleTiming/2;
+      }
+      &:nth-child(2) {
+        background-color: $twoCircleColour2;
+      }
+   }
+}
+
+@keyframes load {
+  0% { transform: scale(0); }
+  46% { transform: scale(1); }
+  54% { transform: scale(1); }
+  100% { transform: scale(0); }
 }`
   }
 ]
@@ -669,7 +648,7 @@ function loadSlide (loader) {
 }
 
 function changeLoader (indexChange) {
-  const newIndex = loaderIndex += indexChange
+  const newIndex = (loaderIndex += indexChange)
   if (newIndex < 0) {
     loaderIndex = loaders.length - 1
   } else if (newIndex > loaders.length - 1) {
@@ -767,13 +746,14 @@ function copyToClipboard (element) {
   el.style.left = '-9999px' // Move outside the screen to make it invisible
   document.body.appendChild(el) // Append the <textarea> element to the HTML document
   const selected =
-      document.getSelection().rangeCount > 0 // Check if there is any content selected previously
-        ? document.getSelection().getRangeAt(0) // Store selection if found
-        : false // Mark as false to know no selection existed before
+    document.getSelection().rangeCount > 0 // Check if there is any content selected previously
+      ? document.getSelection().getRangeAt(0) // Store selection if found
+      : false // Mark as false to know no selection existed before
   el.select() // Select the <textarea> content
   document.execCommand('copy') // Copy - only works as a result of a user action (e.g. click events)
   document.body.removeChild(el) // Remove the <textarea> element
-  if (selected) { // If a selection existed before copying
+  if (selected) {
+    // If a selection existed before copying
     document.getSelection().removeAllRanges() // Unselect everything on the HTML document
     document.getSelection().addRange(selected) // Restore the original selection
   }
@@ -781,6 +761,21 @@ function copyToClipboard (element) {
 
 // Function from https://stackoverflow.com/questions/5560248/programmatically-lighten-or-darken-a-hex-color-or-rgb-and-blend-colors
 function shadeColor (color, percent) {
-  let f = parseInt(color.slice(1), 16), t = percent < 0 ? 0 : 255, p = percent < 0 ? percent * -1 : percent, R = f >> 16, G = f >> 8 & 0x00FF, B = f & 0x0000FF
-  return '#' + (0x1000000 + (Math.round((t - R) * p) + R) * 0x10000 + (Math.round((t - G) * p) + G) * 0x100 + (Math.round((t - B) * p) + B)).toString(16).slice(1)
+  const f = parseInt(color.slice(1), 16)
+  const t = percent < 0 ? 0 : 255
+  const p = percent < 0 ? percent * -1 : percent
+  const R = f >> 16
+  const G = (f >> 8) & 0x00ff
+  const B = f & 0x0000ff
+  return (
+    '#' +
+    (
+      0x1000000 +
+      (Math.round((t - R) * p) + R) * 0x10000 +
+      (Math.round((t - G) * p) + G) * 0x100 +
+      (Math.round((t - B) * p) + B)
+    )
+      .toString(16)
+      .slice(1)
+  )
 }

@@ -1,7 +1,7 @@
 $twoCircleSize: 4em;
 $twoCircleTiming: 3s;
-$twoCircleColour1: #f1c40f;
-$twoCircleColour2: #de4e40;
+$twoCircleColor1: #f1c40f;
+$twoCircleColor2: #de4e40;
 
 .twoCircleLoader {
     width: $twoCircleSize;
@@ -13,12 +13,12 @@ $twoCircleColour2: #de4e40;
       position: absolute;
       animation: load $twoCircleTiming infinite cubic-bezier(0.65, 0.05, 0.36, 1);
       &:nth-child(1) {
-        background-color: $twoCircleColour1;
+        background-color: $twoCircleColor1;
         transform: scale(0);
         animation-delay: $twoCircleTiming/2;
       }
       &:nth-child(2) {
-        background-color: $twoCircleColour2;
+        background-color: $twoCircleColor2;
       }
    }
 }
