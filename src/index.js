@@ -3,8 +3,8 @@ import 'react-app-polyfill/ie11';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
-import App from './App';
+import './styles/index.scss';
+import App from './components/app/app';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
