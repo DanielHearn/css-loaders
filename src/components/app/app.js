@@ -1,6 +1,6 @@
 // @flow
 
-import React from 'react';
+import React, {useState} from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,26 +14,93 @@ import { Provider } from 'react-redux'
 import counterReducer from './../../store/reducers/counterReducer'
 import './app.scss';
 import loaders from './../../loaders'
+import { links, slugify } from './../../helpers'
+
 const store = createStore(counterReducer)
 
-function slugify(string) {
-  return string.toLowerCase().replace(' ', '_')
-}
-
 function Home() {
+  const [matchedLoaders, setMatchedLoaders] = useState(loaders);
+
+  function searchCallback(searchText) {
+    filterLoaders(searchText)
+  }
+
+  function filterLoaders(searchText) {
+    const matchingLoaders = loaders.filter(loader => {
+      console.log(loader.name.toLowerCase())
+      console.log(loader.name.toLowerCase().includes(searchText.toLowerCase()))
+      return searchText === '' || 
+      loader.name.toLowerCase().includes(searchText.toLowerCase())
+    })
+
+    setMatchedLoaders(matchingLoaders);
+  }
+
   return (
     <div>
-      <h2>Home</h2>
-      <p>Description of CSS loaders</p>
-      <h3>Loaders</h3>
-      <ul>
-        {loaders.map(loader => {
+      <div className="header">
+        <div className="column-3">
+          <h2 className="title">CSS Loaders</h2>
+        </div>
+        <div className="column-2">
+          <p>Open-source website showcasing a collection of CSS loading animations along
+    with their HTML, CSS, and SCSS code.</p>
+        </div>
+        <div className="column-1">
+          <p>Source on <Link to={links.github}>GitHub</Link></p>
+          <p>Developed by <Link to={links.creator}>Daniel Hearn</Link></p>
+        </div>
+      </div>
+      <div className="content">
+        <SearchBox inputPlaceholder="Search loaders" searchCallback={searchCallback}/>
+        <Grid items={matchedLoaders.map(loader => {
           const loaderLink = slugify(loader.name)
-          return <li><Link to={`/loaders/${loaderLink}`}>{loader.name}</Link></li>
-        })}
-      </ul>
+          return (
+            <div>
+              <Loader html={loader.code.html} css={loader.code.css}/>
+              <Link to={`/loaders/${loaderLink}`}>{loader.name}</Link>
+            </div>
+          )
+        })}/>
+      </div>
     </div>
   );
+}
+
+function Grid({items}) {
+  return (
+    <ul className="grid">
+      {items.map(item => {
+        return (
+          <li>{item}</li>
+        )
+      })}
+    </ul>
+  )
+}
+
+function Loader({html, css}) {
+  return (
+    <div>
+      <style>
+        {css}
+      </style>
+      <div dangerouslySetInnerHTML={{
+        __html: html
+      }}/>
+    </div>
+  )
+}
+
+function SearchBox({inputPlaceholder, searchCallback}) {
+  const [searchText, setSearchText] = useState('');
+
+  return (
+    <input name="text" placeholder={inputPlaceholder} onChange={(event)=> {
+      setSearchText(event.target.value)
+      searchCallback(event.target.value)
+    }}/>
+  )
 }
 
 function Loaders() {
@@ -68,11 +135,7 @@ function Loaders() {
 function Nav() {
   return (
     <nav className="nav">
-      <ul>
-        <li>
-          <Link to="/">CSS Loaders</Link>
-        </li>
-      </ul>
+      <Link to="/">CSS Loaders</Link>
     </nav>
   )
 }
@@ -83,7 +146,6 @@ function App() {
       <Router>
         <div className="app">
           <Nav/>
-
           <Switch>
             <Route exact path="/">
               <Home />

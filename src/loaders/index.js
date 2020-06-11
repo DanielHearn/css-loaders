@@ -8,11 +8,13 @@ import two_circles_loader from './individual/two_circles'
 
 // Formatting for css loader objects
 /* {
-  name: 'NUM: Name',
+  name: 'NAME',
   colour: 'HEX COLOUR',
-  html: `HTML`,
-  css: `CSS`,
-  scss: `SCSS`
+  code: {
+    html: `HTML`,
+    css: `CSS`,
+    scss: `SCSS`
+  }
 } */
 
 
