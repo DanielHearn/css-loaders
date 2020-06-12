@@ -1,6 +1,6 @@
 // @flow
 
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -17,9 +17,17 @@ import loaders from './../../loaders'
 import { links, slugify } from './../../helpers'
 
 const store = createStore(counterReducer)
+const titleRoot = 'CSS Loaders'
+
+const useTitle = title => {
+  useEffect(() => {
+    title && (document.title = title);
+  });
+};
 
 function Home() {
   const [matchedLoaders, setMatchedLoaders] = useState(loaders);
+  useTitle(`${titleRoot}`)
 
   function searchCallback(searchText) {
     filterLoaders(searchText)
@@ -53,27 +61,36 @@ function Home() {
       </div>
       <div className="content">
         <SearchBox inputPlaceholder="Search loaders" searchCallback={searchCallback}/>
-        <Grid items={matchedLoaders.map(loader => {
-          const loaderLink = slugify(loader.name)
-          return (
-            <div>
-              <Loader html={loader.code.html} css={loader.code.css}/>
-              <Link to={`/loaders/${loaderLink}`}>{loader.name}</Link>
-            </div>
-          )
-        })}/>
+        {matchedLoaders.length ?
+          <Grid items={matchedLoaders.map(loader => {
+            const loaderLink = slugify(loader.name)
+            return (
+              <GridItem key={loaderLink} content={
+                <>
+                  <Loader html={loader.code.html} css={loader.code.css}/>
+                  <Link to={`/loaders/${loaderLink}`}>{loader.name}</Link>
+                </>
+              }>
+              </GridItem>
+            )
+          })}/>
+        :
+          <p>No matching loaders</p>
+        }
       </div>
     </div>
   );
+}
+
+function GridItem({listKey, content}) {
+  return (<li key={listKey}>{content}</li>)
 }
 
 function Grid({items}) {
   return (
     <ul className="grid">
       {items.map(item => {
-        return (
-          <li>{item}</li>
-        )
+        return item
       })}
     </ul>
   )
@@ -93,20 +110,24 @@ function Loader({html, css}) {
 }
 
 function SearchBox({inputPlaceholder, searchCallback}) {
-  const [searchText, setSearchText] = useState('');
-
   return (
     <input name="text" placeholder={inputPlaceholder} onChange={(event)=> {
-      setSearchText(event.target.value)
       searchCallback(event.target.value)
     }}/>
   )
 }
 
+function Redirect({url}) {
+  const history = useHistory();
+  history.push(url)
+  return (<div/>)
+}
+
 function Loaders() {
   const history = useHistory();
   const loaderMatch = useRouteMatch('/loaders/:loaderName');
-  const loaderName = loaderMatch.params.loaderName
+  const loaderName = loaderMatch.params.loaderName;
+  useTitle(`${titleRoot}: ${loaderName}`)
   
   if(loaderName === null || loaderName === '') {
     history.push("/");
@@ -124,9 +145,7 @@ function Loaders() {
       );
     } else {
       return (
-        <div>
-          <h2>Loader does not exist</h2>
-        </div>
+        <Redirect url="/"/>
       );
     }
   }
