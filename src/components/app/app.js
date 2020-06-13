@@ -21,6 +21,7 @@ import Nav from './../nav'
 import Loader from './../loader'
 import FilteredGrid from './../filteredGrid'
 import GridItem from './../gridItem'
+import Tabs from './../tabs'
 
 const store = createStore(counterReducer)
 const titleRoot = 'CSS Loaders'
@@ -39,8 +40,8 @@ function Home() {
     with their HTML, CSS, and SCSS code.</p>
         </div>
         <div className="column-1">
-          <p>Source on <Link to={links.github}>GitHub</Link></p>
-          <p>Developed by <Link to={links.creator}>Daniel Hearn</Link></p>
+          <p>Source on <a href={links.github}>GitHub</a></p>
+          <p>Developed by <a href={links.creator}>Daniel Hearn</a></p>
         </div>
       </div>
       <div className="content">
@@ -86,7 +87,13 @@ function Loaders() {
       return (
         <div>
           <h2>Loader</h2>
-          <p>{storedLoader.code.html}</p>
+          <Loader html={storedLoader.code.html} css={storedLoader.code.css}/>
+          <Tabs tabs={Object.keys(storedLoader.code).map(id => {
+            return {
+              id: id,
+              content: storedLoader.code[id]
+            }
+          })}/>
         </div>
       );
     } else {
