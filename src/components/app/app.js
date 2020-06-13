@@ -56,12 +56,10 @@ function Home() {
           renderFunction={(loader) => {
             const loaderLink = slugify(loader.name)
             return (
-              <GridItem key={loaderLink} content={
-                <>
-                  <Loader html={loader.code.html} css={loader.code.css}/>
-                  <Link to={`/loaders/${loaderLink}`}>{loader.name}</Link>
-                </>
-              }/>
+              <GridItem key={loaderLink}>
+                <Loader html={loader.code.html} css={loader.code.css}/>
+                <Link to={`/loaders/${loaderLink}`}>{loader.name}</Link>
+              </GridItem>
             )
           }}
         />
@@ -109,7 +107,9 @@ function App() {
     <Provider store={store}>
       <Router>
         <div className="app">
-          <Nav content={<Link to="/">CSS Loaders</Link>}/>
+          <Nav>
+            <Link to="/">CSS Loaders</Link>
+          </Nav>
           <Switch>
             <Route exact path="/">
               <Home />
