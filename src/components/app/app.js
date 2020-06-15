@@ -13,8 +13,10 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import counterReducer from './../../store/reducers/counterReducer'
 import './app.scss';
-import { links, slugify, useTitle } from './../../helpers'
+import { links, slugify, unslugify, capitaliseWords, useTitle } from './../../helpers'
 import loaders from './../../loaders'
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 import Redirect from './../redirect'
 import Nav from './../nav'
@@ -72,7 +74,7 @@ function Loaders() {
   const history = useHistory();
   const loaderMatch = useRouteMatch('/loaders/:loaderName');
   const loaderName = loaderMatch.params.loaderName;
-  useTitle(`${titleRoot}: ${loaderName}`)
+  useTitle(`${capitaliseWords(unslugify(loaderName))} - ${titleRoot}`)
   
   if(loaderName === null || loaderName === '') {
     history.push("/");
@@ -89,7 +91,11 @@ function Loaders() {
           <Tabs tabs={Object.keys(storedLoader.code).map(id => {
             return {
               id: id,
-              content: storedLoader.code[id]
+              content: (   
+                <SyntaxHighlighter language={id} style={docco}>
+                  {storedLoader.code[id]}
+                </SyntaxHighlighter>
+              )
             }
           })}/>
         </div>

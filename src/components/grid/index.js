@@ -1,8 +1,9 @@
 // @flow
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function Grid({items}) {
+export default function Grid({items} : {items: array}) {
   return (
     <ul className="grid">
       {items.map(item => {
@@ -10,4 +11,8 @@ export default function Grid({items}) {
       })}
     </ul>
   )
+}
+
+Grid.propTypes = {
+  items: PropTypes.array
 }
