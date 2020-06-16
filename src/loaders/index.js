@@ -1,4 +1,4 @@
-import box_loader from './individual/square'
+import square_loader from './individual/square'
 import hearbeat_loader from './individual/heartbeat'
 import slider_loader from './individual/slider'
 import hollow_box_loader from './individual/hollow_box'
@@ -19,7 +19,7 @@ import two_circles_loader from './individual/two_circles'
 
 
 const loaders = [
-  box_loader,
+  square_loader,
   hearbeat_loader,
   slider_loader,
   hollow_box_loader,

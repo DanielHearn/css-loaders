@@ -3,9 +3,9 @@ export default {
   color: '#22958b',
   code: {
     html: `<div class="hollowLoader">
-    <div class="largeBox"></div>
-    <div class="smallBox"></div>
-    </div>`,
+            <div class="largeBox"></div>
+            <div class="smallBox"></div>
+          </div>`,
     css: `.hollowLoader {
     width: 3em;
     height: 3em;
