@@ -9,6 +9,7 @@ export default {
     css: `.heartbeatLoader {
   width: 4em;
   height: 4em;
+  position: relative;
   }
   .heartbeatLoader .pulse {
   width: 4em;

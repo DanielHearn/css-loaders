@@ -10,6 +10,7 @@ export default  {
   css: `.twoCircleLoader {
 width: 4em;
 height: 4em;
+position: relative;
 }
 .twoCircleLoader .circle {
 width: 4em;
