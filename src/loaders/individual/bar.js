@@ -1,6 +1,6 @@
 export default {
   name: 'Bar',
-  colour: '#e6653c',
+  color: '#e6653c',
   code: {
     html: `<div class="barLoader">
     <div class="bar"></div>

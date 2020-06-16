@@ -1,0 +1,15 @@
+@import '../../styles/variables'; 
+
+.input_box {
+  padding: 0.4em 0.8em;
+  font-family: $font-family;
+  border-radius:  $border-radius;
+  border: none;
+  background: $grey;
+  color: $darker;
+  font-weight: $weight-semi-bold;
+  font-size: $size-s;
+  &:focus {
+    outline:0;
+  }
+}

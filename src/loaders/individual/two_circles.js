@@ -1,6 +1,6 @@
 export default  {
   name: 'Two Circles',
-  colour: '#263238',
+  color: '#263238',
   code: {
     html: `<div class='twoCircleLoader'>
   <div class='circle'></div>

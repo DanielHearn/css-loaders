@@ -1,0 +1,21 @@
+@import '../../styles/variables'; 
+
+.button {
+  padding: 0.4em 0.8em;
+  font-family: $font-family;
+  border-radius:  $border-radius;
+  border: none;
+  &:focus {
+    outline:0;
+  }
+  &.primary {
+    color: $white;
+    background: $dark;
+    font-weight: $weight-regular;
+    font-size: $size-s;
+    &:hover {
+      background: $darker;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import '../../styles/variables'; 
+
+.nav {
+  background: $darker;
+  color: $white;
+  display: flex;
+  .nav_title {
+    padding: 0.5em 0.5em;
+    font-size: $size-m;
+    font-weight: $weight-bold;
+    color: $white;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+    &:visited {
+      text-decoration: none;
+      color: $white;
+    }
+  }
+}

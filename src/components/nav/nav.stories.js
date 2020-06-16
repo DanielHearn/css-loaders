@@ -6,6 +6,4 @@ export default {
   component: Nav,
 };
 
-export const Empty = () => <Nav></Nav>;
-
 export const WithContent = () => <Nav><p>Content</p></Nav>;

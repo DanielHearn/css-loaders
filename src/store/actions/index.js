@@ -1,5 +1,5 @@
 const CounterTypes = {
-  INCREASE_COUNT: 'INCREASE_COUNT',
-  DECREASE_COUNT: 'DECREASE_COUNT'
+  ENABLE_MOBILE: 'ENABLE_MOBILE',
+  DISABLE_MOBILE: 'DISABLE_MOBILE'
 }
 export default { ...CounterTypes}

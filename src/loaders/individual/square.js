@@ -1,6 +1,6 @@
 export default  {
   name: 'Square',
-  colour: '#d74b48',
+  color: '#d74b48',
   code: {
     html: `<div class='squareLoader'>
     <div class='square'></div>

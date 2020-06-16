@@ -1,6 +1,6 @@
 export default {
   name: 'Pulse',
-  colour: '#62af65',
+  color: '#62af65',
   code: {
     html: `<div class='pulseLoader'></div>
     `,

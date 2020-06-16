@@ -1,6 +1,6 @@
 export default {
   name: 'Slider',
-  colour: '#714eaf',
+  color: '#714eaf',
   code: {
     html: `<div class='sliderLoader'>
       <div class='rect'></div>

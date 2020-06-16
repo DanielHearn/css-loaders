@@ -9,5 +9,3 @@ export default {
 export const WithContent = () => <Button>Button text</Button>;
 
 export const Primary = () => <Button type="primary">Button text</Button>;
-
-export const Secondary = () => <Button type="secondary">Button text</Button>;

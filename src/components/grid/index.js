@@ -2,14 +2,15 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import './grid.scss';
 
-export default function Grid({items} : {items: array}) {
+export default function Grid({items = [], columns = 1} : {items: Array, columns: Number}) {
   return (
-    <ul className="grid">
+    <div className="grid" style={{gridTemplateColumns: `repeat(${columns}, 1fr)`}}>
       {items.map(item => {
         return item
       })}
-    </ul>
+    </div>
   )
 }
 

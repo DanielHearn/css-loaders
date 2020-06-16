@@ -1,6 +1,6 @@
 export default {
   name: 'Heartbeat',
-  colour: '#9a40a9',
+  color: '#9a40a9',
   code: {
     html: `<div class="heartbeatLoader">
     <div class="pulse"></div>

@@ -1,6 +1,6 @@
 export default {
   name: 'Hollow Box',
-  colour: '#22958b',
+  color: '#22958b',
   code: {
     html: `<div class="hollowLoader">
     <div class="largeBox"></div>
@@ -23,7 +23,7 @@ export default {
     .hollowLoader .smallBox {
     height: 3em;
     width: 3em;
-    background-color: #34495e;
+    background-color: #22958b; //Change to colour of background
     position: fixed;
     z-index: 1;
     outline: 1px solid transparent;

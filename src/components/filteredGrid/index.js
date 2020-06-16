@@ -5,10 +5,12 @@ import PropTypes from 'prop-types';
 
 import Grid from './../grid'
 import InputBox from './../inputBox'
+import './filteredGrid.scss';
 
-export default function FilteredGrid({items, searchPlaceholder, noMatchElement, matchFunction, renderFunction}
-  : {items: array, searchPlaceholder: string, noMatchElement: React.node, matchFunction: Function, renderFunction: Function}) {
+export default function FilteredGrid({items, columns = 1, searchPlaceholder, noMatchElement, matchFunction, renderFunction}
+  : {items: Array, columns: Number, searchPlaceholder: string, noMatchElement: React.node, matchFunction: Function, renderFunction: Function}) {
   const [matchedItems, setMatchedItems] = useState(items);
+  const inputColumns = columns <= 3 ? columns : 3
 
   function searchCallback(searchText) {
     filterItems(searchText)
@@ -23,10 +25,10 @@ export default function FilteredGrid({items, searchPlaceholder, noMatchElement, 
   }
 
   return (
-    <div>
-      <InputBox inputPlaceholder={searchPlaceholder} searchCallback={searchCallback}/>
+    <div className="filtered_grid">
+      <Grid columns={inputColumns} items={[<InputBox key="input_1" inputPlaceholder={searchPlaceholder} searchCallback={searchCallback}/>]}/>
       {matchedItems.length ?
-        <Grid items={matchedItems.map(item => renderFunction(item))}/>
+        <Grid columns={columns} items={matchedItems.map(item => renderFunction(item))}/>
       :
         noMatchElement
       }
@@ -36,6 +38,7 @@ export default function FilteredGrid({items, searchPlaceholder, noMatchElement, 
 
 FilteredGrid.propTypes = {
   items: PropTypes.array,
+  columns: PropTypes.number,
   searchPlaceholder: PropTypes.string,
   noMatchElement: PropTypes.node,
   renderFunction: PropTypes.func
