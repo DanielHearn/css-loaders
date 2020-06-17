@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import Grid from './../grid'
 import InputBox from './../inputBox'
 import './filteredGrid.scss';
+import { TiZoom } from "react-icons/ti";
 
 export default function FilteredGrid({items, columns = 1, searchPlaceholder, noMatchElement, matchFunction, renderFunction}
   : {items: Array, columns: Number, searchPlaceholder: string, noMatchElement: React.node, matchFunction: Function, renderFunction: Function}) {
@@ -26,7 +27,7 @@ export default function FilteredGrid({items, columns = 1, searchPlaceholder, noM
 
   return (
     <div className="filtered_grid">
-      <Grid columns={inputColumns} items={[<InputBox key="input_1" inputPlaceholder={searchPlaceholder} searchCallback={searchCallback}/>]}/>
+      <Grid columns={inputColumns} items={[<InputBox key="input_1" inputPlaceholder={searchPlaceholder} icon={<TiZoom />} clearButton={true} searchCallback={searchCallback}/>]}/>
       {matchedItems.length ?
         <Grid columns={columns} items={matchedItems.map(item => renderFunction(item))}/>
       :

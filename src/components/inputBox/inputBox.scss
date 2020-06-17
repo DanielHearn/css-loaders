@@ -1,15 +1,51 @@
 @import '../../styles/variables'; 
 
 .input_box {
-  padding: 0.4em 0.8em;
-  font-family: $font-family;
-  border-radius:  $border-radius;
-  border: none;
-  background: $grey;
-  color: $darker;
-  font-weight: $weight-semi-bold;
-  font-size: $size-s;
-  &:focus {
-    outline:0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  .text_input {
+    display: flex;
+    flex: 1;
+    padding: 0.4em 0.8em;
+    font-family: $font-family;
+    border-radius:  $border-radius;
+    border: none;
+    background: $grey;
+    color: $darker;
+    font-weight: $weight-semi-bold;
+    font-size: $size-s;
+    &:focus {
+      outline:0;
+    }
+    &::placeholder {
+      right: 1em;
+    }
+    &.with-icon {
+      padding-left: 2.2em;
+    }
+  }
+  .input_icon {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    font-size: 1.5em;
+    font-size: 2em;
+    left: 0.1em;
+    pointer-events: none;
+    color: $dark;
+  }
+  .clear_button {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    font-size: 1.5em;
+    font-size: 2em;
+    right: 0.1em;
+    cursor: pointer;
+    color: $dark;
+    &.hidden {
+      display: none;
+    }
   }
 }

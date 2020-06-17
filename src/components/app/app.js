@@ -12,12 +12,12 @@ import {
 import { createStore, bindActionCreators } from 'redux'
 import { Provider, connect } from 'react-redux'
 import {
-enableMobile,
-disableMobile
+  enableMobile,
+  disableMobile
 } from '../../store/actions/mobile'
 import mobileReducer from '../../store/reducers/mobileReducer'
 import './app.scss';
-import { links, slugify, unslugify, capitaliseWords, useTitle } from './../../helpers'
+import { links, slugify, unslugify, shadeColor, capitaliseWords, useTitle } from './../../helpers'
 import loaders from './../../loaders'
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
@@ -78,6 +78,8 @@ function Home() {
             }}
             renderFunction={(loader) => {
               const loaderLink = slugify(loader.name)
+              const darkColor = shadeColor(loader.color, -10)
+
               return (
                 <GridItem key={loaderLink}>
                   <Link to={`/loaders/${loaderLink}`} style={{margin: 0}}>
