@@ -14,12 +14,13 @@ export default function InputBox({inputPlaceholder = 'Placeholder', searchCallba
         {icon}
       </div>}
       <input className={`text_input ${icon ? 'with-icon': ''}`} name="text" value={text} placeholder={inputPlaceholder} onChange={(event)=> {
-        setText(event.target.value)
+        const newText = event.target.value
+        setText(newText)
         searchCallback(text)
       }}/>
       {clearButton && text.length ? <button className="clear_button" onClick={(event) => {
         setText('')
-        searchCallback(text)
+        searchCallback('')
       }}>
         <TiDelete />
       </button>
