@@ -16,7 +16,7 @@ export default function InputBox({inputPlaceholder = 'Placeholder', searchCallba
       <input className={`text_input ${icon ? 'with-icon': ''}`} name="text" value={text} placeholder={inputPlaceholder} onChange={(event)=> {
         const newText = event.target.value
         setText(newText)
-        searchCallback(text)
+        searchCallback(newText)
       }}/>
       {clearButton && text.length ? <button className="clear_button" onClick={(event) => {
         setText('')
