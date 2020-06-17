@@ -53,6 +53,7 @@ export default  {
 }`,
     scss: `$squareTiming: 0.3s;
 $squareSize: 4em;
+
 .squareLoader {
   max-width: $squareSize;
   .square {

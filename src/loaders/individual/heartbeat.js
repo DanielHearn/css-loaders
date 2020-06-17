@@ -3,15 +3,15 @@ export default {
   color: '#9a40a9',
   code: {
     html: `<div class="heartbeatLoader">
-    <div class="pulse"></div>
-    <div class="pulse"></div>
-  </div>`,
+  <div class="pulse"></div>
+  <div class="pulse"></div>
+</div>`,
     css: `.heartbeatLoader {
   width: 4em;
   height: 4em;
   position: relative;
-  }
-  .heartbeatLoader .pulse {
+}
+.heartbeatLoader .pulse {
   width: 4em;
   height: 4em;
   border-radius: 50%;
@@ -20,12 +20,11 @@ export default {
   animation: heartbeatanim 1.2s ease-in-out infinite;
   transform: scale(0);
   outline: 1px solid transparent;
-  }
-  .heartbeatLoader .pulse:nth-child(2) {
+}
+.heartbeatLoader .pulse:nth-child(2) {
   animation-delay: 0.22s;
-  }
-  
-  @keyframes heartbeatanim {
+}
+@keyframes heartbeatanim {
   0% {
     transform: scale(0);
   }
@@ -33,10 +32,11 @@ export default {
     transform: scale(1);
     opacity: 0;
   }
-  }`,
+}`,
     scss: `$heartbeatSize: 4em;
-  $heartbeatTiming: 1.2s;
-  .heartbeatLoader {
+$heartbeatTiming: 1.2s;
+
+.heartbeatLoader {
   width: $heartbeatSize;
   height: $heartbeatSize;
   .pulse {
@@ -52,10 +52,15 @@ export default {
       animation-delay: 0.22s;
     }
   }
+}
+@keyframes heartbeatanim {
+  0% {
+    transform: scale(0);
   }
-  @keyframes heartbeatanim {
-  0% { transform: scale(0);}
-  100% { transform: scale(1); opacity: 0;}
-  }`
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}`
   }
 }
