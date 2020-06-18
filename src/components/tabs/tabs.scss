@@ -1,1 +1,42 @@
 @import '../../styles/variables'; 
+
+.tabs_container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  .tabs {
+    display: flex;
+    flex-direction: row;
+    .tab {
+      display: flex;
+      flex: 1;
+      padding: 0.75em 1em;
+      font-family: $font-family;
+      font-size: $size-s;
+      font-weight: $weight-semi-bold;
+      background: $grey-dark;
+      color: $white;
+      cursor: pointer;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      &:focus {
+        outline: 0;
+        background: $dark;
+      }
+      &:hover {
+        background: $dark;
+      }
+      &.active {
+        background: $darker;
+        &:hover {
+          background: $dark;
+        }
+      }
+    }
+  }
+  .tabs_content {
+    display: flex;
+    flex: 1;
+  }
+}

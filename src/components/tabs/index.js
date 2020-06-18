@@ -1,12 +1,19 @@
 // @flow
 
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
+import './tabs.scss';
 
 import { slugify } from './../../helpers'
 
-export default function Tabs({tabs} : {tabs: array}) {
+export default function Tabs({tabs} : {tabs: Array}) {
   const [activeTab, setActiveTab] = useState(tabs[0])
+
+  useEffect(() => {
+    if (!tabs.filter(tab => tab.id === activeTab.id).length) {
+      setActiveTab(tabs[0])
+    }
+  }, [tabs, activeTab.id])
 
   return (
     <div className="tabs_container">
@@ -16,11 +23,11 @@ export default function Tabs({tabs} : {tabs: array}) {
 
           return (
             <button 
-              className={`tab ${tabID === activeTab ? 'active' : ''}`}
+              className={`tab ${tabID === activeTab.id ? 'active' : ''}`}
               key={tabID}
               onClick={() => {setActiveTab(tab)}}
               >
-              {tab.id}
+              {tab.name}
             </button>
           )
         })}

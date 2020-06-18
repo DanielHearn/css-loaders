@@ -4,9 +4,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './gridItem.scss';
 
-export default function GridItem({children, title} : {children: React.node, title: React.node}) {
+export default function GridItem({children, title, onMouseEnter = () => {}, onMouseLeave = () => {}} : {children: React.node, title: React.node, onMouseEnter: Function, onMouseLeave: Function}) {
   return (
-    <div className="grid_item">
+    <div className="grid_item" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
       {children}
     </div>
   )

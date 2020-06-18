@@ -15,7 +15,10 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.1 r15371"
-   sodipodi:docname="favicon.svg">
+   sodipodi:docname="favicon.svg"
+   inkscape:export-filename="C:\Users\hearn\Documents\GitHub\css-loaders\src\favicon\favicon.png"
+   inkscape:export-xdpi="100"
+   inkscape:export-ydpi="100">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -26,8 +29,8 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="315.10499"
-     inkscape:cy="740.89694"
+     inkscape:cx="327.22682"
+     inkscape:cy="90.358705"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -58,7 +61,9 @@
        style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:180.6222229px;line-height:1.25;font-family:Raleway;-inkscape-font-specification:'Raleway Heavy';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="36.330666"
        y="260.94028"
-       id="text5040"><tspan
+       id="text5040"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100"><tspan
          sodipodi:role="line"
          id="tspan5038"
          x="36.330666"

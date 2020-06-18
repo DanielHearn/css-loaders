@@ -1,0 +1,14 @@
+@import '../../styles/variables'; 
+
+.scroll_box {
+  display: flex;
+  flex: 1;
+  align-content: center;
+  justify-content: center;
+  &.scroll-x {
+    overflow-x: auto;
+  }
+  &.scroll-y {
+    overflow-y: auto;
+  }
+}
