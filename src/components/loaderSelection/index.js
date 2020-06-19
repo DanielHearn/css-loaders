@@ -18,13 +18,13 @@ import './loaderSelection.scss';
 
 function LoaderGridItem({loader} : {loader: Object}) {
   const loaderLink = slugify(loader.name)
-  const darkColor = shadeColor(loader.color, -0.15)
+  const darkColor = shadeColor(loader.color, -0.1)
   const [hovered, setHovered] = useState(false)
 
   return (
     <GridItem onMouseEnter={(e)=> {setHovered(true)}} onMouseLeave={(e)=> {setHovered(false)}}>
       <Link to={`/loaders/${loaderLink}`} style={{margin: 0}}>
-        <div style={{backgroundColor: hovered ? darkColor : loader.color, display: 'flex', alignItems: 'center', justifyContent: 'center', height: '10em', flex: '1'}}>
+        <div className="loader_container" style={{backgroundColor: hovered ? darkColor : loader.color, display: 'flex', alignItems: 'center', justifyContent: 'center', height: '10em', flex: '1'}}>
           <Loader html={loader.code.html} css={loader.code.css}/>
         </div>
         <GridItemTitle>
