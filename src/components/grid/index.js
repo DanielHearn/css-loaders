@@ -1,10 +1,18 @@
 // @flow
 
 import React from 'react';
-import PropTypes from 'prop-types';
+import type {Node} from 'react'
 import './grid.scss';
 
-export default function Grid({items = [], columns = 1} : {items: Array, columns: Number}) {
+type Props = {
+  items: Array<Node>,
+  columns: number
+}
+
+export default function Grid({
+  items = [],
+  columns = 1
+} : Props) {
   return (
     <div className="grid" style={{gridTemplateColumns: `repeat(${columns}, 1fr)`}}>
       {items.map(item => {
@@ -12,8 +20,4 @@ export default function Grid({items = [], columns = 1} : {items: Array, columns:
       })}
     </div>
   )
-}
-
-Grid.propTypes = {
-  items: PropTypes.array
 }

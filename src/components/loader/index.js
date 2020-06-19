@@ -1,9 +1,13 @@
 // @flow
 
 import React from 'react';
-import PropTypes from 'prop-types';
 
-export default function Loader({html, css} : {html: string, css: string}) {
+type Props = {
+  html: string,
+  css: string
+}
+
+export default function Loader({html, css} : Props) {
   return (
     <div>
       <style>
@@ -14,9 +18,4 @@ export default function Loader({html, css} : {html: string, css: string}) {
       }}/>
     </div>
   )
-}
-
-Loader.propTypes = {
-  html: PropTypes.string,
-  css: PropTypes.string
 }

@@ -1,17 +1,19 @@
 // @flow
 
 import React from 'react';
-import PropTypes from 'prop-types';
+import type {Node} from 'react'
 import './nav.scss';
 
-export default function Nav({children} : {children: React.node}) {
+type Props = {
+  children: Node
+}
+
+export default function Nav({
+  children
+} : Props) {
   return (
     <nav className="nav">
       {children}
     </nav>
   )
-}
-
-Nav.propTypes = {
-  children: PropTypes.node
 }

@@ -1,10 +1,22 @@
 // @flow
 
 import React, {useState} from 'react';
-import PropTypes from 'prop-types';
+import type {Node} from 'react'
 import { slugify } from './../../helpers'
 
-export default function MobileNav({tabs} : {tabs: array}) {
+type TabItem = {
+  id: string,
+  name: string,
+  content: Node
+}
+
+type Props = {
+  tabs: Array<TabItem>
+}
+
+export default function MobileNav({
+  tabs
+} : Props) {
   const [activeTab, setActiveTab] = useState(tabs[0])
 
   return (
@@ -28,8 +40,4 @@ export default function MobileNav({tabs} : {tabs: array}) {
       </div>
     </div>
   )
-}
-
-MobileNav.propTypes = {
-  tabs: PropTypes.array
 }

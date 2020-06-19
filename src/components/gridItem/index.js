@@ -1,10 +1,24 @@
 // @flow
 
 import React from 'react';
-import PropTypes from 'prop-types';
+import type {Node} from 'react'
 import './gridItem.scss';
 
-export default function GridItem({children, title, onMouseEnter = () => {}, onMouseLeave = () => {}} : {children: React.node, title: React.node, onMouseEnter: Function, onMouseLeave: Function}) {
+type ItemProps = {
+  children: Node,
+  onMouseEnter?: Function,
+  onMouseLeave?: Function
+}
+
+type TitleProps = {
+  children: Node
+}
+
+export default function GridItem({
+  children,
+  onMouseEnter = () => {},
+  onMouseLeave = () => {}
+} : ItemProps) {
   return (
     <div className="grid_item" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
       {children}
@@ -12,14 +26,10 @@ export default function GridItem({children, title, onMouseEnter = () => {}, onMo
   )
 }
 
-export function GridItemTitle({children} : {children: React.node}) {
+export function GridItemTitle({children} : TitleProps) {
   return (
     <div className="grid_item_title">
       {children}
     </div>
   )
 } 
-
-GridItem.propTypes = {
-  children: PropTypes.node
-}

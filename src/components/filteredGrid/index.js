@@ -1,6 +1,7 @@
 // @flow
 
 import React, {useState} from 'react';
+import type {Node} from 'react'
 import PropTypes from 'prop-types';
 
 import Grid from './../grid'
@@ -8,8 +9,26 @@ import InputBox from './../inputBox'
 import './filteredGrid.scss';
 import { TiZoom } from "react-icons/ti";
 
-export default function FilteredGrid({items, columns = 1, searchPlaceholder, noMatchElement, matchFunction, renderFunction}
-  : {items: Array, columns: Number, searchPlaceholder: string, noMatchElement: React.node, matchFunction: Function, renderFunction: Function}) {
+type Props = {
+  items: Array<Object | string>, 
+  columns?: number, 
+  searchPlaceholder?: string, 
+  noMatchElement?: Node, 
+  matchFunction?: Function, 
+  renderFunction?: Function
+}
+
+export default function FilteredGrid({
+  items = [], 
+  columns = 3, 
+  searchPlaceholder = 'Search', 
+  noMatchElement = <p>No results found</p>, 
+  matchFunction = (searchText, item) => {
+    return searchText === '' || 
+    item.toLowerCase().includes(searchText.toLowerCase())
+  }, 
+  renderFunction = (item) => item
+} : Props) {
   const [matchedItems, setMatchedItems] = useState(items);
   const inputColumns = columns <= 3 ? columns : 3
 
@@ -35,12 +54,4 @@ export default function FilteredGrid({items, columns = 1, searchPlaceholder, noM
       }
     </div>
   )
-}
-
-FilteredGrid.propTypes = {
-  items: PropTypes.array,
-  columns: PropTypes.number,
-  searchPlaceholder: PropTypes.string,
-  noMatchElement: PropTypes.node,
-  renderFunction: PropTypes.func
 }

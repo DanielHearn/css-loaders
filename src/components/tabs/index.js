@@ -1,12 +1,24 @@
 // @flow
 
 import React, {useState, useEffect} from 'react';
-import PropTypes from 'prop-types';
+import type {Node} from 'react'
 import './tabs.scss';
 
 import { slugify } from './../../helpers'
 
-export default function Tabs({tabs} : {tabs: Array}) {
+type TabItem = {
+  id: string,
+  name: string,
+  content: Node
+}
+
+type Props = {
+  tabs: Array<TabItem>
+}
+
+export default function Tabs({
+  tabs = []
+} : Props) {
   const [activeTab, setActiveTab] = useState(tabs[0])
 
   useEffect(() => {
@@ -37,8 +49,4 @@ export default function Tabs({tabs} : {tabs: Array}) {
       </div>
     </div>
   )
-}
-
-Tabs.propTypes = {
-  tabs: PropTypes.array
 }

@@ -1,11 +1,23 @@
 // @flow
 
 import React, {useState} from 'react';
-import PropTypes from 'prop-types';
+import type {Node} from 'react'
 import './inputBox.scss';
 import { TiDelete } from "react-icons/ti";
 
-export default function InputBox({inputPlaceholder = 'Placeholder', searchCallback, icon = null, clearButton = false} : {inputPlaceholder: string, searchCallback: Function, icon: React.node, clearButton: boolean}) {
+type Props = {
+  inputPlaceholder: string,
+  searchCallback: Function,
+  icon?: Node,
+  clearButton?: boolean
+}
+
+export default function InputBox({
+  inputPlaceholder = 'Placeholder',
+  searchCallback = (text) => {},
+  icon = null,
+  clearButton = false
+} : Props) {
   const [text, setText] = useState('')
 
   return (
@@ -27,11 +39,4 @@ export default function InputBox({inputPlaceholder = 'Placeholder', searchCallba
       : <></>}
     </div>
   )
-}
-
-InputBox.propTypes = {
-  inputPlaceholder: PropTypes.string,
-  searchCallback: PropTypes.func,
-  icon: PropTypes.node,
-  clearButton: PropTypes.bool
 }
