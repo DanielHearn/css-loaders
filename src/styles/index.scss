@@ -166,6 +166,7 @@ a:not(.link) {
   display: flex;
   flex: 1;
   flex-direction: column;
+  width: 100%;
   .code_actions {
     padding: 1em 0.5em;
     background: $off-white;

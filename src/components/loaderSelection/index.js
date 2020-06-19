@@ -39,7 +39,7 @@ export default function LoaderSelection() {
   const rootRef = useRef(null)
   const { width } = useContainerDimensions(rootRef)
   
-  const columns = width < 500 ? 1 : width < 800 ? 2 : 3
+  const columns = width < 600 ? 1 : width < 800 ? 2 : 3
 
   return (
     <div className="loader_selection" ref={rootRef}>

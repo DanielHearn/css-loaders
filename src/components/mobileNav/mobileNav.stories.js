@@ -1,6 +1,8 @@
 import React from 'react';
 import MobileNav from '../mobileNav';
 
+import { TiMediaPlay, TiCode, TiThSmall } from "react-icons/ti";
+
 export default {
   title: 'MobileNav',
   component: MobileNav,
@@ -8,16 +10,19 @@ export default {
 
 const tabs = [
   {
-    id: 'Tab 1',
-    content: (<p>Content 1</p>)
+    name: 'Animation',
+    icon: <TiMediaPlay/>,
+    content: (<p>Animation Content</p>)
   },
   {
-    id: 'Tab 2',
-    content: (<p>Content 2</p>)
+    name: 'Code',
+    icon: <TiCode/>,
+    content: (<p>Code Content</p>)
   },
   {
-    id: 'Tab 3',
-    content: (<p>Content 3</p>)
+    name: 'Library',
+    icon: <TiThSmall/>,
+    content: (<p>Library Content</p>)
   }
 ]
 

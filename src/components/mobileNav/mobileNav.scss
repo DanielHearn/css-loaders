@@ -1,18 +1,19 @@
 @import '../../styles/variables'; 
 
-.tabs_container {
+.mobile_nav_container {
   display: flex;
   flex-direction: column;
   flex: 1;
   width: 100%;
-  .tabs {
+  .mobile_nav_tabs {
     display: flex;
     flex-direction: row;
     width: 100%;
-    .tab {
+    .mobile_nav_tab {
       display: flex;
       flex: 1;
-      padding: 0.75em 1em;
+      flex-direction: column;
+      padding: 0.25em 1em;
       font-family: $font-family;
       font-size: $size-s;
       font-weight: $weight-semi-bold;
@@ -36,11 +37,18 @@
           background: $dark;
         }
       }
+      .mobile_nav_tab_icon svg{
+        font-size: 2em;
+      }
+      .mobile_nav_tab_name {
+        font-size: $size-s;
+        margin: 0;
+      }
     }
   }
-  .tabs_content {
+  .mobile_nav_content {
     display: flex;
     flex: 1;
-    width: 100%;
+    overflow: hidden;
   }
 }

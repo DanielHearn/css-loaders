@@ -2,7 +2,6 @@
 
 import React, {useState} from 'react';
 import type {Node} from 'react'
-import PropTypes from 'prop-types';
 
 import Grid from './../grid'
 import InputBox from './../inputBox'

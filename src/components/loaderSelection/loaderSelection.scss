@@ -5,7 +5,7 @@
   flex-direction: column;
   flex: 1;
   .grid_item {
-    .grid_item_title, .loader_container{
+    .grid_item_title, .loader_container {
       transition: background-color $transition-time ease-in-out;
     }
   }
