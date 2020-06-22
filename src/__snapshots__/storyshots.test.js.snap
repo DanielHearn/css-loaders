@@ -1,0 +1,631 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Button Primary 1`] = `
+<button
+  className="button primary"
+  onClick={[Function]}
+>
+  Button text
+</button>
+`;
+
+exports[`Storyshots Button With Content 1`] = `
+<button
+  className="button primary"
+  onClick={[Function]}
+>
+  Button text
+</button>
+`;
+
+exports[`Storyshots FilteredGrid With Content 1`] = `
+<div
+  className="filtered_grid"
+>
+  <div
+    className="grid"
+    style={
+      Object {
+        "gridTemplateColumns": "repeat(3, 1fr)",
+      }
+    }
+  >
+    <div
+      className="input_box"
+    >
+      <div
+        className="input_icon"
+      >
+        <svg
+          baseProfile="tiny"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          version="1.2"
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M13 4c-3.859 0-7 3.141-7 7 0 .763.127 1.495.354 2.183l-.749.75-.511.512-1.008 1.045c-.562.557-.891 1.345-.891 2.185 0 1.727 1.404 3.131 3.13 3.131.757 0 1.504-.278 2.104-.784l.064-.055.061-.061 1.512-1.51.75-.749c.688.226 1.421.353 2.184.353 3.859 0 7-3.141 7-7s-3.141-7-7-7zm0 12c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5zM13 7c-2.205 0-4 1.794-4 4s1.795 4 4 4 4-1.794 4-4-1.795-4-4-4zm0 7c-1.656 0-3-1.344-3-3s1.344-3 3-3 3 1.344 3 3-1.344 3-3 3z"
+          />
+        </svg>
+      </div>
+      <input
+        className="text_input with-icon"
+        name="text"
+        onChange={[Function]}
+        placeholder="Search items"
+        value=""
+      />
+    </div>
+  </div>
+  <div
+    className="grid"
+    style={
+      Object {
+        "gridTemplateColumns": "repeat(3, 1fr)",
+      }
+    }
+  >
+    <div
+      className="grid_item"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <p>
+        Text 1
+      </p>
+    </div>
+    <div
+      className="grid_item"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <p>
+        Text 2
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Grid With Content 1`] = `
+<div
+  className="grid"
+  style={
+    Object {
+      "gridTemplateColumns": "repeat(1, 1fr)",
+    }
+  }
+>
+  <div
+    className="grid_item"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <p>
+      Item 1
+    </p>
+  </div>
+  <div
+    className="grid_item"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <p>
+      Item 2
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots GridItem With Complex Content 1`] = `
+<div
+  className="grid_item"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <div
+    style={
+      Object {
+        "backgroundColor": "#22958b",
+        "display": "flex",
+        "justifyContent": "center",
+        "padding": "4em",
+      }
+    }
+  >
+    <div>
+      <style>
+        .hollowLoader {
+  width: 3em;
+  height: 3em;
+  -webkit-animation: loaderAnim 1.25s infinite ease-in-out;
+  animation: loaderAnim 1.25s infinite ease-in-out;
+  outline: 1px solid transparent;
+}
+.hollowLoader .largeBox {
+  height: 3em;
+  width: 3em;
+  background-color: #ECECEC;
+  outline: 1px solid transparent;
+  position: fixed;
+}
+.hollowLoader .smallBox {
+  height: 3em;
+  width: 3em;
+  background-color: #22958b; //Change to colour of background
+  position: fixed;
+  z-index: 1;
+  outline: 1px solid transparent;
+  -webkit-animation: smallBoxAnim 1.25s alternate infinite ease-in-out;
+  animation: smallBoxAnim 1.25s alternate infinite ease-in-out;
+}
+@-webkit-keyframes smallBoxAnim {
+  0% {
+    -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75);
+  }
+}
+@keyframes smallBoxAnim {
+  0% {
+    -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75);
+  }
+}
+@-webkit-keyframes loaderAnim {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+@keyframes loaderAnim {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+      </style>
+      <div
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<div class=\\"hollowLoader\\">
+  <div class=\\"largeBox\\"></div>
+  <div class=\\"smallBox\\"></div>
+</div>",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots GridItem With Content 1`] = `
+<div
+  className="grid_item"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <p>
+    Content
+  </p>
+</div>
+`;
+
+exports[`Storyshots InputBox With All Props 1`] = `
+<div
+  className="input_box"
+>
+  <div
+    className="input_icon"
+  >
+    <svg
+      baseProfile="tiny"
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      strokeWidth="0"
+      style={
+        Object {
+          "color": undefined,
+        }
+      }
+      version="1.2"
+      viewBox="0 0 24 24"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M17 9c0-1.381-.56-2.631-1.464-3.535-.905-.905-2.155-1.465-3.536-1.465s-2.631.56-3.536 1.465c-.904.904-1.464 2.154-1.464 3.535s.56 2.631 1.464 3.535c.905.905 2.155 1.465 3.536 1.465s2.631-.56 3.536-1.465c.904-.904 1.464-2.154 1.464-3.535zM6 19c0 1 2.25 2 6 2 3.518 0 6-1 6-2 0-2-2.354-4-6-4-3.75 0-6 2-6 4z"
+      />
+    </svg>
+  </div>
+  <input
+    className="text_input with-icon"
+    name="text"
+    onChange={[Function]}
+    placeholder="Placeholder text"
+    value=""
+  />
+</div>
+`;
+
+exports[`Storyshots InputBox With Basic Props 1`] = `
+<div
+  className="input_box"
+>
+  <input
+    className="text_input "
+    name="text"
+    onChange={[Function]}
+    placeholder="Placeholder text"
+    value=""
+  />
+</div>
+`;
+
+exports[`Storyshots InputBox With Clear Button 1`] = `
+<div
+  className="input_box"
+>
+  <input
+    className="text_input "
+    name="text"
+    onChange={[Function]}
+    placeholder="Placeholder text"
+    value=""
+  />
+</div>
+`;
+
+exports[`Storyshots InputBox With Icon 1`] = `
+<div
+  className="input_box"
+>
+  <div
+    className="input_icon"
+  >
+    <svg
+      baseProfile="tiny"
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      strokeWidth="0"
+      style={
+        Object {
+          "color": undefined,
+        }
+      }
+      version="1.2"
+      viewBox="0 0 24 24"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M17 9c0-1.381-.56-2.631-1.464-3.535-.905-.905-2.155-1.465-3.536-1.465s-2.631.56-3.536 1.465c-.904.904-1.464 2.154-1.464 3.535s.56 2.631 1.464 3.535c.905.905 2.155 1.465 3.536 1.465s2.631-.56 3.536-1.465c.904-.904 1.464-2.154 1.464-3.535zM6 19c0 1 2.25 2 6 2 3.518 0 6-1 6-2 0-2-2.354-4-6-4-3.75 0-6 2-6 4z"
+      />
+    </svg>
+  </div>
+  <input
+    className="text_input with-icon"
+    name="text"
+    onChange={[Function]}
+    placeholder="Placeholder text"
+    value=""
+  />
+</div>
+`;
+
+exports[`Storyshots Loader With Content 1`] = `
+<div>
+  <style>
+    .hollowLoader {
+  width: 3em;
+  height: 3em;
+  -webkit-animation: loaderAnim 1.25s infinite ease-in-out;
+  animation: loaderAnim 1.25s infinite ease-in-out;
+  outline: 1px solid transparent;
+}
+.hollowLoader .largeBox {
+  height: 3em;
+  width: 3em;
+  background-color: #ECECEC;
+  outline: 1px solid transparent;
+  position: fixed;
+}
+.hollowLoader .smallBox {
+  height: 3em;
+  width: 3em;
+  background-color: #22958b; //Change to colour of background
+  position: fixed;
+  z-index: 1;
+  outline: 1px solid transparent;
+  -webkit-animation: smallBoxAnim 1.25s alternate infinite ease-in-out;
+  animation: smallBoxAnim 1.25s alternate infinite ease-in-out;
+}
+@-webkit-keyframes smallBoxAnim {
+  0% {
+    -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75);
+  }
+}
+@keyframes smallBoxAnim {
+  0% {
+    -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75);
+  }
+}
+@-webkit-keyframes loaderAnim {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+@keyframes loaderAnim {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+  </style>
+  <div
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<div class=\\"hollowLoader\\">
+  <div class=\\"largeBox\\"></div>
+  <div class=\\"smallBox\\"></div>
+</div>",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Storyshots MobileNav With Content 1`] = `
+<div
+  className="mobile_nav_container"
+>
+  <div
+    className="mobile_nav_content"
+  >
+    <p>
+      Animation Content
+    </p>
+  </div>
+  <div
+    className="mobile_nav_tabs"
+  >
+    <button
+      className="mobile_nav_tab active"
+      onClick={[Function]}
+    >
+      <div
+        className="mobile_nav_tab_icon"
+      >
+        <svg
+          baseProfile="tiny"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          version="1.2"
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10.396 18.433c2.641-2.574 6.604-6.433 6.604-6.433s-3.963-3.859-6.604-6.433c-.363-.349-.853-.567-1.396-.567-1.104 0-2 .896-2 2v10c0 1.104.896 2 2 2 .543 0 1.033-.218 1.396-.567z"
+          />
+        </svg>
+      </div>
+      <p
+        className="mobile_nav_tab_name"
+      >
+        Animation
+      </p>
+    </button>
+    <button
+      className="mobile_nav_tab active"
+      onClick={[Function]}
+    >
+      <div
+        className="mobile_nav_tab_icon"
+      >
+        <svg
+          baseProfile="tiny"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          version="1.2"
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8.171 18c-.512 0-1.023-.195-1.414-.586l-4.414-4.414 4.414-4.414c.781-.781 2.049-.781 2.828 0 .781.781.781 2.047 0 2.828l-1.585 1.586 1.585 1.586c.781.781.781 2.047 0 2.828-.39.391-.902.586-1.414.586zM15.829 18c-.512 0-1.024-.195-1.414-.586-.781-.781-.781-2.047 0-2.828l1.585-1.586-1.585-1.586c-.781-.781-.781-2.047 0-2.828.779-.781 2.047-.781 2.828 0l4.414 4.414-4.414 4.414c-.39.391-.902.586-1.414.586z"
+          />
+        </svg>
+      </div>
+      <p
+        className="mobile_nav_tab_name"
+      >
+        Code
+      </p>
+    </button>
+    <button
+      className="mobile_nav_tab active"
+      onClick={[Function]}
+    >
+      <div
+        className="mobile_nav_tab_icon"
+      >
+        <svg
+          baseProfile="tiny"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          version="1.2"
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="5"
+            cy="19"
+            r="2.5"
+          />
+          <circle
+            cx="5"
+            cy="12"
+            r="2.5"
+          />
+          <circle
+            cx="5"
+            cy="5"
+            r="2.5"
+          />
+          <circle
+            cx="12"
+            cy="19"
+            r="2.5"
+          />
+          <circle
+            cx="12"
+            cy="12"
+            r="2.5"
+          />
+          <circle
+            cx="12"
+            cy="5"
+            r="2.5"
+          />
+          <circle
+            cx="19"
+            cy="19"
+            r="2.5"
+          />
+          <circle
+            cx="19"
+            cy="12"
+            r="2.5"
+          />
+          <circle
+            cx="19"
+            cy="5"
+            r="2.5"
+          />
+        </svg>
+      </div>
+      <p
+        className="mobile_nav_tab_name"
+      >
+        Library
+      </p>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Nav With Content 1`] = `
+<nav
+  className="nav"
+>
+  <p>
+    Content
+  </p>
+</nav>
+`;
+
+exports[`Storyshots Tabs With Content 1`] = `
+<div
+  className="tabs_container"
+>
+  <div
+    className="tabs"
+  >
+    <button
+      className="tab active"
+      onClick={[Function]}
+    >
+      HTML
+    </button>
+    <button
+      className="tab "
+      onClick={[Function]}
+    >
+      CSS
+    </button>
+    <button
+      className="tab "
+      onClick={[Function]}
+    >
+      SCSS
+    </button>
+  </div>
+  <div
+    className="tabs_content"
+  >
+    &lt;div class="hollowLoader"&gt;
+  &lt;div class="largeBox"&gt;&lt;/div&gt;
+  &lt;div class="smallBox"&gt;&lt;/div&gt;
+&lt;/div&gt;
+  </div>
+</div>
+`;
