@@ -17,7 +17,6 @@ import two_circles_loader from './individual/two_circles'
   }
 } */
 
-
 const loaders = [
   square_loader,
   hearbeat_loader,

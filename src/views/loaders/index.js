@@ -3,10 +3,10 @@
 import React, {useRef} from 'react';
 import {
   useRouteMatch,
-  useHistory
+  useHistory,
+  Redirect 
 } from "react-router-dom";
 
-import Redirect from './../../components/redirect'
 import Loader from './../../components/loader'
 import Tabs from './../../components/tabs'
 import ScrollBox from './../../components/scrollBox'
@@ -18,7 +18,7 @@ import { useTitle } from './../../hooks'
 import loaders from './../../loaders'
 import { titleRoot, mediaQueries } from './../../constants'
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { docco } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import { useMedia } from 'react-media';
 
 import { TiMediaPlay, TiCode, TiThSmall } from "react-icons/ti";
@@ -94,7 +94,7 @@ export default function Loaders() {
           {
             id: `${slugify(storedLoader.name)}_code`,
             name: 'Code',
-            icon: <TiMediaPlay/>,
+            icon: <TiCode/>,
             content: (
               <Tabs tabs={codeTabs}/>
             )
@@ -120,7 +120,7 @@ export default function Loaders() {
         ]
 
         return (
-          <div className="row" style={{height: '100%'}}>
+          <div className="row" style={{height: '90%'}}>
             <MobileNav tabs={mobileNavTabs}/>
           </div>
         )

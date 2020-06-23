@@ -1,9 +1,9 @@
 export function slugify(string : string) {
-  return string.toLowerCase().replace(' ', '_')
+  return string.toLowerCase().replace(/\s+/g, '_')
 }
 
 export function unslugify(string: string) {
-  return string.toLowerCase().replace('_', ' ')
+  return string.toLowerCase().replace(/_/g, ' ')
 }
 
 export function capitaliseWords(title: string) {

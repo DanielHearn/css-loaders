@@ -38,7 +38,6 @@ function LoaderGridItem({loader} : {loader: Object}) {
 export default function LoaderSelection() {
   const rootRef = useRef(null)
   const { width } = useContainerDimensions(rootRef)
-  
   const columns = width < 600 ? 1 : width < 800 ? 2 : 3
 
   return (

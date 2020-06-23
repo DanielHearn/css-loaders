@@ -11,10 +11,10 @@ import { Provider } from 'react-redux'
 
 import './app.scss';
 
-import Nav from './../nav'
-import Home from './../../views/home'
-import Loaders from './../../views/loaders'
-import { store } from './../../store'
+import Nav from '../nav'
+import Home from '../../views/home'
+import Loaders from '../../views/loaders'
+import { store } from '../../store'
 
 
 function App() {

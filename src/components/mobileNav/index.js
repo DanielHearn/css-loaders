@@ -2,7 +2,6 @@
 
 import React, {useState, useEffect} from 'react';
 import type {Node} from 'react'
-import { slugify } from './../../helpers'
 import './mobileNav.scss';
 
 type TabItem = {
@@ -20,7 +19,6 @@ export default function MobileNav({
   tabs
 } : Props) {
   const [activeTab, setActiveTab] = useState(tabs[0])
-  console.log(activeTab)
 
   useEffect(() => {
     if (!tabs.filter(tab => tab.id === activeTab.id).length) {

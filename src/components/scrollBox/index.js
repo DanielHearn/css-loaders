@@ -7,7 +7,8 @@ import './scrollBox.scss';
 type Props = {
   children: Node,
   x?: boolean,
-  y?: boolean}
+  y?: boolean
+}
 
 export default function ScrollBox({
   children,
@@ -16,7 +17,7 @@ export default function ScrollBox({
 } : Props) {
   return (
     <div className={`scroll_box ${x === true ? 'scroll-x' : ''} ${y === true ? 'scroll-y' : ''}`} >
-      {children}
+      <div className='scroll_box_content'>{children}</div>
     </div>
   )
 }
