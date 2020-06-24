@@ -9,7 +9,7 @@ type Props = {
 
 export default function Loader({html, css} : Props) {
   return (
-    <div>
+    <div className="loader">
       <style>
         {css}
       </style>

@@ -10,6 +10,9 @@
     font-weight: $weight-bold;
     color: $white;
     text-decoration: none;
+    &.active {
+      text-decoration: underline;
+    }
     &:hover {
       text-decoration: underline;
     }

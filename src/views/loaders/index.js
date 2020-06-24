@@ -52,12 +52,17 @@ function CodeContainer({language, code}) {
 export default function Loaders() {
   const history = useHistory();
   const loaderMatch = useRouteMatch('/loaders/:loaderName');
-  const loaderName = loaderMatch.params.loaderName;
+  let loaderName = ''
+  if (loaderMatch) {
+    loaderName = loaderMatch.params.loaderName;
+  }
   useTitle(`${capitaliseWords(unslugify(loaderName))} - ${titleRoot}`)
   const queryMatches = useMedia({ queries: mediaQueries });
 
   if(loaderName === null || loaderName === '') {
-    history.push("/");
+    return (
+      <Redirect to={`/loaders/${slugify(loaders[0].name)}`}/>
+    );
   } else {
     const storedLoader = loaders.filter(loader => 
       loaderName === slugify(loader.name)
