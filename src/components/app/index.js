@@ -19,9 +19,6 @@ import Nav from '../nav'
 import Home from '../../views/home'
 import Loaders from '../../views/loaders'
 import { store } from '../../store'
-import loaders from './../../loaders'
-import { slugify } from './../../helpers'
-
 
 function App() {
   const queryMatches = useMedia({ queries: mediaQueries });
@@ -39,8 +36,8 @@ function App() {
                   <Link className="nav_title" to="/">CSS Loaders</Link>
                 </div>
                 <div className="column-1" style={{flexDirection: 'row', justifyContent: 'center'}}>
-                  <NavLink className="nav_title" exact to="/">About</NavLink>
-                  <NavLink className="nav_title" to="/loaders/">Loaders</NavLink>
+                  <NavLink className="nav_link" exact to="/">About</NavLink>
+                  <NavLink className="nav_link" to="/loaders/">Loaders</NavLink>
                 </div>
                 <div className="column-1"/>
               </>

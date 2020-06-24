@@ -3,7 +3,6 @@
 import React, {useRef} from 'react';
 import {
   useRouteMatch,
-  useHistory,
   Redirect 
 } from "react-router-dom";
 
@@ -50,7 +49,6 @@ function CodeContainer({language, code}) {
 }
 
 export default function Loaders() {
-  const history = useHistory();
   const loaderMatch = useRouteMatch('/loaders/:loaderName');
   let loaderName = ''
   if (loaderMatch) {
