@@ -5,8 +5,8 @@
   flex: 1;
   width: 100%;
   height: 100%;
-  align-content: center;
-  justify-content: center;
+  align-content: inherit;
+  justify-content: inherit;
   overflow: hidden;
   &.scroll-x .scroll_box_content{
     overflow-x: auto;
@@ -21,5 +21,7 @@
   .scroll_box_content {
     display: flex;
     flex: 1;
+    align-content: inherit;
+    justify-content: inherit;
   }
 }

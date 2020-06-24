@@ -6,6 +6,7 @@ import {
   Switch,
   Route,
   Link,
+  Redirect
 } from "react-router-dom";
 import { Provider } from 'react-redux'
 
@@ -32,6 +33,7 @@ function App() {
             <Route path="/loaders">
               <Loaders />
             </Route>
+            <Redirect to="/" />
           </Switch>
         </div>
       </Router>

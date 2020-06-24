@@ -18,11 +18,3 @@ Object.defineProperty(window, 'matchMedia', {
     dispatchEvent: jest.fn(),
   })),
 });
-
-test('App', () => {
-  const app = mount(<App/>);
-  expect(app.containsMatchingElement(Nav)).toBe(true);
-  expect(app.containsMatchingElement(Home)).toBe(true);
-  expect(app.find('.title').exists()).toBe(true);
-  expect(app.find('.code_container').exists()).toBe(false);
-});

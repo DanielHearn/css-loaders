@@ -98,13 +98,14 @@ a:not(.link) {
   color: $darker;
   display: flex;
   flex: 1;
-  align-content: center;
-  justify-content: center;
+  align-items: center;
   overflow-y: hidden;
   .content {
     max-width: $max-width;
     width: 100%;
     padding: 1em;
+    box-sizing: border-box;
+    align-self: center;
   }
 }
 
