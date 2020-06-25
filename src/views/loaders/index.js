@@ -30,13 +30,10 @@ function CodeContainer({language, code}) {
   };
 
   return (
-    <div className="code_container">
-    {
-      document.queryCommandSupported('copy') &&
-      <div className="code_actions">
-        <Button type="primary" handleClick={copyCode}>Copy {capitaliseAll(language)}</Button>
-      </div>
-    }
+  <div className="code_container">
+    <div className="code_actions">
+      <Button type="primary" handleClick={copyCode}>Copy {capitaliseAll(language)}</Button>
+    </div>
     <div className="content_container" ref={textAreaRef}>
       <ScrollBox y={true} x={true}>
         <SyntaxHighlighter language={language} style={docco} className="code_block">

@@ -6,8 +6,8 @@ export const queryWidths = {
 }
 
 export const mediaQueries = {
-  small: `(max-width: ${queryWidths.small-1}px)`,
-  medium: `(min-width: ${queryWidths.small}px) and (max-width: ${queryWidths.medium-1}px)`,
+  small: `(max-width: ${queryWidths.small}px)`,
+  medium: `(min-width: ${queryWidths.small+1}px) and (max-width: ${queryWidths.medium-1}px)`,
   large: `(min-width: ${queryWidths.medium}px)`
 };
 

@@ -24,7 +24,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test:e2e": "cypress run --browser chrome",
+    "test:unit": "react-scripts test",
     "eject": "react-scripts eject",
     "flow": "flow",
     "storybook": "start-storybook -p 9009 -s public",
