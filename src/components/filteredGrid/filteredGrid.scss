@@ -1,0 +1,10 @@
+@import '../../styles/variables'; 
+
+.filtered_grid {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  .input_box {
+    margin-bottom: 1em;
+  }
+}

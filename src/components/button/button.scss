@@ -1,0 +1,23 @@
+@import '../../styles/variables'; 
+
+.button {
+  padding: 0.4em 0.8em;
+  font-family: $font-family;
+  border-radius:  $border-radius;
+  border: none;
+  transition: background-color $transition-time ease-in-out;
+  &:focus {
+    outline:0;
+    background: $darker;
+  }
+  &.primary {
+    color: $white;
+    background: $dark;
+    font-weight: $weight-regular;
+    font-size: $size-s;
+    &:hover {
+      background: $darker;
+      cursor: pointer;
+    }
+  }
+}

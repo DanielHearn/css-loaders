@@ -1,0 +1,46 @@
+@import '../../styles/variables'; 
+
+.tabs_container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  .tabs {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    .tab {
+      display: flex;
+      flex: 1;
+      padding: 0.75em 1em;
+      font-family: $font-family;
+      font-size: $size-s;
+      font-weight: $weight-semi-bold;
+      background: $grey-dark;
+      color: $white;
+      cursor: pointer;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      transition: background-color $transition-time ease-in-out;
+      &:focus {
+        outline: 0;
+        background: $dark;
+      }
+      &:hover {
+        background: $dark;
+      }
+      &.active {
+        background: $darker;
+        &:hover {
+          background: $dark;
+        }
+      }
+    }
+  }
+  .tabs_content {
+    display: flex;
+    flex: 1;
+    width: 100%;
+  }
+}

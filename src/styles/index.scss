@@ -1,0 +1,181 @@
+@import-normalize; 
+@import './variables'; 
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: $font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  -webkit-appearance: none;
+  border: none;
+  background: none;
+  border-radius: 0;
+}
+
+.title {
+  font-weight: $weight-max-bold;
+  font-size: $size-xl;
+  margin: 0.3em 0;
+}
+
+.heading {
+  font-weight: $weight-bold;
+  font-size: $size-l;
+}
+
+.text {
+  font-weight: $weight-regular;
+  font-size: $size-m;
+}
+
+.bold {
+  font-weight: $weight-bold;
+}
+
+.code {
+  font-weight: $weight-regular;
+  font-size: $size-s;
+}
+
+.link {
+  font-weight: $weight-bold;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  &.dark {
+    color: $darker;
+    &:visited {
+      color: $darker;
+    }
+  }
+  &.light {
+    color: $white;
+    &:visited {
+      color: $white;
+    }
+  }
+}
+
+a:not(.link) {
+  text-decoration: none;
+  &:visited {
+    text-decoration: none;
+  }
+}
+
+.header {
+  background: $dark;
+  color: $white;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  .header_content {
+    max-width: $max-width;
+    width: 100%;
+    padding: 1em;
+  }
+}
+
+.content_container {
+  background: $off-white;
+  color: $darker;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  overflow-y: hidden;
+  .content {
+    max-width: $max-width;
+    width: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+    align-self: center;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.column-3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.column-2 {
+  display: flex;
+  flex-direction: column;
+  width: 66%;
+}
+
+.column-1 {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: $white;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.code_container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+  .code_actions {
+    padding: 1em 0.5em;
+    background: $off-white;
+  }
+  .code_block {
+    margin: 0;
+    display: flex;
+    flex: 1;
+    padding: 1em !important;
+  }
+}
