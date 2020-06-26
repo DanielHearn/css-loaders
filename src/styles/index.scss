@@ -162,21 +162,3 @@ a:not(.link) {
 .flex-center {
   justify-content: center;
 }
-
-.code_container {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  width: 100%;
-  .code_actions {
-    padding: 1em 0.5em;
-    background: $off-white;
-  }
-  .code_block {
-    margin: 0;
-    display: flex;
-    flex: 1;
-    padding: 1em !important;
-    background: $white !important;
-  }
-}

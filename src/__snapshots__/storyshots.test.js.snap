@@ -3039,13 +3039,23 @@ exports[`Storyshots Loaders With Content 1`] = `
           <div
             className="code_actions"
           >
-            <button
-              className="button primary"
-              onClick={[Function]}
+            <div
+              style={
+                Object {
+                  "alignItems": "center",
+                  "display": "flex",
+                  "flexDirection": "row",
+                }
+              }
             >
-              Copy 
-              HTML
-            </button>
+              <button
+                className="button primary"
+                onClick={[Function]}
+              >
+                Copy 
+                HTML
+              </button>
+            </div>
           </div>
           <div
             className="content_container"

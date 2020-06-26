@@ -1,6 +1,6 @@
 // @flow
 
-import React, {useRef} from 'react';
+import React from 'react';
 import {
   useRouteMatch,
   Redirect 
@@ -9,49 +9,16 @@ import {
 import Loader from './../../components/loader'
 import Tabs from './../../components/tabs'
 import ScrollBox from './../../components/scrollBox'
-import Button from './../../components/button'
 import MobileNav from './../../components/mobileNav'
 import LoaderSelection from './../../components/loaderSelection'
-import { slugify, unslugify, capitaliseWords, capitaliseAll, copyToClipboard } from './../../helpers'
+import CodeBlock from './../../components/codeBlock'
+import { slugify, unslugify, capitaliseWords, capitaliseAll } from './../../helpers'
 import { useTitle } from './../../hooks'
 import loaders from './../../loaders'
 import { titleRoot, mediaQueries } from './../../constants'
-import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
-import prism from 'react-syntax-highlighter/dist/cjs/styles/prism/prism';
 import { useMedia } from 'react-media';
 
-import markup from 'react-syntax-highlighter/dist/cjs/languages/prism/markup';
-import css from 'react-syntax-highlighter/dist/cjs/languages/prism/css';
-import scss from 'react-syntax-highlighter/dist/cjs/languages/prism/scss';
-
 import { TiMediaPlay, TiCode, TiThSmall } from "react-icons/ti";
-
-SyntaxHighlighter.registerLanguage('html', markup);
-SyntaxHighlighter.registerLanguage('css', css);
-SyntaxHighlighter.registerLanguage('scss', scss);
-
-function CodeContainer({language, code}) {
-  const textAreaRef = useRef(null);
-
-  function copyCode(e) {
-    copyToClipboard(textAreaRef.current)
-  };
-
-  return (
-  <div className="code_container">
-    <div className="code_actions">
-      <Button type="primary" onClick={copyCode}>Copy {capitaliseAll(language)}</Button>
-    </div>
-    <div className="content_container" ref={textAreaRef}>
-      <ScrollBox y={true} x={true}>
-        <SyntaxHighlighter language={language} style={prism} className="code_block">
-          {code}
-        </SyntaxHighlighter>
-      </ScrollBox>
-    </div>
-  </div>
-  )
-}
 
 export default function Loaders() {
   const loaderMatch = useRouteMatch('/loaders/:loaderName');
@@ -79,7 +46,7 @@ export default function Loaders() {
           {
             id: `${slugify(storedLoader.name)}_${language}`,
             name: capitaliseAll(unslugify(language)),
-            content: <CodeContainer language={language} code={storedLoader.code[language]}/>
+            content: <CodeBlock language={language} code={storedLoader.code[language]}/>
           }
         )
       }

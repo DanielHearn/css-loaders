@@ -148,7 +148,10 @@ context('Loader', () => {
           cy.get('.code_block').should('contain.text', loaders[0].code.html)
           cy.get('.code_block').should('not.contain.text', loaders[0].code.css)
           cy.get('.code_block').should('not.contain.text', loaders[0].code.scss)
-  
+          cy.get('.copy_success').should('not.be.visible')
+          cy.get('.code_actions .button').first().click()
+          cy.get('.copy_success').should('be.visible')
+
           cy.get('.tabs_container .tab').eq(1).click()
           cy.get('.tabs_container .tab').eq(0).should('not.have.class', 'active')
           cy.get('.tabs_container .tab').eq(1).should('have.class', 'active')
@@ -157,6 +160,9 @@ context('Loader', () => {
           cy.get('.code_block').should('not.contain.text', loaders[0].code.html)
           cy.get('.code_block').should('contain.text', loaders[0].code.css)
           cy.get('.code_block').should('not.contain.text', loaders[0].code.scss)
+          cy.get('.copy_success').should('not.be.visible')
+          cy.get('.code_actions .button').first().click()
+          cy.get('.copy_success').should('be.visible')
   
           cy.get('.tabs_container .tab').eq(2).click()
           cy.get('.tabs_container .tab').eq(0).should('not.have.class', 'active')
@@ -166,6 +172,9 @@ context('Loader', () => {
           cy.get('.code_block').should('not.contain.text', loaders[0].code.html)
           cy.get('.code_block').should('not.contain.text', loaders[0].code.css)
           cy.get('.code_block').should('contain.text', loaders[0].code.scss)
+          cy.get('.copy_success').should('not.be.visible')
+          cy.get('.code_actions .button').first().click()
+          cy.get('.copy_success').should('be.visible')
         })
       })
       describe('library tab', () => {
