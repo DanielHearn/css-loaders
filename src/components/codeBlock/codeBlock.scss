@@ -17,5 +17,8 @@
     flex: 1;
     padding: 1em !important;
     background: $white !important;
+    .token:last-child {
+      padding-bottom: 40%;
+    }
   }
 }
