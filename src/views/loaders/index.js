@@ -41,13 +41,12 @@ export default function Loaders() {
     if (storedLoader) {
       let codeTabs = [];
       const languages = Object.keys(storedLoader.code)
-      const padding = ' '
       for (const language of languages) {
         codeTabs.push(
           {
             id: `${slugify(storedLoader.name)}_${language}`,
             name: capitaliseAll(unslugify(language)),
-            content: <CodeBlock language={language} code={storedLoader.code[language]+padding}/>
+            content: <CodeBlock language={language} code={storedLoader.code[language]}/>
           }
         )
       }
