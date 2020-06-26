@@ -16,11 +16,19 @@ import { slugify, unslugify, capitaliseWords, capitaliseAll, copyToClipboard } f
 import { useTitle } from './../../hooks'
 import loaders from './../../loaders'
 import { titleRoot, mediaQueries } from './../../constants'
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { docco } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
+import prism from 'react-syntax-highlighter/dist/esm/styles/prism/prism';
 import { useMedia } from 'react-media';
 
+import markup from 'react-syntax-highlighter/dist/esm/languages/prism/markup';
+import css from 'react-syntax-highlighter/dist/esm/languages/prism/css';
+import scss from 'react-syntax-highlighter/dist/esm/languages/prism/scss';
+
 import { TiMediaPlay, TiCode, TiThSmall } from "react-icons/ti";
+
+SyntaxHighlighter.registerLanguage('html', markup);
+SyntaxHighlighter.registerLanguage('css', css);
+SyntaxHighlighter.registerLanguage('scss', scss);
 
 function CodeContainer({language, code}) {
   const textAreaRef = useRef(null);
@@ -32,11 +40,11 @@ function CodeContainer({language, code}) {
   return (
   <div className="code_container">
     <div className="code_actions">
-      <Button type="primary" handleClick={copyCode}>Copy {capitaliseAll(language)}</Button>
+      <Button type="primary" onClick={copyCode}>Copy {language}</Button>
     </div>
     <div className="content_container" ref={textAreaRef}>
       <ScrollBox y={true} x={true}>
-        <SyntaxHighlighter language={language} style={docco} className="code_block">
+        <SyntaxHighlighter language={language} style={prism} className="code_block">
           {code}
         </SyntaxHighlighter>
       </ScrollBox>
