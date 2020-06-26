@@ -1,5 +1,5 @@
 import React from 'react';
-import GridItem, { GridItemTitle } from '../GridItem';
+import GridItem, { GridItemTitle } from '../gridItem';
 import { shallow } from 'enzyme';
 
 test('GridItem content', () => {

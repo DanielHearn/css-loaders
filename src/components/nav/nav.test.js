@@ -1,5 +1,5 @@
 import React from 'react';
-import Nav from '../Nav';
+import Nav from '../nav';
 import ReactDOMServer from 'react-dom/server';
 import { shallow } from 'enzyme';
 

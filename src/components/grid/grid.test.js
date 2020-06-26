@@ -1,12 +1,12 @@
 import React from 'react';
-import Grid from '../Grid';
+import Grid from '../grid';
 import { shallow } from 'enzyme';
 
 test('Grid content', () => {
   const columns = 1
   const grid = shallow(<Grid columns={columns} items={[
-    <p>Item 1</p>,
-    <p>Item 2</p>
+    <p key="item_1">Item 1</p>,
+    <p key="item_2">Item 2</p>
   ]}/>);
   expect(grid.find('p').length).toBe(2);
   const style = grid.get(0).props.style
@@ -15,8 +15,8 @@ test('Grid content', () => {
 
 test('Grid columns', () => {
   const grid = shallow(<Grid columns={1} items={[
-    <p>Item 1</p>,
-    <p>Item 2</p>
+    <p key="item_1">Item 1</p>,
+    <p key="item_2">Item 2</p>
   ]}/>);
   expect(grid.get(0).props.style).toHaveProperty('gridTemplateColumns', `repeat(1, 1fr)`)
   grid.setProps({ columns: 2 });

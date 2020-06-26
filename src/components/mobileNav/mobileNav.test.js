@@ -1,5 +1,5 @@
 import React from 'react';
-import MobileNav from '../MobileNav';
+import MobileNav from '../mobileNav';
 import { shallow } from 'enzyme';
 import { TiMediaPlay, TiCode, TiThSmall } from "react-icons/ti";
 

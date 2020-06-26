@@ -1,5 +1,5 @@
 import React from 'react';
-import Tabs from '../Tabs';
+import Tabs from '../tabs';
 import { shallow } from 'enzyme';
 
 test('FilteredGrid content', () => {

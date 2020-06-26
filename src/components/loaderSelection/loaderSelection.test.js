@@ -1,5 +1,5 @@
 import React from 'react';
-import LoaderSelection from '../LoaderSelection';
+import LoaderSelection from '../loaderSelection';
 import loaders from './../../loaders';
 import { MemoryRouter } from 'react-router';
 import { mount } from 'enzyme';

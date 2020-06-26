@@ -1,5 +1,5 @@
 import React from 'react';
-import Loader from '../Loader';
+import Loader from '../loader';
 import { shallow } from 'enzyme';
 
 test('Loader html and css', () => {

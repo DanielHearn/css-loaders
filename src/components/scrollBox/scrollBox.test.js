@@ -1,5 +1,5 @@
 import React from 'react';
-import ScrollBox from '../ScrollBox';
+import ScrollBox from '../scrollBox';
 import { shallow } from 'enzyme';
 
 test('ScrollBox content', () => {

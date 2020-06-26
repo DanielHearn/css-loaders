@@ -8,11 +8,11 @@ export default {
 };
 
 export const WithContent = () => <Grid items={[
-  <GridItem><p>Item 1</p></GridItem>,
-  <GridItem><p>Item 2</p></GridItem>
+  <GridItem key="item_1"><p>Item 1</p></GridItem>,
+  <GridItem key="item_2"><p>Item 2</p></GridItem>
 ]}/>;
 
 export const WithContent3Columns = () => <Grid columns={3} items={[
-  <GridItem><p>Item 1</p></GridItem>,
-  <GridItem><p>Item 2</p></GridItem>
+  <GridItem key="item_1"><p>Item 1</p></GridItem>,
+  <GridItem key="item_2"><p>Item 2</p></GridItem>
 ]}/>;
