@@ -1,0 +1,44 @@
+@import '../../styles/variables'; 
+
+$appSquareTiming: 0.3s;
+$appSquareSize: 4em;
+
+.app_loader {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  animation: app_loader_anim 1s; 
+  background-color: $off-white;
+}
+@keyframes app_loader_anim {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.square_app_loader {
+  max-width: $appSquareSize;
+  .square {
+    height: $appSquareSize/2;
+    width: $appSquareSize/2;
+    background: $dark;
+    float: right;
+    animation: square_app_anim 3s infinite; 
+    &:nth-child(1) {
+      float: left; 
+    }
+    @for $i from 1 to 5 {
+      &:nth-child(#{$i}) {
+        animation-delay: $appSquareTiming*$i;
+      }
+    }
+  }
+}
+@keyframes square_app_anim {
+  0% {opacity: 1;}
+  40% {opacity: 0;}
+  50% {opacity: 0;}
+  90% {opacity: 1;}
+  100% {opacity: 1;}
+}
