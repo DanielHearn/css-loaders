@@ -17,12 +17,12 @@ import { useTitle } from './../../hooks'
 import loaders from './../../loaders'
 import { titleRoot, mediaQueries } from './../../constants'
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
-import prism from 'react-syntax-highlighter/dist/esm/styles/prism/prism';
+import prism from 'react-syntax-highlighter/dist/cjs/styles/prism/prism';
 import { useMedia } from 'react-media';
 
-import markup from 'react-syntax-highlighter/dist/esm/languages/prism/markup';
-import css from 'react-syntax-highlighter/dist/esm/languages/prism/css';
-import scss from 'react-syntax-highlighter/dist/esm/languages/prism/scss';
+import markup from 'react-syntax-highlighter/dist/cjs/languages/prism/markup';
+import css from 'react-syntax-highlighter/dist/cjs/languages/prism/css';
+import scss from 'react-syntax-highlighter/dist/cjs/languages/prism/scss';
 
 import { TiMediaPlay, TiCode, TiThSmall } from "react-icons/ti";
 
@@ -40,7 +40,7 @@ function CodeContainer({language, code}) {
   return (
   <div className="code_container">
     <div className="code_actions">
-      <Button type="primary" onClick={copyCode}>Copy {language}</Button>
+      <Button type="primary" onClick={copyCode}>Copy {capitaliseAll(language)}</Button>
     </div>
     <div className="content_container" ref={textAreaRef}>
       <ScrollBox y={true} x={true}>

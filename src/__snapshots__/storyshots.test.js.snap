@@ -2,882 +2,46 @@
 
 exports[`Storyshots App With Content 1`] = `
 <div
-  className="app"
+  className="app_loader"
 >
-  <nav
-    className="nav"
+  <div
+    className="square_app_loader"
   >
     <div
-      className="column-1"
-    >
-      <a
-        className="nav_title"
-        href="/"
-        onClick={[Function]}
-      >
-        CSS Loaders
-      </a>
-    </div>
-    <div
-      className="column-1"
-      style={
-        Object {
-          "flexDirection": "row",
-          "justifyContent": "center",
-        }
-      }
-    >
-      <a
-        aria-current="page"
-        className="nav_link active"
-        href="/"
-        onClick={[Function]}
-        style={Object {}}
-      >
-        About
-      </a>
-      <a
-        aria-current={null}
-        className="nav_link"
-        href="/loaders/"
-        onClick={[Function]}
-      >
-        Loaders
-      </a>
-    </div>
-    <div
-      className="column-1"
+      className="square"
     />
-  </nav>
-  <div
-    className="header"
-  >
     <div
-      className="header_content"
-    >
-      <div
-        className="row"
-      >
-        <div
-          className="column-3"
-        >
-          <h2
-            className="title text-center"
-          >
-            CSS Loaders
-          </h2>
-        </div>
-      </div>
-      <div
-        className="row"
-      >
-        <div
-          className="column-2"
-        >
-          <p
-            className="text"
-          >
-            Open-source website showcasing a collection of CSS loading animations along with their HTML, CSS, and SCSS code.
-          </p>
-        </div>
-        <div
-          className="column-1 text-right"
-        >
-          <p
-            className="text"
-          >
-            Source on 
-            <a
-              className="link light"
-              href="https://github.com/DanielHearn/css-loaders"
-            >
-              GitHub
-            </a>
-          </p>
-          <p
-            className="text"
-          >
-            Developed by 
-            <a
-              className="link light"
-              href="https://danielhearn.co.uk"
-            >
-              Daniel Hearn
-            </a>
-          </p>
-        </div>
-      </div>
-    </div>
+      className="square"
+    />
+    <div
+      className="square"
+    />
+    <div
+      className="square"
+    />
   </div>
+</div>
+`;
+
+exports[`Storyshots AppLoader With Content 1`] = `
+<div
+  className="app_loader"
+>
   <div
-    className="content_container"
+    className="square_app_loader"
   >
     <div
-      className="scroll_box  scroll-y"
-    >
-      <div
-        className="scroll_box_content"
-      >
-        <div
-          className="content"
-        >
-          <div
-            style={
-              Object {
-                "marginBottom": "2em",
-              }
-            }
-          >
-            <div
-              className="loader_selection"
-            >
-              <div
-                className="filtered_grid"
-              >
-                <div
-                  className="grid"
-                  style={
-                    Object {
-                      "gridTemplateColumns": "repeat(1, 1fr)",
-                    }
-                  }
-                >
-                  <div
-                    className="input_box"
-                  >
-                    <div
-                      className="input_icon"
-                    >
-                      <svg
-                        baseProfile="tiny"
-                        fill="currentColor"
-                        height="1em"
-                        stroke="currentColor"
-                        strokeWidth="0"
-                        style={
-                          Object {
-                            "color": undefined,
-                          }
-                        }
-                        version="1.2"
-                        viewBox="0 0 24 24"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M13 4c-3.859 0-7 3.141-7 7 0 .763.127 1.495.354 2.183l-.749.75-.511.512-1.008 1.045c-.562.557-.891 1.345-.891 2.185 0 1.727 1.404 3.131 3.13 3.131.757 0 1.504-.278 2.104-.784l.064-.055.061-.061 1.512-1.51.75-.749c.688.226 1.421.353 2.184.353 3.859 0 7-3.141 7-7s-3.141-7-7-7zm0 12c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5zM13 7c-2.205 0-4 1.794-4 4s1.795 4 4 4 4-1.794 4-4-1.795-4-4-4zm0 7c-1.656 0-3-1.344-3-3s1.344-3 3-3 3 1.344 3 3-1.344 3-3 3z"
-                        />
-                      </svg>
-                    </div>
-                    <input
-                      className="text_input with-icon"
-                      name="text"
-                      onChange={[Function]}
-                      placeholder="Search loaders"
-                      value=""
-                    />
-                  </div>
-                </div>
-                <div
-                  className="grid"
-                  style={
-                    Object {
-                      "gridTemplateColumns": "repeat(1, 1fr)",
-                    }
-                  }
-                >
-                  <div
-                    className="grid_item"
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                  >
-                    <a
-                      href="/loaders/square"
-                      onClick={[Function]}
-                      style={
-                        Object {
-                          "margin": 0,
-                        }
-                      }
-                    >
-                      <div
-                        className="loader_container"
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "backgroundColor": "#d74b48",
-                            "display": "flex",
-                            "flex": "1",
-                            "height": "10em",
-                            "justifyContent": "center",
-                          }
-                        }
-                      >
-                        <div
-                          className="loader"
-                        >
-                          <style>
-                            .squareLoader {
-    max-width: 4em;
-}
-.squareLoader .square {
-  height: 2em;
-  width: 2em;
-  background-color: white;
-  float: right;
-  animation: squareanim 3s infinite;
-}
-.squareLoader .square:nth-child(1) {
-  float: left;
-}
-.squareLoader .square:nth-child(1) {
-  animation-delay: 0.3s;
-}
-.squareLoader .square:nth-child(2) {
-  animation-delay: 0.6s;
-}
-.squareLoader .square:nth-child(3) {
-  animation-delay: 0.9s;
-}
-.squareLoader .square:nth-child(4) {
-  animation-delay: 1.2s;
-}
-  
-@keyframes squareanim {
-  0% {
-    opacity: 1;
-  }
-  40% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-                          </style>
-                          <div
-                            dangerouslySetInnerHTML={
-                              Object {
-                                "__html": "<div class='squareLoader'>
-  <div class='square'></div>
-  <div class='square'></div>
-  <div class='square'></div>
-  <div class='square'></div>
-</div>",
-                              }
-                            }
-                          />
-                        </div>
-                      </div>
-                      <div
-                        className="grid_item_title"
-                      >
-                        <p
-                          className="text bold"
-                          style={
-                            Object {
-                              "margin": 0,
-                            }
-                          }
-                        >
-                          Square
-                        </p>
-                      </div>
-                    </a>
-                  </div>
-                  <div
-                    className="grid_item"
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                  >
-                    <a
-                      href="/loaders/heartbeat"
-                      onClick={[Function]}
-                      style={
-                        Object {
-                          "margin": 0,
-                        }
-                      }
-                    >
-                      <div
-                        className="loader_container"
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "backgroundColor": "#9a40a9",
-                            "display": "flex",
-                            "flex": "1",
-                            "height": "10em",
-                            "justifyContent": "center",
-                          }
-                        }
-                      >
-                        <div
-                          className="loader"
-                        >
-                          <style>
-                            .heartbeatLoader {
-  width: 4em;
-  height: 4em;
-  position: relative;
-}
-.heartbeatLoader .pulse {
-  width: 4em;
-  height: 4em;
-  border-radius: 50%;
-  position: absolute;
-  background-color: white;
-  animation: heartbeatanim 1.2s ease-in-out infinite;
-  transform: scale(0);
-  outline: 1px solid transparent;
-}
-.heartbeatLoader .pulse:nth-child(2) {
-  animation-delay: 0.22s;
-}
-@keyframes heartbeatanim {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-    opacity: 0;
-  }
-}
-                          </style>
-                          <div
-                            dangerouslySetInnerHTML={
-                              Object {
-                                "__html": "<div class=\\"heartbeatLoader\\">
-  <div class=\\"pulse\\"></div>
-  <div class=\\"pulse\\"></div>
-</div>",
-                              }
-                            }
-                          />
-                        </div>
-                      </div>
-                      <div
-                        className="grid_item_title"
-                      >
-                        <p
-                          className="text bold"
-                          style={
-                            Object {
-                              "margin": 0,
-                            }
-                          }
-                        >
-                          Heartbeat
-                        </p>
-                      </div>
-                    </a>
-                  </div>
-                  <div
-                    className="grid_item"
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                  >
-                    <a
-                      href="/loaders/slider"
-                      onClick={[Function]}
-                      style={
-                        Object {
-                          "margin": 0,
-                        }
-                      }
-                    >
-                      <div
-                        className="loader_container"
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "backgroundColor": "#714eaf",
-                            "display": "flex",
-                            "flex": "1",
-                            "height": "10em",
-                            "justifyContent": "center",
-                          }
-                        }
-                      >
-                        <div
-                          className="loader"
-                        >
-                          <style>
-                            .sliderLoader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.sliderLoader .rect {
-  height: 20px;
-  width: 8px;
-  background-color: white;
-  display: inline-block;
-  animation: slideranim 1.4s ease-in-out infinite;
-  margin-right: 4px;
-}
-.sliderLoader .rect:nth-child(1) {
-  animation-delay: 0.15s;
-}
-.sliderLoader .rect:nth-child(2) {
-  animation-delay: 0.3s;
-}
-.sliderLoader .rect:nth-child(3) {
-  animation-delay: 0.45s;
-}
-.sliderLoader .rect:nth-child(4) {
-  animation-delay: 0.6s;
-}
-.sliderLoader .rect:nth-child(5) {
-  animation-delay: 0.75s;
-}
-@keyframes slideranim {
-  0% {
-    transform: scaleY(1);
-  }
-  25% {
-    transform: scaleY(3);
-  }
-  50% {
-    transform: scaleY(1);
-  }
-  100% {
-    transform: scaleY(1);
-  }
-}
-                          </style>
-                          <div
-                            dangerouslySetInnerHTML={
-                              Object {
-                                "__html": "<div class='sliderLoader'>
-  <div class='rect'></div>
-  <div class='rect'></div>
-  <div class='rect'></div>
-  <div class='rect'></div>
-  <div class='rect'></div>
-</div>
-        ",
-                              }
-                            }
-                          />
-                        </div>
-                      </div>
-                      <div
-                        className="grid_item_title"
-                      >
-                        <p
-                          className="text bold"
-                          style={
-                            Object {
-                              "margin": 0,
-                            }
-                          }
-                        >
-                          Slider
-                        </p>
-                      </div>
-                    </a>
-                  </div>
-                  <div
-                    className="grid_item"
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                  >
-                    <a
-                      href="/loaders/hollow_box"
-                      onClick={[Function]}
-                      style={
-                        Object {
-                          "margin": 0,
-                        }
-                      }
-                    >
-                      <div
-                        className="loader_container"
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "backgroundColor": "#22958b",
-                            "display": "flex",
-                            "flex": "1",
-                            "height": "10em",
-                            "justifyContent": "center",
-                          }
-                        }
-                      >
-                        <div
-                          className="loader"
-                        >
-                          <style>
-                            .hollowLoader {
-  width: 3em;
-  height: 3em;
-  -webkit-animation: loaderAnim 1.25s infinite ease-in-out;
-  animation: loaderAnim 1.25s infinite ease-in-out;
-  outline: 1px solid transparent;
-}
-.hollowLoader .largeBox {
-  height: 3em;
-  width: 3em;
-  background-color: #ECECEC;
-  outline: 1px solid transparent;
-  position: fixed;
-}
-.hollowLoader .smallBox {
-  height: 3em;
-  width: 3em;
-  background-color: #22958b; //Change to colour of background
-  position: fixed;
-  z-index: 1;
-  outline: 1px solid transparent;
-  -webkit-animation: smallBoxAnim 1.25s alternate infinite ease-in-out;
-  animation: smallBoxAnim 1.25s alternate infinite ease-in-out;
-}
-@-webkit-keyframes smallBoxAnim {
-  0% {
-    -webkit-transform: scale(0.2);
-    transform: scale(0.2);
-  }
-  100% {
-    -webkit-transform: scale(0.75);
-    transform: scale(0.75);
-  }
-}
-@keyframes smallBoxAnim {
-  0% {
-    -webkit-transform: scale(0.2);
-    transform: scale(0.2);
-  }
-  100% {
-    -webkit-transform: scale(0.75);
-    transform: scale(0.75);
-  }
-}
-@-webkit-keyframes loaderAnim {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-  }
-}
-@keyframes loaderAnim {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-  }
-}
-                          </style>
-                          <div
-                            dangerouslySetInnerHTML={
-                              Object {
-                                "__html": "<div class=\\"hollowLoader\\">
-  <div class=\\"largeBox\\"></div>
-  <div class=\\"smallBox\\"></div>
-</div>",
-                              }
-                            }
-                          />
-                        </div>
-                      </div>
-                      <div
-                        className="grid_item_title"
-                      >
-                        <p
-                          className="text bold"
-                          style={
-                            Object {
-                              "margin": 0,
-                            }
-                          }
-                        >
-                          Hollow Box
-                        </p>
-                      </div>
-                    </a>
-                  </div>
-                  <div
-                    className="grid_item"
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                  >
-                    <a
-                      href="/loaders/pulse"
-                      onClick={[Function]}
-                      style={
-                        Object {
-                          "margin": 0,
-                        }
-                      }
-                    >
-                      <div
-                        className="loader_container"
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "backgroundColor": "#62af65",
-                            "display": "flex",
-                            "flex": "1",
-                            "height": "10em",
-                            "justifyContent": "center",
-                          }
-                        }
-                      >
-                        <div
-                          className="loader"
-                        >
-                          <style>
-                            .pulseLoader {
-  width: 4em;
-  height: 4em;
-  border-radius: 4em;
-  background-color: white;
-  outline: 1px solid transparent;
-  animation: pulseanim 1.2s ease-in-out infinite;
-}
-@keyframes pulseanim {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-    opacity: 0;
-  }
-}
-                          </style>
-                          <div
-                            dangerouslySetInnerHTML={
-                              Object {
-                                "__html": "<div class='pulseLoader'></div>
-    ",
-                              }
-                            }
-                          />
-                        </div>
-                      </div>
-                      <div
-                        className="grid_item_title"
-                      >
-                        <p
-                          className="text bold"
-                          style={
-                            Object {
-                              "margin": 0,
-                            }
-                          }
-                        >
-                          Pulse
-                        </p>
-                      </div>
-                    </a>
-                  </div>
-                  <div
-                    className="grid_item"
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                  >
-                    <a
-                      href="/loaders/bar"
-                      onClick={[Function]}
-                      style={
-                        Object {
-                          "margin": 0,
-                        }
-                      }
-                    >
-                      <div
-                        className="loader_container"
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "backgroundColor": "#e6653c",
-                            "display": "flex",
-                            "flex": "1",
-                            "height": "10em",
-                            "justifyContent": "center",
-                          }
-                        }
-                      >
-                        <div
-                          className="loader"
-                        >
-                          <style>
-                            .barLoader {
-  width: 10em;
-}
-.barLoader .bar {
-  width: 100%;
-  opacity: 0;
-  height: 1.5em;
-  background: #fefefe;
-  animation: baranim 2.5s infinite cubic-bezier(0.61, 0.33, 0.39, 0.79);
-  transform-origin: 0% 50%;
-}
-@keyframes baranim {
-  0% {
-    transform: scaleX(0);
-    opacity: 0;
-  }
-  5% {
-    transform: scaleX(0);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  95% {
-    transform: scaleX(1);
-  }
-  100% {
-    transform: scaleX(1);
-    opacity: 0;
-  }
-}
-                          </style>
-                          <div
-                            dangerouslySetInnerHTML={
-                              Object {
-                                "__html": "<div class=\\"barLoader\\">
-  <div class=\\"bar\\"></div>
-</div>",
-                              }
-                            }
-                          />
-                        </div>
-                      </div>
-                      <div
-                        className="grid_item_title"
-                      >
-                        <p
-                          className="text bold"
-                          style={
-                            Object {
-                              "margin": 0,
-                            }
-                          }
-                        >
-                          Bar
-                        </p>
-                      </div>
-                    </a>
-                  </div>
-                  <div
-                    className="grid_item"
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                  >
-                    <a
-                      href="/loaders/two_circles"
-                      onClick={[Function]}
-                      style={
-                        Object {
-                          "margin": 0,
-                        }
-                      }
-                    >
-                      <div
-                        className="loader_container"
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "backgroundColor": "#263238",
-                            "display": "flex",
-                            "flex": "1",
-                            "height": "10em",
-                            "justifyContent": "center",
-                          }
-                        }
-                      >
-                        <div
-                          className="loader"
-                        >
-                          <style>
-                            .twoCircleLoader {
-  width: 4em;
-  height: 4em;
-  position: relative;
-}
-.twoCircleLoader .circle {
-  width: 4em;
-  height: 4em;
-  border-radius: 4em;
-  position: absolute;
-  animation: load 3s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
-}
-.twoCircleLoader .circle:nth-child(1) {
-  background-color: #f1c40f;
-  transform: scale(0);
-  animation-delay: 1.5s;
-}
-.twoCircleLoader .circle:nth-child(2) {
-  background-color: #de4e40;
-}
-@keyframes load {
-  0% {
-    transform: scale(0);
-  }
-  46% {
-    transform: scale(1);
-  }
-  54% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
-                          </style>
-                          <div
-                            dangerouslySetInnerHTML={
-                              Object {
-                                "__html": "<div class='twoCircleLoader'>
-  <div class='circle'></div>
-  <div class='circle'></div>
-</div>
-      ",
-                              }
-                            }
-                          />
-                        </div>
-                      </div>
-                      <div
-                        className="grid_item_title"
-                      >
-                        <p
-                          className="text bold"
-                          style={
-                            Object {
-                              "margin": 0,
-                            }
-                          }
-                        >
-                          Two Circles
-                        </p>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      className="square"
+    />
+    <div
+      className="square"
+    />
+    <div
+      className="square"
+    />
+    <div
+      className="square"
+    />
   </div>
 </div>
 `;
@@ -3896,319 +3060,706 @@ exports[`Storyshots Loaders With Content 1`] = `
                   className="code_block"
                   style={
                     Object {
-                      "background": "#f8f8ff",
-                      "color": "#000",
-                      "display": "block",
-                      "overflowX": "auto",
-                      "padding": "0.5em",
+                      "MozHyphens": "none",
+                      "MozTabSize": "4",
+                      "OTabSize": "4",
+                      "WebkitHyphens": "none",
+                      "background": "#f5f2f0",
+                      "color": "black",
+                      "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+                      "hyphens": "none",
+                      "lineHeight": "1.5",
+                      "margin": ".5em 0",
+                      "msHyphens": "none",
+                      "overflow": "auto",
+                      "padding": "1em",
+                      "tabSize": "4",
+                      "textAlign": "left",
+                      "textShadow": "0 1px white",
+                      "whiteSpace": "pre",
+                      "wordBreak": "normal",
+                      "wordSpacing": "normal",
+                      "wordWrap": "normal",
                     }
                   }
                 >
-                  <code>
+                  <code
+                    style={
+                      Object {
+                        "MozHyphens": "none",
+                        "MozTabSize": "4",
+                        "OTabSize": "4",
+                        "WebkitHyphens": "none",
+                        "background": "none",
+                        "color": "black",
+                        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+                        "hyphens": "none",
+                        "lineHeight": "1.5",
+                        "msHyphens": "none",
+                        "tabSize": "4",
+                        "textAlign": "left",
+                        "textShadow": "0 1px white",
+                        "whiteSpace": "pre",
+                        "wordBreak": "normal",
+                        "wordSpacing": "normal",
+                        "wordWrap": "normal",
+                      }
+                    }
+                  >
                     <span
+                      className="token"
                       style={
                         Object {
-                          "color": "#000080",
-                          "fontWeight": "normal",
+                          "color": "#905",
                         }
                       }
                     >
-                      &lt;
                       <span
+                        className="token"
                         style={
                           Object {
-                            "color": "#000080",
-                            "fontWeight": "normal",
+                            "color": "#905",
                           }
                         }
                       >
+                        <span
+                          className="token"
+                          style={
+                            Object {
+                              "color": "#999",
+                            }
+                          }
+                        >
+                          &lt;
+                        </span>
                         div
                       </span>
                        
                       <span
-                        className="hljs-attr"
-                        style={Object {}}
-                      >
-                        class
-                      </span>
-                      =
-                      <span
+                        className="token"
                         style={
                           Object {
-                            "color": "#219161",
+                            "color": "#690",
                           }
                         }
                       >
-                        'squareLoader'
+                        class
                       </span>
-                      &gt;
+                      <span
+                        className="token"
+                        style={
+                          Object {
+                            "color": "#07a",
+                          }
+                        }
+                      >
+                        <span
+                          className="token"
+                          style={
+                            Object {
+                              "color": "#999",
+                            }
+                          }
+                        >
+                          =
+                        </span>
+                        <span
+                          className="token"
+                          style={
+                            Object {
+                              "color": "#999",
+                            }
+                          }
+                        >
+                          '
+                        </span>
+                        squareLoader
+                        <span
+                          className="token"
+                          style={
+                            Object {
+                              "color": "#999",
+                            }
+                          }
+                        >
+                          '
+                        </span>
+                      </span>
+                      <span
+                        className="token"
+                        style={
+                          Object {
+                            "color": "#999",
+                          }
+                        }
+                      >
+                        &gt;
+                      </span>
                     </span>
                     
   
                     <span
+                      className="token"
                       style={
                         Object {
-                          "color": "#000080",
-                          "fontWeight": "normal",
+                          "color": "#905",
                         }
                       }
                     >
-                      &lt;
                       <span
+                        className="token"
                         style={
                           Object {
-                            "color": "#000080",
-                            "fontWeight": "normal",
+                            "color": "#905",
                           }
                         }
                       >
+                        <span
+                          className="token"
+                          style={
+                            Object {
+                              "color": "#999",
+                            }
+                          }
+                        >
+                          &lt;
+                        </span>
                         div
                       </span>
                        
                       <span
-                        className="hljs-attr"
-                        style={Object {}}
+                        className="token"
+                        style={
+                          Object {
+                            "color": "#690",
+                          }
+                        }
                       >
                         class
                       </span>
-                      =
                       <span
+                        className="token"
                         style={
                           Object {
-                            "color": "#219161",
+                            "color": "#07a",
                           }
                         }
                       >
-                        'square'
+                        <span
+                          className="token"
+                          style={
+                            Object {
+                              "color": "#999",
+                            }
+                          }
+                        >
+                          =
+                        </span>
+                        <span
+                          className="token"
+                          style={
+                            Object {
+                              "color": "#999",
+                            }
+                          }
+                        >
+                          '
+                        </span>
+                        square
+                        <span
+                          className="token"
+                          style={
+                            Object {
+                              "color": "#999",
+                            }
+                          }
+                        >
+                          '
+                        </span>
                       </span>
-                      &gt;
+                      <span
+                        className="token"
+                        style={
+                          Object {
+                            "color": "#999",
+                          }
+                        }
+                      >
+                        &gt;
+                      </span>
                     </span>
                     <span
+                      className="token"
                       style={
                         Object {
-                          "color": "#000080",
-                          "fontWeight": "normal",
+                          "color": "#905",
                         }
                       }
                     >
-                      &lt;/
                       <span
+                        className="token"
                         style={
                           Object {
-                            "color": "#000080",
-                            "fontWeight": "normal",
+                            "color": "#905",
                           }
                         }
                       >
+                        <span
+                          className="token"
+                          style={
+                            Object {
+                              "color": "#999",
+                            }
+                          }
+                        >
+                          &lt;/
+                        </span>
                         div
                       </span>
-                      &gt;
+                      <span
+                        className="token"
+                        style={
+                          Object {
+                            "color": "#999",
+                          }
+                        }
+                      >
+                        &gt;
+                      </span>
                     </span>
                     
   
                     <span
+                      className="token"
                       style={
                         Object {
-                          "color": "#000080",
-                          "fontWeight": "normal",
+                          "color": "#905",
                         }
                       }
                     >
-                      &lt;
                       <span
+                        className="token"
                         style={
                           Object {
-                            "color": "#000080",
-                            "fontWeight": "normal",
+                            "color": "#905",
                           }
                         }
                       >
+                        <span
+                          className="token"
+                          style={
+                            Object {
+                              "color": "#999",
+                            }
+                          }
+                        >
+                          &lt;
+                        </span>
                         div
                       </span>
                        
                       <span
-                        className="hljs-attr"
-                        style={Object {}}
+                        className="token"
+                        style={
+                          Object {
+                            "color": "#690",
+                          }
+                        }
                       >
                         class
                       </span>
-                      =
                       <span
+                        className="token"
                         style={
                           Object {
-                            "color": "#219161",
+                            "color": "#07a",
                           }
                         }
                       >
-                        'square'
+                        <span
+                          className="token"
+                          style={
+                            Object {
+                              "color": "#999",
+                            }
+                          }
+                        >
+                          =
+                        </span>
+                        <span
+                          className="token"
+                          style={
+                            Object {
+                              "color": "#999",
+                            }
+                          }
+                        >
+                          '
+                        </span>
+                        square
+                        <span
+                          className="token"
+                          style={
+                            Object {
+                              "color": "#999",
+                            }
+                          }
+                        >
+                          '
+                        </span>
                       </span>
-                      &gt;
+                      <span
+                        className="token"
+                        style={
+                          Object {
+                            "color": "#999",
+                          }
+                        }
+                      >
+                        &gt;
+                      </span>
                     </span>
                     <span
+                      className="token"
                       style={
                         Object {
-                          "color": "#000080",
-                          "fontWeight": "normal",
+                          "color": "#905",
                         }
                       }
                     >
-                      &lt;/
                       <span
+                        className="token"
                         style={
                           Object {
-                            "color": "#000080",
-                            "fontWeight": "normal",
+                            "color": "#905",
                           }
                         }
                       >
+                        <span
+                          className="token"
+                          style={
+                            Object {
+                              "color": "#999",
+                            }
+                          }
+                        >
+                          &lt;/
+                        </span>
                         div
                       </span>
-                      &gt;
+                      <span
+                        className="token"
+                        style={
+                          Object {
+                            "color": "#999",
+                          }
+                        }
+                      >
+                        &gt;
+                      </span>
                     </span>
                     
   
                     <span
+                      className="token"
                       style={
                         Object {
-                          "color": "#000080",
-                          "fontWeight": "normal",
+                          "color": "#905",
                         }
                       }
                     >
-                      &lt;
                       <span
+                        className="token"
                         style={
                           Object {
-                            "color": "#000080",
-                            "fontWeight": "normal",
+                            "color": "#905",
                           }
                         }
                       >
+                        <span
+                          className="token"
+                          style={
+                            Object {
+                              "color": "#999",
+                            }
+                          }
+                        >
+                          &lt;
+                        </span>
                         div
                       </span>
                        
                       <span
-                        className="hljs-attr"
-                        style={Object {}}
+                        className="token"
+                        style={
+                          Object {
+                            "color": "#690",
+                          }
+                        }
                       >
                         class
                       </span>
-                      =
                       <span
+                        className="token"
                         style={
                           Object {
-                            "color": "#219161",
+                            "color": "#07a",
                           }
                         }
                       >
-                        'square'
+                        <span
+                          className="token"
+                          style={
+                            Object {
+                              "color": "#999",
+                            }
+                          }
+                        >
+                          =
+                        </span>
+                        <span
+                          className="token"
+                          style={
+                            Object {
+                              "color": "#999",
+                            }
+                          }
+                        >
+                          '
+                        </span>
+                        square
+                        <span
+                          className="token"
+                          style={
+                            Object {
+                              "color": "#999",
+                            }
+                          }
+                        >
+                          '
+                        </span>
                       </span>
-                      &gt;
+                      <span
+                        className="token"
+                        style={
+                          Object {
+                            "color": "#999",
+                          }
+                        }
+                      >
+                        &gt;
+                      </span>
                     </span>
                     <span
+                      className="token"
                       style={
                         Object {
-                          "color": "#000080",
-                          "fontWeight": "normal",
+                          "color": "#905",
                         }
                       }
                     >
-                      &lt;/
                       <span
+                        className="token"
                         style={
                           Object {
-                            "color": "#000080",
-                            "fontWeight": "normal",
+                            "color": "#905",
                           }
                         }
                       >
+                        <span
+                          className="token"
+                          style={
+                            Object {
+                              "color": "#999",
+                            }
+                          }
+                        >
+                          &lt;/
+                        </span>
                         div
                       </span>
-                      &gt;
+                      <span
+                        className="token"
+                        style={
+                          Object {
+                            "color": "#999",
+                          }
+                        }
+                      >
+                        &gt;
+                      </span>
                     </span>
                     
   
                     <span
+                      className="token"
                       style={
                         Object {
-                          "color": "#000080",
-                          "fontWeight": "normal",
+                          "color": "#905",
                         }
                       }
                     >
-                      &lt;
                       <span
+                        className="token"
                         style={
                           Object {
-                            "color": "#000080",
-                            "fontWeight": "normal",
+                            "color": "#905",
                           }
                         }
                       >
+                        <span
+                          className="token"
+                          style={
+                            Object {
+                              "color": "#999",
+                            }
+                          }
+                        >
+                          &lt;
+                        </span>
                         div
                       </span>
                        
                       <span
-                        className="hljs-attr"
-                        style={Object {}}
+                        className="token"
+                        style={
+                          Object {
+                            "color": "#690",
+                          }
+                        }
                       >
                         class
                       </span>
-                      =
                       <span
+                        className="token"
                         style={
                           Object {
-                            "color": "#219161",
+                            "color": "#07a",
                           }
                         }
                       >
-                        'square'
+                        <span
+                          className="token"
+                          style={
+                            Object {
+                              "color": "#999",
+                            }
+                          }
+                        >
+                          =
+                        </span>
+                        <span
+                          className="token"
+                          style={
+                            Object {
+                              "color": "#999",
+                            }
+                          }
+                        >
+                          '
+                        </span>
+                        square
+                        <span
+                          className="token"
+                          style={
+                            Object {
+                              "color": "#999",
+                            }
+                          }
+                        >
+                          '
+                        </span>
                       </span>
-                      &gt;
+                      <span
+                        className="token"
+                        style={
+                          Object {
+                            "color": "#999",
+                          }
+                        }
+                      >
+                        &gt;
+                      </span>
                     </span>
                     <span
+                      className="token"
                       style={
                         Object {
-                          "color": "#000080",
-                          "fontWeight": "normal",
+                          "color": "#905",
                         }
                       }
                     >
-                      &lt;/
                       <span
+                        className="token"
                         style={
                           Object {
-                            "color": "#000080",
-                            "fontWeight": "normal",
+                            "color": "#905",
                           }
                         }
                       >
+                        <span
+                          className="token"
+                          style={
+                            Object {
+                              "color": "#999",
+                            }
+                          }
+                        >
+                          &lt;/
+                        </span>
                         div
                       </span>
-                      &gt;
+                      <span
+                        className="token"
+                        style={
+                          Object {
+                            "color": "#999",
+                          }
+                        }
+                      >
+                        &gt;
+                      </span>
                     </span>
                     
 
                     <span
+                      className="token"
                       style={
                         Object {
-                          "color": "#000080",
-                          "fontWeight": "normal",
+                          "color": "#905",
                         }
                       }
                     >
-                      &lt;/
                       <span
+                        className="token"
                         style={
                           Object {
-                            "color": "#000080",
-                            "fontWeight": "normal",
+                            "color": "#905",
                           }
                         }
                       >
+                        <span
+                          className="token"
+                          style={
+                            Object {
+                              "color": "#999",
+                            }
+                          }
+                        >
+                          &lt;/
+                        </span>
                         div
                       </span>
-                      &gt;
+                      <span
+                        className="token"
+                        style={
+                          Object {
+                            "color": "#999",
+                          }
+                        }
+                      >
+                        &gt;
+                      </span>
                     </span>
                   </code>
                 </pre>
