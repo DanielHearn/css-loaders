@@ -1,6 +1,6 @@
 // @flow
 
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -17,10 +17,9 @@ import './app.scss';
 
 import Nav from '../nav'
 import AppLoader from '../appLoader'
+import Home from '../../views/home'
+import Loaders from '../../views/loaders'
 import { store } from '../../store'
-
-const Home = lazy(() => import('../../views/home'));
-const Loaders = lazy(() => import('../../views/loaders'));
 
 function App() {
   const queryMatches = useMedia({ queries: mediaQueries });
