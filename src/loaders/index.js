@@ -27,4 +27,15 @@ const loaders = [
   two_circles_loader
 ]
 
+export type Loader = {
+  name: string,
+  color: string,
+  code: {
+    html: string,
+    css: string,
+    scss: string
+  }
+}
+
+
 export default loaders;

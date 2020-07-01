@@ -19,7 +19,7 @@ SyntaxHighlighter.registerLanguage('html', markup);
 SyntaxHighlighter.registerLanguage('css', css);
 SyntaxHighlighter.registerLanguage('scss', scss);
 
-export default function CodeContainer({language, code}) {
+export default function CodeContainer({language, code} : {language: string, code: string}) {
   const textAreaRef = useRef(null);
   const [copied, setCopied] = useState(false);
 

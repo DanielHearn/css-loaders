@@ -8,7 +8,7 @@ import {
 
 import { slugify, shadeColor } from './../../helpers'
 import { useContainerDimensions } from './../../hooks'
-import loaders from './../../loaders'
+import loaders, { LoaderType } from './../../loaders'
 
 import Loader from './../loader'
 import FilteredGrid from './../filteredGrid'
@@ -16,7 +16,7 @@ import GridItem, { GridItemTitle} from './../gridItem'
 
 import './loaderSelection.scss';
 
-function LoaderGridItem({loader} : {loader: Object}) {
+function LoaderGridItem({loader} : {loader: LoaderType}) {
   const loaderLink = slugify(loader.name)
   const darkColor = shadeColor(loader.color, -0.1)
   const [hovered, setHovered] = useState(false)
@@ -47,11 +47,11 @@ export default function LoaderSelection() {
         columns={columns}
         searchPlaceholder="Search loaders"
         noMatchElement={(<p>No matching loaders</p>)}
-        matchFunction={(searchText, item) => {
+        matchFunction={(searchText: string, item: LoaderType) => {
           return searchText === '' || 
           item.name.toLowerCase().includes(searchText.toLowerCase())
         }}
-        renderFunction={(loader) => {
+        renderFunction={(loader: LoaderType) => {
           const loaderLink = slugify(loader.name)
           return (<LoaderGridItem key={loaderLink} loader={loader}/>)
         }

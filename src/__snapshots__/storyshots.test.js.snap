@@ -908,7 +908,6 @@ exports[`Storyshots AppLoader With Content 1`] = `
 exports[`Storyshots Button Primary 1`] = `
 <button
   className="button primary"
-  onClick={[Function]}
 >
   Button text
 </button>
@@ -917,7 +916,6 @@ exports[`Storyshots Button Primary 1`] = `
 exports[`Storyshots Button With Content 1`] = `
 <button
   className="button primary"
-  onClick={[Function]}
 >
   Button text
 </button>
@@ -2232,8 +2230,6 @@ exports[`Storyshots FilteredGrid With Content 1`] = `
   >
     <div
       className="grid_item"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
     >
       <p>
         Text 1
@@ -2241,8 +2237,6 @@ exports[`Storyshots FilteredGrid With Content 1`] = `
     </div>
     <div
       className="grid_item"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
     >
       <p>
         Text 2
@@ -2263,8 +2257,6 @@ exports[`Storyshots Grid With Content 1`] = `
 >
   <div
     className="grid_item"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <p>
       Item 1
@@ -2272,8 +2264,6 @@ exports[`Storyshots Grid With Content 1`] = `
   </div>
   <div
     className="grid_item"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <p>
       Item 2
@@ -2293,8 +2283,6 @@ exports[`Storyshots Grid With Content 3 Columns 1`] = `
 >
   <div
     className="grid_item"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <p>
       Item 1
@@ -2302,8 +2290,6 @@ exports[`Storyshots Grid With Content 3 Columns 1`] = `
   </div>
   <div
     className="grid_item"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
   >
     <p>
       Item 2
@@ -2315,8 +2301,6 @@ exports[`Storyshots Grid With Content 3 Columns 1`] = `
 exports[`Storyshots GridItem With Complex Content 1`] = `
 <div
   className="grid_item"
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
 >
   <div
     style={
@@ -2415,8 +2399,6 @@ exports[`Storyshots GridItem With Complex Content 1`] = `
 exports[`Storyshots GridItem With Content 1`] = `
 <div
   className="grid_item"
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
 >
   <p>
     Content
@@ -2427,8 +2409,6 @@ exports[`Storyshots GridItem With Content 1`] = `
 exports[`Storyshots GridItem With Content Title 1`] = `
 <div
   className="grid_item"
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
 >
   <p>
     Content

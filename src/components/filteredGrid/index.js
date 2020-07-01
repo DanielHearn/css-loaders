@@ -13,8 +13,8 @@ type Props = {
   columns?: number, 
   searchPlaceholder?: string, 
   noMatchElement?: Node, 
-  matchFunction?: Function, 
-  renderFunction?: Function
+  matchFunction?: (searchText: string, item: Object | string) => boolean,
+  renderFunction?: (item: Object | string) => Node
 }
 
 export default function FilteredGrid({
@@ -22,23 +22,21 @@ export default function FilteredGrid({
   columns = 3, 
   searchPlaceholder = 'Search', 
   noMatchElement = <p>No results found</p>, 
-  matchFunction = (searchText, item) => {
+  matchFunction = (searchText: string, item: string): boolean => {
     return searchText === '' || 
     item.toLowerCase().includes(searchText.toLowerCase())
   }, 
-  renderFunction = (item) => item
+  renderFunction = (item: string): Node => <li>{item}</li>
 } : Props) {
   const [matchedItems, setMatchedItems] = useState(items);
   const inputColumns = columns <= 3 ? columns : 3
 
-  function searchCallback(searchText) {
+  function searchCallback(searchText: string): void {
     filterItems(searchText)
   }
 
-  function filterItems(searchText) {
-    const matchingItems = items.filter(item => {
-      return matchFunction(searchText, item)
-    })
+  function filterItems(searchText: string): void {
+    const matchingItems = items.filter((item: Node): boolean => matchFunction(searchText, item))
 
     setMatchedItems(matchingItems);
   }
@@ -47,7 +45,7 @@ export default function FilteredGrid({
     <div className="filtered_grid">
       <Grid columns={inputColumns} items={[<InputBox key="input_1" inputPlaceholder={searchPlaceholder} icon={<TiZoom />} clearButton={true} searchCallback={searchCallback}/>]}/>
       {matchedItems.length ?
-        <Grid columns={columns} items={matchedItems.map(item => renderFunction(item))}/>
+        <Grid columns={columns} items={matchedItems.map((item: Node): Node => renderFunction(item))}/>
       :
         noMatchElement
       }

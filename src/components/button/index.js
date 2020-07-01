@@ -6,17 +6,16 @@ import './button.scss';
 
 type Props = {
   type: 'primary',
-  children: Node,
-  onClick?: Function
+  children: Node
 }
 
 export default function Button({
   type = 'primary', 
   children = 'Button',
-  onClick = () => {}
+  ...props
 } : Props) {
   return (
-    <button className={`button ${type}`} onClick={onClick}>
+    <button {...props} className={`button ${type}`}>
       {children}
     </button>
   )

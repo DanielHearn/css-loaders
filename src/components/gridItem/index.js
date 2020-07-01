@@ -5,9 +5,7 @@ import type {Node} from 'react'
 import './gridItem.scss';
 
 type ItemProps = {
-  children: Node,
-  onMouseEnter?: Function,
-  onMouseLeave?: Function
+  children: Node
 }
 
 type TitleProps = {
@@ -16,19 +14,18 @@ type TitleProps = {
 
 export default function GridItem({
   children,
-  onMouseEnter = () => {},
-  onMouseLeave = () => {}
+  ...props
 } : ItemProps) {
   return (
-    <div className="grid_item" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+    <div {...props} className="grid_item">
       {children}
     </div>
   )
 }
 
-export function GridItemTitle({children} : TitleProps) {
+export function GridItemTitle({children, ...props} : TitleProps) {
   return (
-    <div className="grid_item_title">
+    <div {...props} className="grid_item_title">
       {children}
     </div>
   )

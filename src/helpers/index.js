@@ -1,3 +1,5 @@
+// @flow
+
 export function slugify(string : string) {
   return string.toLowerCase().replace(/\s+/g, '_')
 }
@@ -17,7 +19,7 @@ export function capitaliseAll(title: string) {
 }
 
 // Function from https://stackoverflow.com/questions/5560248/programmatically-lighten-or-darken-a-hex-color-or-rgb-and-blend-colors
-export function shadeColor (color, percent) {
+export function shadeColor (color: string, percent: number) {
   const f = parseInt(color.slice(1), 16)
   const t = percent < 0 ? 0 : 255
   const p = percent < 0 ? percent * -1 : percent
