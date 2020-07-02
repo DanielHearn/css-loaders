@@ -1,3 +1,5 @@
+// @flow
+
 import ActionTypes from '.'
 
 export const setSmallScreen = () => ({

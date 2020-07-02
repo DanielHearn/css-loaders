@@ -1,4 +1,6 @@
-export default  {
+import type {Loader} from './../'
+
+const squareLoader: Loader = {
   name: 'Square',
   color: '#d74b48',
   code: {
@@ -80,3 +82,5 @@ $squareSize: 4em;
 }`
   }
 }
+
+export default squareLoader

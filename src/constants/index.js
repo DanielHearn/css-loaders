@@ -1,3 +1,5 @@
+// @flow
+
 export const titleRoot = 'CSS Loaders'
 
 export const queryWidths = {

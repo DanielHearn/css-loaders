@@ -1,4 +1,6 @@
-export default {
+import type {Loader} from './../'
+
+const sliderLoader: Loader = {
   name: 'Slider',
   color: '#714eaf',
   code: {
@@ -91,3 +93,5 @@ $sliderRectWidth: 8px;
 }`
   }
 }
+
+export default sliderLoader

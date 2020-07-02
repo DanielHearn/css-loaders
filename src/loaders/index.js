@@ -1,3 +1,5 @@
+// @flow
+
 import square_loader from './individual/square'
 import hearbeat_loader from './individual/heartbeat'
 import slider_loader from './individual/slider'
@@ -17,16 +19,6 @@ import two_circles_loader from './individual/two_circles'
   }
 } */
 
-const loaders = [
-  square_loader,
-  hearbeat_loader,
-  slider_loader,
-  hollow_box_loader,
-  pulse_loader,
-  bar_loader,
-  two_circles_loader
-]
-
 export type Loader = {
   name: string,
   color: string,
@@ -36,6 +28,16 @@ export type Loader = {
     scss: string
   }
 }
+
+const loaders: Array<Loader> = [
+  square_loader,
+  hearbeat_loader,
+  slider_loader,
+  hollow_box_loader,
+  pulse_loader,
+  bar_loader,
+  two_circles_loader
+]
 
 
 export default loaders;

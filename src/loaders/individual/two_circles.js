@@ -1,4 +1,6 @@
-export default  {
+import type {Loader} from './../'
+
+const twoCirclesLoader: Loader = {
   name: 'Two Circles',
   color: '#263238',
   code: {
@@ -81,3 +83,5 @@ $twoCircleColour2: #de4e40;
 }`
   }
 }
+
+export default twoCirclesLoader

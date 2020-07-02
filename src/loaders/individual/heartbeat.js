@@ -1,4 +1,6 @@
-export default {
+import type {Loader} from './../'
+
+const heartbeatLoader: Loader = {
   name: 'Heartbeat',
   color: '#9a40a9',
   code: {
@@ -64,3 +66,5 @@ $heartbeatTiming: 1.2s;
 }`
   }
 }
+
+export default heartbeatLoader

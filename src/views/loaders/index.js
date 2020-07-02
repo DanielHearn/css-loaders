@@ -1,11 +1,12 @@
 // @flow
 
 import React from 'react';
+import type { Node } from 'react'
 import {
   useRouteMatch,
   Redirect 
 } from "react-router-dom";
-import ActionTypes from '../../store/actions'
+import { ScreenTypes } from '../../store/actions'
 
 import Loader from './../../components/loader'
 import Tabs from './../../components/tabs'
@@ -17,24 +18,29 @@ import { slugify, unslugify, capitaliseWords, capitaliseAll } from './../../help
 import { useTitle } from './../../hooks'
 import loaders from './../../loaders'
 import { titleRoot } from './../../constants'
+import type { Loader as LoaderType } from './../../loaders'
 
 import { TiMediaPlay, TiCode, TiThSmall } from "react-icons/ti";
 
-export default function Loaders({screen} : {screen: string}) {
+type Props = {
+  screen: $Values<typeof ScreenTypes>
+}
+
+export default function Loaders({screen = ScreenTypes.LARGE_SCREEN} : Props) : Node {
   const loaderMatch = useRouteMatch('/loaders/:loaderName');
   let loaderName = ''
   if (loaderMatch) {
     loaderName = loaderMatch.params.loaderName;
   }
   useTitle(`${capitaliseWords(unslugify(loaderName))} - ${titleRoot}`)
-  const smallScreen = screen === ActionTypes.SMALL_SCREEN
+  const smallScreen = screen === ScreenTypes.SMALL_SCREEN
 
   if(loaderName === null || loaderName === '') {
     return (
       <Redirect to={`/loaders/${slugify(loaders[0].name)}`}/>
     );
   } else {
-    const storedLoader = loaders.filter(loader => 
+    const storedLoader = loaders.filter((loader: LoaderType) : boolean => 
       loaderName === slugify(loader.name)
     )[0]
 

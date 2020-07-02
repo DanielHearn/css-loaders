@@ -1,15 +1,20 @@
 // @flow
 
 import React from 'react';
+import type { Node } from 'react'
 import {
   Link,
   NavLink,
 } from "react-router-dom";
 import './nav.scss';
-import ActionTypes from '../../store/actions'
+import { ScreenTypes } from '../../store/actions'
 
-export default function Nav({screen} : {screen: string}) {
-  const smallScreen = screen === ActionTypes.SMALL_SCREEN
+type Props = {
+  screen: $Values<typeof ScreenTypes>
+}
+
+export default function Nav({screen = ScreenTypes.LARGE_SCREEN} : Props): Node {
+  const smallScreen = screen === ScreenTypes.SMALL_SCREEN
 
   return (
     <nav className="nav">

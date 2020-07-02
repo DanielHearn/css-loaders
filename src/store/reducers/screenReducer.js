@@ -1,7 +1,17 @@
-import ActionTypes from '../actions'
+// @flow
+
+import ActionTypes, { ScreenTypes } from '../actions'
+
+type stateType = {
+  screen: $Values<typeof ScreenTypes>
+}
+
+type actionType = {
+  type: $Values<typeof ScreenTypes>
+}
 
 const initialState = {screen: ActionTypes.SMALL_SCREEN}
-export default function screenReducer(state = initialState, action) {
+export default function screenReducer(state : stateType = initialState, action : actionType) {
   switch(action.type) {
     case ActionTypes.SMALL_SCREEN:
       return {screen: ActionTypes.SMALL_SCREEN}

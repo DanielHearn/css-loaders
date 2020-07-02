@@ -1,3 +1,4 @@
+// @flow
 import { useState, useEffect } from 'react';
 
 export function useTitle(title: string) {
@@ -6,8 +7,13 @@ export function useTitle(title: string) {
   });
 };
 
+type useContainerDimensionsParams = {
+  width: number,
+  height: number
+}
+
 // Adapted from https://stackoverflow.com/questions/43817118/how-to-get-the-width-of-a-react-element
-export const useContainerDimensions = (ref: Node) => {
+export const useContainerDimensions = (ref: any) : useContainerDimensionsParams => {
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
 
   useEffect(() => {

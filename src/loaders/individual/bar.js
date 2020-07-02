@@ -1,4 +1,6 @@
-export default {
+import type {Loader} from './../'
+
+const barLoader: Loader = {
   name: 'Bar',
   color: '#e6653c',
   code: {
@@ -80,3 +82,4 @@ $barColor: #fefefe;
 }`
   }
 }
+export default barLoader

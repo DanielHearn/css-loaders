@@ -1,4 +1,6 @@
-export default {
+import type {Loader} from './../'
+
+const hollowBoxLoader: Loader = {
   name: 'Hollow Box',
   color: '#22958b',
   code: {
@@ -107,3 +109,5 @@ $hollowTiming: 1.25s;
 }`
   }
 }
+
+export default hollowBoxLoader

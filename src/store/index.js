@@ -1,3 +1,5 @@
+// @flow
+
 import { createStore } from 'redux'
 import screenReducer from './reducers/screenReducer'
 

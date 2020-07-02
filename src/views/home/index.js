@@ -1,16 +1,21 @@
 // @flow
 
 import React from 'react';
+import type { Node } from 'react'
 import { useTitle } from './../../hooks'
 import { titleRoot, links } from './../../constants'
-import ActionTypes from '../../store/actions'
+import { ScreenTypes } from '../../store/actions'
 
 import LoaderSelection from './../../components/loaderSelection'
 import ScrollBox from './../../components/scrollBox'
 
-export default function Home({ screen } : {screen: string}) {
+type Props = {
+  screen: $Values<typeof ScreenTypes>
+}
+
+export default function Home({ screen } : Props): Node {
   useTitle(`${titleRoot}`)
-  const smallScreen = screen === ActionTypes.SMALL_SCREEN
+  const smallScreen = screen === ScreenTypes.SMALL_SCREEN
 
   return (
     <>

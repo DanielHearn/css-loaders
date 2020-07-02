@@ -1,4 +1,6 @@
-export default {
+import type {Loader} from './../'
+
+const pulseLoader: Loader = {
   name: 'Pulse',
   color: '#62af65',
   code: {
@@ -43,3 +45,5 @@ $pulseTiming: 1.2s;
 }`
   }
 }
+
+export default pulseLoader

@@ -8,13 +8,13 @@ import InputBox from './../inputBox'
 import './filteredGrid.scss';
 import { TiZoom } from "react-icons/ti";
 
-type Props = {
+type Props<T> = {
   items: Array<Object | string>, 
   columns?: number, 
   searchPlaceholder?: string, 
   noMatchElement?: Node, 
-  matchFunction?: (searchText: string, item: Object | string) => boolean,
-  renderFunction?: (item: Object | string) => Node
+  matchFunction?: (searchText: string, item: T) => boolean,
+  renderFunction?: (item: T) => Node
 }
 
 export default function FilteredGrid({
@@ -27,7 +27,7 @@ export default function FilteredGrid({
     item.toLowerCase().includes(searchText.toLowerCase())
   }, 
   renderFunction = (item: string): Node => <li>{item}</li>
-} : Props) {
+} : Props<any>) {
   const [matchedItems, setMatchedItems] = useState(items);
   const inputColumns = columns <= 3 ? columns : 3
 

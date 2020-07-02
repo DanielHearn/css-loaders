@@ -8,7 +8,8 @@ import {
 
 import { slugify, shadeColor } from './../../helpers'
 import { useContainerDimensions } from './../../hooks'
-import loaders, { LoaderType } from './../../loaders'
+import loaders from './../../loaders'
+import type {Loader as LoaderType } from './../../loaders'
 
 import Loader from './../loader'
 import FilteredGrid from './../filteredGrid'
