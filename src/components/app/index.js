@@ -1,15 +1,13 @@
 // @flow
 
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  NavLink,
   Redirect
 } from "react-router-dom";
-import { Provider } from 'react-redux'
+import { Provider, connect } from 'react-redux'
 import { mediaQueries } from './../../constants'
 import { useMedia } from 'react-media';
 
@@ -20,41 +18,75 @@ import AppLoader from '../appLoader'
 import Home from '../../views/home'
 import Loaders from '../../views/loaders'
 import { store } from '../../store'
+import ActionTypes from '../../store/actions'
+import { setSmallScreen, setMediumScreen, setLargeScreen } from '../../store/actions/screen'
 
-function App() {
-  const queryMatches = useMedia({ queries: mediaQueries });
+const NavMapStateToProps = state => ({
+  screen: state.screen
+})
 
+const ConnectedNav = connect(NavMapStateToProps)(Nav);
+
+
+const HomeMapStateToProps = state => ({
+  screen: state.screen
+})
+
+const ConnectedHome = connect(HomeMapStateToProps)(Home);
+
+const LoadersMapStateToProps = state => ({
+  screen: state.screen
+})
+
+const ConnectedLoaders = connect(LoadersMapStateToProps)(Loaders);
+
+
+function AppWrapper() {
   return (
     <Provider store={store}>
       <Router>
         <Suspense fallback={<AppLoader/>}>
-          <div className="app">
-            <Nav>
-              {queryMatches.small ?
-                <Link className="nav_title" to="/">CSS Loaders</Link>
-                :
-                <>
-                  <div className="column-1">
-                    <Link className="nav_title" to="/">CSS Loaders</Link>
-                  </div>
-                  <div className="column-1" style={{flexDirection: 'row', justifyContent: 'center'}}>
-                    <NavLink className="nav_link" exact to="/">About</NavLink>
-                    <NavLink className="nav_link" to="/loaders/">Loaders</NavLink>
-                  </div>
-                  <div className="column-1"/>
-                </>
-              }
-            </Nav>
-            <Switch>
-              <Route exact path="/"  component={Home}/>
-              <Route path="/loaders" component={Loaders}/>
-              <Redirect to="/" />
-            </Switch>
-          </div>
+          <ConnectedApp/>
         </Suspense>
       </Router>
     </Provider>  
   );
 }
 
-export default App;
+function App({screen, setSmallScreen, setMediumScreen, setLargeScreen}) {
+  const queryMatches = useMedia({ queries: mediaQueries });
+  useEffect(() => {
+    if (queryMatches.small && screen !== ActionTypes.SMALL_SCREEN) {
+      setSmallScreen()
+    } else if (queryMatches.medium && screen !== ActionTypes.MEDIUM_SCREEN) {
+      setMediumScreen()
+    } else if (queryMatches.large && screen !== ActionTypes.LARGE_SCREEN) {
+      setLargeScreen()
+    }
+  }, [screen, queryMatches, setSmallScreen, setMediumScreen, setLargeScreen])
+  
+  return (
+    <div className="app">
+      <ConnectedNav/>
+      <Switch>
+        <Route exact path="/"  component={ConnectedHome}/>
+        <Route path="/loaders" component={ConnectedLoaders}/>
+        <Redirect to="/" />
+      </Switch>
+    </div>
+  )
+}
+
+const mapStateToProps = state => ({
+  screen: state.screen
+})
+
+const mapDispatchToProps = dispatch => ({
+  setSmallScreen: () => dispatch(setSmallScreen()),
+  setMediumScreen: () => dispatch(setMediumScreen()),
+  setLargeScreen: () => dispatch(setLargeScreen())
+})
+
+const ConnectedApp = connect(mapStateToProps, mapDispatchToProps)(App);
+
+export default AppWrapper

@@ -1,5 +1,6 @@
-const CounterTypes = {
-  ENABLE_MOBILE: 'ENABLE_MOBILE',
-  DISABLE_MOBILE: 'DISABLE_MOBILE'
+const ScreenTypes = {
+  SMALL_SCREEN: 'SMALL_SCREEN',
+  MEDIUM_SCREEN: 'MEDIUM_SCREEN',
+  LARGE_SCREEN: 'LARGE_SCREEN'
 }
-export default { ...CounterTypes}
+export default { ...ScreenTypes}

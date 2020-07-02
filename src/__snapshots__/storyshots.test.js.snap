@@ -7,47 +7,13 @@ exports[`Storyshots App With Content 1`] = `
   <nav
     className="nav"
   >
-    <div
-      className="column-1"
+    <a
+      className="nav_title"
+      href="/"
+      onClick={[Function]}
     >
-      <a
-        className="nav_title"
-        href="/"
-        onClick={[Function]}
-      >
-        CSS Loaders
-      </a>
-    </div>
-    <div
-      className="column-1"
-      style={
-        Object {
-          "flexDirection": "row",
-          "justifyContent": "center",
-        }
-      }
-    >
-      <a
-        aria-current="page"
-        className="nav_link active"
-        href="/"
-        onClick={[Function]}
-        style={Object {}}
-      >
-        About
-      </a>
-      <a
-        aria-current={null}
-        className="nav_link"
-        href="/loaders/"
-        onClick={[Function]}
-      >
-        Loaders
-      </a>
-    </div>
-    <div
-      className="column-1"
-    />
+      CSS Loaders
+    </a>
   </nav>
   <div
     className="header"
@@ -69,10 +35,10 @@ exports[`Storyshots App With Content 1`] = `
         </div>
       </div>
       <div
-        className="row"
+        className="column"
       >
         <div
-          className="column-2"
+          className="column-3"
         >
           <p
             className="text"
@@ -81,7 +47,7 @@ exports[`Storyshots App With Content 1`] = `
           </p>
         </div>
         <div
-          className="column-1 text-right"
+          className="row justify-space-between"
         >
           <p
             className="text"
@@ -6039,9 +6005,47 @@ exports[`Storyshots Nav With Content 1`] = `
 <nav
   className="nav"
 >
-  <p>
-    Content
-  </p>
+  <div
+    className="column-1"
+  >
+    <a
+      className="nav_title"
+      href="/"
+      onClick={[Function]}
+    >
+      CSS Loaders
+    </a>
+  </div>
+  <div
+    className="column-1"
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <a
+      aria-current="page"
+      className="nav_link active"
+      href="/"
+      onClick={[Function]}
+      style={Object {}}
+    >
+      About
+    </a>
+    <a
+      aria-current={null}
+      className="nav_link"
+      href="/loaders/"
+      onClick={[Function]}
+    >
+      Loaders
+    </a>
+  </div>
+  <div
+    className="column-1"
+  />
 </nav>
 `;
 

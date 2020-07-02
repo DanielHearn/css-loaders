@@ -5,6 +5,8 @@ import {
   useRouteMatch,
   Redirect 
 } from "react-router-dom";
+import { connect } from 'react-redux'
+import ActionTypes from '../../store/actions'
 
 import Loader from './../../components/loader'
 import Tabs from './../../components/tabs'
@@ -15,19 +17,18 @@ import CodeBlock from './../../components/codeBlock'
 import { slugify, unslugify, capitaliseWords, capitaliseAll } from './../../helpers'
 import { useTitle } from './../../hooks'
 import loaders from './../../loaders'
-import { titleRoot, mediaQueries } from './../../constants'
-import { useMedia } from 'react-media';
+import { titleRoot } from './../../constants'
 
 import { TiMediaPlay, TiCode, TiThSmall } from "react-icons/ti";
 
-export default function Loaders() {
+export default function Loaders({screen} : {screen: string}) {
   const loaderMatch = useRouteMatch('/loaders/:loaderName');
   let loaderName = ''
   if (loaderMatch) {
     loaderName = loaderMatch.params.loaderName;
   }
   useTitle(`${capitaliseWords(unslugify(loaderName))} - ${titleRoot}`)
-  const queryMatches = useMedia({ queries: mediaQueries });
+  const smallScreen = screen === ActionTypes.SMALL_SCREEN
 
   if(loaderName === null || loaderName === '') {
     return (
@@ -51,7 +52,7 @@ export default function Loaders() {
         )
       }
 
-      if (queryMatches.small) {
+      if (smallScreen) {
         const mobileNavTabs = [
           {
             id: `${slugify(storedLoader.name)}_animation`,
