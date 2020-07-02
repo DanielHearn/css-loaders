@@ -1,7 +1,6 @@
 // @flow
 
 import React from 'react';
-import { connect } from 'react-redux'
 import { useTitle } from './../../hooks'
 import { titleRoot, links } from './../../constants'
 import ActionTypes from '../../store/actions'

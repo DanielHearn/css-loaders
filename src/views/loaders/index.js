@@ -5,7 +5,6 @@ import {
   useRouteMatch,
   Redirect 
 } from "react-router-dom";
-import { connect } from 'react-redux'
 import ActionTypes from '../../store/actions'
 
 import Loader from './../../components/loader'

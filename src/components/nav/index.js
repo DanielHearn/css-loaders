@@ -6,7 +6,6 @@ import {
   NavLink,
 } from "react-router-dom";
 import './nav.scss';
-import { connect } from 'react-redux'
 import ActionTypes from '../../store/actions'
 
 export default function Nav({screen} : {screen: string}) {
