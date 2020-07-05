@@ -5,7 +5,8 @@ import type {Node} from 'react'
 import './gridItem.scss';
 
 type ItemProps = {
-  children: Node
+  children: Node,
+  active: boolean
 }
 
 type TitleProps = {
@@ -14,10 +15,11 @@ type TitleProps = {
 
 export default function GridItem({
   children,
+  active = false,
   ...props
 } : ItemProps) {
   return (
-    <div {...props} className="grid_item">
+    <div {...props} className={`grid_item ${active ? 'active' : ''}`}>
       {children}
     </div>
   )

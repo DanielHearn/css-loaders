@@ -90,7 +90,7 @@ export default function Loaders({screen = ScreenTypes.LARGE_SCREEN} : Props) : N
                     <ScrollBox y={true}>
                       <div className="content">
                         <div style={{marginBottom: '4em'}}>
-                          <LoaderSelection/>
+                          <LoaderSelection initialActiveLoader={loaderName} removeActive={true}/>
                         </div>
                       </div>
                     </ScrollBox>

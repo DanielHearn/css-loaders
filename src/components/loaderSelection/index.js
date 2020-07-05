@@ -1,6 +1,6 @@
 // @flow
 
-import React, {useRef, useState} from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 
 import {
   Link
@@ -17,15 +17,21 @@ import GridItem, { GridItemTitle} from './../gridItem'
 
 import './loaderSelection.scss';
 
-function LoaderGridItem({loader} : {loader: LoaderType}) {
+type ItemProps = {
+  loader: LoaderType,
+  active: boolean,
+  onClick: Function
+}
+
+function LoaderGridItem({loader, active, onClick} : ItemProps) {
   const loaderLink = slugify(loader.name)
-  const darkColor = shadeColor(loader.color, -0.1)
+  const darkColor = shadeColor(loader.color, -0.15)
   const [hovered, setHovered] = useState(false)
 
   return (
-    <GridItem onMouseEnter={(e)=> {setHovered(true)}} onMouseLeave={(e)=> {setHovered(false)}}>
+    <GridItem active={active} onClick={(e) => {onClick(loader)}} onMouseEnter={(e)=> {setHovered(true)}} onMouseLeave={(e)=> {setHovered(false)}}>
       <Link to={`/loaders/${loaderLink}`} style={{margin: 0}}>
-        <div className="loader_container" style={{backgroundColor: hovered ? darkColor : loader.color, display: 'flex', alignItems: 'center', justifyContent: 'center', height: '10em', flex: '1'}}>
+        <div className="loader_container" style={{backgroundColor: hovered || active ? darkColor : loader.color, display: 'flex', alignItems: 'center', justifyContent: 'center', height: '10em', flex: '1'}}>
           <Loader html={loader.code.html} css={loader.code.css}/>
         </div>
         <GridItemTitle>
@@ -36,10 +42,26 @@ function LoaderGridItem({loader} : {loader: LoaderType}) {
   )
 }
 
-export default function LoaderSelection() {
+type Props = {
+  initialActiveLoader?: string, 
+  removeActive?: boolean
+}
+
+export default function LoaderSelection({initialActiveLoader = '', removeActive = false} : Props) {
   const rootRef = useRef(null)
   const { width } = useContainerDimensions(rootRef)
   const columns = width < 600 ? 1 : width < 800 ? 2 : 3
+  const [activeLoader, setActiveLoader] = useState(slugify(loaders[0].name))
+
+  useEffect(()=> {
+    if (initialActiveLoader && activeLoader !== initialActiveLoader) {
+      setActiveLoader(initialActiveLoader)
+    }
+  }, [activeLoader, initialActiveLoader])
+
+  function clickLoader(loader) {
+    setActiveLoader(slugify(loader.name))
+  }
 
   return (
     <div className="loader_selection" ref={rootRef}>
@@ -48,13 +70,24 @@ export default function LoaderSelection() {
         columns={columns}
         searchPlaceholder="Search loaders"
         noMatchElement={(<p>No matching loaders</p>)}
-        matchFunction={(searchText: string, item: LoaderType) => {
+        matchFunction={(searchText: string, loader: LoaderType) => {
           return searchText === '' || 
-          item.name.toLowerCase().includes(searchText.toLowerCase())
+          loader.name.toLowerCase().includes(searchText.toLowerCase())
         }}
         renderFunction={(loader: LoaderType) => {
           const loaderLink = slugify(loader.name)
-          return (<LoaderGridItem key={loaderLink} loader={loader}/>)
+
+          if (removeActive) {
+            const isDupe = removeActive ? slugify(loader.name) === activeLoader : false
+            if (isDupe) {
+              return null
+            }
+          }
+          return (<LoaderGridItem
+            key={loaderLink}
+            loader={loader}
+            active={loaderLink === activeLoader}
+            onClick={clickLoader}/>)
         }
       }
       />

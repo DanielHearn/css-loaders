@@ -20,7 +20,7 @@
     justify-content: left;
     padding: 0.8em 0.6em;
   }
-  &:hover {
+  &:hover, &.active {
     .grid_item_title {
       background: $near-white;
       text-decoration: underline;

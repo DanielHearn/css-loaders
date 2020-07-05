@@ -128,6 +128,11 @@ context('Loader', () => {
       })
       describe('code tab', () => {
         it('tab click', () => {
+          cy.visit(`${baseUrl}/loaders/square`, {
+            onBeforeLoad(win) {
+              cy.stub(win, 'prompt').as('windowAlert')
+            }
+          })
           cy.get('.mobile_nav_tabs .mobile_nav_tab').eq(1).click()
 
           cy.get('.mobile_nav_tabs .mobile_nav_tab').eq(0).should('not.have.class', 'active')
@@ -149,7 +154,10 @@ context('Loader', () => {
           cy.get('.code_block').should('not.contain.text', loaders[0].code.css)
           cy.get('.code_block').should('not.contain.text', loaders[0].code.scss)
           cy.get('.copy_success').should('not.be.visible')
-          cy.get('.code_actions .button').first().click()
+
+          cy.get('.code_actions .button').first().click().then(function () {
+            expect(this.windowAlert).to.be.calledWith('Copy to clipboard: Ctrl+C, Enter', loaders[0].code.html)
+          })
           cy.get('.copy_success').should('be.visible')
 
           cy.get('.tabs_container .tab').eq(1).click()
@@ -161,7 +169,9 @@ context('Loader', () => {
           cy.get('.code_block').should('contain.text', loaders[0].code.css)
           cy.get('.code_block').should('not.contain.text', loaders[0].code.scss)
           cy.get('.copy_success').should('not.be.visible')
-          cy.get('.code_actions .button').first().click()
+          cy.get('.code_actions .button').first().click().then(function () {
+            expect(this.windowAlert).to.be.calledWith('Copy to clipboard: Ctrl+C, Enter', loaders[0].code.css)
+          })
           cy.get('.copy_success').should('be.visible')
   
           cy.get('.tabs_container .tab').eq(2).click()
@@ -173,7 +183,9 @@ context('Loader', () => {
           cy.get('.code_block').should('not.contain.text', loaders[0].code.css)
           cy.get('.code_block').should('contain.text', loaders[0].code.scss)
           cy.get('.copy_success').should('not.be.visible')
-          cy.get('.code_actions .button').first().click()
+          cy.get('.code_actions .button').first().click().then(function () {
+            expect(this.windowAlert).to.be.calledWith('Copy to clipboard: Ctrl+C, Enter', loaders[0].code.scss)
+          })
           cy.get('.copy_success').should('be.visible')
         })
       })
@@ -185,7 +197,7 @@ context('Loader', () => {
           cy.get('.mobile_nav_tabs .mobile_nav_tab').eq(1).should('not.have.class', 'active')
           cy.get('.mobile_nav_tabs .mobile_nav_tab').eq(2).should('have.class', 'active')
 
-          cy.get('.grid .grid_item').should('have.length', loaders.length)
+          cy.get('.grid .grid_item').should('have.length', loaders.length-1)
 
           cy.get('.grid .input_box input').type('hollow box')
           cy.get('.grid .input_box .input_icon').should('be.visible')
@@ -195,9 +207,9 @@ context('Loader', () => {
 
           cy.get('.grid .input_box .clear_button').click()
           cy.get('.grid .input_box input').should('value', '')
-          cy.get('.grid').find('.grid_item').should('have.length', loaders.length)
+          cy.get('.grid').find('.grid_item').should('have.length', loaders.length-1)
 
-          cy.get('.grid_item').eq(1).click()
+          cy.get('.grid_item').eq(0).click()
           cy.url().should('eq', `${baseUrl}/loaders/heartbeat`);
 
           cy.title().should('eq', 'Heartbeat - CSS Loaders');
