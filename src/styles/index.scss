@@ -28,6 +28,18 @@ button {
   border-radius: 0;
 }
 
+.small_screen {
+  .title {
+    font-size: $size-l;
+    margin: 0;
+  }
+  .header {
+    .text {
+      margin: 0.5em 0;
+    }
+  }
+}
+
 .title {
   font-weight: $weight-max-bold;
   font-size: $size-xl;

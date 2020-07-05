@@ -1,6 +1,4 @@
-import type {Loader} from './../'
-
-const pulseLoader: Loader = {
+const pulseLoader = {
   name: 'Pulse',
   color: '#62af65',
   code: {

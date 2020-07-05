@@ -2,7 +2,7 @@
 
 exports[`Storyshots App With Content 1`] = `
 <div
-  className="app"
+  className="app small_screen"
 >
   <nav
     className="nav"
@@ -22,19 +22,6 @@ exports[`Storyshots App With Content 1`] = `
       className="header_content"
     >
       <div
-        className="row"
-      >
-        <div
-          className="column-3"
-        >
-          <h2
-            className="title text-center"
-          >
-            CSS Loaders
-          </h2>
-        </div>
-      </div>
-      <div
         className="column"
       >
         <div
@@ -43,11 +30,11 @@ exports[`Storyshots App With Content 1`] = `
           <p
             className="text"
           >
-            Open-source website showcasing a collection of CSS loading animations along with their HTML, CSS, and SCSS code.
+            Collection of CSS loading animations along with their HTML, CSS, and SCSS code.
           </p>
         </div>
         <div
-          className="row justify-space-between"
+          className="column-3 justify-space-between"
         >
           <p
             className="text"
@@ -2419,7 +2406,7 @@ Array [
           <p
             className="text"
           >
-            Open-source website showcasing a collection of CSS loading animations along with their HTML, CSS, and SCSS code.
+            Collection of CSS loading animations along with their HTML, CSS, and SCSS code.
           </p>
         </div>
         <div

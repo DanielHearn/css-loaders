@@ -1,6 +1,4 @@
-import type {Loader} from './../'
-
-const twoCirclesLoader: Loader = {
+const twoCirclesLoader = {
   name: 'Two Circles',
   color: '#263238',
   code: {

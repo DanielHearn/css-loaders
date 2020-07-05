@@ -1,6 +1,4 @@
-import type {Loader} from './../'
-
-const hollowBoxLoader: Loader = {
+const hollowBoxLoader = {
   name: 'Hollow Box',
   color: '#22958b',
   code: {

@@ -66,7 +66,7 @@ function App({screen, setSmallScreen, setMediumScreen, setLargeScreen}) {
   }, [screen, queryMatches, setSmallScreen, setMediumScreen, setLargeScreen])
   
   return (
-    <div className="app">
+    <div className={`app ${screen.toLowerCase()}`}>
       <ConnectedNav/>
       <Switch>
         <Route exact path="/"  component={ConnectedHome}/>

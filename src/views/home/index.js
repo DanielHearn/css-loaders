@@ -21,17 +21,17 @@ export default function Home({ screen } : Props): Node {
     <>
       <div className="header">
         <div className="header_content">
-          <div className="row">
+          {!smallScreen && <div className="row">
             <div className="column-3">
               <h2 className="title text-center">CSS Loaders</h2>
             </div>
-          </div>
+          </div>}
           <div className={`${smallScreen ? 'column' : 'row'}`}>
             <div className={`${smallScreen ? 'column-3' : 'column-2'}`}>
-              <p className="text">Open-source website showcasing a collection of CSS loading animations along
+              <p className="text">Collection of CSS loading animations along
         with their HTML, CSS, and SCSS code.</p>
             </div>
-            <div className={`${smallScreen ? 'row justify-space-between' : 'column-1 text-right'}`}>
+            <div className={`${smallScreen ? 'column-3 justify-space-between' : 'column-1 text-right'}`}>
               <p className="text">Source on <a className="link light" href={links.github}>GitHub</a></p>
               <p className="text">Developed by <a className="link light" href={links.creator}>Daniel Hearn</a></p>
             </div>

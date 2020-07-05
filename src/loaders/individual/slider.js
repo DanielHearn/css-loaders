@@ -1,6 +1,4 @@
-import type {Loader} from './../'
-
-const sliderLoader: Loader = {
+const sliderLoader = {
   name: 'Slider',
   color: '#714eaf',
   code: {

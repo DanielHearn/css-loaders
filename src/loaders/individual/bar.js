@@ -1,6 +1,4 @@
-import type {Loader} from './../'
-
-const barLoader: Loader = {
+const barLoader = {
   name: 'Bar',
   color: '#e6653c',
   code: {

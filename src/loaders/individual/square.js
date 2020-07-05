@@ -1,6 +1,4 @@
-import type {Loader} from './../'
-
-const squareLoader: Loader = {
+const squareLoader = {
   name: 'Square',
   color: '#d74b48',
   code: {
