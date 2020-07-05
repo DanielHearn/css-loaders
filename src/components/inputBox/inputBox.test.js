@@ -1,20 +1,19 @@
 import React from 'react';
 import InputBox from '../inputBox';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import { TiUser } from "react-icons/ti";
 
 test('InputBox AllProps', () => {
-  const input = 'some text';
-  const searchCallback = jest.fn()
-  const inputBox = shallow(<InputBox inputPlaceholder="Placeholder text" icon={<TiUser />} clearButton={true} searchCallback={searchCallback}/>);
-  
-  inputBox.find('.text_input').simulate('change', {target: {value: input}})
-  expect(searchCallback).toBeCalledTimes(1)
-  expect(searchCallback).toBeCalledWith(input)
+  const onChange = jest.fn()
+  const clearCallback = jest.fn()
+  const inputBox = mount(<InputBox inputPlaceholder="Placeholder text" value="" icon={<TiUser />} clearButton={true} onChange={onChange} clearCallback={clearCallback}/>);
   expect(inputBox.find('.input_icon').exists()).toBe(true)
+
+  inputBox.find('.text_input').simulate('change', {target: {value: 'test'}})
+  expect(onChange).toBeCalledTimes(1)
+  inputBox.setProps({value: 'test'})
   expect(inputBox.find('.clear_button').exists()).toBe(true)
 
   inputBox.find('.clear_button').simulate('click')
-  expect(searchCallback).toBeCalledTimes(2)
-  expect(searchCallback).toBeCalledWith('')
+  expect(clearCallback).toBeCalledTimes(1)
 });

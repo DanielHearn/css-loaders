@@ -4,9 +4,8 @@ import React, {useState} from 'react';
 import type {Node} from 'react'
 
 import Grid from './../grid'
-import InputBox from './../inputBox'
+import SearchForm from './../searchForm'
 import './filteredGrid.scss';
-import { TiZoom } from "react-icons/ti";
 
 type Props<T> = {
   items: Array<Object | string>, 
@@ -43,7 +42,7 @@ export default function FilteredGrid({
 
   return (
     <div className="filtered_grid">
-      <Grid columns={inputColumns} items={[<InputBox key="input_1" inputPlaceholder={searchPlaceholder} icon={<TiZoom />} clearButton={true} searchCallback={searchCallback}/>]}/>
+      <Grid columns={inputColumns} items={[<SearchForm key="search_form" onSubmit={(text) => {searchCallback(text)}}/>]}/>
       {matchedItems.length ?
         <Grid columns={columns} items={matchedItems.map((item: Node): Node => renderFunction(item))}/>
       :
