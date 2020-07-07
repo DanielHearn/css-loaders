@@ -10,10 +10,10 @@ import LoaderSelection from './../../components/loaderSelection'
 import ScrollBox from './../../components/scrollBox'
 
 type Props = {
-  screen: $Values<typeof ScreenTypes>
+  screen?: $Values<typeof ScreenTypes>
 }
 
-export default function Home({ screen } : Props): Node {
+export default function Home({ screen = ScreenTypes.SMALL_SCREEN } : Props): Node {
   useTitle(`${titleRoot}`)
   const smallScreen = screen === ScreenTypes.SMALL_SCREEN
 
@@ -42,7 +42,7 @@ export default function Home({ screen } : Props): Node {
           <ScrollBox y={true}>
             <div className="content">
               <div style={{marginBottom: '2em'}}>
-                <LoaderSelection/>
+                <LoaderSelection showActive={false}/>
               </div>
             </div>
           </ScrollBox>
