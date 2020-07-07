@@ -2402,23 +2402,10 @@ Array [
       className="header_content"
     >
       <div
-        className="row"
+        className="column"
       >
         <div
           className="column-3"
-        >
-          <h2
-            className="title text-center"
-          >
-            CSS Loaders
-          </h2>
-        </div>
-      </div>
-      <div
-        className="row"
-      >
-        <div
-          className="column-2"
         >
           <p
             className="text"
@@ -2427,7 +2414,7 @@ Array [
           </p>
         </div>
         <div
-          className="column-1 text-right"
+          className="column-3 justify-space-between"
         >
           <p
             className="text"
