@@ -6,10 +6,12 @@ import InputBox from "./../inputBox";
 
 type Props = {
   onSubmit: Function,
+  placeholder?: string,
 }
 
 export default function SearchForm({
   onSubmit = (value) => value,
+  placeholder = 'Search'
 } : Props) {
   const [inputValue, setInputValue] = useState('');
 
@@ -31,7 +33,7 @@ export default function SearchForm({
 
   return (
     <form className="search_form" onSubmit={submitForm}>
-      <InputBox inputPlaceholder="Placeholder text" value={inputValue} icon={<TiZoom />} clearButton={true} onChange={onChange} clearCallback={clearCallback}/>
+      <InputBox inputPlaceholder={placeholder} value={inputValue} icon={<TiZoom />} clearButton={true} onChange={onChange} clearCallback={clearCallback}/>
     </form>
   )
 }
