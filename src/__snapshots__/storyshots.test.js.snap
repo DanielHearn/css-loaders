@@ -130,7 +130,7 @@ exports[`Storyshots App With Content 1`] = `
                         className="text_input with-icon"
                         name="text"
                         onChange={[Function]}
-                        placeholder="Placeholder text"
+                        placeholder="Search loaders"
                         value=""
                       />
                     </div>
@@ -2184,7 +2184,7 @@ exports[`Storyshots FilteredGrid With Content 1`] = `
           className="text_input with-icon"
           name="text"
           onChange={[Function]}
-          placeholder="Placeholder text"
+          placeholder="Search loaders"
           value=""
         />
       </div>
@@ -2510,7 +2510,7 @@ Array [
                         className="text_input with-icon"
                         name="text"
                         onChange={[Function]}
-                        placeholder="Placeholder text"
+                        placeholder="Search loaders"
                         value=""
                       />
                     </div>
@@ -3464,7 +3464,7 @@ exports[`Storyshots LoaderSelection Element 1`] = `
             className="text_input with-icon"
             name="text"
             onChange={[Function]}
-            placeholder="Placeholder text"
+            placeholder="Search loaders"
             value=""
           />
         </div>
@@ -4225,7 +4225,7 @@ exports[`Storyshots LoaderSelection With Remove Active 1`] = `
             className="text_input with-icon"
             name="text"
             onChange={[Function]}
-            placeholder="Placeholder text"
+            placeholder="Search loaders"
             value=""
           />
         </div>
@@ -5019,7 +5019,7 @@ exports[`Storyshots Loaders With Content 1`] = `
                             className="text_input with-icon"
                             name="text"
                             onChange={[Function]}
-                            placeholder="Placeholder text"
+                            placeholder="Search loaders"
                             value=""
                           />
                         </div>
@@ -6997,7 +6997,7 @@ exports[`Storyshots SearchForm Element 1`] = `
       className="text_input with-icon"
       name="text"
       onChange={[Function]}
-      placeholder="Placeholder text"
+      placeholder="Search"
       value=""
     />
   </div>
