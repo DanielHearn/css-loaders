@@ -11,17 +11,17 @@
     font-family: $font-family;
     border-radius:  $border-radius;
     border: none;
-    background: $grey;
+    background: $white;
     transition: background-color $transition-time ease-in-out;
     color: $darker;
     font-weight: $weight-semi-bold;
     font-size: $size-s;
     &:focus {
       outline:0;
-      background: $grey-darkish;
+      background: $off-white;
     }
     &:hover {
-      background: $grey-darkish;
+      background: $off-white;
     }
     &::placeholder {
       right: 1em;
@@ -36,7 +36,7 @@
     position: absolute;
     font-size: 1.5em;
     font-size: 2em;
-    left: 0.1em;
+    left: 0.2em;
     pointer-events: none;
     color: $dark;
   }

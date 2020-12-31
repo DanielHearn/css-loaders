@@ -103,6 +103,9 @@ a:not(.link) {
     width: 100%;
     padding: 1em;
   }
+  .text {
+    margin: 0.5em 0;
+  }
 }
 
 .content_container {
@@ -113,9 +116,7 @@ a:not(.link) {
   align-items: center;
   overflow-y: hidden;
   .content {
-    max-width: $max-width;
     width: 100%;
-    padding: 1em;
     box-sizing: border-box;
     align-self: center;
   }
@@ -173,4 +174,8 @@ a:not(.link) {
 
 .flex-center {
   justify-content: center;
+}
+
+svg {
+  font-size: 24px;
 }

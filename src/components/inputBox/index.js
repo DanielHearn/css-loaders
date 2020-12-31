@@ -3,7 +3,7 @@
 import React from 'react';
 import type {Node} from 'react'
 import './inputBox.scss';
-import { TiDelete } from "react-icons/ti";
+import { FaRegTimesCircle } from "react-icons/fa";
 
 type Props = {
   inputPlaceholder: string,
@@ -30,7 +30,7 @@ export default function InputBox({
       </div>}
       <input className={`text_input ${icon ? 'with-icon': ''}`} placeholder={inputPlaceholder} name="text" value={value} onChange={onChange}/>
       {clearButton && value.length ? <span className="clear_button" onClick={clearCallback}>
-        <TiDelete />
+        <FaRegTimesCircle />
       </span>
       : <></>}
     </div>

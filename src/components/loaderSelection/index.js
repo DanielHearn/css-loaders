@@ -75,7 +75,7 @@ export default function LoaderSelection({showActive = true, initialActiveLoader 
         items={loaders}
         columns={columns}
         searchPlaceholder="Search loaders"
-        noMatchElement={(<p>No matching loaders</p>)}
+        noMatchElement={(<p className="no-results">No matching loaders</p>)}
         matchFunction={(searchText: string, loader: LoaderType) => {
           return searchText === '' || 
           loader.name.toLowerCase().includes(searchText.toLowerCase())

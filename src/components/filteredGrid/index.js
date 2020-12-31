@@ -42,7 +42,9 @@ export default function FilteredGrid({
 
   return (
     <div className="filtered_grid">
-      <Grid columns={inputColumns} items={[<SearchForm key="search_form" onSubmit={(text) => {searchCallback(text)}} placeholder="Search loaders"/>]}/>
+      <div className="filtered_grid-search">
+        <Grid columns={inputColumns} items={[<SearchForm key="search_form" onSubmit={(text) => {searchCallback(text)}} placeholder="Search loaders"/>]}/>
+      </div>
       {matchedItems.length ?
         <Grid columns={columns} items={matchedItems.map((item: Node): Node => renderFunction(item))}/>
       :

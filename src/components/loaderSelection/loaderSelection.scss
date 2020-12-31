@@ -9,4 +9,12 @@
       transition: background-color $transition-time ease-in-out;
     }
   }
+  .no-results {
+    padding: 0 1em;
+  }
+  .grid {
+    max-width: $max-width;
+    width: 100%;
+    box-sizing: border-box;
+  }
 }

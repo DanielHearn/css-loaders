@@ -1,7 +1,7 @@
 // @flow
 
 import React, {useState} from 'react';
-import { TiZoom } from "react-icons/ti";
+import { FaSearch } from "react-icons/fa";
 import InputBox from "./../inputBox";
 
 type Props = {
@@ -33,7 +33,7 @@ export default function SearchForm({
 
   return (
     <form className="search_form" onSubmit={submitForm}>
-      <InputBox inputPlaceholder={placeholder} value={inputValue} icon={<TiZoom />} clearButton={true} onChange={onChange} clearCallback={clearCallback}/>
+      <InputBox inputPlaceholder={placeholder} value={inputValue} icon={<FaSearch />} clearButton={true} onChange={onChange} clearCallback={clearCallback}/>
     </form>
   )
 }
