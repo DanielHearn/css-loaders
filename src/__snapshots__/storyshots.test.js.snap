@@ -30,23 +30,12 @@ exports[`Storyshots App With Content 1`] = `
           <p
             className="text"
           >
-            Collection of CSS loading animations along with their HTML, CSS, and SCSS code.
+            Collection of CSS loading animations with their HTML and CSS.
           </p>
         </div>
         <div
           className="column-3 justify-space-between"
         >
-          <p
-            className="text"
-          >
-            Source on 
-            <a
-              className="link light"
-              href="https://github.com/DanielHearn/css-loaders"
-            >
-              GitHub
-            </a>
-          </p>
           <p
             className="text"
           >
@@ -56,6 +45,13 @@ exports[`Storyshots App With Content 1`] = `
               href="https://danielhearn.co.uk"
             >
               Daniel Hearn
+            </a>
+             with the source on 
+            <a
+              className="link light"
+              href="https://github.com/DanielHearn/css-loaders"
+            >
+              GitHub
             </a>
           </p>
         </div>
@@ -2414,23 +2410,12 @@ Array [
           <p
             className="text"
           >
-            Collection of CSS loading animations along with their HTML, CSS, and SCSS code.
+            Collection of CSS loading animations with their HTML and CSS.
           </p>
         </div>
         <div
           className="column-3 justify-space-between"
         >
-          <p
-            className="text"
-          >
-            Source on 
-            <a
-              className="link light"
-              href="https://github.com/DanielHearn/css-loaders"
-            >
-              GitHub
-            </a>
-          </p>
           <p
             className="text"
           >
@@ -2440,6 +2425,13 @@ Array [
               href="https://danielhearn.co.uk"
             >
               Daniel Hearn
+            </a>
+             with the source on 
+            <a
+              className="link light"
+              href="https://github.com/DanielHearn/css-loaders"
+            >
+              GitHub
             </a>
           </p>
         </div>

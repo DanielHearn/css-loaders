@@ -28,12 +28,11 @@ export default function Home({ screen = ScreenTypes.SMALL_SCREEN } : Props): Nod
           </div>}
           <div className={`${smallScreen ? 'column' : 'row'}`}>
             <div className={`${smallScreen ? 'column-3' : 'column-2'}`}>
-              <p className="text">Collection of CSS loading animations along
-        with their HTML, CSS, and SCSS code.</p>
+              <p className="text">Collection of CSS loading animations
+        with their HTML and CSS.</p>
             </div>
             <div className={`${smallScreen ? 'column-3 justify-space-between' : 'column-1 text-right'}`}>
-              <p className="text">Source on <a className="link light" href={links.github}>GitHub</a></p>
-              <p className="text">Developed by <a className="link light" href={links.creator}>Daniel Hearn</a></p>
+              <p className="text">Developed by <a className="link light" href={links.creator}>Daniel Hearn</a> with the source on <a className="link light" href={links.github}>GitHub</a></p>
             </div>
           </div>
         </div>

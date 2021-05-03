@@ -7,7 +7,7 @@
   .text_input {
     display: flex;
     flex: 1;
-    padding: 0.6em 0.8em;
+    padding: 0.4em 0.6em;
     font-family: $font-family;
     border-radius:  $border-radius;
     border: none;
@@ -34,9 +34,9 @@
     display: flex;
     align-items: center;
     position: absolute;
-    font-size: 1.5em;
-    font-size: 2em;
-    left: 0.2em;
+    width: 20px;
+    height: 20px;
+    left: 0.4em;
     pointer-events: none;
     color: $dark;
   }
@@ -44,8 +44,9 @@
     display: flex;
     align-items: center;
     position: absolute;
-    font-size: 2em;
-    right: 0.1em;
+    width: 20px;
+    height: 20px;
+    right: 0.4em;
     cursor: pointer;
     color: $dark;
     &.hidden {

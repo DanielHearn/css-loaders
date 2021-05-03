@@ -14,7 +14,7 @@
     flex-direction: row;
   }
   &.scroll-y .scroll_box_content {
-    overflow-y: auto;
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
   }
