@@ -10,32 +10,5 @@
     font-weight: $weight-bold;
     color: $white;
     text-decoration: none;
-    &.active {
-      text-decoration: underline;
-    }
-    &:hover {
-      text-decoration: underline;
-    }
-    &:visited {
-      text-decoration: none;
-      color: $white;
-    }
-  }
-  .nav_link {
-    padding: 0.5em 1em;
-    font-size: $size-m;
-    font-weight: $weight-regular;
-    color: $white;
-    text-decoration: none;
-    &.active {
-      text-decoration: underline;
-    }
-    &:hover {
-      text-decoration: underline;
-    }
-    &:visited {
-      text-decoration: none;
-      color: $white;
-    }
   }
 }

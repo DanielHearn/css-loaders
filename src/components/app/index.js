@@ -20,12 +20,6 @@ import { store } from '../../store'
 import ActionTypes from '../../store/actions'
 import { setSmallScreen, setMediumScreen, setLargeScreen } from '../../store/actions/screen'
 
-const NavMapStateToProps = state => ({
-  screen: state.screen
-})
-
-const ConnectedNav = connect(NavMapStateToProps)(Nav);
-
 const LoadersMapStateToProps = state => ({
   screen: state.screen
 })
@@ -59,7 +53,7 @@ function App({screen, setSmallScreen, setMediumScreen, setLargeScreen}) {
   
   return (
     <div className={`app ${screen.toLowerCase()}`}>
-      <ConnectedNav/>
+      <Nav/>
       <Switch>
         <Route path="/" component={ConnectedLoaders}/>
         <Redirect to="/" />
