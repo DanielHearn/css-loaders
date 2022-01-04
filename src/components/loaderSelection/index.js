@@ -6,7 +6,7 @@ import {
   Link
 } from "react-router-dom";
 
-import { slugify, shadeColor } from './../../helpers'
+import { slugify } from './../../helpers'
 import { useContainerDimensions } from './../../hooks'
 import loaders from './../../loaders'
 import type {Loader as LoaderType } from './../../loaders'
@@ -25,13 +25,12 @@ type ItemProps = {
 
 function LoaderGridItem({loader, active, onClick} : ItemProps) {
   const loaderLink = slugify(loader.name)
-  const darkColor = shadeColor(loader.color, -0.15)
   const [hovered, setHovered] = useState(false)
 
   return (
     <GridItem active={active} onClick={(e) => {onClick(loader)}} onMouseEnter={(e)=> {setHovered(true)}} onMouseLeave={(e)=> {setHovered(false)}}>
       <Link to={`/${loaderLink}`} style={{margin: 0}}>
-        <div className="loader_container" style={{backgroundColor: hovered || active ? darkColor : loader.color, display: 'flex', alignItems: 'center', justifyContent: 'center', height: '10em', flex: '1'}}>
+        <div className="loader_container" style={{background: loader.color, display: 'flex', alignItems: 'center', justifyContent: 'center', height: '10em', flex: '1'}}>
           <Loader html={loader.code.html} css={loader.code.css}/>
         </div>
         <GridItemTitle>

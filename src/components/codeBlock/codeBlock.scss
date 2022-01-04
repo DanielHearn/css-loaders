@@ -10,9 +10,14 @@
   .code_actions {
     padding: 0.5em;
     background: $off-white;
+    font-weight: 600;
     button {
       display: flex;
       padding: 0.7em;
+      background: $action;
+      &:hover {
+        background: $action-dark;
+      }
     }
   }
   .scroll_box_content {

@@ -22,8 +22,8 @@
   }
   &:hover, &.active {
     .grid_item_title {
-      background: $near-white;
-      text-decoration: underline;
+      background: $action;
+      color: $white;
     }
   }
 }

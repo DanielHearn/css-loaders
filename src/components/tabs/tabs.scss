@@ -15,9 +15,9 @@
       flex: 1;
       padding: 0.75em 1em;
       font-family: $font-family;
-      font-size: $size-s;
+      font-size: $size-m;
       font-weight: $weight-semi-bold;
-      background: $grey-dark;
+      background: $dark;
       color: $white;
       cursor: pointer;
       text-align: center;
@@ -29,12 +29,12 @@
         background: $dark;
       }
       &:hover {
-        background: $dark;
+        background: $action;
       }
       &.active {
         background: $darker;
         &:hover {
-          background: $darker;
+          background: $action;
         }
       }
     }

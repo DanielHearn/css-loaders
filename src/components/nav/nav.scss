@@ -1,11 +1,11 @@
 @import '../../styles/variables'; 
 
 .nav {
-  background: $darker;
+  background: $darkest;
   color: $white;
   display: flex;
   .nav_title {
-    padding: 0.5em 0.5em;
+    padding: 0.7em;
     font-size: $size-m;
     font-weight: $weight-bold;
     color: $white;

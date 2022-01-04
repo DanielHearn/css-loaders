@@ -1,6 +1,6 @@
 const twoCirclesLoader = {
   name: 'Two Circles',
-  color: '#263238',
+  color: '#81B29A',
   code: {
     html: `<div class='twoCircleLoader'>
   <div class='circle'></div>
