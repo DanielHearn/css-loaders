@@ -23,9 +23,3 @@ test('Helpers capitaliseAll', () => {
   const capitalisedText = capitaliseAll(text)
   expect(capitalisedText).toBe('SOME EXAMPLE TEXT')
 });
-
-test('Helpers shadeColor', () => {
-  const color = '#FFFFFF'
-  const darkerColor = shadeColor(color, -0.1)
-  expect(darkerColor).toBe('#e6e6e6')
-});
