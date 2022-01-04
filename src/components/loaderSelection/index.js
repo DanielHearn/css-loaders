@@ -30,7 +30,7 @@ function LoaderGridItem({loader, active, onClick} : ItemProps) {
 
   return (
     <GridItem active={active} onClick={(e) => {onClick(loader)}} onMouseEnter={(e)=> {setHovered(true)}} onMouseLeave={(e)=> {setHovered(false)}}>
-      <Link to={`/loaders/${loaderLink}`} style={{margin: 0}}>
+      <Link to={`/${loaderLink}`} style={{margin: 0}}>
         <div className="loader_container" style={{backgroundColor: hovered || active ? darkColor : loader.color, display: 'flex', alignItems: 'center', justifyContent: 'center', height: '10em', flex: '1'}}>
           <Loader html={loader.code.html} css={loader.code.css}/>
         </div>

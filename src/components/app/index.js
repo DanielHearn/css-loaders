@@ -15,7 +15,6 @@ import './app.scss';
 
 import Nav from '../nav'
 import AppLoader from '../appLoader'
-import Home from '../../views/home'
 import Loaders from '../../views/loaders'
 import { store } from '../../store'
 import ActionTypes from '../../store/actions'
@@ -26,13 +25,6 @@ const NavMapStateToProps = state => ({
 })
 
 const ConnectedNav = connect(NavMapStateToProps)(Nav);
-
-
-const HomeMapStateToProps = state => ({
-  screen: state.screen
-})
-
-const ConnectedHome = connect(HomeMapStateToProps)(Home);
 
 const LoadersMapStateToProps = state => ({
   screen: state.screen
@@ -69,8 +61,7 @@ function App({screen, setSmallScreen, setMediumScreen, setLargeScreen}) {
     <div className={`app ${screen.toLowerCase()}`}>
       <ConnectedNav/>
       <Switch>
-        <Route exact path="/"  component={ConnectedHome}/>
-        <Route path="/loaders" component={ConnectedLoaders}/>
+        <Route path="/" component={ConnectedLoaders}/>
         <Redirect to="/" />
       </Switch>
     </div>

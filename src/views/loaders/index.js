@@ -27,8 +27,8 @@ type Props = {
 }
 
 export default function Loaders({screen = ScreenTypes.LARGE_SCREEN} : Props) : Node {
-  const loaderMatch = useRouteMatch('/loaders/:loaderName');
-  let loaderName = ''
+  const loaderMatch = useRouteMatch('/:loaderName');
+  let loaderName = 'square'
   if (loaderMatch) {
     loaderName = loaderMatch.params.loaderName;
   }
@@ -37,7 +37,7 @@ export default function Loaders({screen = ScreenTypes.LARGE_SCREEN} : Props) : N
 
   if(loaderName === null || loaderName === '') {
     return (
-      <Redirect to={`/loaders/${slugify(loaders[0].name)}`}/>
+      <Redirect to={`/${slugify(loaders[0].name)}`}/>
     );
   } else {
     const storedLoader = loaders.filter((loader: LoaderType) : boolean => 

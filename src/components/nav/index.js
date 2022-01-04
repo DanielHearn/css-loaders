@@ -18,20 +18,7 @@ export default function Nav({screen = ScreenTypes.LARGE_SCREEN} : Props): Node {
 
   return (
     <nav className="nav">
-      {smallScreen ?
-        <Link className="nav_title" to="/">CSS Loaders</Link>
-        :
-        <>
-          <div className="column-1">
-            <Link className="nav_title" to="/">CSS Loaders</Link>
-          </div>
-          <div className="column-1" style={{flexDirection: 'row', justifyContent: 'center'}}>
-            <NavLink className="nav_link" exact to="/">About</NavLink>
-            <NavLink className="nav_link" to="/loaders/">Loaders</NavLink>
-          </div>
-          <div className="column-1"/>
-        </>
-      }
+      <Link className="nav_title" to="/">CSS Loaders</Link>
     </nav>
   )
 }
