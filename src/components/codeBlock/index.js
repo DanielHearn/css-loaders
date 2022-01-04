@@ -6,7 +6,7 @@ import ScrollBox from './../../components/scrollBox'
 import Button from './../../components/button'
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { capitaliseAll } from './../../helpers'
-import { TiClipboard } from "react-icons/ti";
+import { FaRegClipboard } from "react-icons/fa";
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import prism from 'react-syntax-highlighter/dist/cjs/styles/prism/prism';
 import markup from 'react-syntax-highlighter/dist/cjs/languages/prism/markup';
@@ -34,7 +34,7 @@ export default function CodeContainer({language, code} : {language: string, code
         <CopyToClipboard
             text={code}
             onCopy={() => setCopied(true)}>
-          <Button type="primary"><TiClipboard/></Button>
+          <Button type="primary" title={`Copy ${capitaliseAll(language)}`}><FaRegClipboard/></Button>
         </CopyToClipboard>
         {copied && <p className="copy_success text" style={{margin: 0, paddingLeft: '0.5em'}}>Copied {capitaliseAll(language)}!</p>}
       </div>
