@@ -32,38 +32,124 @@ exports[`Storyshots App With Content 1`] = `
           style={
             Object {
               "height": "100%",
-              "position": "relative",
             }
           }
         >
-          <h1
-            className="heading text-center text-white"
-            style={
-              Object {
-                "position": "absolute",
-                "top": "20%",
-                "width": "100%",
-              }
-            }
-          >
-            Square
-          </h1>
           <div
-            style={
-              Object {
-                "alignItems": "center",
-                "background": "#d74b48",
-                "display": "flex",
-                "flex": 1,
-                "justifyContent": "center",
-              }
-            }
+            className="content_container"
           >
             <div
-              className="loader"
+              className="scroll_box  scroll-y"
             >
-              <style>
-                .squareLoader {
+              <div
+                className="scroll_box_content"
+              >
+                <div
+                  className="content"
+                >
+                  <div
+                    style={
+                      Object {
+                        "marginBottom": "4em",
+                      }
+                    }
+                  >
+                    <div
+                      className="loader_selection"
+                    >
+                      <div
+                        className="filtered_grid"
+                      >
+                        <div
+                          className="filtered_grid-search"
+                        >
+                          <div
+                            className="grid"
+                            style={
+                              Object {
+                                "gridTemplateColumns": "repeat(1, 1fr)",
+                              }
+                            }
+                          >
+                            <form
+                              className="search_form"
+                              onSubmit={[Function]}
+                            >
+                              <div
+                                className="input_box"
+                              >
+                                <div
+                                  className="input_icon"
+                                >
+                                  <svg
+                                    fill="currentColor"
+                                    height="1em"
+                                    stroke="currentColor"
+                                    strokeWidth="0"
+                                    style={
+                                      Object {
+                                        "color": undefined,
+                                      }
+                                    }
+                                    viewBox="0 0 512 512"
+                                    width="1em"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+                                    />
+                                  </svg>
+                                </div>
+                                <input
+                                  className="text_input with-icon"
+                                  name="text"
+                                  onChange={[Function]}
+                                  placeholder="Search loaders"
+                                  value=""
+                                />
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                        <div
+                          className="grid"
+                          style={
+                            Object {
+                              "gridTemplateColumns": "repeat(1, 1fr)",
+                            }
+                          }
+                        >
+                          <div
+                            className="grid_item active"
+                            onClick={[Function]}
+                          >
+                            <a
+                              href="/square"
+                              onClick={[Function]}
+                              style={
+                                Object {
+                                  "margin": 0,
+                                }
+                              }
+                            >
+                              <div
+                                className="loader_container"
+                                style={
+                                  Object {
+                                    "alignItems": "center",
+                                    "background": "#d74b48",
+                                    "display": "flex",
+                                    "flex": "1",
+                                    "height": "10em",
+                                    "justifyContent": "center",
+                                  }
+                                }
+                              >
+                                <div
+                                  className="loader"
+                                >
+                                  <style>
+                                    .squareLoader {
     max-width: 4em;
 }
 .squareLoader .square {
@@ -106,19 +192,617 @@ exports[`Storyshots App With Content 1`] = `
     opacity: 1;
   }
 }
-              </style>
-              <div
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "<div class='squareLoader'>
+                                  </style>
+                                  <div
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "<div class='squareLoader'>
   <div class='square'></div>
   <div class='square'></div>
   <div class='square'></div>
   <div class='square'></div>
 </div>",
-                  }
-                }
-              />
+                                      }
+                                    }
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                className="grid_item_title"
+                              >
+                                <p
+                                  className="text bold"
+                                  style={
+                                    Object {
+                                      "margin": 0,
+                                    }
+                                  }
+                                >
+                                  Square
+                                </p>
+                              </div>
+                            </a>
+                          </div>
+                          <div
+                            className="grid_item "
+                            onClick={[Function]}
+                          >
+                            <a
+                              href="/heartbeat"
+                              onClick={[Function]}
+                              style={
+                                Object {
+                                  "margin": 0,
+                                }
+                              }
+                            >
+                              <div
+                                className="loader_container"
+                                style={
+                                  Object {
+                                    "alignItems": "center",
+                                    "background": "#9a40a9",
+                                    "display": "flex",
+                                    "flex": "1",
+                                    "height": "10em",
+                                    "justifyContent": "center",
+                                  }
+                                }
+                              >
+                                <div
+                                  className="loader"
+                                >
+                                  <style>
+                                    .heartbeatLoader {
+  width: 4em;
+  height: 4em;
+  position: relative;
+}
+.heartbeatLoader .pulse {
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  position: absolute;
+  background-color: white;
+  animation: heartbeatanim 1.2s ease-in-out infinite;
+  transform: scale(0);
+  outline: 1px solid transparent;
+}
+.heartbeatLoader .pulse:nth-child(2) {
+  animation-delay: 0.22s;
+}
+@keyframes heartbeatanim {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+                                  </style>
+                                  <div
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "<div class=\\"heartbeatLoader\\">
+  <div class=\\"pulse\\"></div>
+  <div class=\\"pulse\\"></div>
+</div>",
+                                      }
+                                    }
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                className="grid_item_title"
+                              >
+                                <p
+                                  className="text bold"
+                                  style={
+                                    Object {
+                                      "margin": 0,
+                                    }
+                                  }
+                                >
+                                  Heartbeat
+                                </p>
+                              </div>
+                            </a>
+                          </div>
+                          <div
+                            className="grid_item "
+                            onClick={[Function]}
+                          >
+                            <a
+                              href="/slider"
+                              onClick={[Function]}
+                              style={
+                                Object {
+                                  "margin": 0,
+                                }
+                              }
+                            >
+                              <div
+                                className="loader_container"
+                                style={
+                                  Object {
+                                    "alignItems": "center",
+                                    "background": "#714eaf",
+                                    "display": "flex",
+                                    "flex": "1",
+                                    "height": "10em",
+                                    "justifyContent": "center",
+                                  }
+                                }
+                              >
+                                <div
+                                  className="loader"
+                                >
+                                  <style>
+                                    .sliderLoader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sliderLoader .rect {
+  height: 20px;
+  width: 8px;
+  background-color: white;
+  display: inline-block;
+  animation: slideranim 1.4s ease-in-out infinite;
+  margin-right: 4px;
+}
+.sliderLoader .rect:nth-child(1) {
+  animation-delay: 0.15s;
+}
+.sliderLoader .rect:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.sliderLoader .rect:nth-child(3) {
+  animation-delay: 0.45s;
+}
+.sliderLoader .rect:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.sliderLoader .rect:nth-child(5) {
+  animation-delay: 0.75s;
+}
+@keyframes slideranim {
+  0% {
+    transform: scaleY(1);
+  }
+  25% {
+    transform: scaleY(3);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+                                  </style>
+                                  <div
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "<div class='sliderLoader'>
+  <div class='rect'></div>
+  <div class='rect'></div>
+  <div class='rect'></div>
+  <div class='rect'></div>
+  <div class='rect'></div>
+</div>
+        ",
+                                      }
+                                    }
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                className="grid_item_title"
+                              >
+                                <p
+                                  className="text bold"
+                                  style={
+                                    Object {
+                                      "margin": 0,
+                                    }
+                                  }
+                                >
+                                  Slider
+                                </p>
+                              </div>
+                            </a>
+                          </div>
+                          <div
+                            className="grid_item "
+                            onClick={[Function]}
+                          >
+                            <a
+                              href="/hollow_box"
+                              onClick={[Function]}
+                              style={
+                                Object {
+                                  "margin": 0,
+                                }
+                              }
+                            >
+                              <div
+                                className="loader_container"
+                                style={
+                                  Object {
+                                    "alignItems": "center",
+                                    "background": "#22958b",
+                                    "display": "flex",
+                                    "flex": "1",
+                                    "height": "10em",
+                                    "justifyContent": "center",
+                                  }
+                                }
+                              >
+                                <div
+                                  className="loader"
+                                >
+                                  <style>
+                                    .hollowLoader {
+  width: 3em;
+  height: 3em;
+  -webkit-animation: loaderAnim 1.25s infinite ease-in-out;
+  animation: loaderAnim 1.25s infinite ease-in-out;
+  outline: 1px solid transparent;
+}
+.hollowLoader .largeBox {
+  height: 3em;
+  width: 3em;
+  background-color: #ECECEC;
+  outline: 1px solid transparent;
+  position: fixed;
+}
+.hollowLoader .smallBox {
+  height: 3em;
+  width: 3em;
+  background-color: #22958b; //Change to colour of background
+  position: fixed;
+  z-index: 1;
+  outline: 1px solid transparent;
+  -webkit-animation: smallBoxAnim 1.25s alternate infinite ease-in-out;
+  animation: smallBoxAnim 1.25s alternate infinite ease-in-out;
+}
+@-webkit-keyframes smallBoxAnim {
+  0% {
+    -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75);
+  }
+}
+@keyframes smallBoxAnim {
+  0% {
+    -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75);
+  }
+}
+@-webkit-keyframes loaderAnim {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+@keyframes loaderAnim {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+                                  </style>
+                                  <div
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "<div class=\\"hollowLoader\\">
+  <div class=\\"largeBox\\"></div>
+  <div class=\\"smallBox\\"></div>
+</div>",
+                                      }
+                                    }
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                className="grid_item_title"
+                              >
+                                <p
+                                  className="text bold"
+                                  style={
+                                    Object {
+                                      "margin": 0,
+                                    }
+                                  }
+                                >
+                                  Hollow Box
+                                </p>
+                              </div>
+                            </a>
+                          </div>
+                          <div
+                            className="grid_item "
+                            onClick={[Function]}
+                          >
+                            <a
+                              href="/pulse"
+                              onClick={[Function]}
+                              style={
+                                Object {
+                                  "margin": 0,
+                                }
+                              }
+                            >
+                              <div
+                                className="loader_container"
+                                style={
+                                  Object {
+                                    "alignItems": "center",
+                                    "background": "#62af65",
+                                    "display": "flex",
+                                    "flex": "1",
+                                    "height": "10em",
+                                    "justifyContent": "center",
+                                  }
+                                }
+                              >
+                                <div
+                                  className="loader"
+                                >
+                                  <style>
+                                    .pulseLoader {
+  width: 4em;
+  height: 4em;
+  border-radius: 4em;
+  background-color: white;
+  outline: 1px solid transparent;
+  animation: pulseanim 1.2s ease-in-out infinite;
+}
+@keyframes pulseanim {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+                                  </style>
+                                  <div
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "<div class='pulseLoader'></div>
+    ",
+                                      }
+                                    }
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                className="grid_item_title"
+                              >
+                                <p
+                                  className="text bold"
+                                  style={
+                                    Object {
+                                      "margin": 0,
+                                    }
+                                  }
+                                >
+                                  Pulse
+                                </p>
+                              </div>
+                            </a>
+                          </div>
+                          <div
+                            className="grid_item "
+                            onClick={[Function]}
+                          >
+                            <a
+                              href="/bar"
+                              onClick={[Function]}
+                              style={
+                                Object {
+                                  "margin": 0,
+                                }
+                              }
+                            >
+                              <div
+                                className="loader_container"
+                                style={
+                                  Object {
+                                    "alignItems": "center",
+                                    "background": "#e6653c",
+                                    "display": "flex",
+                                    "flex": "1",
+                                    "height": "10em",
+                                    "justifyContent": "center",
+                                  }
+                                }
+                              >
+                                <div
+                                  className="loader"
+                                >
+                                  <style>
+                                    .barLoader {
+  width: 10em;
+}
+.barLoader .bar {
+  width: 100%;
+  opacity: 0;
+  height: 1.5em;
+  background: #fefefe;
+  animation: baranim 2.5s infinite cubic-bezier(0.61, 0.33, 0.39, 0.79);
+  transform-origin: 0% 50%;
+}
+@keyframes baranim {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  5% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  95% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 0;
+  }
+}
+                                  </style>
+                                  <div
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "<div class=\\"barLoader\\">
+  <div class=\\"bar\\"></div>
+</div>",
+                                      }
+                                    }
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                className="grid_item_title"
+                              >
+                                <p
+                                  className="text bold"
+                                  style={
+                                    Object {
+                                      "margin": 0,
+                                    }
+                                  }
+                                >
+                                  Bar
+                                </p>
+                              </div>
+                            </a>
+                          </div>
+                          <div
+                            className="grid_item "
+                            onClick={[Function]}
+                          >
+                            <a
+                              href="/two_circles"
+                              onClick={[Function]}
+                              style={
+                                Object {
+                                  "margin": 0,
+                                }
+                              }
+                            >
+                              <div
+                                className="loader_container"
+                                style={
+                                  Object {
+                                    "alignItems": "center",
+                                    "background": "#81B29A",
+                                    "display": "flex",
+                                    "flex": "1",
+                                    "height": "10em",
+                                    "justifyContent": "center",
+                                  }
+                                }
+                              >
+                                <div
+                                  className="loader"
+                                >
+                                  <style>
+                                    .twoCircleLoader {
+  width: 4em;
+  height: 4em;
+  position: relative;
+}
+.twoCircleLoader .circle {
+  width: 4em;
+  height: 4em;
+  border-radius: 4em;
+  position: absolute;
+  animation: load 3s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.twoCircleLoader .circle:nth-child(1) {
+  background-color: #f1c40f;
+  transform: scale(0);
+  animation-delay: 1.5s;
+}
+.twoCircleLoader .circle:nth-child(2) {
+  background-color: #de4e40;
+}
+@keyframes load {
+  0% {
+    transform: scale(0);
+  }
+  46% {
+    transform: scale(1);
+  }
+  54% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+                                  </style>
+                                  <div
+                                    dangerouslySetInnerHTML={
+                                      Object {
+                                        "__html": "<div class='twoCircleLoader'>
+  <div class='circle'></div>
+  <div class='circle'></div>
+</div>
+      ",
+                                      }
+                                    }
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                className="grid_item_title"
+                              >
+                                <p
+                                  className="text bold"
+                                  style={
+                                    Object {
+                                      "margin": 0,
+                                    }
+                                  }
+                                >
+                                  Two Circles
+                                </p>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -127,7 +811,7 @@ exports[`Storyshots App With Content 1`] = `
         className="mobile_nav_tabs"
       >
         <button
-          className="mobile_nav_tab active"
+          className="mobile_nav_tab "
           onClick={[Function]}
         >
           <div
@@ -195,7 +879,7 @@ exports[`Storyshots App With Content 1`] = `
           </p>
         </button>
         <button
-          className="mobile_nav_tab "
+          className="mobile_nav_tab active"
           onClick={[Function]}
         >
           <div
@@ -334,9 +1018,9 @@ exports[`Storyshots CodeBlock With Content 1`] = `
       <button
         className="button primary"
         onClick={[Function]}
+        title="Copy SCSS"
       >
         <svg
-          baseProfile="tiny"
           fill="currentColor"
           height="1em"
           stroke="currentColor"
@@ -346,16 +1030,13 @@ exports[`Storyshots CodeBlock With Content 1`] = `
               "color": undefined,
             }
           }
-          version="1.2"
-          viewBox="0 0 24 24"
+          viewBox="0 0 384 512"
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <g>
-            <path
-              d="M17 3h-10c-1.654 0-3 1.346-3 3v12c0 1.654 1.346 3 3 3h10c1.654 0 3-1.346 3-3v-12c0-1.654-1.346-3-3-3zm-8 2h6v1c0 .551-.449 1-1 1h-4c-.551 0-1-.449-1-1v-1zm9 13c0 .551-.449 1-1 1h-10c-.551 0-1-.449-1-1v-12c0-.551.449-1 1-1h1v1c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2v-1h1c.551 0 1 .449 1 1v12zM16 17h-8c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h8c.276 0 .5.224.5.5s-.224.5-.5.5zM16 14h-8c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h8c.276 0 .5.224.5.5s-.224.5-.5.5zM16 11h-8c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h8c.276 0 .5.224.5.5s-.224.5-.5.5z"
-            />
-          </g>
+          <path
+            d="M336 64h-80c0-35.3-28.7-64-64-64s-64 28.7-64 64H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM192 40c13.3 0 24 10.7 24 24s-10.7 24-24 24-24-10.7-24-24 10.7-24 24-24zm144 418c0 3.3-2.7 6-6 6H54c-3.3 0-6-2.7-6-6V118c0-3.3 2.7-6 6-6h42v36c0 6.6 5.4 12 12 12h168c6.6 0 12-5.4 12-12v-36h42c3.3 0 6 2.7 6 6z"
+          />
         </svg>
       </button>
     </div>
@@ -2100,8 +2781,6 @@ exports[`Storyshots LoaderSelection Element 1`] = `
       <div
         className="grid_item active"
         onClick={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
       >
         <a
           href="/square"
@@ -2117,7 +2796,7 @@ exports[`Storyshots LoaderSelection Element 1`] = `
             style={
               Object {
                 "alignItems": "center",
-                "backgroundColor": "#b7403d",
+                "background": "#d74b48",
                 "display": "flex",
                 "flex": "1",
                 "height": "10em",
@@ -2206,8 +2885,6 @@ exports[`Storyshots LoaderSelection Element 1`] = `
       <div
         className="grid_item "
         onClick={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
       >
         <a
           href="/heartbeat"
@@ -2223,7 +2900,7 @@ exports[`Storyshots LoaderSelection Element 1`] = `
             style={
               Object {
                 "alignItems": "center",
-                "backgroundColor": "#9a40a9",
+                "background": "#9a40a9",
                 "display": "flex",
                 "flex": "1",
                 "height": "10em",
@@ -2294,8 +2971,6 @@ exports[`Storyshots LoaderSelection Element 1`] = `
       <div
         className="grid_item "
         onClick={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
       >
         <a
           href="/slider"
@@ -2311,7 +2986,7 @@ exports[`Storyshots LoaderSelection Element 1`] = `
             style={
               Object {
                 "alignItems": "center",
-                "backgroundColor": "#714eaf",
+                "background": "#714eaf",
                 "display": "flex",
                 "flex": "1",
                 "height": "10em",
@@ -2401,8 +3076,6 @@ exports[`Storyshots LoaderSelection Element 1`] = `
       <div
         className="grid_item "
         onClick={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
       >
         <a
           href="/hollow_box"
@@ -2418,7 +3091,7 @@ exports[`Storyshots LoaderSelection Element 1`] = `
             style={
               Object {
                 "alignItems": "center",
-                "backgroundColor": "#22958b",
+                "background": "#22958b",
                 "display": "flex",
                 "flex": "1",
                 "height": "10em",
@@ -2526,8 +3199,6 @@ exports[`Storyshots LoaderSelection Element 1`] = `
       <div
         className="grid_item "
         onClick={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
       >
         <a
           href="/pulse"
@@ -2543,7 +3214,7 @@ exports[`Storyshots LoaderSelection Element 1`] = `
             style={
               Object {
                 "alignItems": "center",
-                "backgroundColor": "#62af65",
+                "background": "#62af65",
                 "display": "flex",
                 "flex": "1",
                 "height": "10em",
@@ -2602,8 +3273,6 @@ exports[`Storyshots LoaderSelection Element 1`] = `
       <div
         className="grid_item "
         onClick={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
       >
         <a
           href="/bar"
@@ -2619,7 +3288,7 @@ exports[`Storyshots LoaderSelection Element 1`] = `
             style={
               Object {
                 "alignItems": "center",
-                "backgroundColor": "#e6653c",
+                "background": "#e6653c",
                 "display": "flex",
                 "flex": "1",
                 "height": "10em",
@@ -2696,8 +3365,6 @@ exports[`Storyshots LoaderSelection Element 1`] = `
       <div
         className="grid_item "
         onClick={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
       >
         <a
           href="/two_circles"
@@ -2713,7 +3380,7 @@ exports[`Storyshots LoaderSelection Element 1`] = `
             style={
               Object {
                 "alignItems": "center",
-                "backgroundColor": "#263238",
+                "background": "#81B29A",
                 "display": "flex",
                 "flex": "1",
                 "height": "10em",
@@ -3002,8 +3669,6 @@ exports[`Storyshots Loaders With Content 1`] = `
                       <div
                         className="grid_item active"
                         onClick={[Function]}
-                        onMouseEnter={[Function]}
-                        onMouseLeave={[Function]}
                       >
                         <a
                           href="/square"
@@ -3019,7 +3684,7 @@ exports[`Storyshots Loaders With Content 1`] = `
                             style={
                               Object {
                                 "alignItems": "center",
-                                "backgroundColor": "#b7403d",
+                                "background": "#d74b48",
                                 "display": "flex",
                                 "flex": "1",
                                 "height": "10em",
@@ -3108,8 +3773,6 @@ exports[`Storyshots Loaders With Content 1`] = `
                       <div
                         className="grid_item "
                         onClick={[Function]}
-                        onMouseEnter={[Function]}
-                        onMouseLeave={[Function]}
                       >
                         <a
                           href="/heartbeat"
@@ -3125,7 +3788,7 @@ exports[`Storyshots Loaders With Content 1`] = `
                             style={
                               Object {
                                 "alignItems": "center",
-                                "backgroundColor": "#9a40a9",
+                                "background": "#9a40a9",
                                 "display": "flex",
                                 "flex": "1",
                                 "height": "10em",
@@ -3196,8 +3859,6 @@ exports[`Storyshots Loaders With Content 1`] = `
                       <div
                         className="grid_item "
                         onClick={[Function]}
-                        onMouseEnter={[Function]}
-                        onMouseLeave={[Function]}
                       >
                         <a
                           href="/slider"
@@ -3213,7 +3874,7 @@ exports[`Storyshots Loaders With Content 1`] = `
                             style={
                               Object {
                                 "alignItems": "center",
-                                "backgroundColor": "#714eaf",
+                                "background": "#714eaf",
                                 "display": "flex",
                                 "flex": "1",
                                 "height": "10em",
@@ -3303,8 +3964,6 @@ exports[`Storyshots Loaders With Content 1`] = `
                       <div
                         className="grid_item "
                         onClick={[Function]}
-                        onMouseEnter={[Function]}
-                        onMouseLeave={[Function]}
                       >
                         <a
                           href="/hollow_box"
@@ -3320,7 +3979,7 @@ exports[`Storyshots Loaders With Content 1`] = `
                             style={
                               Object {
                                 "alignItems": "center",
-                                "backgroundColor": "#22958b",
+                                "background": "#22958b",
                                 "display": "flex",
                                 "flex": "1",
                                 "height": "10em",
@@ -3428,8 +4087,6 @@ exports[`Storyshots Loaders With Content 1`] = `
                       <div
                         className="grid_item "
                         onClick={[Function]}
-                        onMouseEnter={[Function]}
-                        onMouseLeave={[Function]}
                       >
                         <a
                           href="/pulse"
@@ -3445,7 +4102,7 @@ exports[`Storyshots Loaders With Content 1`] = `
                             style={
                               Object {
                                 "alignItems": "center",
-                                "backgroundColor": "#62af65",
+                                "background": "#62af65",
                                 "display": "flex",
                                 "flex": "1",
                                 "height": "10em",
@@ -3504,8 +4161,6 @@ exports[`Storyshots Loaders With Content 1`] = `
                       <div
                         className="grid_item "
                         onClick={[Function]}
-                        onMouseEnter={[Function]}
-                        onMouseLeave={[Function]}
                       >
                         <a
                           href="/bar"
@@ -3521,7 +4176,7 @@ exports[`Storyshots Loaders With Content 1`] = `
                             style={
                               Object {
                                 "alignItems": "center",
-                                "backgroundColor": "#e6653c",
+                                "background": "#e6653c",
                                 "display": "flex",
                                 "flex": "1",
                                 "height": "10em",
@@ -3598,8 +4253,6 @@ exports[`Storyshots Loaders With Content 1`] = `
                       <div
                         className="grid_item "
                         onClick={[Function]}
-                        onMouseEnter={[Function]}
-                        onMouseLeave={[Function]}
                       >
                         <a
                           href="/two_circles"
@@ -3615,7 +4268,7 @@ exports[`Storyshots Loaders With Content 1`] = `
                             style={
                               Object {
                                 "alignItems": "center",
-                                "backgroundColor": "#263238",
+                                "background": "#81B29A",
                                 "display": "flex",
                                 "flex": "1",
                                 "height": "10em",
@@ -3755,9 +4408,9 @@ exports[`Storyshots Loaders With Content 1`] = `
               <button
                 className="button primary"
                 onClick={[Function]}
+                title="Copy HTML"
               >
                 <svg
-                  baseProfile="tiny"
                   fill="currentColor"
                   height="1em"
                   stroke="currentColor"
@@ -3767,16 +4420,13 @@ exports[`Storyshots Loaders With Content 1`] = `
                       "color": undefined,
                     }
                   }
-                  version="1.2"
-                  viewBox="0 0 24 24"
+                  viewBox="0 0 384 512"
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <g>
-                    <path
-                      d="M17 3h-10c-1.654 0-3 1.346-3 3v12c0 1.654 1.346 3 3 3h10c1.654 0 3-1.346 3-3v-12c0-1.654-1.346-3-3-3zm-8 2h6v1c0 .551-.449 1-1 1h-4c-.551 0-1-.449-1-1v-1zm9 13c0 .551-.449 1-1 1h-10c-.551 0-1-.449-1-1v-12c0-.551.449-1 1-1h1v1c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2v-1h1c.551 0 1 .449 1 1v12zM16 17h-8c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h8c.276 0 .5.224.5.5s-.224.5-.5.5zM16 14h-8c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h8c.276 0 .5.224.5.5s-.224.5-.5.5zM16 11h-8c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h8c.276 0 .5.224.5.5s-.224.5-.5.5z"
-                    />
-                  </g>
+                  <path
+                    d="M336 64h-80c0-35.3-28.7-64-64-64s-64 28.7-64 64H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM192 40c13.3 0 24 10.7 24 24s-10.7 24-24 24-24-10.7-24-24 10.7-24 24-24zm144 418c0 3.3-2.7 6-6 6H54c-3.3 0-6-2.7-6-6V118c0-3.3 2.7-6 6-6h42v36c0 6.6 5.4 12 12 12h168c6.6 0 12-5.4 12-12v-36h42c3.3 0 6 2.7 6 6z"
+                  />
                 </svg>
               </button>
             </div>
