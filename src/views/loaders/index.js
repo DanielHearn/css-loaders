@@ -35,11 +35,6 @@ export default function Loaders({screen = ScreenTypes.LARGE_SCREEN} : Props) : N
   useTitle(`${capitaliseWords(unslugify(loaderName))} - ${titleRoot}`)
   const smallScreen = screen === ScreenTypes.SMALL_SCREEN
 
-  if(loaderName === null || loaderName === '') {
-    return (
-      <Redirect to={`/${slugify(loaders[0].name)}`}/>
-    );
-  } else {
     const storedLoader = loaders.filter((loader: LoaderType) : boolean => 
       loaderName === slugify(loader.name)
     )[0]
@@ -102,7 +97,7 @@ export default function Loaders({screen = ScreenTypes.LARGE_SCREEN} : Props) : N
 
         return (
           <div className="row" style={{height: '90%'}}>
-            <MobileNav tabs={mobileNavTabs}/>
+            <MobileNav tabs={mobileNavTabs} defaultTab={smallScreen && !loaderMatch ? mobileNavTabs[2] :null}/>
           </div>
         )
       } else {
@@ -138,5 +133,4 @@ export default function Loaders({screen = ScreenTypes.LARGE_SCREEN} : Props) : N
         <Redirect url="/"/>
       );
     }
-  }
 }

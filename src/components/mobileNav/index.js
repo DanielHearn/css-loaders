@@ -12,13 +12,15 @@ type TabItem = {
 }
 
 type Props = {
-  tabs: Array<TabItem>
+  tabs: Array<TabItem>,
+  defaultTab: TabItem
 }
 
 export default function MobileNav({
-  tabs
+  tabs,
+  defaultTab = null
 } : Props) {
-  const [activeTab, setActiveTab] = useState(tabs[0])
+  const [activeTab, setActiveTab] = useState(defaultTab || tabs[0])
 
   useEffect(() => {
     if (!tabs.filter(tab => tab.id === activeTab.id).length) {
