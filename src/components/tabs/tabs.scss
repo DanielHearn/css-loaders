@@ -24,6 +24,8 @@
       align-items: center;
       justify-content: center;
       transition: background-color $transition-time ease-in-out;
+      user-select: none;
+
       &:focus {
         outline: 0;
         background: $dark;

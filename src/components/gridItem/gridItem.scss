@@ -9,6 +9,8 @@
   -webkit-box-shadow: 3px 3px 6px 1px rgba(0,0,0,0.1);
   -moz-box-shadow: 3px 3px 6px 1px rgba(0,0,0,0.1);
   box-shadow: 3px 3px 6px 1px rgba(0,0,0,0.1);
+  
+
   .grid_item_content {
     display: flex;
     flex-direction: column;
@@ -19,6 +21,7 @@
     display: flex;
     justify-content: left;
     padding: 0.8em 0.6em;
+    user-select: none;
   }
   &:hover, &.active {
     .grid_item_title {
