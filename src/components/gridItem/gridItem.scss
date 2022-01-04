@@ -22,7 +22,7 @@
   }
   &:hover, &.active {
     .grid_item_title {
-      background: $action;
+      background: $selected;
       color: $white;
     }
   }
