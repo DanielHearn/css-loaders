@@ -10,6 +10,13 @@
   .code_actions {
     padding: 1em 0.5em;
     background: $off-white;
+    button {
+      display: flex;
+      padding: 0.8em;
+    }
+  }
+  .scroll_box_content {
+    background: $white;
   }
   .code_block {
     margin: 0 !important;
@@ -17,6 +24,7 @@
     flex: 1;
     padding: 1em !important;
     background: $white !important;
+    overflow: visible !important;
     .token:last-child {
       padding-bottom: 40%;
     }
