@@ -6,9 +6,23 @@
   display: flex;
   .nav_title {
     padding: 0.7em;
+    padding-right: 0.5em;
     font-size: $size-m;
     font-weight: $weight-bold;
     color: $white;
     text-decoration: none;
+  }
+  .nav_subtitle {
+    padding: 0.4em;
+    font-size: $size-s;
+    font-weight: $weight-regular;
+    color: $white;
+    display: flex;
+    align-items: center;
+    a {
+      color: $white;
+      margin-left: 0.3em;
+      font-weight: $weight-semi-bold
+    }
   }
 }

@@ -8,6 +8,7 @@ export default function Nav(): Node {
   return (
     <nav className="nav">
       <span className="nav_title">CSS Loaders</span>
+      <div className="nav_subtitle">By <a href="https://danielhearn.co.uk" className="link">Daniel Hearn</a></div>
     </nav>
   )
 }
