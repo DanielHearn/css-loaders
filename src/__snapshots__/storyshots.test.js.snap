@@ -12,6 +12,17 @@ exports[`Storyshots App With Content 1`] = `
     >
       CSS Loaders
     </span>
+    <div
+      className="nav_subtitle"
+    >
+      By 
+      <a
+        className="link"
+        href="https://danielhearn.co.uk"
+      >
+        Daniel Hearn
+      </a>
+    </div>
   </nav>
   <div
     className="row"
@@ -5328,6 +5339,17 @@ exports[`Storyshots Nav With Content 1`] = `
   >
     CSS Loaders
   </span>
+  <div
+    className="nav_subtitle"
+  >
+    By 
+    <a
+      className="link"
+      href="https://danielhearn.co.uk"
+    >
+      Daniel Hearn
+    </a>
+  </div>
 </nav>
 `;
 
