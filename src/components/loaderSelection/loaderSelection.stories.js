@@ -7,5 +7,3 @@ export default {
 };
 
 export const Element = () => <LoaderSelection/>;
-
-export const WithRemoveActive = () => <LoaderSelection removeActive={true}/>;

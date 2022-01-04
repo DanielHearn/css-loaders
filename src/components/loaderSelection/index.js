@@ -44,11 +44,10 @@ function LoaderGridItem({loader, active, onClick} : ItemProps) {
 
 type Props = {
   initialActiveLoader?: string, 
-  showActive?: boolean,
-  removeActive?: boolean
+  showActive?: boolean
 }
 
-export default function LoaderSelection({showActive = true, initialActiveLoader = '', removeActive = false} : Props) {
+export default function LoaderSelection({showActive = true, initialActiveLoader = ''} : Props) {
   const rootRef = useRef(null)
   const { width } = useContainerDimensions(rootRef)
   const columns = width < 600 ? 1 : width < 800 ? 2 : 3
@@ -83,12 +82,6 @@ export default function LoaderSelection({showActive = true, initialActiveLoader 
         renderFunction={(loader: LoaderType) => {
           const loaderLink = slugify(loader.name)
 
-          if (removeActive) {
-            const isDupe = removeActive ? slugify(loader.name) === activeLoader : false
-            if (isDupe) {
-              return null
-            }
-          }
           return (<LoaderGridItem
             key={loaderLink}
             loader={loader}
