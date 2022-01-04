@@ -35,6 +35,7 @@
       }
       &.active {
         background: $selected;
+        transition: background-color 0s ease-in-out;
         &:hover {
           background: $selected;
         }
