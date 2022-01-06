@@ -8,7 +8,7 @@ import SearchForm from './../searchForm'
 import './filteredGrid.scss';
 
 type Props<T> = {
-  items: Array<Object | string>, 
+  items: Array<T>, 
   columns?: number, 
   searchPlaceholder?: string, 
   noMatchElement?: Node, 
