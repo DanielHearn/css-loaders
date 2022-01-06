@@ -20,7 +20,7 @@ export default function FilteredGrid({
   items = [], 
   columns = 3, 
   searchPlaceholder = 'Search', 
-  noMatchElement = <p>No results found</p>, 
+  noMatchElement = <p key="no_match">No results found</p>, 
   matchFunction = (searchText: string, item: string): boolean => {
     return searchText === '' || 
     item.toLowerCase().includes(searchText.toLowerCase())
@@ -49,7 +49,7 @@ export default function FilteredGrid({
         {matchedItems.length ?
           <Grid columns={columns} items={matchedItems.map((item: Node): Node => renderFunction(item))}/>
         :
-          noMatchElement
+          <Grid columns={columns} items={[noMatchElement]}/>
         }
       </div>
     </div>

@@ -11,8 +11,6 @@
     }
   }
   .no-results {
-    padding: 0 1em;
-    margin: 1.5em;
     font-weight: $weight-regular;
     color: $white;
     font-size: $size-m;
@@ -21,5 +19,6 @@
     max-width: $max-width;
     width: 100%;
     box-sizing: border-box;
+    margin: 0 auto;
   }
 }
