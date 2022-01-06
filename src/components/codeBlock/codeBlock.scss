@@ -34,4 +34,9 @@
       padding-bottom: 40%;
     }
   }
+  .content_container {
+    overflow: auto;
+    align-items: flex-start;
+    background: $white;
+  }
 }

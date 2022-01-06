@@ -13,7 +13,7 @@ type TabItem = {
 
 type Props = {
   tabs: Array<TabItem>,
-  defaultTab: TabItem
+  defaultTab: ?TabItem
 }
 
 export default function MobileNav({

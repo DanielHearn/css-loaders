@@ -2,7 +2,6 @@
 
 import React, { useRef, useState, useEffect } from 'react';
 
-import ScrollBox from './../../components/scrollBox'
 import Button from './../../components/button'
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { capitaliseAll } from './../../helpers'
@@ -40,11 +39,9 @@ export default function CodeContainer({language, code} : {language: string, code
       </div>
     </div>
     <div className="content_container" ref={textAreaRef}>
-      <ScrollBox y={true} x={true}>
-        <SyntaxHighlighter language={language} style={prism} className="code_block">
-          {code}
-        </SyntaxHighlighter>
-      </ScrollBox>
+      <SyntaxHighlighter language={language} style={prism} className="code_block">
+        {code}
+      </SyntaxHighlighter>
     </div>
   </div>
   )

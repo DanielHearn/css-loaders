@@ -102,7 +102,7 @@ export default function Loaders({screen = ScreenTypes.LARGE_SCREEN} : Props) : N
       )
     } else {
       return (
-        <div className="row" style={{height: '100%'}}>
+        <div className="row" style={{height: 'calc(100% - 45px)'}}>
           <div className="column" style={{width: '50%', height: '100%'}}>
             <div className="row" style={{position: 'relative', height: '50%'}}>
               <h1 className="heading text-center text-white" style={{position: 'absolute', top: '20%', width: '100%'}}>{storedLoader.name}</h1>
@@ -112,13 +112,9 @@ export default function Loaders({screen = ScreenTypes.LARGE_SCREEN} : Props) : N
             </div>
             <div className="row" style={{height: '50%'}}>
               <div className="content_container">
-                  <ScrollBox y={true}>
-                    <div className="content">
-                      <div style={{marginBottom: '4em'}}>
-                        <LoaderSelection/>
-                      </div>
-                    </div>
-                  </ScrollBox>
+                <div className="content">
+                  <LoaderSelection/>
+                </div>
               </div>
             </div>
           </div>
