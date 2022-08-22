@@ -722,6 +722,99 @@ exports[`Storyshots App With Content 1`] = `
                               onClick={[Function]}
                             >
                               <a
+                                href="/bar_with_border"
+                                onClick={[Function]}
+                                style={
+                                  Object {
+                                    "margin": 0,
+                                  }
+                                }
+                              >
+                                <div
+                                  className="loader_container"
+                                  style={
+                                    Object {
+                                      "alignItems": "center",
+                                      "background": "#4c4ea9",
+                                      "display": "flex",
+                                      "flex": "1",
+                                      "height": "10em",
+                                      "justifyContent": "center",
+                                    }
+                                  }
+                                >
+                                  <div
+                                    className="loader"
+                                  >
+                                    <style>
+                                      .barWithBorderLoader {
+  width: 10em;
+  border: 0.25em solid #fefefe;
+}
+.barWithBorderLoader .bar {
+  width: 100%;
+  opacity: 0;
+  height: 1.5em;
+  background: #fefefe;
+  animation: barwithborderanim 2.5s infinite cubic-bezier(0.61, 0.33, 0.39, 0.79);
+  transform-origin: 0% 50%;
+}
+@keyframes barwithborderanim {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  5% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  95% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 0;
+  }
+}
+                                    </style>
+                                    <div
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "<div class=\\"barWithBorderLoader\\">
+  <div class=\\"bar\\"></div>
+</div>",
+                                        }
+                                      }
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="grid_item_title"
+                                >
+                                  <p
+                                    className="text bold"
+                                    style={
+                                      Object {
+                                        "margin": 0,
+                                      }
+                                    }
+                                  >
+                                    Bar with Border
+                                  </p>
+                                </div>
+                              </a>
+                            </div>
+                            <div
+                              className="grid_item "
+                              onClick={[Function]}
+                            >
+                              <a
                                 href="/two_circles"
                                 onClick={[Function]}
                                 style={
@@ -735,7 +828,7 @@ exports[`Storyshots App With Content 1`] = `
                                   style={
                                     Object {
                                       "alignItems": "center",
-                                      "background": "#81B29A",
+                                      "background": "#221d2a",
                                       "display": "flex",
                                       "flex": "1",
                                       "height": "10em",
@@ -807,6 +900,95 @@ exports[`Storyshots App With Content 1`] = `
                                     }
                                   >
                                     Two Circles
+                                  </p>
+                                </div>
+                              </a>
+                            </div>
+                            <div
+                              className="grid_item "
+                              onClick={[Function]}
+                            >
+                              <a
+                                href="/single_orbit_loader"
+                                onClick={[Function]}
+                                style={
+                                  Object {
+                                    "margin": 0,
+                                  }
+                                }
+                              >
+                                <div
+                                  className="loader_container"
+                                  style={
+                                    Object {
+                                      "alignItems": "center",
+                                      "background": "#b6596c",
+                                      "display": "flex",
+                                      "flex": "1",
+                                      "height": "10em",
+                                      "justifyContent": "center",
+                                    }
+                                  }
+                                >
+                                  <div
+                                    className="loader"
+                                  >
+                                    <style>
+                                      .singleOrbitLoader {
+  position: relative;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.singleOrbitLoader__circle {
+  width: 3em;
+  height: 3em;
+  background-color: #fefefe;
+  border-radius: 3em;
+}
+.singleOrbitLoader__orbit {
+  position: absolute;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: #fefefe;
+  border-radius: 3em;
+  animation: 2s singleorbitloaderanim infinite linear;
+}
+
+@keyframes singleorbitloaderanim {
+  from {
+    transform: rotate(0deg) translate(-3em) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(-3em) rotate(-360deg);
+  }
+}
+                                    </style>
+                                    <div
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "<div class=\\"singleOrbitLoader\\">
+  <div class=\\"singleOrbitLoader__circle\\"></div>
+  <div class=\\"singleOrbitLoader__orbit\\"></div>
+</div>",
+                                        }
+                                      }
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="grid_item_title"
+                                >
+                                  <p
+                                    className="text bold"
+                                    style={
+                                      Object {
+                                        "margin": 0,
+                                      }
+                                    }
+                                  >
+                                    Single Orbit Loader
                                   </p>
                                 </div>
                               </a>
@@ -3381,6 +3563,99 @@ exports[`Storyshots LoaderSelection Element 1`] = `
           onClick={[Function]}
         >
           <a
+            href="/bar_with_border"
+            onClick={[Function]}
+            style={
+              Object {
+                "margin": 0,
+              }
+            }
+          >
+            <div
+              className="loader_container"
+              style={
+                Object {
+                  "alignItems": "center",
+                  "background": "#4c4ea9",
+                  "display": "flex",
+                  "flex": "1",
+                  "height": "10em",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <div
+                className="loader"
+              >
+                <style>
+                  .barWithBorderLoader {
+  width: 10em;
+  border: 0.25em solid #fefefe;
+}
+.barWithBorderLoader .bar {
+  width: 100%;
+  opacity: 0;
+  height: 1.5em;
+  background: #fefefe;
+  animation: barwithborderanim 2.5s infinite cubic-bezier(0.61, 0.33, 0.39, 0.79);
+  transform-origin: 0% 50%;
+}
+@keyframes barwithborderanim {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  5% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  95% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 0;
+  }
+}
+                </style>
+                <div
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "<div class=\\"barWithBorderLoader\\">
+  <div class=\\"bar\\"></div>
+</div>",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="grid_item_title"
+            >
+              <p
+                className="text bold"
+                style={
+                  Object {
+                    "margin": 0,
+                  }
+                }
+              >
+                Bar with Border
+              </p>
+            </div>
+          </a>
+        </div>
+        <div
+          className="grid_item "
+          onClick={[Function]}
+        >
+          <a
             href="/two_circles"
             onClick={[Function]}
             style={
@@ -3394,7 +3669,7 @@ exports[`Storyshots LoaderSelection Element 1`] = `
               style={
                 Object {
                   "alignItems": "center",
-                  "background": "#81B29A",
+                  "background": "#221d2a",
                   "display": "flex",
                   "flex": "1",
                   "height": "10em",
@@ -3466,6 +3741,95 @@ exports[`Storyshots LoaderSelection Element 1`] = `
                 }
               >
                 Two Circles
+              </p>
+            </div>
+          </a>
+        </div>
+        <div
+          className="grid_item "
+          onClick={[Function]}
+        >
+          <a
+            href="/single_orbit_loader"
+            onClick={[Function]}
+            style={
+              Object {
+                "margin": 0,
+              }
+            }
+          >
+            <div
+              className="loader_container"
+              style={
+                Object {
+                  "alignItems": "center",
+                  "background": "#b6596c",
+                  "display": "flex",
+                  "flex": "1",
+                  "height": "10em",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <div
+                className="loader"
+              >
+                <style>
+                  .singleOrbitLoader {
+  position: relative;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.singleOrbitLoader__circle {
+  width: 3em;
+  height: 3em;
+  background-color: #fefefe;
+  border-radius: 3em;
+}
+.singleOrbitLoader__orbit {
+  position: absolute;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: #fefefe;
+  border-radius: 3em;
+  animation: 2s singleorbitloaderanim infinite linear;
+}
+
+@keyframes singleorbitloaderanim {
+  from {
+    transform: rotate(0deg) translate(-3em) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(-3em) rotate(-360deg);
+  }
+}
+                </style>
+                <div
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "<div class=\\"singleOrbitLoader\\">
+  <div class=\\"singleOrbitLoader__circle\\"></div>
+  <div class=\\"singleOrbitLoader__orbit\\"></div>
+</div>",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="grid_item_title"
+            >
+              <p
+                className="text bold"
+                style={
+                  Object {
+                    "margin": 0,
+                  }
+                }
+              >
+                Single Orbit Loader
               </p>
             </div>
           </a>
@@ -4260,6 +4624,99 @@ exports[`Storyshots Loaders With Content 1`] = `
                     onClick={[Function]}
                   >
                     <a
+                      href="/bar_with_border"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "margin": 0,
+                        }
+                      }
+                    >
+                      <div
+                        className="loader_container"
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "background": "#4c4ea9",
+                            "display": "flex",
+                            "flex": "1",
+                            "height": "10em",
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <div
+                          className="loader"
+                        >
+                          <style>
+                            .barWithBorderLoader {
+  width: 10em;
+  border: 0.25em solid #fefefe;
+}
+.barWithBorderLoader .bar {
+  width: 100%;
+  opacity: 0;
+  height: 1.5em;
+  background: #fefefe;
+  animation: barwithborderanim 2.5s infinite cubic-bezier(0.61, 0.33, 0.39, 0.79);
+  transform-origin: 0% 50%;
+}
+@keyframes barwithborderanim {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  5% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  95% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 0;
+  }
+}
+                          </style>
+                          <div
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "<div class=\\"barWithBorderLoader\\">
+  <div class=\\"bar\\"></div>
+</div>",
+                              }
+                            }
+                          />
+                        </div>
+                      </div>
+                      <div
+                        className="grid_item_title"
+                      >
+                        <p
+                          className="text bold"
+                          style={
+                            Object {
+                              "margin": 0,
+                            }
+                          }
+                        >
+                          Bar with Border
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    className="grid_item "
+                    onClick={[Function]}
+                  >
+                    <a
                       href="/two_circles"
                       onClick={[Function]}
                       style={
@@ -4273,7 +4730,7 @@ exports[`Storyshots Loaders With Content 1`] = `
                         style={
                           Object {
                             "alignItems": "center",
-                            "background": "#81B29A",
+                            "background": "#221d2a",
                             "display": "flex",
                             "flex": "1",
                             "height": "10em",
@@ -4345,6 +4802,95 @@ exports[`Storyshots Loaders With Content 1`] = `
                           }
                         >
                           Two Circles
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    className="grid_item "
+                    onClick={[Function]}
+                  >
+                    <a
+                      href="/single_orbit_loader"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "margin": 0,
+                        }
+                      }
+                    >
+                      <div
+                        className="loader_container"
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "background": "#b6596c",
+                            "display": "flex",
+                            "flex": "1",
+                            "height": "10em",
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <div
+                          className="loader"
+                        >
+                          <style>
+                            .singleOrbitLoader {
+  position: relative;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.singleOrbitLoader__circle {
+  width: 3em;
+  height: 3em;
+  background-color: #fefefe;
+  border-radius: 3em;
+}
+.singleOrbitLoader__orbit {
+  position: absolute;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: #fefefe;
+  border-radius: 3em;
+  animation: 2s singleorbitloaderanim infinite linear;
+}
+
+@keyframes singleorbitloaderanim {
+  from {
+    transform: rotate(0deg) translate(-3em) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(-3em) rotate(-360deg);
+  }
+}
+                          </style>
+                          <div
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "<div class=\\"singleOrbitLoader\\">
+  <div class=\\"singleOrbitLoader__circle\\"></div>
+  <div class=\\"singleOrbitLoader__orbit\\"></div>
+</div>",
+                              }
+                            }
+                          />
+                        </div>
+                      </div>
+                      <div
+                        className="grid_item_title"
+                      >
+                        <p
+                          className="text bold"
+                          style={
+                            Object {
+                              "margin": 0,
+                            }
+                          }
+                        >
+                          Single Orbit Loader
                         </p>
                       </div>
                     </a>
