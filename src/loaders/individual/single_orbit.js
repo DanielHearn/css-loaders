@@ -1,5 +1,5 @@
 const singleOrbitLoader = {
-  name: 'Single Orbit Loader',
+  name: 'Single Orbit',
   color: '#b6596c',
   code: {
     html: `<div class="singleOrbitLoader">
