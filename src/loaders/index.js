@@ -8,6 +8,7 @@ import pulse_loader from './individual/pulse'
 import bar_loader from './individual/bar'
 import bar_with_border from './individual/bar_wiith_border'
 import two_circles_loader from './individual/two_circles'
+import single_orbit_loader from './individual/single_orbit'
 
 // Formatting for css loader objects
 /* {
@@ -38,7 +39,8 @@ const loaders: Array<Loader> = [
   pulse_loader,
   bar_loader,
   bar_with_border,
-  two_circles_loader
+  two_circles_loader,
+  single_orbit_loader
 ]
 
 
