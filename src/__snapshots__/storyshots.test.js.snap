@@ -909,7 +909,7 @@ exports[`Storyshots App With Content 1`] = `
                               onClick={[Function]}
                             >
                               <a
-                                href="/single_orbit_loader"
+                                href="/single_orbit"
                                 onClick={[Function]}
                                 style={
                                   Object {
@@ -988,7 +988,7 @@ exports[`Storyshots App With Content 1`] = `
                                       }
                                     }
                                   >
-                                    Single Orbit Loader
+                                    Single Orbit
                                   </p>
                                 </div>
                               </a>
@@ -3750,7 +3750,7 @@ exports[`Storyshots LoaderSelection Element 1`] = `
           onClick={[Function]}
         >
           <a
-            href="/single_orbit_loader"
+            href="/single_orbit"
             onClick={[Function]}
             style={
               Object {
@@ -3829,7 +3829,7 @@ exports[`Storyshots LoaderSelection Element 1`] = `
                   }
                 }
               >
-                Single Orbit Loader
+                Single Orbit
               </p>
             </div>
           </a>
@@ -4811,7 +4811,7 @@ exports[`Storyshots Loaders With Content 1`] = `
                     onClick={[Function]}
                   >
                     <a
-                      href="/single_orbit_loader"
+                      href="/single_orbit"
                       onClick={[Function]}
                       style={
                         Object {
@@ -4890,7 +4890,7 @@ exports[`Storyshots Loaders With Content 1`] = `
                             }
                           }
                         >
-                          Single Orbit Loader
+                          Single Orbit
                         </p>
                       </div>
                     </a>
