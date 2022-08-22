@@ -1,6 +1,5 @@
 /// <reference types="cypress" />
 
-import { titleRoot, links, queryWidths } from './../../src/constants'
 import { mobile, desktop } from './../constants'
 import loaders from './../../src/loaders'
 
@@ -12,8 +11,8 @@ context('Loader', () => {
       cy.viewport(desktop.width, desktop.height) 
     })
     it('load loader', () => {
-      cy.visit(`${baseUrl}/loaders/square`);
-      cy.url().should('eq', `${baseUrl}/loaders/square`);
+      cy.visit(`${baseUrl}/square`);
+      cy.url().should('eq', `${baseUrl}/square`);
     }) 
     it('page title', () => {
       cy.title().should('eq', 'Square - CSS Loaders');
@@ -80,7 +79,7 @@ context('Loader', () => {
       })
       it('filtered loaders click', () => {
         cy.get('.grid_item').eq(1).click()
-        cy.url().should('eq', `${baseUrl}/loaders/heartbeat`);
+        cy.url().should('eq', `${baseUrl}/heartbeat`);
       })
       it('new page title', () => {
         cy.title().should('eq', 'Heartbeat - CSS Loaders');
@@ -97,8 +96,8 @@ context('Loader', () => {
       cy.wait(50)
     })
     it('load loader', () => {
-      cy.visit(`${baseUrl}/loaders/square`);
-      cy.url().should('eq', `${baseUrl}/loaders/square`);
+      cy.visit(`${baseUrl}/square`);
+      cy.url().should('eq', `${baseUrl}/square`);
     }) 
     it('page title', () => {
       cy.title().should('eq', 'Square - CSS Loaders');
@@ -128,7 +127,7 @@ context('Loader', () => {
       })
       describe('code tab', () => {
         it('tab click', () => {
-          cy.visit(`${baseUrl}/loaders/square`, {
+          cy.visit(`${baseUrl}/square`, {
             onBeforeLoad(win) {
               cy.stub(win, 'prompt').as('windowAlert')
             }
@@ -197,7 +196,7 @@ context('Loader', () => {
           cy.get('.mobile_nav_tabs .mobile_nav_tab').eq(1).should('not.have.class', 'active')
           cy.get('.mobile_nav_tabs .mobile_nav_tab').eq(2).should('have.class', 'active')
 
-          cy.get('.grid .grid_item').should('have.length', loaders.length-1)
+          cy.get('.grid .grid_item').should('have.length', loaders.length)
 
           cy.get('.grid .input_box input').type('hollow box')
           cy.get('.grid .input_box .input_icon').should('be.visible')
@@ -207,10 +206,10 @@ context('Loader', () => {
 
           cy.get('.grid .input_box .clear_button').click()
           cy.get('.grid .input_box input').should('value', '')
-          cy.get('.grid').find('.grid_item').should('have.length', loaders.length-1)
+          cy.get('.grid').find('.grid_item').should('have.length', loaders.length)
 
-          cy.get('.grid_item').eq(0).click()
-          cy.url().should('eq', `${baseUrl}/loaders/heartbeat`);
+          cy.get('.grid_item').eq(1).click()
+          cy.url().should('eq', `${baseUrl}/heartbeat`);
 
           cy.title().should('eq', 'Heartbeat - CSS Loaders');
 
