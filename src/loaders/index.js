@@ -6,6 +6,7 @@ import slider_loader from './individual/slider'
 import hollow_box_loader from './individual/hollow_box'
 import pulse_loader from './individual/pulse'
 import bar_loader from './individual/bar'
+import bar_with_border from './individual/bar_wiith_border'
 import two_circles_loader from './individual/two_circles'
 
 // Formatting for css loader objects
@@ -36,6 +37,7 @@ const loaders: Array<Loader> = [
   hollow_box_loader,
   pulse_loader,
   bar_loader,
+  bar_with_border,
   two_circles_loader
 ]
 
