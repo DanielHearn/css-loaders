@@ -878,9 +878,9 @@ exports[`Storyshots App With Content 1`] = `
                                     <div
                                       dangerouslySetInnerHTML={
                                         Object {
-                                          "__html": "<div class='twoCircleLoader'>
-  <div class='circle'></div>
-  <div class='circle'></div>
+                                          "__html": "<div class=\\"twoCircleLoader\\">
+  <div class=\\"circle\\"></div>
+  <div class=\\"circle\\"></div>
 </div>
       ",
                                         }
@@ -1087,6 +1087,183 @@ exports[`Storyshots App With Content 1`] = `
                                     }
                                   >
                                     Dual Orbit
+                                  </p>
+                                </div>
+                              </a>
+                            </div>
+                            <div
+                              className="grid_item "
+                              onClick={[Function]}
+                            >
+                              <a
+                                href="/vertical"
+                                onClick={[Function]}
+                                style={
+                                  Object {
+                                    "margin": 0,
+                                  }
+                                }
+                              >
+                                <div
+                                  className="loader_container"
+                                  style={
+                                    Object {
+                                      "alignItems": "center",
+                                      "background": "#4a79cf",
+                                      "display": "flex",
+                                      "flex": "1",
+                                      "height": "10em",
+                                      "justifyContent": "center",
+                                    }
+                                  }
+                                >
+                                  <div
+                                    className="loader"
+                                  >
+                                    <style>
+                                      .verticalLoader {
+  margin: 0 auto;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 1.5em;
+  background-color: white;
+  animation: verticalloaderanim 1s ease-in-out infinite;
+  outline: 1px solid transparent;
+}
+
+@keyframes verticalloaderanim {
+  0% {
+    transform: translate(0, -2.5em);
+  }
+  50% {
+    transform: translate(0, 2.5em);
+  }
+  100% {
+    transform: translate(0, -2.5em);
+  }
+}
+                                    </style>
+                                    <div
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "<div class=\\"verticalLoader\\"></div>",
+                                        }
+                                      }
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="grid_item_title"
+                                >
+                                  <p
+                                    className="text bold"
+                                    style={
+                                      Object {
+                                        "margin": 0,
+                                      }
+                                    }
+                                  >
+                                    Vertical
+                                  </p>
+                                </div>
+                              </a>
+                            </div>
+                            <div
+                              className="grid_item "
+                              onClick={[Function]}
+                            >
+                              <a
+                                href="/three_dot"
+                                onClick={[Function]}
+                                style={
+                                  Object {
+                                    "margin": 0,
+                                  }
+                                }
+                              >
+                                <div
+                                  className="loader_container"
+                                  style={
+                                    Object {
+                                      "alignItems": "center",
+                                      "background": "#34bd84",
+                                      "display": "flex",
+                                      "flex": "1",
+                                      "height": "10em",
+                                      "justifyContent": "center",
+                                    }
+                                  }
+                                >
+                                  <div
+                                    className="loader"
+                                  >
+                                    <style>
+                                      .threeDotLoader {
+  margin: 0 auto;
+  width: 5.6em;
+}
+.threeDotLoader .threeDotLoader__dot {
+  width: 1.4em;
+  height: 1.4em;
+  border-radius: 1.4em;
+  background-color: white;
+  transform: scale(0);
+  display: inline-block;
+  animation: threedotloaderanim 1.6s infinite ease-in-out;
+}
+.threeDotLoader .threeDotLoader__dot:nth-child(1) {
+  animation-delay: 0s;
+}
+.threeDotLoader .threeDotLoader__dot:nth-child(2) {
+  animation-delay: 0.25s;
+}
+.threeDotLoader .threeDotLoader__dot:nth-child(3) {
+  animation-delay: 0.5s;
+}
+.threeDotLoader .threeDotLoader__dot:nth-child(4) {
+  animation-delay: 0.75s;
+}
+
+@keyframes threedotloaderanim {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+                                    </style>
+                                    <div
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "<div class=\\"threeDotLoader\\">
+    <div class=\\"threeDotLoader__dot\\"></div>
+    <div class=\\"threeDotLoader__dot\\"></div>
+    <div class=\\"threeDotLoader__dot\\"></div>
+  </div>",
+                                        }
+                                      }
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="grid_item_title"
+                                >
+                                  <p
+                                    className="text bold"
+                                    style={
+                                      Object {
+                                        "margin": 0,
+                                      }
+                                    }
+                                  >
+                                    Three Dot
                                   </p>
                                 </div>
                               </a>
@@ -3817,9 +3994,9 @@ exports[`Storyshots LoaderSelection Element 1`] = `
                 <div
                   dangerouslySetInnerHTML={
                     Object {
-                      "__html": "<div class='twoCircleLoader'>
-  <div class='circle'></div>
-  <div class='circle'></div>
+                      "__html": "<div class=\\"twoCircleLoader\\">
+  <div class=\\"circle\\"></div>
+  <div class=\\"circle\\"></div>
 </div>
       ",
                     }
@@ -4026,6 +4203,183 @@ exports[`Storyshots LoaderSelection Element 1`] = `
                 }
               >
                 Dual Orbit
+              </p>
+            </div>
+          </a>
+        </div>
+        <div
+          className="grid_item "
+          onClick={[Function]}
+        >
+          <a
+            href="/vertical"
+            onClick={[Function]}
+            style={
+              Object {
+                "margin": 0,
+              }
+            }
+          >
+            <div
+              className="loader_container"
+              style={
+                Object {
+                  "alignItems": "center",
+                  "background": "#4a79cf",
+                  "display": "flex",
+                  "flex": "1",
+                  "height": "10em",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <div
+                className="loader"
+              >
+                <style>
+                  .verticalLoader {
+  margin: 0 auto;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 1.5em;
+  background-color: white;
+  animation: verticalloaderanim 1s ease-in-out infinite;
+  outline: 1px solid transparent;
+}
+
+@keyframes verticalloaderanim {
+  0% {
+    transform: translate(0, -2.5em);
+  }
+  50% {
+    transform: translate(0, 2.5em);
+  }
+  100% {
+    transform: translate(0, -2.5em);
+  }
+}
+                </style>
+                <div
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "<div class=\\"verticalLoader\\"></div>",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="grid_item_title"
+            >
+              <p
+                className="text bold"
+                style={
+                  Object {
+                    "margin": 0,
+                  }
+                }
+              >
+                Vertical
+              </p>
+            </div>
+          </a>
+        </div>
+        <div
+          className="grid_item "
+          onClick={[Function]}
+        >
+          <a
+            href="/three_dot"
+            onClick={[Function]}
+            style={
+              Object {
+                "margin": 0,
+              }
+            }
+          >
+            <div
+              className="loader_container"
+              style={
+                Object {
+                  "alignItems": "center",
+                  "background": "#34bd84",
+                  "display": "flex",
+                  "flex": "1",
+                  "height": "10em",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <div
+                className="loader"
+              >
+                <style>
+                  .threeDotLoader {
+  margin: 0 auto;
+  width: 5.6em;
+}
+.threeDotLoader .threeDotLoader__dot {
+  width: 1.4em;
+  height: 1.4em;
+  border-radius: 1.4em;
+  background-color: white;
+  transform: scale(0);
+  display: inline-block;
+  animation: threedotloaderanim 1.6s infinite ease-in-out;
+}
+.threeDotLoader .threeDotLoader__dot:nth-child(1) {
+  animation-delay: 0s;
+}
+.threeDotLoader .threeDotLoader__dot:nth-child(2) {
+  animation-delay: 0.25s;
+}
+.threeDotLoader .threeDotLoader__dot:nth-child(3) {
+  animation-delay: 0.5s;
+}
+.threeDotLoader .threeDotLoader__dot:nth-child(4) {
+  animation-delay: 0.75s;
+}
+
+@keyframes threedotloaderanim {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+                </style>
+                <div
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "<div class=\\"threeDotLoader\\">
+    <div class=\\"threeDotLoader__dot\\"></div>
+    <div class=\\"threeDotLoader__dot\\"></div>
+    <div class=\\"threeDotLoader__dot\\"></div>
+  </div>",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="grid_item_title"
+            >
+              <p
+                className="text bold"
+                style={
+                  Object {
+                    "margin": 0,
+                  }
+                }
+              >
+                Three Dot
               </p>
             </div>
           </a>
@@ -4976,9 +5330,9 @@ exports[`Storyshots Loaders With Content 1`] = `
                           <div
                             dangerouslySetInnerHTML={
                               Object {
-                                "__html": "<div class='twoCircleLoader'>
-  <div class='circle'></div>
-  <div class='circle'></div>
+                                "__html": "<div class=\\"twoCircleLoader\\">
+  <div class=\\"circle\\"></div>
+  <div class=\\"circle\\"></div>
 </div>
       ",
                               }
@@ -5185,6 +5539,183 @@ exports[`Storyshots Loaders With Content 1`] = `
                           }
                         >
                           Dual Orbit
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    className="grid_item "
+                    onClick={[Function]}
+                  >
+                    <a
+                      href="/vertical"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "margin": 0,
+                        }
+                      }
+                    >
+                      <div
+                        className="loader_container"
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "background": "#4a79cf",
+                            "display": "flex",
+                            "flex": "1",
+                            "height": "10em",
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <div
+                          className="loader"
+                        >
+                          <style>
+                            .verticalLoader {
+  margin: 0 auto;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 1.5em;
+  background-color: white;
+  animation: verticalloaderanim 1s ease-in-out infinite;
+  outline: 1px solid transparent;
+}
+
+@keyframes verticalloaderanim {
+  0% {
+    transform: translate(0, -2.5em);
+  }
+  50% {
+    transform: translate(0, 2.5em);
+  }
+  100% {
+    transform: translate(0, -2.5em);
+  }
+}
+                          </style>
+                          <div
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "<div class=\\"verticalLoader\\"></div>",
+                              }
+                            }
+                          />
+                        </div>
+                      </div>
+                      <div
+                        className="grid_item_title"
+                      >
+                        <p
+                          className="text bold"
+                          style={
+                            Object {
+                              "margin": 0,
+                            }
+                          }
+                        >
+                          Vertical
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    className="grid_item "
+                    onClick={[Function]}
+                  >
+                    <a
+                      href="/three_dot"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "margin": 0,
+                        }
+                      }
+                    >
+                      <div
+                        className="loader_container"
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "background": "#34bd84",
+                            "display": "flex",
+                            "flex": "1",
+                            "height": "10em",
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <div
+                          className="loader"
+                        >
+                          <style>
+                            .threeDotLoader {
+  margin: 0 auto;
+  width: 5.6em;
+}
+.threeDotLoader .threeDotLoader__dot {
+  width: 1.4em;
+  height: 1.4em;
+  border-radius: 1.4em;
+  background-color: white;
+  transform: scale(0);
+  display: inline-block;
+  animation: threedotloaderanim 1.6s infinite ease-in-out;
+}
+.threeDotLoader .threeDotLoader__dot:nth-child(1) {
+  animation-delay: 0s;
+}
+.threeDotLoader .threeDotLoader__dot:nth-child(2) {
+  animation-delay: 0.25s;
+}
+.threeDotLoader .threeDotLoader__dot:nth-child(3) {
+  animation-delay: 0.5s;
+}
+.threeDotLoader .threeDotLoader__dot:nth-child(4) {
+  animation-delay: 0.75s;
+}
+
+@keyframes threedotloaderanim {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+                          </style>
+                          <div
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "<div class=\\"threeDotLoader\\">
+    <div class=\\"threeDotLoader__dot\\"></div>
+    <div class=\\"threeDotLoader__dot\\"></div>
+    <div class=\\"threeDotLoader__dot\\"></div>
+  </div>",
+                              }
+                            }
+                          />
+                        </div>
+                      </div>
+                      <div
+                        className="grid_item_title"
+                      >
+                        <p
+                          className="text bold"
+                          style={
+                            Object {
+                              "margin": 0,
+                            }
+                          }
+                        >
+                          Three Dot
                         </p>
                       </div>
                     </a>
