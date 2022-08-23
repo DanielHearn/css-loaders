@@ -2,9 +2,9 @@ const twoCirclesLoader = {
   name: 'Two Circles',
   color: '#221d2a',
   code: {
-    html: `<div class='twoCircleLoader'>
-  <div class='circle'></div>
-  <div class='circle'></div>
+    html: `<div class="twoCircleLoader">
+  <div class="circle"></div>
+  <div class="circle"></div>
 </div>
       `,
   css: `.twoCircleLoader {
