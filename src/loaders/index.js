@@ -10,6 +10,7 @@ import bar_with_border from './individual/bar_wiith_border'
 import two_circles_loader from './individual/two_circles'
 import single_orbit_loader from './individual/single_orbit'
 import dual_orbit_loader from './individual/dual_orbit'
+import vertical_loader from './individual/vertical'
 
 // Formatting for css loader objects
 /* {
@@ -42,7 +43,8 @@ const loaders: Array<Loader> = [
   bar_with_border,
   two_circles_loader,
   single_orbit_loader,
-  dual_orbit_loader
+  dual_orbit_loader,
+  vertical_loader
 ]
 
 
