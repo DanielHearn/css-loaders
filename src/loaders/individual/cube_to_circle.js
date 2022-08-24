@@ -1,6 +1,6 @@
 const cubeToCircleLoader = {
   name: 'Cube to Circle',
-  color: '#4a79cf',
+  color: '#d74b48',
   code: {
     html: `<div class='cubeToCircleLoader'>
   <div class='cubeToCircleLoader__cube'></div>
@@ -17,7 +17,7 @@ const cubeToCircleLoader = {
   height: 20px;
   width: 20px;
   margin: 15px;
-  background-color: #ECECEC;
+  background-color: #FEFEFE;
   float: right;
   animation: anim 2.5s infinite;
 }
@@ -92,7 +92,7 @@ $cubeToCircleLoaderAnimCubeSize: 20px;
     height: $cubeToCircleLoaderAnimCubeSize;
     width: $cubeToCircleLoaderAnimCubeSize;
     margin: 15px;
-    background-color: #ECECEC;
+    background-color: #FEFEFE;
     float: right;
     animation: cubeToCircleLoaderAnim 2.5s infinite;
     @for $i from 0 to 4 {
