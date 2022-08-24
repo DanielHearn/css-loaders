@@ -49,8 +49,6 @@ export default function LoaderSelection({showActive = true, initialActiveLoader 
   const { width } = useContainerDimensions(rootRef)
   const columns = width < 600 ? 1 : width < 800 ? 2 : 3
   const [activeLoader, setActiveLoader] = useState(initialActiveLoader || loaders[0].key)
-  console.log(initialActiveLoader)
-  console.log(activeLoader)
 
   useEffect(() => {
     if (!showActive) {
