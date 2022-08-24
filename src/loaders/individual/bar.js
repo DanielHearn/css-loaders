@@ -3,20 +3,20 @@ const barLoader = {
   color: '#e6653c',
   code: {
     html: `<div class="barLoader">
-  <div class="bar"></div>
+  <div class="barLoader__bar"></div>
 </div>`,
     css: `.barLoader {
   width: 10em;
 }
-.barLoader .bar {
+.barLoader .barLoader__bar {
   width: 100%;
   opacity: 0;
   height: 1.5em;
   background: #fefefe;
-  animation: baranim 2.5s infinite cubic-bezier(0.61, 0.33, 0.39, 0.79);
+  animation: barLoaderAnim 2.5s infinite cubic-bezier(0.61, 0.33, 0.39, 0.79);
   transform-origin: 0% 50%;
 }
-@keyframes baranim {
+@keyframes barLoaderAnim {
   0% {
     transform: scaleX(0);
     opacity: 0;
@@ -39,23 +39,23 @@ const barLoader = {
     opacity: 0;
   }
 }`,
-      scss: `$barTiming: 2.5s;
-$barHeight: 1.5em;
-$barMaxWidth: 10em;
-$barColor: #fefefe;
+      scss: `$barLoaderTiming: 2.5s;
+$barLoaderHeight: 1.5em;
+$barLoaderMaxWidth: 10em;
+$barLoaderColor: #fefefe;
 
 .barLoader {
-  width: $barMaxWidth;
-  .bar {
+  width: $barLoaderMaxWidth;
+  &__bar {
     width: 100%;
     opacity: 0;
-    height: $barHeight;
-    background: $barColor;
-    animation: baranim $barTiming infinite cubic-bezier(0.61, 0.33, 0.39, 0.79);
+    height: $barLoaderHeight;
+    background: $barLoaderColor;
+    animation: barLoaderAnim $barLoaderTiming infinite cubic-bezier(0.61, 0.33, 0.39, 0.79);
     transform-origin: 0% 50%;
   }
 }
-@keyframes baranim {
+@keyframes barLoaderAnim {
   0% {
     transform: scaleX(0);
     opacity: 0;

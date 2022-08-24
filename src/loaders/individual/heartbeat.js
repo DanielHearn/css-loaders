@@ -3,28 +3,28 @@ const heartbeatLoader = {
   color: '#9a40a9',
   code: {
     html: `<div class="heartbeatLoader">
-  <div class="pulse"></div>
-  <div class="pulse"></div>
+  <div class="heartbeatLoader__pulse"></div>
+  <div class="heartbeatLoader__pulse"></div>
 </div>`,
     css: `.heartbeatLoader {
   width: 4em;
   height: 4em;
   position: relative;
 }
-.heartbeatLoader .pulse {
+.heartbeatLoader .heartbeatLoader__pulse {
   width: 4em;
   height: 4em;
   border-radius: 50%;
   position: absolute;
   background-color: white;
-  animation: heartbeatanim 1.2s ease-in-out infinite;
+  animation: heartbeatLoaderAnim 1.2s ease-in-out infinite;
   transform: scale(0);
   outline: 1px solid transparent;
 }
-.heartbeatLoader .pulse:nth-child(2) {
+.heartbeatLoader .heartbeatLoader__pulse:nth-child(2) {
   animation-delay: 0.22s;
 }
-@keyframes heartbeatanim {
+@keyframes heartbeatLoaderAnim {
   0% {
     transform: scale(0);
   }
@@ -33,19 +33,19 @@ const heartbeatLoader = {
     opacity: 0;
   }
 }`,
-    scss: `$heartbeatSize: 4em;
-$heartbeatTiming: 1.2s;
+    scss: `$heartbeatLoaderSize: 4em;
+$heartbeatLoaderTiming: 1.2s;
 
 .heartbeatLoader {
-  width: $heartbeatSize;
-  height: $heartbeatSize;
-  .pulse {
-    width: $heartbeatSize;
-    height: $heartbeatSize;
+  width: $heartbeatLoaderSize;
+  height: $heartbeatLoaderSize;
+  &__pulse {
+    width: $heartbeatLoaderSize;
+    height: $heartbeatLoaderSize;
     border-radius: 50%;
     position: absolute;
     background-color: white;
-    animation: heartbeatanim $heartbeatTiming ease-in-out infinite;
+    animation: heartbeatLoaderAnim $heartbeatLoaderTiming ease-in-out infinite;
     transform: scale(0);
     outline: 1px solid transparent;
     &:nth-child(2) {
@@ -53,7 +53,7 @@ $heartbeatTiming: 1.2s;
     }
   }
 }
-@keyframes heartbeatanim {
+@keyframes heartbeatLoaderAnim {
   0% {
     transform: scale(0);
   }

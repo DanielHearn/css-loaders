@@ -3,8 +3,8 @@ const twoCirclesLoader = {
   color: '#221d2a',
   code: {
     html: `<div class="twoCircleLoader">
-  <div class="circle"></div>
-  <div class="circle"></div>
+  <div class="twoCircleLoader__circle"></div>
+  <div class="twoCircleLoader__circle"></div>
 </div>
       `,
   css: `.twoCircleLoader {
@@ -12,22 +12,22 @@ const twoCirclesLoader = {
   height: 4em;
   position: relative;
 }
-.twoCircleLoader .circle {
+.twoCircleLoader .twoCircleLoader__circle {
   width: 4em;
   height: 4em;
   border-radius: 4em;
   position: absolute;
-  animation: load 3s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
+  animation: twoCircleLoaderAnim 3s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
 }
-.twoCircleLoader .circle:nth-child(1) {
+.twoCircleLoader .twoCircleLoader__circle:nth-child(1) {
   background-color: #f1c40f;
   transform: scale(0);
   animation-delay: 1.5s;
 }
-.twoCircleLoader .circle:nth-child(2) {
+.twoCircleLoader .twoCircleLoader__circle:nth-child(2) {
   background-color: #de4e40;
 }
-@keyframes load {
+@keyframes twoCircleLoaderAnim {
   0% {
     transform: scale(0);
   }
@@ -41,31 +41,31 @@ const twoCirclesLoader = {
     transform: scale(0);
   }
 }`,
-  scss: `$twoCircleSize: 4em;
-$twoCircleTiming: 3s;
-$twoCircleColour1: #f1c40f;
-$twoCircleColour2: #de4e40;
+  scss: `$twoCircleLoaderSize: 4em;
+$twoCircleLoaderTiming: 3s;
+$twoCircleLoaderColour1: #f1c40f;
+$twoCircleLoaderColour2: #de4e40;
 
 .twoCircleLoader {
-  width: $twoCircleSize;
-  height: $twoCircleSize;
-  .circle {
-    width: $twoCircleSize;
-    height: $twoCircleSize;
-    border-radius: $twoCircleSize;
+  width: $twoCircleLoaderSize;
+  height: $twoCircleLoaderSize;
+  &__circle {
+    width: $twoCircleLoaderSize;
+    height: $twoCircleLoaderSize;
+    border-radius: $twoCircleLoaderSize;
     position: absolute;
-    animation: load $twoCircleTiming infinite cubic-bezier(0.65, 0.05, 0.36, 1);
+    animation: twoCircleLoaderAnim $twoCircleLoaderTiming infinite cubic-bezier(0.65, 0.05, 0.36, 1);
     &:nth-child(1) {
-      background-color: $twoCircleColour1;
+      background-color: $twoCircleLoaderColour1;
       transform: scale(0);
-      animation-delay: $twoCircleTiming/2;
+      animation-delay: $twoCircleLoaderTiming/2;
     }
     &:nth-child(2) {
-      background-color: $twoCircleColour2;
+      background-color: $twoCircleLoaderColour2;
     }
   }
 }
-@keyframes load {
+@keyframes twoCircleLoaderAnim {
   0% {
     transform: scale(0);
   }

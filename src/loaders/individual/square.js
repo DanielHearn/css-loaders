@@ -3,38 +3,38 @@ const squareLoader = {
   color: '#d74b48',
   code: {
     html: `<div class='squareLoader'>
-  <div class='square'></div>
-  <div class='square'></div>
-  <div class='square'></div>
-  <div class='square'></div>
+  <div class='squareLoader__square'></div>
+  <div class='squareLoader__square'></div>
+  <div class='squareLoader__square'></div>
+  <div class='squareLoader__square'></div>
 </div>`,
     css: `.squareLoader {
     max-width: 4em;
 }
-.squareLoader .square {
+.squareLoader .squareLoader__square {
   height: 2em;
   width: 2em;
   background-color: white;
   float: right;
-  animation: squareanim 3s infinite;
+  animation: squareLoaderAnim 3s infinite;
 }
-.squareLoader .square:nth-child(1) {
+.squareLoader .squareLoader__square:nth-child(1) {
   float: left;
 }
-.squareLoader .square:nth-child(1) {
+.squareLoader .squareLoader__square:nth-child(1) {
   animation-delay: 0.3s;
 }
-.squareLoader .square:nth-child(2) {
+.squareLoader .squareLoader__square:nth-child(2) {
   animation-delay: 0.6s;
 }
-.squareLoader .square:nth-child(3) {
+.squareLoader .squareLoader__square:nth-child(3) {
   animation-delay: 0.9s;
 }
-.squareLoader .square:nth-child(4) {
+.squareLoader .squareLoader__square:nth-child(4) {
   animation-delay: 1.2s;
 }
   
-@keyframes squareanim {
+@keyframes squareLoaderAnim {
   0% {
     opacity: 1;
   }
@@ -56,12 +56,12 @@ $squareSize: 4em;
 
 .squareLoader {
   max-width: $squareSize;
-  .square {
+  &__square {
     height: $squareSize/2;
     width: $squareSize/2;
     background-color: white;
     float: right;
-    animation: squareanim 3s infinite; 
+    animation: squareLoaderAnim 3s infinite; 
     &:nth-child(1) {
       float: left; }
     @for $i from 1 to 5 {
@@ -71,7 +71,7 @@ $squareSize: 4em;
     }
   }
 }
-@keyframes squareanim {
+@keyframes squareLoaderAnim {
   0% {opacity: 1;}
   40% {opacity: 0;}
   50% {opacity: 0;}

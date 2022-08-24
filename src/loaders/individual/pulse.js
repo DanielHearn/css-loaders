@@ -10,9 +10,9 @@ const pulseLoader = {
   border-radius: 4em;
   background-color: white;
   outline: 1px solid transparent;
-  animation: pulseanim 1.2s ease-in-out infinite;
+  animation: pulseLoaderAnim 1.2s ease-in-out infinite;
 }
-@keyframes pulseanim {
+@keyframes pulseLoaderAnim {
   0% {
     transform: scale(0);
   }
@@ -21,18 +21,18 @@ const pulseLoader = {
     opacity: 0;
   }
 }`,
-    scss: `$pulseSize: 4em;
-$pulseTiming: 1.2s;
+    scss: `$pulseLoaderSize: 4em;
+$pulseLoaderTiming: 1.2s;
 
 .pulseLoader {
-  width: $pulseSize;
-  height: $pulseSize;
-  border-radius: $pulseSize;
+  width: $pulseLoaderSize;
+  height: $pulseLoaderSize;
+  border-radius: $pulseLoaderSize;
   background-color: white;
   outline: 1px solid transparent;
-  animation: pulseanim $pulseTiming ease-in-out infinite;
+  animation: pulseLoaderAnim $pulseLoaderTiming ease-in-out infinite;
 }
-@keyframes pulseanim {
+@keyframes pulseLoaderAnim {
   0% {
     transform: scale(0);
   }
