@@ -1268,6 +1268,139 @@ exports[`Storyshots App With Content 1`] = `
                                 </div>
                               </a>
                             </div>
+                            <div
+                              className="grid_item "
+                              onClick={[Function]}
+                            >
+                              <a
+                                href="/cube_to_circle"
+                                onClick={[Function]}
+                                style={
+                                  Object {
+                                    "margin": 0,
+                                  }
+                                }
+                              >
+                                <div
+                                  className="loader_container"
+                                  style={
+                                    Object {
+                                      "alignItems": "center",
+                                      "background": "#d74b48",
+                                      "display": "flex",
+                                      "flex": "1",
+                                      "height": "10em",
+                                      "justifyContent": "center",
+                                    }
+                                  }
+                                >
+                                  <div
+                                    className="loader"
+                                  >
+                                    <style>
+                                      .cubeToCircleLoader {
+  width: 100px;
+  height: 100px;
+  transform: rotate(-45deg);
+}
+.cubeToCircleLoader .cubeToCircleLoader__cube {
+  height: 20px;
+  width: 20px;
+  margin: 15px;
+  background-color: #FEFEFE;
+  float: right;
+  animation: anim 2.5s infinite;
+}
+.cubeToCircleLoader .cubeToCircleLoader__cube:nth-child(1) {
+  animation-name: cubeToCircleLoaderAnim1, cubeToCircleLoaderAnim;
+}
+@keyframes cubeToCircleLoaderAnim1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-50px, 0);
+  }
+}
+.cubeToCircleLoader .cubeToCircleLoader__cube:nth-child(2) {
+  animation-name: cubeToCircleLoaderAnim2, cubeToCircleLoaderAnim;
+}
+@keyframes cubeToCircleLoaderAnim2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 50px);
+  }
+}
+.cubeToCircleLoader .cubeToCircleLoader__cube:nth-child(3) {
+  animation-name: cubeToCircleLoaderAnim3, cubeToCircleLoaderAnim;
+}
+@keyframes cubeToCircleLoaderAnim3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -50px);
+  }
+}
+.cubeToCircleLoader .cubeToCircleLoader__cube:nth-child(4) {
+  animation-name: cubeToCircleLoaderAnim4, cubeToCircleLoaderAnim;
+}
+@keyframes cubeToCircleLoaderAnim4 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 0);
+  }
+}
+
+@keyframes cubeToCircleLoaderAnim {
+  0% {
+    border-radius: 0px;
+  }
+  40% {
+    border-radius: 40px;
+  }
+  60% {
+    border-radius: 40px;
+  }
+  100% {
+    border-radius: 0px;
+  }
+}
+                                    </style>
+                                    <div
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "<div class='cubeToCircleLoader'>
+  <div class='cubeToCircleLoader__cube'></div>
+  <div class='cubeToCircleLoader__cube'></div>
+  <div class='cubeToCircleLoader__cube'></div>
+  <div class='cubeToCircleLoader__cube'></div>
+</div>",
+                                        }
+                                      }
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="grid_item_title"
+                                >
+                                  <p
+                                    className="text bold"
+                                    style={
+                                      Object {
+                                        "margin": 0,
+                                      }
+                                    }
+                                  >
+                                    Cube to Circle
+                                  </p>
+                                </div>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -4384,6 +4517,139 @@ exports[`Storyshots LoaderSelection Element 1`] = `
             </div>
           </a>
         </div>
+        <div
+          className="grid_item "
+          onClick={[Function]}
+        >
+          <a
+            href="/cube_to_circle"
+            onClick={[Function]}
+            style={
+              Object {
+                "margin": 0,
+              }
+            }
+          >
+            <div
+              className="loader_container"
+              style={
+                Object {
+                  "alignItems": "center",
+                  "background": "#d74b48",
+                  "display": "flex",
+                  "flex": "1",
+                  "height": "10em",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <div
+                className="loader"
+              >
+                <style>
+                  .cubeToCircleLoader {
+  width: 100px;
+  height: 100px;
+  transform: rotate(-45deg);
+}
+.cubeToCircleLoader .cubeToCircleLoader__cube {
+  height: 20px;
+  width: 20px;
+  margin: 15px;
+  background-color: #FEFEFE;
+  float: right;
+  animation: anim 2.5s infinite;
+}
+.cubeToCircleLoader .cubeToCircleLoader__cube:nth-child(1) {
+  animation-name: cubeToCircleLoaderAnim1, cubeToCircleLoaderAnim;
+}
+@keyframes cubeToCircleLoaderAnim1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-50px, 0);
+  }
+}
+.cubeToCircleLoader .cubeToCircleLoader__cube:nth-child(2) {
+  animation-name: cubeToCircleLoaderAnim2, cubeToCircleLoaderAnim;
+}
+@keyframes cubeToCircleLoaderAnim2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 50px);
+  }
+}
+.cubeToCircleLoader .cubeToCircleLoader__cube:nth-child(3) {
+  animation-name: cubeToCircleLoaderAnim3, cubeToCircleLoaderAnim;
+}
+@keyframes cubeToCircleLoaderAnim3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -50px);
+  }
+}
+.cubeToCircleLoader .cubeToCircleLoader__cube:nth-child(4) {
+  animation-name: cubeToCircleLoaderAnim4, cubeToCircleLoaderAnim;
+}
+@keyframes cubeToCircleLoaderAnim4 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 0);
+  }
+}
+
+@keyframes cubeToCircleLoaderAnim {
+  0% {
+    border-radius: 0px;
+  }
+  40% {
+    border-radius: 40px;
+  }
+  60% {
+    border-radius: 40px;
+  }
+  100% {
+    border-radius: 0px;
+  }
+}
+                </style>
+                <div
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "<div class='cubeToCircleLoader'>
+  <div class='cubeToCircleLoader__cube'></div>
+  <div class='cubeToCircleLoader__cube'></div>
+  <div class='cubeToCircleLoader__cube'></div>
+  <div class='cubeToCircleLoader__cube'></div>
+</div>",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="grid_item_title"
+            >
+              <p
+                className="text bold"
+                style={
+                  Object {
+                    "margin": 0,
+                  }
+                }
+              >
+                Cube to Circle
+              </p>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -5716,6 +5982,139 @@ exports[`Storyshots Loaders With Content 1`] = `
                           }
                         >
                           Three Dot
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    className="grid_item "
+                    onClick={[Function]}
+                  >
+                    <a
+                      href="/cube_to_circle"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "margin": 0,
+                        }
+                      }
+                    >
+                      <div
+                        className="loader_container"
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "background": "#d74b48",
+                            "display": "flex",
+                            "flex": "1",
+                            "height": "10em",
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <div
+                          className="loader"
+                        >
+                          <style>
+                            .cubeToCircleLoader {
+  width: 100px;
+  height: 100px;
+  transform: rotate(-45deg);
+}
+.cubeToCircleLoader .cubeToCircleLoader__cube {
+  height: 20px;
+  width: 20px;
+  margin: 15px;
+  background-color: #FEFEFE;
+  float: right;
+  animation: anim 2.5s infinite;
+}
+.cubeToCircleLoader .cubeToCircleLoader__cube:nth-child(1) {
+  animation-name: cubeToCircleLoaderAnim1, cubeToCircleLoaderAnim;
+}
+@keyframes cubeToCircleLoaderAnim1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-50px, 0);
+  }
+}
+.cubeToCircleLoader .cubeToCircleLoader__cube:nth-child(2) {
+  animation-name: cubeToCircleLoaderAnim2, cubeToCircleLoaderAnim;
+}
+@keyframes cubeToCircleLoaderAnim2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 50px);
+  }
+}
+.cubeToCircleLoader .cubeToCircleLoader__cube:nth-child(3) {
+  animation-name: cubeToCircleLoaderAnim3, cubeToCircleLoaderAnim;
+}
+@keyframes cubeToCircleLoaderAnim3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -50px);
+  }
+}
+.cubeToCircleLoader .cubeToCircleLoader__cube:nth-child(4) {
+  animation-name: cubeToCircleLoaderAnim4, cubeToCircleLoaderAnim;
+}
+@keyframes cubeToCircleLoaderAnim4 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 0);
+  }
+}
+
+@keyframes cubeToCircleLoaderAnim {
+  0% {
+    border-radius: 0px;
+  }
+  40% {
+    border-radius: 40px;
+  }
+  60% {
+    border-radius: 40px;
+  }
+  100% {
+    border-radius: 0px;
+  }
+}
+                          </style>
+                          <div
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "<div class='cubeToCircleLoader'>
+  <div class='cubeToCircleLoader__cube'></div>
+  <div class='cubeToCircleLoader__cube'></div>
+  <div class='cubeToCircleLoader__cube'></div>
+  <div class='cubeToCircleLoader__cube'></div>
+</div>",
+                              }
+                            }
+                          />
+                        </div>
+                      </div>
+                      <div
+                        className="grid_item_title"
+                      >
+                        <p
+                          className="text bold"
+                          style={
+                            Object {
+                              "margin": 0,
+                            }
+                          }
+                        >
+                          Cube to Circle
                         </p>
                       </div>
                     </a>
