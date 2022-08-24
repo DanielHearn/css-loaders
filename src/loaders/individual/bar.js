@@ -1,5 +1,6 @@
 const barLoader = {
   name: 'Bar',
+  key: 'bar',
   color: '#e6653c',
   code: {
     html: `<div class="barLoader">

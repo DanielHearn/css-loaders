@@ -1,5 +1,6 @@
 const verticalLoader = {
   name: 'Vertical',
+  key: 'vertical',
   color: '#4a79cf',
   code: {
     html: `<div class="verticalLoader"></div>`,

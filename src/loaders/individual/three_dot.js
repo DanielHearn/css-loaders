@@ -1,5 +1,6 @@
 const threeDotLoader = {
   name: 'Three Dot',
+  key: 'three_dot',
   color: '#34bd84',
   code: {
     html: `<div class="threeDotLoader">

@@ -1,5 +1,6 @@
 const sliderLoader = {
   name: 'Slider',
+  key: 'slider',
   color: '#714eaf',
   code: {
     html: `<div class='sliderLoader'>

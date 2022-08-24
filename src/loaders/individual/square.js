@@ -1,5 +1,6 @@
 const squareLoader = {
   name: 'Square',
+  key: 'square',
   color: '#d74b48',
   code: {
     html: `<div class='squareLoader'>

@@ -36,7 +36,7 @@ export default function Loaders({screen = ScreenTypes.LARGE_SCREEN} : Props) : N
   const smallScreen = screen === ScreenTypes.SMALL_SCREEN
 
   const storedLoader = loaders.filter((loader: LoaderType) : boolean => 
-    loaderName === slugify(loader.name)
+    loaderName === loader.key
   )[0]
 
   if (storedLoader) {
@@ -85,7 +85,7 @@ export default function Loaders({screen = ScreenTypes.LARGE_SCREEN} : Props) : N
                   <ScrollBox y={true}>
                     <div className="content">
                       <div style={{marginBottom: '4em'}}>
-                        <LoaderSelection initialActiveLoader={loaderName}/>
+                        <LoaderSelection initialActiveLoader={storedLoader.key}/>
                       </div>
                     </div>
                   </ScrollBox>
@@ -113,7 +113,7 @@ export default function Loaders({screen = ScreenTypes.LARGE_SCREEN} : Props) : N
             <div className="row" style={{height: '50%'}}>
               <div className="content_container">
                 <div className="content">
-                  <LoaderSelection/>
+                  <LoaderSelection initialActiveLoader={storedLoader.key}/>
                 </div>
               </div>
             </div>
@@ -126,7 +126,7 @@ export default function Loaders({screen = ScreenTypes.LARGE_SCREEN} : Props) : N
     }
   } else {
     return (
-      <Redirect url="/"/>
+      <Redirect url="/square"/>
     );
   }
 }

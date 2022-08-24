@@ -1,5 +1,6 @@
 const barWithBorderLoader = {
   name: 'Bar with Border',
+  key: 'bar_with_border',
   color: '#4c4ea9',
   code: {
     html: `<div class="barWithBorderLoader">

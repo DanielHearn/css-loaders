@@ -6,7 +6,6 @@ import {
   Link
 } from "react-router-dom";
 
-import { slugify } from './../../helpers'
 import { useContainerDimensions } from './../../hooks'
 import loaders from './../../loaders'
 import type {Loader as LoaderType } from './../../loaders'
@@ -24,7 +23,7 @@ type ItemProps = {
 }
 
 function LoaderGridItem({loader, active, onClick} : ItemProps) {
-  const loaderLink = slugify(loader.name)
+  const loaderLink = loader.key
 
   return (
     <GridItem active={active} onClick={(e) => {onClick(loader)}}>
@@ -49,7 +48,10 @@ export default function LoaderSelection({showActive = true, initialActiveLoader 
   const rootRef = useRef(null)
   const { width } = useContainerDimensions(rootRef)
   const columns = width < 600 ? 1 : width < 800 ? 2 : 3
-  const [activeLoader, setActiveLoader] = useState(slugify(loaders[0].name))
+  const [activeLoader, setActiveLoader] = useState(initialActiveLoader || loaders[0].key)
+  console.log(initialActiveLoader)
+  console.log(activeLoader)
+
   useEffect(() => {
     if (!showActive) {
       setActiveLoader('')
@@ -63,7 +65,7 @@ export default function LoaderSelection({showActive = true, initialActiveLoader 
   }, [activeLoader, initialActiveLoader])
 
   function clickLoader(loader) {
-    setActiveLoader(slugify(loader.name))
+    setActiveLoader(loader.key)
   }
 
   return (
@@ -78,7 +80,7 @@ export default function LoaderSelection({showActive = true, initialActiveLoader 
           loader.name.toLowerCase().includes(searchText.toLowerCase())
         }}
         renderFunction={(loader: LoaderType) => {
-          const loaderLink = slugify(loader.name)
+          const loaderLink = loader.key
 
           return (<LoaderGridItem
             key={loaderLink}

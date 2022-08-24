@@ -1,5 +1,6 @@
 const dualOrbitLoader = {
   name: 'Dual Orbit',
+  key: 'dual_orbit',
   color: '#b6599b',
   code: {
     html: `<div class="dualOrbitLoader">

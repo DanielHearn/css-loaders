@@ -1,5 +1,6 @@
 const hollowBoxLoader = {
   name: 'Hollow Box',
+  key: 'hollow_box',
   color: '#22958b',
   code: {
     html: `<div class="hollowLoader">

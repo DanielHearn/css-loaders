@@ -1,5 +1,6 @@
 const heartbeatLoader = {
   name: 'Heartbeat',
+  key: 'heartbeat',
   color: '#9a40a9',
   code: {
     html: `<div class="heartbeatLoader">

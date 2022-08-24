@@ -1,5 +1,6 @@
 const pulseLoader = {
   name: 'Pulse',
+  key: 'pulse',
   color: '#62af65',
   code: {
     html: `<div class='pulseLoader'></div>
