@@ -35,6 +35,7 @@
       }
       &.active {
         border-bottom: 4px solid $selected;
+        background: $darker;
         &:hover {
           background: $darker;
         }
