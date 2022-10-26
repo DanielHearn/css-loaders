@@ -18,10 +18,6 @@
     font-size: $size-s;
     &:focus {
       outline:0;
-      background: $off-white;
-    }
-    &:hover {
-      background: $off-white;
     }
     &::placeholder {
       right: 1em;

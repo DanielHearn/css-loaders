@@ -11,7 +11,8 @@ type Props = {
   onChange: Function,
   clearCallback?: Function,
   icon?: Node,
-  clearButton?: boolean
+  clearButton?: boolean,
+  autocomplete?: string 
 }
 
 export default function InputBox({
@@ -20,7 +21,8 @@ export default function InputBox({
   onChange = (e) => {},
   clearCallback = (e) => {},
   icon = null,
-  clearButton = false
+  clearButton = false,
+  autoComplete = null
 } : Props) {
 
   return (
@@ -28,7 +30,7 @@ export default function InputBox({
       {icon && <div className="input_icon">
         {icon}
       </div>}
-      <input className={`text_input ${icon ? 'with-icon': ''}`} placeholder={inputPlaceholder} name="text" value={value} onChange={onChange}/>
+      <input className={`text_input ${icon ? 'with-icon': ''}`} placeholder={inputPlaceholder} name="text" value={value} onChange={onChange} autoComplete={autoComplete ? autoComplete : undefined}/>
       {clearButton && value.length ? <span className="clear_button" onClick={clearCallback}>
         <FaRegTimesCircle />
       </span>

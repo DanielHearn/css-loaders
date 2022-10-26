@@ -1,5 +1,11 @@
 @import '../../styles/variables'; 
 
+.small_screen .filtered_grid-search {
+  position: sticky;
+  z-index: 999;
+  top: 0;
+}
+
 .filtered_grid {
   display: flex;
   flex-direction: column;

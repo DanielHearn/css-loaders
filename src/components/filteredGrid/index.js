@@ -1,7 +1,7 @@
 // @flow
 
-import React, {useState} from 'react';
-import type {Node} from 'react'
+import React, { useState, useRef, useEffect} from 'react';
+import type { Node } from 'react'
 
 import Grid from './../grid'
 import SearchForm from './../searchForm'
@@ -29,6 +29,7 @@ export default function FilteredGrid({
 } : Props<any>) {
   const [matchedItems, setMatchedItems] = useState(items);
   const inputColumns = columns <= 3 ? columns : 3
+  const ref = useRef(null)
 
   function searchCallback(searchText: string): void {
     filterItems(searchText)
@@ -40,12 +41,19 @@ export default function FilteredGrid({
     setMatchedItems(matchingItems);
   }
 
+  useEffect(() => {
+    if (ref.current) {
+      console.log(ref.current.scrollTop)
+      ref.current.scrollTop = 0;
+    }
+  }, [ref, matchedItems, columns])
+
   return (
     <div className="filtered_grid">
       <div className="filtered_grid-search">
         <Grid columns={inputColumns} items={[<SearchForm key="search_form" onSubmit={(text) => {searchCallback(text)}} placeholder="Search loaders"/>]}/>
       </div>
-      <div className="filtered_grid-items">
+      <div className="filtered_grid-items" ref={ref}>
         {matchedItems.length ?
           <Grid columns={columns} items={matchedItems.map((item: Node): Node => renderFunction(item))}/>
         :

@@ -1,5 +1,8 @@
 @import '../../styles/variables'; 
 
+.small_screen .code_container {
+  font-size: 14px;
+}
 
 .code_container {
   display: flex;
@@ -38,5 +41,8 @@
     overflow: auto;
     align-items: flex-start;
     background: $white;
+  }
+  .copy_success {
+    font-size: $size-s;
   }
 }
