@@ -20,8 +20,8 @@ $appSquareSize: 4em;
 .square_app_loader {
   max-width: $appSquareSize;
   .square {
-    height: $appSquareSize/2;
-    width: $appSquareSize/2;
+    height:  calc($appSquareSize/2);
+    width:  calc($appSquareSize/2);
     background: $dark;
     float: right;
     animation: square_app_anim 3s infinite; 
