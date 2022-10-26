@@ -13,17 +13,17 @@
     .tab {
       display: flex;
       flex: 1;
-      padding: 0.75em 1em;
+      padding: calc(0.5em + 4px) 1em;
       font-family: $font-family;
       font-size: $size-m;
       font-weight: $weight-semi-bold;
       background: $dark;
+      border-bottom: 4px solid $dark;
       color: $white;
       cursor: pointer;
       text-align: center;
       align-items: center;
       justify-content: center;
-      transition: background-color $transition-time ease-in-out;
       user-select: none;
 
       &:focus {
@@ -34,10 +34,9 @@
         background: $darker;
       }
       &.active {
-        background: $selected;
-        transition: background-color 0s ease-in-out;
+        border-bottom: 4px solid $selected;
         &:hover {
-          background: $selected;
+          background: $darker;
         }
       }
     }
