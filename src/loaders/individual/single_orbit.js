@@ -1,6 +1,7 @@
 const singleOrbitLoader = {
   name: 'Single Orbit',
   key: 'single_orbit',
+  link: 'https://codepen.io/danhearn/pen/BarbJGO',
   color: '#b6596c',
   code: {
     html: `<div class="singleOrbitLoader">

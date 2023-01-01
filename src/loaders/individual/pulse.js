@@ -1,6 +1,7 @@
 const pulseLoader = {
   name: 'Pulse',
   key: 'pulse',
+  link: 'https://codepen.io/danhearn/pen/xLJvam',
   color: '#62af65',
   code: {
     html: `<div class='pulseLoader'></div>

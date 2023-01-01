@@ -1,6 +1,7 @@
 const sliderLoader = {
   name: 'Slider',
   key: 'slider',
+  link: 'https://codepen.io/danhearn/pen/XXZMbY',
   color: '#714eaf',
   code: {
     html: `<div class='sliderLoader'>

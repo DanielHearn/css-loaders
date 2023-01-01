@@ -47,7 +47,7 @@ export default function Loaders({screen = ScreenTypes.LARGE_SCREEN} : Props) : N
         {
           id: `${slugify(storedLoader.name)}_${language}`,
           name: capitaliseAll(unslugify(language)),
-          content: <CodeBlock language={language} code={storedLoader.code[language]}/>
+          content: <CodeBlock language={language} code={storedLoader.code[language]} link={storedLoader.link}/>
         }
       )
     }

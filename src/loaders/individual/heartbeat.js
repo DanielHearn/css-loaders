@@ -1,6 +1,7 @@
 const heartbeatLoader = {
   name: 'Heartbeat',
   key: 'heartbeat',
+  link: 'https://codepen.io/danhearn/pen/xLJvam',
   color: '#9a40a9',
   code: {
     html: `<div class="heartbeatLoader">

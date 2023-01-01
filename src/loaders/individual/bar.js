@@ -1,6 +1,7 @@
 const barLoader = {
   name: 'Bar',
   key: 'bar',
+  link: 'https://codepen.io/danhearn/pen/aPmjWJ',
   color: '#e6653c',
   code: {
     html: `<div class="barLoader">

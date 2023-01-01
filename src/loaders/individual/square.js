@@ -1,6 +1,7 @@
 const squareLoader = {
   name: 'Square',
   key: 'square',
+  link: 'https://codepen.io/danhearn/pen/YWNGYR',
   color: '#d74b48',
   code: {
     html: `<div class='squareLoader'>

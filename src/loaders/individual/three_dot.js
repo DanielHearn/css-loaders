@@ -1,6 +1,7 @@
 const threeDotLoader = {
   name: 'Three Dot',
   key: 'three_dot',
+  link: 'https://codepen.io/danhearn/pen/VjPpZQ',
   color: '#34bd84',
   code: {
     html: `<div class="threeDotLoader">

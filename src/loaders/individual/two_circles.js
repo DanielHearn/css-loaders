@@ -1,6 +1,7 @@
 const twoCirclesLoader = {
   name: 'Two Circles',
   key: 'two_circles',
+  link: 'https://codepen.io/danhearn/pen/wMbVeV',
   color: '#221d2a',
   code: {
     html: `<div class="twoCircleLoader">

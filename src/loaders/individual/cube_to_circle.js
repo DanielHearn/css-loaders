@@ -1,6 +1,7 @@
 const cubeToCircleLoader = {
   name: 'Cube to Circle',
   key: 'cube_to_circle',
+  link: 'https://codepen.io/danhearn/pen/NpBgmK',
   color: '#d74b48',
   code: {
     html: `<div class='cubeToCircleLoader'>

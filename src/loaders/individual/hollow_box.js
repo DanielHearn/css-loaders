@@ -1,6 +1,7 @@
 const hollowBoxLoader = {
   name: 'Hollow Box',
   key: 'hollow_box',
+  link: 'https://codepen.io/danhearn/pen/MvqgdM',
   color: '#22958b',
   code: {
     html: `<div class="hollowLoader">

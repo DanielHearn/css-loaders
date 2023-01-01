@@ -1,6 +1,7 @@
 const verticalLoader = {
   name: 'Vertical',
   key: 'vertical',
+  link: 'https://codepen.io/danhearn/pen/xrqpqY',
   color: '#4a79cf',
   code: {
     html: `<div class="verticalLoader"></div>`,

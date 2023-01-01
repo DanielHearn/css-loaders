@@ -1,6 +1,7 @@
 const barWithBorderLoader = {
   name: 'Bar with Border',
   key: 'bar_with_border',
+  link: 'https://codepen.io/danhearn/pen/ZExPaqM',
   color: '#4c4ea9',
   code: {
     html: `<div class="barWithBorderLoader">

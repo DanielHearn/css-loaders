@@ -1,6 +1,7 @@
 const dualOrbitLoader = {
   name: 'Dual Orbit',
   key: 'dual_orbit',
+  link: 'https://codepen.io/danhearn/pen/ZExPMEV',
   color: '#b6599b',
   code: {
     html: `<div class="dualOrbitLoader">
