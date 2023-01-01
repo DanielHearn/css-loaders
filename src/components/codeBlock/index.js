@@ -33,7 +33,7 @@ export default function CodeContainer({language, code, link} : {language: string
             }}>
           <Button type="primary" title={`Copy ${capitaliseAll(language)}`}><FaRegClipboard/></Button>
         </CopyToClipboard>
-        {link && <a href={link} target='_blank'><Button type="primary" title="Open CodePen Editor" on><FaExternalLinkAlt/></Button></a>}
+        {link && <a href={link} target='_blank' rel="noopener noreferrer"><Button type="primary" title="Open CodePen Editor" on><FaExternalLinkAlt/></Button></a>}
       </div>
     </div>
     <div className="content_container" ref={textAreaRef}>

@@ -6108,6 +6108,7 @@ exports[`Storyshots Loaders With Content 1`] = `
               </button>
               <a
                 href="https://codepen.io/danhearn/pen/YWNGYR"
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 <button
