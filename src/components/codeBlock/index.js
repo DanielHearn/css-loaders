@@ -24,17 +24,15 @@ export default function CodeContainer({language, code, link} : {language: string
   return (
   <div className="code_container">
     <div className="code_actions">
-      <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
-        <CopyToClipboard
-            text={code}
-            onCopy={() => {
-              toast.clearWaitingQueue();
-              toast(`Copied ${capitaliseAll(language)}`);
-            }}>
-          <Button type="primary" title={`Copy ${capitaliseAll(language)}`}><FaRegClipboard/></Button>
-        </CopyToClipboard>
-        {link && <a href={link} target='_blank' rel="noopener noreferrer"><Button type="primary" title="Open CodePen Editor" on><FaExternalLinkAlt/></Button></a>}
-      </div>
+      <CopyToClipboard
+          text={code}
+          onCopy={() => {
+            toast.clearWaitingQueue();
+            toast(`Copied ${capitaliseAll(language)}`);
+          }}>
+        <Button type="primary" title={`Copy ${capitaliseAll(language)}`}><FaRegClipboard/></Button>
+      </CopyToClipboard>
+      {link && <a href={link} target='_blank' rel="noopener noreferrer" className='code_codepen'><Button type="primary" title="Open CodePen Editor" on>CodePen <FaExternalLinkAlt/></Button></a>}
     </div>
     <div className="content_container" ref={textAreaRef}>
       <SyntaxHighlighter language={language} style={prism} className="code_block">

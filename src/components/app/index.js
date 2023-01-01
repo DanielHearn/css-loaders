@@ -66,8 +66,9 @@ function App({screen, setSmallScreen, setMediumScreen, setLargeScreen}) {
       <ToastContainer 
         position={ screen === ScreenTypes.SMALL_SCREEN ? 'bottom-left' :'top-left' }
         limit={3}
-        autoClose={3000}
+        autoClose={2500}
         pauseOnFocusLoss={false}
+        pauseOnHover={false}
         closeButton={FaTimes}
       />
     </div>

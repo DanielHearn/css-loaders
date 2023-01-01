@@ -14,7 +14,7 @@
 }
 
 .Toastify__progress-bar-theme--light {
-  background: $selected !important;
+  background: $dark !important;
 }
 
 .Toastify__toast {
@@ -26,4 +26,8 @@
 
 .Toastify__toast-container--bottom-left {
  bottom: 3em !important;
+}
+
+.Toastify__toast-container--top-left {
+ top: 3em !important;
 }
