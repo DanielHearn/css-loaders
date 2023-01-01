@@ -19,6 +19,10 @@ import Loaders from '../../views/loaders'
 import { store } from '../../store'
 import ActionTypes from '../../store/actions'
 import { setSmallScreen, setMediumScreen, setLargeScreen } from '../../store/actions/screen'
+import { ToastContainer } from 'react-toastify';
+import { ScreenTypes } from '../../store/actions'
+import { FaTimes } from "react-icons/fa";
+import 'react-toastify/dist/ReactToastify.css';
 
 const LoadersMapStateToProps = state => ({
   screen: state.screen
@@ -41,6 +45,7 @@ function AppWrapper() {
 
 function App({screen, setSmallScreen, setMediumScreen, setLargeScreen}) {
   const queryMatches = useMedia({ queries: mediaQueries });
+  
   useEffect(() => {
     if (queryMatches.small && screen !== ActionTypes.SMALL_SCREEN) {
       setSmallScreen()
@@ -58,6 +63,13 @@ function App({screen, setSmallScreen, setMediumScreen, setLargeScreen}) {
         <Route path="/" component={ConnectedLoaders}/>
         <Redirect to="/" />
       </Switch>
+      <ToastContainer 
+        position={ screen === ScreenTypes.SMALL_SCREEN ? 'bottom-left' :'top-left' }
+        limit={3}
+        autoClose={3000}
+        pauseOnFocusLoss={false}
+        closeButton={FaTimes}
+      />
     </div>
   )
 }
