@@ -1379,6 +1379,93 @@ exports[`Storyshots App With Content 1`] = `
                                 </div>
                               </a>
                             </div>
+                            <div
+                              className="grid_item "
+                              onClick={[Function]}
+                            >
+                              <a
+                                href="/circle_rotate"
+                                onClick={[Function]}
+                                style={
+                                  Object {
+                                    "margin": 0,
+                                  }
+                                }
+                              >
+                                <div
+                                  className="loader_container"
+                                  style={
+                                    Object {
+                                      "alignItems": "center",
+                                      "background": "#9f3755",
+                                      "display": "flex",
+                                      "flex": "1",
+                                      "height": "10em",
+                                      "justifyContent": "center",
+                                    }
+                                  }
+                                >
+                                  <div
+                                    className="loader"
+                                  >
+                                    <style>
+                                      .circleRotateLoader {
+  width: 100px;
+  height: 100px;
+  transform: rotate(0deg);
+  animation: circleRotateLoaderAnim 1.6s infinite;
+}
+.circleRotateLoader__cube {
+  height: 20px;
+  width: 20px;
+  margin: 15px;
+  background-color: #ECECEC;
+  float: right;
+  border-radius: 50%;
+}
+
+@keyframes circleRotateLoaderAnim {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+                                    </style>
+                                    <div
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "<div class='circleRotateLoader'>
+  <div class='circleRotateLoader__cube'></div>
+  <div class='circleRotateLoader__cube'></div>
+  <div class='circleRotateLoader__cube'></div>
+  <div class='circleRotateLoader__cube'></div>
+</div>",
+                                        }
+                                      }
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="grid_item_title"
+                                >
+                                  <p
+                                    className="text bold"
+                                    style={
+                                      Object {
+                                        "margin": 0,
+                                      }
+                                    }
+                                  >
+                                    Circle Rotate
+                                  </p>
+                                </div>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -4566,6 +4653,93 @@ exports[`Storyshots LoaderSelection Element 1`] = `
             </div>
           </a>
         </div>
+        <div
+          className="grid_item "
+          onClick={[Function]}
+        >
+          <a
+            href="/circle_rotate"
+            onClick={[Function]}
+            style={
+              Object {
+                "margin": 0,
+              }
+            }
+          >
+            <div
+              className="loader_container"
+              style={
+                Object {
+                  "alignItems": "center",
+                  "background": "#9f3755",
+                  "display": "flex",
+                  "flex": "1",
+                  "height": "10em",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <div
+                className="loader"
+              >
+                <style>
+                  .circleRotateLoader {
+  width: 100px;
+  height: 100px;
+  transform: rotate(0deg);
+  animation: circleRotateLoaderAnim 1.6s infinite;
+}
+.circleRotateLoader__cube {
+  height: 20px;
+  width: 20px;
+  margin: 15px;
+  background-color: #ECECEC;
+  float: right;
+  border-radius: 50%;
+}
+
+@keyframes circleRotateLoaderAnim {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+                </style>
+                <div
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "<div class='circleRotateLoader'>
+  <div class='circleRotateLoader__cube'></div>
+  <div class='circleRotateLoader__cube'></div>
+  <div class='circleRotateLoader__cube'></div>
+  <div class='circleRotateLoader__cube'></div>
+</div>",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="grid_item_title"
+            >
+              <p
+                className="text bold"
+                style={
+                  Object {
+                    "margin": 0,
+                  }
+                }
+              >
+                Circle Rotate
+              </p>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -6009,6 +6183,93 @@ exports[`Storyshots Loaders With Content 1`] = `
                           }
                         >
                           Cube to Circle
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    className="grid_item "
+                    onClick={[Function]}
+                  >
+                    <a
+                      href="/circle_rotate"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "margin": 0,
+                        }
+                      }
+                    >
+                      <div
+                        className="loader_container"
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "background": "#9f3755",
+                            "display": "flex",
+                            "flex": "1",
+                            "height": "10em",
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <div
+                          className="loader"
+                        >
+                          <style>
+                            .circleRotateLoader {
+  width: 100px;
+  height: 100px;
+  transform: rotate(0deg);
+  animation: circleRotateLoaderAnim 1.6s infinite;
+}
+.circleRotateLoader__cube {
+  height: 20px;
+  width: 20px;
+  margin: 15px;
+  background-color: #ECECEC;
+  float: right;
+  border-radius: 50%;
+}
+
+@keyframes circleRotateLoaderAnim {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+                          </style>
+                          <div
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "<div class='circleRotateLoader'>
+  <div class='circleRotateLoader__cube'></div>
+  <div class='circleRotateLoader__cube'></div>
+  <div class='circleRotateLoader__cube'></div>
+  <div class='circleRotateLoader__cube'></div>
+</div>",
+                              }
+                            }
+                          />
+                        </div>
+                      </div>
+                      <div
+                        className="grid_item_title"
+                      >
+                        <p
+                          className="text bold"
+                          style={
+                            Object {
+                              "margin": 0,
+                            }
+                          }
+                        >
+                          Circle Rotate
                         </p>
                       </div>
                     </a>

@@ -13,6 +13,7 @@ import dual_orbit_loader from './individual/dual_orbit'
 import vertical_loader from './individual/vertical'
 import three_dot_loader from './individual/three_dot'
 import cube_to_circle_loader from './individual/cube_to_circle'
+import circle_rotate_loader from './individual/circle_rotate'
 
 // Formatting for css loader objects
 /* {
@@ -48,7 +49,8 @@ const loaders: Array<Loader> = [
   dual_orbit_loader,
   vertical_loader,
   three_dot_loader,
-  cube_to_circle_loader
+  cube_to_circle_loader,
+  circle_rotate_loader
 ]
 
 
