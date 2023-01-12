@@ -14,7 +14,7 @@ const cubeToCircleLoader = {
   width: 100px;
   height: 100px;
   transform: rotate(0deg);
-  animation: circleRotateLoaderAnim 1.6s infinite;
+  animation: circleRotateLoaderAnim 1.5s infinite;
 }
 .circleRotateLoader__cube {
   height: 20px;
@@ -58,7 +58,7 @@ const cubeToCircleLoader = {
 
 @keyframes circleRotateLoaderAnim {
   0% {transform: rotate(0deg)}
-  80% {transform: rotate(90deg)}
+  90% {transform: rotate(90deg)}
   100% {transform: rotate(90deg)}
 } `
   }
