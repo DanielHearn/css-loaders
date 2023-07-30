@@ -1413,7 +1413,7 @@ exports[`Storyshots App With Content 1`] = `
   width: 100px;
   height: 100px;
   transform: rotate(0deg);
-  animation: circleRotateLoaderAnim 1.6s infinite;
+  animation: circleRotateLoaderAnim 1.5s infinite;
 }
 .circleRotateLoader__cube {
   height: 20px;
@@ -1462,6 +1462,189 @@ exports[`Storyshots App With Content 1`] = `
                                     }
                                   >
                                     Circle Rotate
+                                  </p>
+                                </div>
+                              </a>
+                            </div>
+                            <div
+                              className="grid_item "
+                              onClick={[Function]}
+                            >
+                              <a
+                                href="/arc"
+                                onClick={[Function]}
+                                style={
+                                  Object {
+                                    "margin": 0,
+                                  }
+                                }
+                              >
+                                <div
+                                  className="loader_container"
+                                  style={
+                                    Object {
+                                      "alignItems": "center",
+                                      "background": "#714eaf",
+                                      "display": "flex",
+                                      "flex": "1",
+                                      "height": "10em",
+                                      "justifyContent": "center",
+                                    }
+                                  }
+                                >
+                                  <div
+                                    className="loader"
+                                  >
+                                    <style>
+                                      .arcLoader {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arcLoader__arc {
+  border: 6px solid white;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  display: inline-block;
+  min-width: 15px;
+  min-height: 15px;
+  padding: 7.5px;
+  border-radius: 100%;
+  border-bottom-color: transparent;
+  animation: arcLoaderAnim 1.6s linear infinite;
+}
+
+@keyframes arcLoaderAnim {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+                                    </style>
+                                    <div
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "<div class='arcLoader'>
+  <div class='arcLoader__arc'></div>
+</div>",
+                                        }
+                                      }
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="grid_item_title"
+                                >
+                                  <p
+                                    className="text bold"
+                                    style={
+                                      Object {
+                                        "margin": 0,
+                                      }
+                                    }
+                                  >
+                                    Arc
+                                  </p>
+                                </div>
+                              </a>
+                            </div>
+                            <div
+                              className="grid_item "
+                              onClick={[Function]}
+                            >
+                              <a
+                                href="/double_arc"
+                                onClick={[Function]}
+                                style={
+                                  Object {
+                                    "margin": 0,
+                                  }
+                                }
+                              >
+                                <div
+                                  className="loader_container"
+                                  style={
+                                    Object {
+                                      "alignItems": "center",
+                                      "background": "#4c4ea9",
+                                      "display": "flex",
+                                      "flex": "1",
+                                      "height": "10em",
+                                      "justifyContent": "center",
+                                    }
+                                  }
+                                >
+                                  <div
+                                    className="loader"
+                                  >
+                                    <style>
+                                      .doubleArcLoader {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.doubleArcLoader__arc {
+  position: absolute;
+  border: 6px solid white;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  display: inline-block;
+  min-width: 15px;
+  min-height: 15px;
+  padding: 7.5px;
+  border-radius: 100%;
+  border-bottom-color: transparent;
+  animation: arcLoaderAnim 1.6s linear infinite;
+}
+.doubleArcLoader__arc--large {
+  min-width: 34.2857142857px;
+  min-height: 34.2857142857px;
+  padding: 10px;
+  animation: doubleArcLoaderLargeAnim 2.1s linear infinite;
+}
+
+@keyframes doubleArcLoaderAnim {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes doubleArcLoaderLargeAnim {
+  0% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+                                    </style>
+                                    <div
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "<div class='doubleArcLoader'>
+  <div class='doubleArcLoader__arc'></div>
+  <div class='doubleArcLoader__arc doubleArcLoader__arc--large'></div>
+</div>",
+                                        }
+                                      }
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="grid_item_title"
+                                >
+                                  <p
+                                    className="text bold"
+                                    style={
+                                      Object {
+                                        "margin": 0,
+                                      }
+                                    }
+                                  >
+                                    Double Arc
                                   </p>
                                 </div>
                               </a>
@@ -4687,7 +4870,7 @@ exports[`Storyshots LoaderSelection Element 1`] = `
   width: 100px;
   height: 100px;
   transform: rotate(0deg);
-  animation: circleRotateLoaderAnim 1.6s infinite;
+  animation: circleRotateLoaderAnim 1.5s infinite;
 }
 .circleRotateLoader__cube {
   height: 20px;
@@ -4736,6 +4919,189 @@ exports[`Storyshots LoaderSelection Element 1`] = `
                 }
               >
                 Circle Rotate
+              </p>
+            </div>
+          </a>
+        </div>
+        <div
+          className="grid_item "
+          onClick={[Function]}
+        >
+          <a
+            href="/arc"
+            onClick={[Function]}
+            style={
+              Object {
+                "margin": 0,
+              }
+            }
+          >
+            <div
+              className="loader_container"
+              style={
+                Object {
+                  "alignItems": "center",
+                  "background": "#714eaf",
+                  "display": "flex",
+                  "flex": "1",
+                  "height": "10em",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <div
+                className="loader"
+              >
+                <style>
+                  .arcLoader {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arcLoader__arc {
+  border: 6px solid white;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  display: inline-block;
+  min-width: 15px;
+  min-height: 15px;
+  padding: 7.5px;
+  border-radius: 100%;
+  border-bottom-color: transparent;
+  animation: arcLoaderAnim 1.6s linear infinite;
+}
+
+@keyframes arcLoaderAnim {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+                </style>
+                <div
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "<div class='arcLoader'>
+  <div class='arcLoader__arc'></div>
+</div>",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="grid_item_title"
+            >
+              <p
+                className="text bold"
+                style={
+                  Object {
+                    "margin": 0,
+                  }
+                }
+              >
+                Arc
+              </p>
+            </div>
+          </a>
+        </div>
+        <div
+          className="grid_item "
+          onClick={[Function]}
+        >
+          <a
+            href="/double_arc"
+            onClick={[Function]}
+            style={
+              Object {
+                "margin": 0,
+              }
+            }
+          >
+            <div
+              className="loader_container"
+              style={
+                Object {
+                  "alignItems": "center",
+                  "background": "#4c4ea9",
+                  "display": "flex",
+                  "flex": "1",
+                  "height": "10em",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <div
+                className="loader"
+              >
+                <style>
+                  .doubleArcLoader {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.doubleArcLoader__arc {
+  position: absolute;
+  border: 6px solid white;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  display: inline-block;
+  min-width: 15px;
+  min-height: 15px;
+  padding: 7.5px;
+  border-radius: 100%;
+  border-bottom-color: transparent;
+  animation: arcLoaderAnim 1.6s linear infinite;
+}
+.doubleArcLoader__arc--large {
+  min-width: 34.2857142857px;
+  min-height: 34.2857142857px;
+  padding: 10px;
+  animation: doubleArcLoaderLargeAnim 2.1s linear infinite;
+}
+
+@keyframes doubleArcLoaderAnim {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes doubleArcLoaderLargeAnim {
+  0% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+                </style>
+                <div
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "<div class='doubleArcLoader'>
+  <div class='doubleArcLoader__arc'></div>
+  <div class='doubleArcLoader__arc doubleArcLoader__arc--large'></div>
+</div>",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="grid_item_title"
+            >
+              <p
+                className="text bold"
+                style={
+                  Object {
+                    "margin": 0,
+                  }
+                }
+              >
+                Double Arc
               </p>
             </div>
           </a>
@@ -6221,7 +6587,7 @@ exports[`Storyshots Loaders With Content 1`] = `
   width: 100px;
   height: 100px;
   transform: rotate(0deg);
-  animation: circleRotateLoaderAnim 1.6s infinite;
+  animation: circleRotateLoaderAnim 1.5s infinite;
 }
 .circleRotateLoader__cube {
   height: 20px;
@@ -6270,6 +6636,189 @@ exports[`Storyshots Loaders With Content 1`] = `
                           }
                         >
                           Circle Rotate
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    className="grid_item "
+                    onClick={[Function]}
+                  >
+                    <a
+                      href="/arc"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "margin": 0,
+                        }
+                      }
+                    >
+                      <div
+                        className="loader_container"
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "background": "#714eaf",
+                            "display": "flex",
+                            "flex": "1",
+                            "height": "10em",
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <div
+                          className="loader"
+                        >
+                          <style>
+                            .arcLoader {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arcLoader__arc {
+  border: 6px solid white;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  display: inline-block;
+  min-width: 15px;
+  min-height: 15px;
+  padding: 7.5px;
+  border-radius: 100%;
+  border-bottom-color: transparent;
+  animation: arcLoaderAnim 1.6s linear infinite;
+}
+
+@keyframes arcLoaderAnim {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+                          </style>
+                          <div
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "<div class='arcLoader'>
+  <div class='arcLoader__arc'></div>
+</div>",
+                              }
+                            }
+                          />
+                        </div>
+                      </div>
+                      <div
+                        className="grid_item_title"
+                      >
+                        <p
+                          className="text bold"
+                          style={
+                            Object {
+                              "margin": 0,
+                            }
+                          }
+                        >
+                          Arc
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    className="grid_item "
+                    onClick={[Function]}
+                  >
+                    <a
+                      href="/double_arc"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "margin": 0,
+                        }
+                      }
+                    >
+                      <div
+                        className="loader_container"
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "background": "#4c4ea9",
+                            "display": "flex",
+                            "flex": "1",
+                            "height": "10em",
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <div
+                          className="loader"
+                        >
+                          <style>
+                            .doubleArcLoader {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.doubleArcLoader__arc {
+  position: absolute;
+  border: 6px solid white;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  display: inline-block;
+  min-width: 15px;
+  min-height: 15px;
+  padding: 7.5px;
+  border-radius: 100%;
+  border-bottom-color: transparent;
+  animation: arcLoaderAnim 1.6s linear infinite;
+}
+.doubleArcLoader__arc--large {
+  min-width: 34.2857142857px;
+  min-height: 34.2857142857px;
+  padding: 10px;
+  animation: doubleArcLoaderLargeAnim 2.1s linear infinite;
+}
+
+@keyframes doubleArcLoaderAnim {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes doubleArcLoaderLargeAnim {
+  0% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+                          </style>
+                          <div
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "<div class='doubleArcLoader'>
+  <div class='doubleArcLoader__arc'></div>
+  <div class='doubleArcLoader__arc doubleArcLoader__arc--large'></div>
+</div>",
+                              }
+                            }
+                          />
+                        </div>
+                      </div>
+                      <div
+                        className="grid_item_title"
+                      >
+                        <p
+                          className="text bold"
+                          style={
+                            Object {
+                              "margin": 0,
+                            }
+                          }
+                        >
+                          Double Arc
                         </p>
                       </div>
                     </a>
