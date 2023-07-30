@@ -14,6 +14,7 @@ import vertical_loader from './individual/vertical'
 import three_dot_loader from './individual/three_dot'
 import cube_to_circle_loader from './individual/cube_to_circle'
 import circle_rotate_loader from './individual/circle_rotate'
+import arc_loader from './individual/arc'
 
 // Formatting for css loader objects
 /* {
@@ -32,8 +33,8 @@ export type Loader = {
   code: {
     html: string,
     css: string,
-    scss: string
-  }
+    scss: string,
+  },
 }
 
 const loaders: Array<Loader> = [
@@ -50,8 +51,8 @@ const loaders: Array<Loader> = [
   vertical_loader,
   three_dot_loader,
   cube_to_circle_loader,
-  circle_rotate_loader
+  circle_rotate_loader,
+  arc_loader,
 ]
 
-
-export default loaders;
+export default loaders
