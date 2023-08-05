@@ -16,6 +16,7 @@ import cube_to_circle_loader from './individual/cube_to_circle'
 import circle_rotate_loader from './individual/circle_rotate'
 import arc_loader from './individual/arc'
 import double_arc_loader from './individual/double_arc'
+import arc_circle_loader from './individual/arc_circle'
 
 // Formatting for css loader objects
 /* {
@@ -54,6 +55,7 @@ const loaders: Array<Loader> = [
   cube_to_circle_loader,
   circle_rotate_loader,
   arc_loader,
+  arc_circle_loader,
   double_arc_loader,
 ]
 
