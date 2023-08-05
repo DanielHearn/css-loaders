@@ -1554,6 +1554,99 @@ exports[`Storyshots App With Content 1`] = `
                               onClick={[Function]}
                             >
                               <a
+                                href="/arc_circle"
+                                onClick={[Function]}
+                                style={
+                                  Object {
+                                    "margin": 0,
+                                  }
+                                }
+                              >
+                                <div
+                                  className="loader_container"
+                                  style={
+                                    Object {
+                                      "alignItems": "center",
+                                      "background": "#4ca98b",
+                                      "display": "flex",
+                                      "flex": "1",
+                                      "height": "10em",
+                                      "justifyContent": "center",
+                                    }
+                                  }
+                                >
+                                  <div
+                                    className="loader"
+                                  >
+                                    <style>
+                                      .arcCircleLoader {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arcCircleLoader__arc {
+  position: absolute;
+  border: 6px solid white;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  display: inline-block;
+  min-width: 15px;
+  min-height: 15px;
+  padding: 7.5px;
+  border-radius: 100%;
+  border-bottom-color: transparent;
+  animation: arcCircleLoaderAnim 1.6s linear infinite;
+}
+.arcCircleLoader__circle {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  width: 20px;
+  height: 20px;
+}
+
+@keyframes arcCircleLoaderAnim {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+                                    </style>
+                                    <div
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "<div class='arcCircleLoader'>
+  <div class='arcCircleLoader__arc'></div>
+  <div class='arcCircleLoader__circle'></div>
+</div>",
+                                        }
+                                      }
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="grid_item_title"
+                                >
+                                  <p
+                                    className="text bold"
+                                    style={
+                                      Object {
+                                        "margin": 0,
+                                      }
+                                    }
+                                  >
+                                    Arc Circle
+                                  </p>
+                                </div>
+                              </a>
+                            </div>
+                            <div
+                              className="grid_item "
+                              onClick={[Function]}
+                            >
+                              <a
                                 href="/double_arc"
                                 onClick={[Function]}
                                 style={
@@ -5011,6 +5104,99 @@ exports[`Storyshots LoaderSelection Element 1`] = `
           onClick={[Function]}
         >
           <a
+            href="/arc_circle"
+            onClick={[Function]}
+            style={
+              Object {
+                "margin": 0,
+              }
+            }
+          >
+            <div
+              className="loader_container"
+              style={
+                Object {
+                  "alignItems": "center",
+                  "background": "#4ca98b",
+                  "display": "flex",
+                  "flex": "1",
+                  "height": "10em",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <div
+                className="loader"
+              >
+                <style>
+                  .arcCircleLoader {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arcCircleLoader__arc {
+  position: absolute;
+  border: 6px solid white;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  display: inline-block;
+  min-width: 15px;
+  min-height: 15px;
+  padding: 7.5px;
+  border-radius: 100%;
+  border-bottom-color: transparent;
+  animation: arcCircleLoaderAnim 1.6s linear infinite;
+}
+.arcCircleLoader__circle {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  width: 20px;
+  height: 20px;
+}
+
+@keyframes arcCircleLoaderAnim {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+                </style>
+                <div
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "<div class='arcCircleLoader'>
+  <div class='arcCircleLoader__arc'></div>
+  <div class='arcCircleLoader__circle'></div>
+</div>",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="grid_item_title"
+            >
+              <p
+                className="text bold"
+                style={
+                  Object {
+                    "margin": 0,
+                  }
+                }
+              >
+                Arc Circle
+              </p>
+            </div>
+          </a>
+        </div>
+        <div
+          className="grid_item "
+          onClick={[Function]}
+        >
+          <a
             href="/double_arc"
             onClick={[Function]}
             style={
@@ -6719,6 +6905,99 @@ exports[`Storyshots Loaders With Content 1`] = `
                           }
                         >
                           Arc
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    className="grid_item "
+                    onClick={[Function]}
+                  >
+                    <a
+                      href="/arc_circle"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "margin": 0,
+                        }
+                      }
+                    >
+                      <div
+                        className="loader_container"
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "background": "#4ca98b",
+                            "display": "flex",
+                            "flex": "1",
+                            "height": "10em",
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <div
+                          className="loader"
+                        >
+                          <style>
+                            .arcCircleLoader {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arcCircleLoader__arc {
+  position: absolute;
+  border: 6px solid white;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  display: inline-block;
+  min-width: 15px;
+  min-height: 15px;
+  padding: 7.5px;
+  border-radius: 100%;
+  border-bottom-color: transparent;
+  animation: arcCircleLoaderAnim 1.6s linear infinite;
+}
+.arcCircleLoader__circle {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  width: 20px;
+  height: 20px;
+}
+
+@keyframes arcCircleLoaderAnim {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+                          </style>
+                          <div
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "<div class='arcCircleLoader'>
+  <div class='arcCircleLoader__arc'></div>
+  <div class='arcCircleLoader__circle'></div>
+</div>",
+                              }
+                            }
+                          />
+                        </div>
+                      </div>
+                      <div
+                        className="grid_item_title"
+                      >
+                        <p
+                          className="text bold"
+                          style={
+                            Object {
+                              "margin": 0,
+                            }
+                          }
+                        >
+                          Arc Circle
                         </p>
                       </div>
                     </a>
