@@ -1742,6 +1742,218 @@ exports[`Storyshots App With Content 1`] = `
                                 </div>
                               </a>
                             </div>
+                            <div
+                              className="grid_item "
+                              onClick={[Function]}
+                            >
+                              <a
+                                href="/stair"
+                                onClick={[Function]}
+                                style={
+                                  Object {
+                                    "margin": 0,
+                                  }
+                                }
+                              >
+                                <div
+                                  className="loader_container"
+                                  style={
+                                    Object {
+                                      "alignItems": "center",
+                                      "background": "#4c89a9",
+                                      "display": "flex",
+                                      "flex": "1",
+                                      "height": "10em",
+                                      "justifyContent": "center",
+                                    }
+                                  }
+                                >
+                                  <div
+                                    className="loader"
+                                  >
+                                    <style>
+                                      .stairLoader {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.stairLoader__line {
+  background: white;
+  display: inline-block;
+  height: 15px;
+  width: 100%;
+  margin: 3.75px;
+  animation: stairLoaderAnim 1.5s linear infinite;
+}
+.stairLoader__line:nth-child(1) {
+  animation-delay: 0.15s;
+}
+.stairLoader__line:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.stairLoader__line:nth-child(3) {
+  animation-delay: 0.45s;
+}
+
+@keyframes stairLoaderAnim {
+  0% {
+    transform: 0;
+  }
+  25% {
+    transform: translate(-30px);
+  }
+  50% {
+    transform: 0;
+  }
+  75% {
+    transform: translate(30px);
+  }
+  100% {
+    transform: 0;
+  }
+}
+                                    </style>
+                                    <div
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "<div class='stairLoader'>
+  <div class='stairLoader__line'></div>
+  <div class='stairLoader__line'></div>
+  <div class='stairLoader__line'></div>
+</div>",
+                                        }
+                                      }
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="grid_item_title"
+                                >
+                                  <p
+                                    className="text bold"
+                                    style={
+                                      Object {
+                                        "margin": 0,
+                                      }
+                                    }
+                                  >
+                                    Stair
+                                  </p>
+                                </div>
+                              </a>
+                            </div>
+                            <div
+                              className="grid_item "
+                              onClick={[Function]}
+                            >
+                              <a
+                                href="/aligned_stair"
+                                onClick={[Function]}
+                                style={
+                                  Object {
+                                    "margin": 0,
+                                  }
+                                }
+                              >
+                                <div
+                                  className="loader_container"
+                                  style={
+                                    Object {
+                                      "alignItems": "center",
+                                      "background": "#8c4ca9",
+                                      "display": "flex",
+                                      "flex": "1",
+                                      "height": "10em",
+                                      "justifyContent": "center",
+                                    }
+                                  }
+                                >
+                                  <div
+                                    className="loader"
+                                  >
+                                    <style>
+                                      .alignedStairLoader {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.alignedStairLoader__line {
+  background: white;
+  display: inline-block;
+  height: 15px;
+  width: 100%;
+  margin: 3.75px;
+  animation: alignedStairLoaderSizeAnim 5s linear infinite;
+}
+.alignedStairLoader__line:nth-child(1) {
+  animation-delay: 0s;
+}
+.alignedStairLoader__line:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.alignedStairLoader__line:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+@keyframes alignedStairLoaderSizeAnim {
+  0% {
+    transform: 0;
+  }
+  16.666% {
+    transform: translate(-40px);
+  }
+  33.333% {
+    transform: translate(-40px);
+  }
+  66.666% {
+    transform: translate(40px);
+  }
+  83.333% {
+    transform: translate(40px);
+  }
+  100% {
+    transform: 0;
+  }
+}
+                                    </style>
+                                    <div
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "<div class='alignedStairLoader'>
+  <div class='alignedStairLoader__line'></div>
+  <div class='alignedStairLoader__line'></div>
+  <div class='alignedStairLoader__line'></div>
+</div>
+",
+                                        }
+                                      }
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="grid_item_title"
+                                >
+                                  <p
+                                    className="text bold"
+                                    style={
+                                      Object {
+                                        "margin": 0,
+                                      }
+                                    }
+                                  >
+                                    Aligned Stair
+                                  </p>
+                                </div>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -5292,6 +5504,218 @@ exports[`Storyshots LoaderSelection Element 1`] = `
             </div>
           </a>
         </div>
+        <div
+          className="grid_item "
+          onClick={[Function]}
+        >
+          <a
+            href="/stair"
+            onClick={[Function]}
+            style={
+              Object {
+                "margin": 0,
+              }
+            }
+          >
+            <div
+              className="loader_container"
+              style={
+                Object {
+                  "alignItems": "center",
+                  "background": "#4c89a9",
+                  "display": "flex",
+                  "flex": "1",
+                  "height": "10em",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <div
+                className="loader"
+              >
+                <style>
+                  .stairLoader {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.stairLoader__line {
+  background: white;
+  display: inline-block;
+  height: 15px;
+  width: 100%;
+  margin: 3.75px;
+  animation: stairLoaderAnim 1.5s linear infinite;
+}
+.stairLoader__line:nth-child(1) {
+  animation-delay: 0.15s;
+}
+.stairLoader__line:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.stairLoader__line:nth-child(3) {
+  animation-delay: 0.45s;
+}
+
+@keyframes stairLoaderAnim {
+  0% {
+    transform: 0;
+  }
+  25% {
+    transform: translate(-30px);
+  }
+  50% {
+    transform: 0;
+  }
+  75% {
+    transform: translate(30px);
+  }
+  100% {
+    transform: 0;
+  }
+}
+                </style>
+                <div
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "<div class='stairLoader'>
+  <div class='stairLoader__line'></div>
+  <div class='stairLoader__line'></div>
+  <div class='stairLoader__line'></div>
+</div>",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="grid_item_title"
+            >
+              <p
+                className="text bold"
+                style={
+                  Object {
+                    "margin": 0,
+                  }
+                }
+              >
+                Stair
+              </p>
+            </div>
+          </a>
+        </div>
+        <div
+          className="grid_item "
+          onClick={[Function]}
+        >
+          <a
+            href="/aligned_stair"
+            onClick={[Function]}
+            style={
+              Object {
+                "margin": 0,
+              }
+            }
+          >
+            <div
+              className="loader_container"
+              style={
+                Object {
+                  "alignItems": "center",
+                  "background": "#8c4ca9",
+                  "display": "flex",
+                  "flex": "1",
+                  "height": "10em",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <div
+                className="loader"
+              >
+                <style>
+                  .alignedStairLoader {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.alignedStairLoader__line {
+  background: white;
+  display: inline-block;
+  height: 15px;
+  width: 100%;
+  margin: 3.75px;
+  animation: alignedStairLoaderSizeAnim 5s linear infinite;
+}
+.alignedStairLoader__line:nth-child(1) {
+  animation-delay: 0s;
+}
+.alignedStairLoader__line:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.alignedStairLoader__line:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+@keyframes alignedStairLoaderSizeAnim {
+  0% {
+    transform: 0;
+  }
+  16.666% {
+    transform: translate(-40px);
+  }
+  33.333% {
+    transform: translate(-40px);
+  }
+  66.666% {
+    transform: translate(40px);
+  }
+  83.333% {
+    transform: translate(40px);
+  }
+  100% {
+    transform: 0;
+  }
+}
+                </style>
+                <div
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "<div class='alignedStairLoader'>
+  <div class='alignedStairLoader__line'></div>
+  <div class='alignedStairLoader__line'></div>
+  <div class='alignedStairLoader__line'></div>
+</div>
+",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="grid_item_title"
+            >
+              <p
+                className="text bold"
+                style={
+                  Object {
+                    "margin": 0,
+                  }
+                }
+              >
+                Aligned Stair
+              </p>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -7098,6 +7522,218 @@ exports[`Storyshots Loaders With Content 1`] = `
                           }
                         >
                           Double Arc
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    className="grid_item "
+                    onClick={[Function]}
+                  >
+                    <a
+                      href="/stair"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "margin": 0,
+                        }
+                      }
+                    >
+                      <div
+                        className="loader_container"
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "background": "#4c89a9",
+                            "display": "flex",
+                            "flex": "1",
+                            "height": "10em",
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <div
+                          className="loader"
+                        >
+                          <style>
+                            .stairLoader {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.stairLoader__line {
+  background: white;
+  display: inline-block;
+  height: 15px;
+  width: 100%;
+  margin: 3.75px;
+  animation: stairLoaderAnim 1.5s linear infinite;
+}
+.stairLoader__line:nth-child(1) {
+  animation-delay: 0.15s;
+}
+.stairLoader__line:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.stairLoader__line:nth-child(3) {
+  animation-delay: 0.45s;
+}
+
+@keyframes stairLoaderAnim {
+  0% {
+    transform: 0;
+  }
+  25% {
+    transform: translate(-30px);
+  }
+  50% {
+    transform: 0;
+  }
+  75% {
+    transform: translate(30px);
+  }
+  100% {
+    transform: 0;
+  }
+}
+                          </style>
+                          <div
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "<div class='stairLoader'>
+  <div class='stairLoader__line'></div>
+  <div class='stairLoader__line'></div>
+  <div class='stairLoader__line'></div>
+</div>",
+                              }
+                            }
+                          />
+                        </div>
+                      </div>
+                      <div
+                        className="grid_item_title"
+                      >
+                        <p
+                          className="text bold"
+                          style={
+                            Object {
+                              "margin": 0,
+                            }
+                          }
+                        >
+                          Stair
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    className="grid_item "
+                    onClick={[Function]}
+                  >
+                    <a
+                      href="/aligned_stair"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "margin": 0,
+                        }
+                      }
+                    >
+                      <div
+                        className="loader_container"
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "background": "#8c4ca9",
+                            "display": "flex",
+                            "flex": "1",
+                            "height": "10em",
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <div
+                          className="loader"
+                        >
+                          <style>
+                            .alignedStairLoader {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.alignedStairLoader__line {
+  background: white;
+  display: inline-block;
+  height: 15px;
+  width: 100%;
+  margin: 3.75px;
+  animation: alignedStairLoaderSizeAnim 5s linear infinite;
+}
+.alignedStairLoader__line:nth-child(1) {
+  animation-delay: 0s;
+}
+.alignedStairLoader__line:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.alignedStairLoader__line:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+@keyframes alignedStairLoaderSizeAnim {
+  0% {
+    transform: 0;
+  }
+  16.666% {
+    transform: translate(-40px);
+  }
+  33.333% {
+    transform: translate(-40px);
+  }
+  66.666% {
+    transform: translate(40px);
+  }
+  83.333% {
+    transform: translate(40px);
+  }
+  100% {
+    transform: 0;
+  }
+}
+                          </style>
+                          <div
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "<div class='alignedStairLoader'>
+  <div class='alignedStairLoader__line'></div>
+  <div class='alignedStairLoader__line'></div>
+  <div class='alignedStairLoader__line'></div>
+</div>
+",
+                              }
+                            }
+                          />
+                        </div>
+                      </div>
+                      <div
+                        className="grid_item_title"
+                      >
+                        <p
+                          className="text bold"
+                          style={
+                            Object {
+                              "margin": 0,
+                            }
+                          }
+                        >
+                          Aligned Stair
                         </p>
                       </div>
                     </a>

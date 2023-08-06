@@ -17,6 +17,8 @@ import circle_rotate_loader from './individual/circle_rotate'
 import arc_loader from './individual/arc'
 import double_arc_loader from './individual/double_arc'
 import arc_circle_loader from './individual/arc_circle'
+import stair_loader from './individual/stair'
+import aligned_stair_loader from './individual/aligned_stair'
 
 // Formatting for css loader objects
 /* {
@@ -57,6 +59,8 @@ const loaders: Array<Loader> = [
   arc_loader,
   arc_circle_loader,
   double_arc_loader,
+  stair_loader,
+  aligned_stair_loader,
 ]
 
 export default loaders
