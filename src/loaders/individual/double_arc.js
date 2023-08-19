@@ -2,7 +2,7 @@ const doubleArcLoader = {
   name: 'Double Arc',
   key: 'double_arc',
   link: 'https://codepen.io/danhearn/pen/BaGGXJo',
-  color: '#4c4ea9',
+  color: '#fda95a',
   code: {
     html: `<div class='doubleArcLoader'>
   <div class='doubleArcLoader__arc'></div>

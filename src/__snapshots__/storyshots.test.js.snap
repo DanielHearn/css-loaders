@@ -1660,7 +1660,7 @@ exports[`Storyshots App With Content 1`] = `
                                   style={
                                     Object {
                                       "alignItems": "center",
-                                      "background": "#4c4ea9",
+                                      "background": "#fda95a",
                                       "display": "flex",
                                       "flex": "1",
                                       "height": "10em",
@@ -1950,6 +1950,110 @@ exports[`Storyshots App With Content 1`] = `
                                     }
                                   >
                                     Aligned Stair
+                                  </p>
+                                </div>
+                              </a>
+                            </div>
+                            <div
+                              className="grid_item "
+                              onClick={[Function]}
+                            >
+                              <a
+                                href="/image"
+                                onClick={[Function]}
+                                style={
+                                  Object {
+                                    "margin": 0,
+                                  }
+                                }
+                              >
+                                <div
+                                  className="loader_container"
+                                  style={
+                                    Object {
+                                      "alignItems": "center",
+                                      "background": "#4a79cf",
+                                      "display": "flex",
+                                      "flex": "1",
+                                      "height": "10em",
+                                      "justifyContent": "center",
+                                    }
+                                  }
+                                >
+                                  <div
+                                    className="loader"
+                                  >
+                                    <style>
+                                      .imageLoader {
+  width: 150px;
+  height: 100px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 8px solid white;
+  border-radius: 8px;
+  overflow: hidden;
+  animation: imageLoaderAnim 3s ease-in-out infinite;
+  opacity: 0.9;
+}
+.imageLoader__landscape {
+  position: absolute;
+  rotate: 45deg;
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 8px;
+  bottom: -58px;
+  right: 0;
+}
+.imageLoader__sun {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  top: 22.2222222222px;
+  left: 20px;
+}
+
+@keyframes imageLoaderAnim {
+  0% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: 0.9;
+  }
+}
+                                    </style>
+                                    <div
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "<div class=\\"imageLoader\\">
+  <div class=\\"imageLoader__landscape\\"></div>
+  <div class=\\"imageLoader__sun\\"></div>
+</div>",
+                                        }
+                                      }
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="grid_item_title"
+                                >
+                                  <p
+                                    className="text bold"
+                                    style={
+                                      Object {
+                                        "margin": 0,
+                                      }
+                                    }
+                                  >
+                                    Image
                                   </p>
                                 </div>
                               </a>
@@ -5422,7 +5526,7 @@ exports[`Storyshots LoaderSelection Element 1`] = `
               style={
                 Object {
                   "alignItems": "center",
-                  "background": "#4c4ea9",
+                  "background": "#fda95a",
                   "display": "flex",
                   "flex": "1",
                   "height": "10em",
@@ -5712,6 +5816,110 @@ exports[`Storyshots LoaderSelection Element 1`] = `
                 }
               >
                 Aligned Stair
+              </p>
+            </div>
+          </a>
+        </div>
+        <div
+          className="grid_item "
+          onClick={[Function]}
+        >
+          <a
+            href="/image"
+            onClick={[Function]}
+            style={
+              Object {
+                "margin": 0,
+              }
+            }
+          >
+            <div
+              className="loader_container"
+              style={
+                Object {
+                  "alignItems": "center",
+                  "background": "#4a79cf",
+                  "display": "flex",
+                  "flex": "1",
+                  "height": "10em",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <div
+                className="loader"
+              >
+                <style>
+                  .imageLoader {
+  width: 150px;
+  height: 100px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 8px solid white;
+  border-radius: 8px;
+  overflow: hidden;
+  animation: imageLoaderAnim 3s ease-in-out infinite;
+  opacity: 0.9;
+}
+.imageLoader__landscape {
+  position: absolute;
+  rotate: 45deg;
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 8px;
+  bottom: -58px;
+  right: 0;
+}
+.imageLoader__sun {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  top: 22.2222222222px;
+  left: 20px;
+}
+
+@keyframes imageLoaderAnim {
+  0% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: 0.9;
+  }
+}
+                </style>
+                <div
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "<div class=\\"imageLoader\\">
+  <div class=\\"imageLoader__landscape\\"></div>
+  <div class=\\"imageLoader__sun\\"></div>
+</div>",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="grid_item_title"
+            >
+              <p
+                className="text bold"
+                style={
+                  Object {
+                    "margin": 0,
+                  }
+                }
+              >
+                Image
               </p>
             </div>
           </a>
@@ -7444,7 +7652,7 @@ exports[`Storyshots Loaders With Content 1`] = `
                         style={
                           Object {
                             "alignItems": "center",
-                            "background": "#4c4ea9",
+                            "background": "#fda95a",
                             "display": "flex",
                             "flex": "1",
                             "height": "10em",
@@ -7734,6 +7942,110 @@ exports[`Storyshots Loaders With Content 1`] = `
                           }
                         >
                           Aligned Stair
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    className="grid_item "
+                    onClick={[Function]}
+                  >
+                    <a
+                      href="/image"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "margin": 0,
+                        }
+                      }
+                    >
+                      <div
+                        className="loader_container"
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "background": "#4a79cf",
+                            "display": "flex",
+                            "flex": "1",
+                            "height": "10em",
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <div
+                          className="loader"
+                        >
+                          <style>
+                            .imageLoader {
+  width: 150px;
+  height: 100px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 8px solid white;
+  border-radius: 8px;
+  overflow: hidden;
+  animation: imageLoaderAnim 3s ease-in-out infinite;
+  opacity: 0.9;
+}
+.imageLoader__landscape {
+  position: absolute;
+  rotate: 45deg;
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 8px;
+  bottom: -58px;
+  right: 0;
+}
+.imageLoader__sun {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  top: 22.2222222222px;
+  left: 20px;
+}
+
+@keyframes imageLoaderAnim {
+  0% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: 0.9;
+  }
+}
+                          </style>
+                          <div
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "<div class=\\"imageLoader\\">
+  <div class=\\"imageLoader__landscape\\"></div>
+  <div class=\\"imageLoader__sun\\"></div>
+</div>",
+                              }
+                            }
+                          />
+                        </div>
+                      </div>
+                      <div
+                        className="grid_item_title"
+                      >
+                        <p
+                          className="text bold"
+                          style={
+                            Object {
+                              "margin": 0,
+                            }
+                          }
+                        >
+                          Image
                         </p>
                       </div>
                     </a>
