@@ -20,6 +20,7 @@ import arc_circle_loader from './individual/arc_circle'
 import stair_loader from './individual/stair'
 import aligned_stair_loader from './individual/aligned_stair'
 import image_loader from './individual/image'
+import square_plus_loader from './individual/square_plus'
 
 // Formatting for css loader objects
 /* {
@@ -44,6 +45,7 @@ export type Loader = {
 
 const loaders: Array<Loader> = [
   square_loader,
+  square_plus_loader,
   hearbeat_loader,
   slider_loader,
   hollow_box_loader,
