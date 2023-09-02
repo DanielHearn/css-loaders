@@ -946,6 +946,191 @@ exports[`Storyshots App With Content 1`] = `
                               onClick={[Function]}
                             >
                               <a
+                                href="/rounded_bar"
+                                onClick={[Function]}
+                                style={
+                                  Object {
+                                    "margin": 0,
+                                  }
+                                }
+                              >
+                                <div
+                                  className="loader_container"
+                                  style={
+                                    Object {
+                                      "alignItems": "center",
+                                      "background": "#54dea0",
+                                      "display": "flex",
+                                      "flex": "1",
+                                      "height": "10em",
+                                      "justifyContent": "center",
+                                    }
+                                  }
+                                >
+                                  <div
+                                    className="loader"
+                                  >
+                                    <style>
+                                      .roundedBarLoader {
+  width: 10em;
+  border: 0.25em solid #fefefe;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.roundedBarLoader__bar {
+  width: 104%;
+  height: 104%;
+  left: -2%;
+  opacity: 0;
+  height: 1.5em;
+  background: #fefefe;
+  animation: roundedBarLoaderAnim 2.5s infinite cubic-bezier(0.61, 0.33, 0.39, 0.79);
+  transform-origin: 0% 50%;
+}
+
+@keyframes roundedBarLoaderAnim {
+  0%, 5% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 1;
+  }
+  95% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 0;
+  }
+}
+                                    </style>
+                                    <div
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "<div class=\\"roundedBarLoader\\">
+  <div class=\\"roundedBarLoader__bar\\"></div>
+</div>",
+                                        }
+                                      }
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="grid_item_title"
+                                >
+                                  <p
+                                    className="text bold"
+                                    style={
+                                      Object {
+                                        "margin": 0,
+                                      }
+                                    }
+                                  >
+                                    Rounded Bar
+                                  </p>
+                                </div>
+                              </a>
+                            </div>
+                            <div
+                              className="grid_item "
+                              onClick={[Function]}
+                            >
+                              <a
+                                href="/rounded_bar_continuous"
+                                onClick={[Function]}
+                                style={
+                                  Object {
+                                    "margin": 0,
+                                  }
+                                }
+                              >
+                                <div
+                                  className="loader_container"
+                                  style={
+                                    Object {
+                                      "alignItems": "center",
+                                      "background": "#dec154",
+                                      "display": "flex",
+                                      "flex": "1",
+                                      "height": "10em",
+                                      "justifyContent": "center",
+                                    }
+                                  }
+                                >
+                                  <div
+                                    className="loader"
+                                  >
+                                    <style>
+                                      .roundedBarContinuousLoader {
+  width: 10em;
+  border: 0.25em solid #fefefe;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  height: 1.5em;
+}
+.roundedBarContinuousLoader .roundedBarContinuousLoader__bar {
+  position: absolute;
+  top: 0;
+  left: -3em;
+  width: 25%;
+  height: 104%;
+  height: 1.5em;
+  background: #fefefe;
+  animation: roundedBarContinuousLoaderAnim 1.75s infinite linear;
+  transform-origin: 0% 50%;
+}
+.roundedBarContinuousLoader .roundedBarContinuousLoader__bar:nth-child(1) {
+  animation-delay: 0.5833333333s;
+}
+.roundedBarContinuousLoader .roundedBarContinuousLoader__bar:nth-child(2) {
+  animation-delay: 1.1666666667s;
+}
+
+@keyframes roundedBarContinuousLoaderAnim {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(13.5em);
+  }
+}
+                                    </style>
+                                    <div
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "<div class=\\"roundedBarContinuousLoader\\">
+  <div class=\\"roundedBarContinuousLoader__bar\\"></div>
+  <div class=\\"roundedBarContinuousLoader__bar\\"></div>
+  <div class=\\"roundedBarContinuousLoader__bar\\"></div>
+</div>",
+                                        }
+                                      }
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="grid_item_title"
+                                >
+                                  <p
+                                    className="text bold"
+                                    style={
+                                      Object {
+                                        "margin": 0,
+                                      }
+                                    }
+                                  >
+                                    Rounded Bar Continuous
+                                  </p>
+                                </div>
+                              </a>
+                            </div>
+                            <div
+                              className="grid_item "
+                              onClick={[Function]}
+                            >
+                              <a
                                 href="/two_circles"
                                 onClick={[Function]}
                                 style={
@@ -4965,6 +5150,191 @@ exports[`Storyshots LoaderSelection Element 1`] = `
           onClick={[Function]}
         >
           <a
+            href="/rounded_bar"
+            onClick={[Function]}
+            style={
+              Object {
+                "margin": 0,
+              }
+            }
+          >
+            <div
+              className="loader_container"
+              style={
+                Object {
+                  "alignItems": "center",
+                  "background": "#54dea0",
+                  "display": "flex",
+                  "flex": "1",
+                  "height": "10em",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <div
+                className="loader"
+              >
+                <style>
+                  .roundedBarLoader {
+  width: 10em;
+  border: 0.25em solid #fefefe;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.roundedBarLoader__bar {
+  width: 104%;
+  height: 104%;
+  left: -2%;
+  opacity: 0;
+  height: 1.5em;
+  background: #fefefe;
+  animation: roundedBarLoaderAnim 2.5s infinite cubic-bezier(0.61, 0.33, 0.39, 0.79);
+  transform-origin: 0% 50%;
+}
+
+@keyframes roundedBarLoaderAnim {
+  0%, 5% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 1;
+  }
+  95% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 0;
+  }
+}
+                </style>
+                <div
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "<div class=\\"roundedBarLoader\\">
+  <div class=\\"roundedBarLoader__bar\\"></div>
+</div>",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="grid_item_title"
+            >
+              <p
+                className="text bold"
+                style={
+                  Object {
+                    "margin": 0,
+                  }
+                }
+              >
+                Rounded Bar
+              </p>
+            </div>
+          </a>
+        </div>
+        <div
+          className="grid_item "
+          onClick={[Function]}
+        >
+          <a
+            href="/rounded_bar_continuous"
+            onClick={[Function]}
+            style={
+              Object {
+                "margin": 0,
+              }
+            }
+          >
+            <div
+              className="loader_container"
+              style={
+                Object {
+                  "alignItems": "center",
+                  "background": "#dec154",
+                  "display": "flex",
+                  "flex": "1",
+                  "height": "10em",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <div
+                className="loader"
+              >
+                <style>
+                  .roundedBarContinuousLoader {
+  width: 10em;
+  border: 0.25em solid #fefefe;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  height: 1.5em;
+}
+.roundedBarContinuousLoader .roundedBarContinuousLoader__bar {
+  position: absolute;
+  top: 0;
+  left: -3em;
+  width: 25%;
+  height: 104%;
+  height: 1.5em;
+  background: #fefefe;
+  animation: roundedBarContinuousLoaderAnim 1.75s infinite linear;
+  transform-origin: 0% 50%;
+}
+.roundedBarContinuousLoader .roundedBarContinuousLoader__bar:nth-child(1) {
+  animation-delay: 0.5833333333s;
+}
+.roundedBarContinuousLoader .roundedBarContinuousLoader__bar:nth-child(2) {
+  animation-delay: 1.1666666667s;
+}
+
+@keyframes roundedBarContinuousLoaderAnim {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(13.5em);
+  }
+}
+                </style>
+                <div
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "<div class=\\"roundedBarContinuousLoader\\">
+  <div class=\\"roundedBarContinuousLoader__bar\\"></div>
+  <div class=\\"roundedBarContinuousLoader__bar\\"></div>
+  <div class=\\"roundedBarContinuousLoader__bar\\"></div>
+</div>",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="grid_item_title"
+            >
+              <p
+                className="text bold"
+                style={
+                  Object {
+                    "margin": 0,
+                  }
+                }
+              >
+                Rounded Bar Continuous
+              </p>
+            </div>
+          </a>
+        </div>
+        <div
+          className="grid_item "
+          onClick={[Function]}
+        >
+          <a
             href="/two_circles"
             onClick={[Function]}
             style={
@@ -7235,6 +7605,191 @@ exports[`Storyshots Loaders With Content 1`] = `
                           }
                         >
                           Bar with Border
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    className="grid_item "
+                    onClick={[Function]}
+                  >
+                    <a
+                      href="/rounded_bar"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "margin": 0,
+                        }
+                      }
+                    >
+                      <div
+                        className="loader_container"
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "background": "#54dea0",
+                            "display": "flex",
+                            "flex": "1",
+                            "height": "10em",
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <div
+                          className="loader"
+                        >
+                          <style>
+                            .roundedBarLoader {
+  width: 10em;
+  border: 0.25em solid #fefefe;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.roundedBarLoader__bar {
+  width: 104%;
+  height: 104%;
+  left: -2%;
+  opacity: 0;
+  height: 1.5em;
+  background: #fefefe;
+  animation: roundedBarLoaderAnim 2.5s infinite cubic-bezier(0.61, 0.33, 0.39, 0.79);
+  transform-origin: 0% 50%;
+}
+
+@keyframes roundedBarLoaderAnim {
+  0%, 5% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 1;
+  }
+  95% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 0;
+  }
+}
+                          </style>
+                          <div
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "<div class=\\"roundedBarLoader\\">
+  <div class=\\"roundedBarLoader__bar\\"></div>
+</div>",
+                              }
+                            }
+                          />
+                        </div>
+                      </div>
+                      <div
+                        className="grid_item_title"
+                      >
+                        <p
+                          className="text bold"
+                          style={
+                            Object {
+                              "margin": 0,
+                            }
+                          }
+                        >
+                          Rounded Bar
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    className="grid_item "
+                    onClick={[Function]}
+                  >
+                    <a
+                      href="/rounded_bar_continuous"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "margin": 0,
+                        }
+                      }
+                    >
+                      <div
+                        className="loader_container"
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "background": "#dec154",
+                            "display": "flex",
+                            "flex": "1",
+                            "height": "10em",
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <div
+                          className="loader"
+                        >
+                          <style>
+                            .roundedBarContinuousLoader {
+  width: 10em;
+  border: 0.25em solid #fefefe;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  height: 1.5em;
+}
+.roundedBarContinuousLoader .roundedBarContinuousLoader__bar {
+  position: absolute;
+  top: 0;
+  left: -3em;
+  width: 25%;
+  height: 104%;
+  height: 1.5em;
+  background: #fefefe;
+  animation: roundedBarContinuousLoaderAnim 1.75s infinite linear;
+  transform-origin: 0% 50%;
+}
+.roundedBarContinuousLoader .roundedBarContinuousLoader__bar:nth-child(1) {
+  animation-delay: 0.5833333333s;
+}
+.roundedBarContinuousLoader .roundedBarContinuousLoader__bar:nth-child(2) {
+  animation-delay: 1.1666666667s;
+}
+
+@keyframes roundedBarContinuousLoaderAnim {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(13.5em);
+  }
+}
+                          </style>
+                          <div
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "<div class=\\"roundedBarContinuousLoader\\">
+  <div class=\\"roundedBarContinuousLoader__bar\\"></div>
+  <div class=\\"roundedBarContinuousLoader__bar\\"></div>
+  <div class=\\"roundedBarContinuousLoader__bar\\"></div>
+</div>",
+                              }
+                            }
+                          />
+                        </div>
+                      </div>
+                      <div
+                        className="grid_item_title"
+                      >
+                        <p
+                          className="text bold"
+                          style={
+                            Object {
+                              "margin": 0,
+                            }
+                          }
+                        >
+                          Rounded Bar Continuous
                         </p>
                       </div>
                     </a>
