@@ -21,6 +21,7 @@ import stair_loader from './individual/stair'
 import aligned_stair_loader from './individual/aligned_stair'
 import image_loader from './individual/image'
 import square_plus_loader from './individual/square_plus'
+import rounded_bar_loader from './individual/rounded_bar'
 
 // Formatting for css loader objects
 /* {
@@ -52,6 +53,7 @@ const loaders: Array<Loader> = [
   pulse_loader,
   bar_loader,
   bar_with_border,
+  rounded_bar_loader,
   two_circles_loader,
   single_orbit_loader,
   dual_orbit_loader,
