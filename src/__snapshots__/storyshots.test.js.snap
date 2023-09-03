@@ -1892,6 +1892,111 @@ exports[`Storyshots App With Content 1`] = `
                               onClick={[Function]}
                             >
                               <a
+                                href="/arc_fill"
+                                onClick={[Function]}
+                                style={
+                                  Object {
+                                    "margin": 0,
+                                  }
+                                }
+                              >
+                                <div
+                                  className="loader_container"
+                                  style={
+                                    Object {
+                                      "alignItems": "center",
+                                      "background": "#4eaeaf",
+                                      "display": "flex",
+                                      "flex": "1",
+                                      "height": "10em",
+                                      "justifyContent": "center",
+                                    }
+                                  }
+                                >
+                                  <div
+                                    className="loader"
+                                  >
+                                    <style>
+                                      .arcFillLoader {
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+.arcFillLoader__arc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 6px solid white;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  display: inline-block;
+  min-width: 15px;
+  min-height: 15px;
+  padding: 7.5px;
+  border-radius: 100%;
+  border-bottom-color: transparent;
+  animation: arcFillLoaderAnim 1.6s linear infinite;
+  z-index: 10;
+}
+.arcFillLoader__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+  border: 6px solid white;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  display: inline-block;
+  min-width: 15px;
+  min-height: 15px;
+  padding: 7.5px;
+  border-radius: 100%;
+  border-bottom-color: transparent;
+}
+.arcFillLoader__background--2 {
+  transform: rotate(180deg);
+}
+
+@keyframes arcFillLoaderAnim {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+                                    </style>
+                                    <div
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "<div class='arcFillLoader'>
+  <div class='arcFillLoader__arc'></div>
+  <div class='arcFillLoader__background'></div>
+  <div class='arcFillLoader__background arcFillLoader__background--2'></div>
+</div>",
+                                        }
+                                      }
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="grid_item_title"
+                                >
+                                  <p
+                                    className="text bold"
+                                    style={
+                                      Object {
+                                        "margin": 0,
+                                      }
+                                    }
+                                  >
+                                    Arc Fill
+                                  </p>
+                                </div>
+                              </a>
+                            </div>
+                            <div
+                              className="grid_item "
+                              onClick={[Function]}
+                            >
+                              <a
                                 href="/arc_circle"
                                 onClick={[Function]}
                                 style={
@@ -2392,6 +2497,101 @@ exports[`Storyshots App With Content 1`] = `
                                     }
                                   >
                                     Image
+                                  </p>
+                                </div>
+                              </a>
+                            </div>
+                            <div
+                              className="grid_item "
+                              onClick={[Function]}
+                            >
+                              <a
+                                href="/text"
+                                onClick={[Function]}
+                                style={
+                                  Object {
+                                    "margin": 0,
+                                  }
+                                }
+                              >
+                                <div
+                                  className="loader_container"
+                                  style={
+                                    Object {
+                                      "alignItems": "center",
+                                      "background": "#af4e73",
+                                      "display": "flex",
+                                      "flex": "1",
+                                      "height": "10em",
+                                      "justifyContent": "center",
+                                    }
+                                  }
+                                >
+                                  <div
+                                    className="loader"
+                                  >
+                                    <style>
+                                      .textLoader {
+  width: 150px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  animation: textLoaderAnim 2.5s ease-in-out infinite;
+  opacity: 0.8;
+  gap: 8px;
+}
+.textLoader__title {
+  height: 33.3333333333px;
+  width: 60%;
+  background: white;
+}
+.textLoader__text {
+  height: 20px;
+  width: 100%;
+  background: white;
+}
+.textLoader div {
+  border-radius: 2px;
+}
+
+@keyframes textLoaderAnim {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: 0.8;
+  }
+}
+                                    </style>
+                                    <div
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "<div class=\\"textLoader\\">
+  <div class=\\"textLoader__title\\"></div>
+  <div class=\\"textLoader__text\\"></div>
+  <div class=\\"textLoader__text\\"></div>
+  <div class=\\"textLoader__text\\"></div>
+</div>",
+                                        }
+                                      }
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="grid_item_title"
+                                >
+                                  <p
+                                    className="text bold"
+                                    style={
+                                      Object {
+                                        "margin": 0,
+                                      }
+                                    }
+                                  >
+                                    Text
                                   </p>
                                 </div>
                               </a>
@@ -6096,6 +6296,111 @@ exports[`Storyshots LoaderSelection Element 1`] = `
           onClick={[Function]}
         >
           <a
+            href="/arc_fill"
+            onClick={[Function]}
+            style={
+              Object {
+                "margin": 0,
+              }
+            }
+          >
+            <div
+              className="loader_container"
+              style={
+                Object {
+                  "alignItems": "center",
+                  "background": "#4eaeaf",
+                  "display": "flex",
+                  "flex": "1",
+                  "height": "10em",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <div
+                className="loader"
+              >
+                <style>
+                  .arcFillLoader {
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+.arcFillLoader__arc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 6px solid white;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  display: inline-block;
+  min-width: 15px;
+  min-height: 15px;
+  padding: 7.5px;
+  border-radius: 100%;
+  border-bottom-color: transparent;
+  animation: arcFillLoaderAnim 1.6s linear infinite;
+  z-index: 10;
+}
+.arcFillLoader__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+  border: 6px solid white;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  display: inline-block;
+  min-width: 15px;
+  min-height: 15px;
+  padding: 7.5px;
+  border-radius: 100%;
+  border-bottom-color: transparent;
+}
+.arcFillLoader__background--2 {
+  transform: rotate(180deg);
+}
+
+@keyframes arcFillLoaderAnim {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+                </style>
+                <div
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "<div class='arcFillLoader'>
+  <div class='arcFillLoader__arc'></div>
+  <div class='arcFillLoader__background'></div>
+  <div class='arcFillLoader__background arcFillLoader__background--2'></div>
+</div>",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="grid_item_title"
+            >
+              <p
+                className="text bold"
+                style={
+                  Object {
+                    "margin": 0,
+                  }
+                }
+              >
+                Arc Fill
+              </p>
+            </div>
+          </a>
+        </div>
+        <div
+          className="grid_item "
+          onClick={[Function]}
+        >
+          <a
             href="/arc_circle"
             onClick={[Function]}
             style={
@@ -6596,6 +6901,101 @@ exports[`Storyshots LoaderSelection Element 1`] = `
                 }
               >
                 Image
+              </p>
+            </div>
+          </a>
+        </div>
+        <div
+          className="grid_item "
+          onClick={[Function]}
+        >
+          <a
+            href="/text"
+            onClick={[Function]}
+            style={
+              Object {
+                "margin": 0,
+              }
+            }
+          >
+            <div
+              className="loader_container"
+              style={
+                Object {
+                  "alignItems": "center",
+                  "background": "#af4e73",
+                  "display": "flex",
+                  "flex": "1",
+                  "height": "10em",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <div
+                className="loader"
+              >
+                <style>
+                  .textLoader {
+  width: 150px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  animation: textLoaderAnim 2.5s ease-in-out infinite;
+  opacity: 0.8;
+  gap: 8px;
+}
+.textLoader__title {
+  height: 33.3333333333px;
+  width: 60%;
+  background: white;
+}
+.textLoader__text {
+  height: 20px;
+  width: 100%;
+  background: white;
+}
+.textLoader div {
+  border-radius: 2px;
+}
+
+@keyframes textLoaderAnim {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: 0.8;
+  }
+}
+                </style>
+                <div
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "<div class=\\"textLoader\\">
+  <div class=\\"textLoader__title\\"></div>
+  <div class=\\"textLoader__text\\"></div>
+  <div class=\\"textLoader__text\\"></div>
+  <div class=\\"textLoader__text\\"></div>
+</div>",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="grid_item_title"
+            >
+              <p
+                className="text bold"
+                style={
+                  Object {
+                    "margin": 0,
+                  }
+                }
+              >
+                Text
               </p>
             </div>
           </a>
@@ -8560,6 +8960,111 @@ exports[`Storyshots Loaders With Content 1`] = `
                     onClick={[Function]}
                   >
                     <a
+                      href="/arc_fill"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "margin": 0,
+                        }
+                      }
+                    >
+                      <div
+                        className="loader_container"
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "background": "#4eaeaf",
+                            "display": "flex",
+                            "flex": "1",
+                            "height": "10em",
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <div
+                          className="loader"
+                        >
+                          <style>
+                            .arcFillLoader {
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+.arcFillLoader__arc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 6px solid white;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  display: inline-block;
+  min-width: 15px;
+  min-height: 15px;
+  padding: 7.5px;
+  border-radius: 100%;
+  border-bottom-color: transparent;
+  animation: arcFillLoaderAnim 1.6s linear infinite;
+  z-index: 10;
+}
+.arcFillLoader__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+  border: 6px solid white;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  display: inline-block;
+  min-width: 15px;
+  min-height: 15px;
+  padding: 7.5px;
+  border-radius: 100%;
+  border-bottom-color: transparent;
+}
+.arcFillLoader__background--2 {
+  transform: rotate(180deg);
+}
+
+@keyframes arcFillLoaderAnim {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+                          </style>
+                          <div
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "<div class='arcFillLoader'>
+  <div class='arcFillLoader__arc'></div>
+  <div class='arcFillLoader__background'></div>
+  <div class='arcFillLoader__background arcFillLoader__background--2'></div>
+</div>",
+                              }
+                            }
+                          />
+                        </div>
+                      </div>
+                      <div
+                        className="grid_item_title"
+                      >
+                        <p
+                          className="text bold"
+                          style={
+                            Object {
+                              "margin": 0,
+                            }
+                          }
+                        >
+                          Arc Fill
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    className="grid_item "
+                    onClick={[Function]}
+                  >
+                    <a
                       href="/arc_circle"
                       onClick={[Function]}
                       style={
@@ -9060,6 +9565,101 @@ exports[`Storyshots Loaders With Content 1`] = `
                           }
                         >
                           Image
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    className="grid_item "
+                    onClick={[Function]}
+                  >
+                    <a
+                      href="/text"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "margin": 0,
+                        }
+                      }
+                    >
+                      <div
+                        className="loader_container"
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "background": "#af4e73",
+                            "display": "flex",
+                            "flex": "1",
+                            "height": "10em",
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <div
+                          className="loader"
+                        >
+                          <style>
+                            .textLoader {
+  width: 150px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  animation: textLoaderAnim 2.5s ease-in-out infinite;
+  opacity: 0.8;
+  gap: 8px;
+}
+.textLoader__title {
+  height: 33.3333333333px;
+  width: 60%;
+  background: white;
+}
+.textLoader__text {
+  height: 20px;
+  width: 100%;
+  background: white;
+}
+.textLoader div {
+  border-radius: 2px;
+}
+
+@keyframes textLoaderAnim {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: 0.8;
+  }
+}
+                          </style>
+                          <div
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "<div class=\\"textLoader\\">
+  <div class=\\"textLoader__title\\"></div>
+  <div class=\\"textLoader__text\\"></div>
+  <div class=\\"textLoader__text\\"></div>
+  <div class=\\"textLoader__text\\"></div>
+</div>",
+                              }
+                            }
+                          />
+                        </div>
+                      </div>
+                      <div
+                        className="grid_item_title"
+                      >
+                        <p
+                          className="text bold"
+                          style={
+                            Object {
+                              "margin": 0,
+                            }
+                          }
+                        >
+                          Text
                         </p>
                       </div>
                     </a>
