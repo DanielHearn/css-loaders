@@ -24,6 +24,7 @@ import image_loader from './individual/image'
 import square_plus_loader from './individual/square_plus'
 import rounded_bar_loader from './individual/rounded_bar'
 import rounded_bar_continuous_loader from './individual/rounded_bar_continuous'
+import text_loader from './individual/text'
 
 // Formatting for css loader objects
 /* {
@@ -71,6 +72,7 @@ const loaders: Array<Loader> = [
   stair_loader,
   aligned_stair_loader,
   image_loader,
+  text_loader,
 ]
 
 export default loaders
