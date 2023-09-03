@@ -15,6 +15,7 @@ import three_dot_loader from './individual/three_dot'
 import cube_to_circle_loader from './individual/cube_to_circle'
 import circle_rotate_loader from './individual/circle_rotate'
 import arc_loader from './individual/arc'
+import arc_fill_loader from './individual/arc_fill'
 import double_arc_loader from './individual/double_arc'
 import arc_circle_loader from './individual/arc_circle'
 import stair_loader from './individual/stair'
@@ -64,6 +65,7 @@ const loaders: Array<Loader> = [
   cube_to_circle_loader,
   circle_rotate_loader,
   arc_loader,
+  arc_fill_loader,
   arc_circle_loader,
   double_arc_loader,
   stair_loader,
