@@ -10,15 +10,18 @@
     display: flex;
     flex-direction: row;
     width: 100%;
+    background: $dark;
     .tab {
       display: flex;
       flex: 1;
-      padding: calc(0.5em + 4px) 1em;
+      max-width: 120px;
+      padding: 0.6em 1em;
       font-family: $font-family;
       font-size: $size-m;
       font-weight: $weight-semi-bold;
       background: $dark;
       border-bottom: 4px solid $dark;
+      border-right: 4px solid $darker;
       color: $white;
       cursor: pointer;
       text-align: center;
