@@ -946,6 +946,102 @@ exports[`Storyshots App With Content 1`] = `
                               onClick={[Function]}
                             >
                               <a
+                                href="/bar_with_background"
+                                onClick={[Function]}
+                                style={
+                                  Object {
+                                    "margin": 0,
+                                  }
+                                }
+                              >
+                                <div
+                                  className="loader_container"
+                                  style={
+                                    Object {
+                                      "alignItems": "center",
+                                      "background": "#3cb4e6",
+                                      "display": "flex",
+                                      "flex": "1",
+                                      "height": "10em",
+                                      "justifyContent": "center",
+                                    }
+                                  }
+                                >
+                                  <div
+                                    className="loader"
+                                  >
+                                    <style>
+                                      .barWithBackgroundLoader {
+  width: 10em;
+  position: relative;
+}
+.barWithBackgroundLoader__bar {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  height: 1.5em;
+  background: #fefefe;
+  animation: barWithBackgroundLoaderAnim 2.5s infinite cubic-bezier(0.61, 0.33, 0.39, 0.79);
+  transform-origin: 0% 50%;
+}
+.barWithBackgroundLoader__barbackground {
+  position: absolute;
+  width: 100%;
+  height: 1.5em;
+  background: #fefefe;
+  opacity: 0.3;
+}
+
+@keyframes barWithBackgroundLoaderAnim {
+  0%, 5% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 1;
+  }
+  95% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 0;
+  }
+}
+                                    </style>
+                                    <div
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "<div class=\\"barWithBackgroundLoader\\">
+  <div class=\\"barWithBackgroundLoader__bar\\"></div>
+  <div class=\\"barWithBackgroundLoader__barbackground\\"></div>
+</div>",
+                                        }
+                                      }
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="grid_item_title"
+                                >
+                                  <p
+                                    className="text bold"
+                                    style={
+                                      Object {
+                                        "margin": 0,
+                                      }
+                                    }
+                                  >
+                                    Bar With Background
+                                  </p>
+                                </div>
+                              </a>
+                            </div>
+                            <div
+                              className="grid_item "
+                              onClick={[Function]}
+                            >
+                              <a
                                 href="/rounded_bar"
                                 onClick={[Function]}
                                 style={
@@ -5350,6 +5446,102 @@ exports[`Storyshots LoaderSelection Element 1`] = `
           onClick={[Function]}
         >
           <a
+            href="/bar_with_background"
+            onClick={[Function]}
+            style={
+              Object {
+                "margin": 0,
+              }
+            }
+          >
+            <div
+              className="loader_container"
+              style={
+                Object {
+                  "alignItems": "center",
+                  "background": "#3cb4e6",
+                  "display": "flex",
+                  "flex": "1",
+                  "height": "10em",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <div
+                className="loader"
+              >
+                <style>
+                  .barWithBackgroundLoader {
+  width: 10em;
+  position: relative;
+}
+.barWithBackgroundLoader__bar {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  height: 1.5em;
+  background: #fefefe;
+  animation: barWithBackgroundLoaderAnim 2.5s infinite cubic-bezier(0.61, 0.33, 0.39, 0.79);
+  transform-origin: 0% 50%;
+}
+.barWithBackgroundLoader__barbackground {
+  position: absolute;
+  width: 100%;
+  height: 1.5em;
+  background: #fefefe;
+  opacity: 0.3;
+}
+
+@keyframes barWithBackgroundLoaderAnim {
+  0%, 5% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 1;
+  }
+  95% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 0;
+  }
+}
+                </style>
+                <div
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "<div class=\\"barWithBackgroundLoader\\">
+  <div class=\\"barWithBackgroundLoader__bar\\"></div>
+  <div class=\\"barWithBackgroundLoader__barbackground\\"></div>
+</div>",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="grid_item_title"
+            >
+              <p
+                className="text bold"
+                style={
+                  Object {
+                    "margin": 0,
+                  }
+                }
+              >
+                Bar With Background
+              </p>
+            </div>
+          </a>
+        </div>
+        <div
+          className="grid_item "
+          onClick={[Function]}
+        >
+          <a
             href="/rounded_bar"
             onClick={[Function]}
             style={
@@ -8005,6 +8197,102 @@ exports[`Storyshots Loaders With Content 1`] = `
                           }
                         >
                           Bar with Border
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    className="grid_item "
+                    onClick={[Function]}
+                  >
+                    <a
+                      href="/bar_with_background"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "margin": 0,
+                        }
+                      }
+                    >
+                      <div
+                        className="loader_container"
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "background": "#3cb4e6",
+                            "display": "flex",
+                            "flex": "1",
+                            "height": "10em",
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <div
+                          className="loader"
+                        >
+                          <style>
+                            .barWithBackgroundLoader {
+  width: 10em;
+  position: relative;
+}
+.barWithBackgroundLoader__bar {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  height: 1.5em;
+  background: #fefefe;
+  animation: barWithBackgroundLoaderAnim 2.5s infinite cubic-bezier(0.61, 0.33, 0.39, 0.79);
+  transform-origin: 0% 50%;
+}
+.barWithBackgroundLoader__barbackground {
+  position: absolute;
+  width: 100%;
+  height: 1.5em;
+  background: #fefefe;
+  opacity: 0.3;
+}
+
+@keyframes barWithBackgroundLoaderAnim {
+  0%, 5% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 1;
+  }
+  95% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 0;
+  }
+}
+                          </style>
+                          <div
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "<div class=\\"barWithBackgroundLoader\\">
+  <div class=\\"barWithBackgroundLoader__bar\\"></div>
+  <div class=\\"barWithBackgroundLoader__barbackground\\"></div>
+</div>",
+                              }
+                            }
+                          />
+                        </div>
+                      </div>
+                      <div
+                        className="grid_item_title"
+                      >
+                        <p
+                          className="text bold"
+                          style={
+                            Object {
+                              "margin": 0,
+                            }
+                          }
+                        >
+                          Bar With Background
                         </p>
                       </div>
                     </a>
