@@ -7,6 +7,7 @@ import hollow_box_loader from './individual/hollow_box'
 import pulse_loader from './individual/pulse'
 import bar_loader from './individual/bar'
 import bar_with_border from './individual/bar_wiith_border'
+import bar_with_background from './individual/bar_with_background'
 import two_circles_loader from './individual/two_circles'
 import single_orbit_loader from './individual/single_orbit'
 import dual_orbit_loader from './individual/dual_orbit'
@@ -56,6 +57,7 @@ const loaders: Array<Loader> = [
   pulse_loader,
   bar_loader,
   bar_with_border,
+  bar_with_background,
   rounded_bar_loader,
   rounded_bar_continuous_loader,
   two_circles_loader,
