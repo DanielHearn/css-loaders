@@ -35,8 +35,7 @@
     "flow": "flow",
     "flow-coverage": "flow batch-coverage src",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public",
-    "deploy": "gh-pages -d build"
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -65,12 +64,6 @@
     "cypress": "^4.9.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
-    "gh-pages": "^4.0.0",
     "react-testing-library": "^8.0.1"
-  },
-  "gh-pages-deploy": {
-    "staticpath": "build",
-    "commit": "Deploy to gh-pages",
-    "noprompt": false
   }
 }
