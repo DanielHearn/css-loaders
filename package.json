@@ -24,6 +24,7 @@
     "sass": "^1.54.5",
     "source-map-explorer": "^2.4.2"
   },
+  "homepage": "https://danielhearn.co.uk/css-loaders/",
   "scripts": {
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "start": "react-scripts --openssl-legacy-provider start",
