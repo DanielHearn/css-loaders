@@ -1,28 +1,55 @@
-@import '../../styles/variables'; 
+@import '../../styles/variables';
 
 .nav {
+  min-height: 64px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
   background: $darkest;
   color: $white;
   display: flex;
+  box-shadow: 0 3px 14px rgba(11, 29, 46, 0.18);
   .nav_title {
-    padding: 0.7em;
-    padding-right: 0.5em;
-    font-size: $size-m;
+    padding: 0;
+    font-size: 1.05rem;
     font-weight: $weight-bold;
     color: $white;
     text-decoration: none;
+    letter-spacing: 0.02em;
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      margin: 0 0.55rem 0.08rem 0;
+      border-radius: 50%;
+      background: $selected;
+      box-shadow: 0 0 0 4px rgba($selected, 0.18);
+    }
   }
   .nav_subtitle {
-    padding: 0.4em;
-    font-size: $size-s;
+    padding: 0;
+    font-size: 0.9rem;
     font-weight: $weight-regular;
-    color: $white;
+    color: $grey;
     display: flex;
     align-items: center;
     a {
       color: $white;
       margin-left: 0.3em;
-      font-weight: $weight-semi-bold
+      font-weight: $weight-semi-bold;
+      transition: color $transition-time ease-in-out;
+      &:hover {
+        color: $action;
+      }
     }
+  }
+}
+
+@media (max-width: 600px) {
+  .nav {
+    min-height: 56px;
+    padding: 0 1rem;
   }
 }

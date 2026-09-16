@@ -1,14 +1,15 @@
-@import '../../styles/variables'; 
+@import '../../styles/variables';
 
 .grid_item {
   display: flex;
-  flex-direction: column;;
-  background: $white;
+  flex-direction: column;
+  background: $surface;
   overflow: hidden;
   border-radius: $border-radius;
-  -webkit-box-shadow: 3px 3px 6px 1px rgba(0,0,0,0.1);
-  -moz-box-shadow: 3px 3px 6px 1px rgba(0,0,0,0.1);
-  box-shadow: 3px 3px 6px 1px rgba(0,0,0,0.1);
+  box-shadow: $shadow;
+  transition:
+    transform $transition-time ease-in-out,
+    box-shadow $transition-time ease-in-out;
 
   .grid_item_content {
     display: flex;
@@ -22,7 +23,10 @@
     padding: 0.8em 0.6em;
     user-select: none;
   }
-  &:hover, &.active {
+  &:hover,
+  &.active {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 34px rgba(16, 40, 63, 0.16);
     .grid_item_title {
       background: $selected;
       color: $white;

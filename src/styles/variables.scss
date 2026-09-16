@@ -1,23 +1,27 @@
-$dark: #282D3E;
-$darker: #202432;
-$darkest: #1e212c;
-$white: #FFFFFF;
-$off-white: #E5E5E5;
-$near-white: #f0f0f0;
-$grey: #C8C8C8;
-$grey-dark: #38383a;
-$action: #74AA90;
-$action-dark: #5D987B;
-$selected: #DE7254;
-$selected-dark: #DB6443;
+$dark: #17324d;
+$darker: #10283f;
+$darkest: #0b1d2e;
+$white: #ffffff;
+$off-white: #edf3f6;
+$near-white: #f7fafb;
+$grey: #9fb0bb;
+$grey-dark: #536b7b;
+$action: #65c6b5;
+$action-dark: #46aa9a;
+$selected: #f26457;
+$selected-dark: #d94e43;
+$surface: #ffffff;
+$page: #f3f7f8;
+$border: #dce7eb;
+$shadow: 0 12px 30px rgba(16, 40, 63, 0.1);
 
-$font-family: 'Overpass', sans-serif;
+$font-family: 'Manrope', sans-serif;
 
 $max-width: 1000px;
-$border-radius: 0.4em;
+$border-radius: 0.65em;
 $mobile-width: 700px;
 
-$transition-time: 0.06s;
+$transition-time: 0.16s;
 
 $size-xl: 2.5em;
 $size-l: 2.25em;

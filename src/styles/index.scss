@@ -1,5 +1,5 @@
-@import-normalize; 
-@import './variables'; 
+@import-normalize;
+@import './variables';
 
 html {
   width: 100%;
@@ -9,6 +9,8 @@ html {
 body {
   margin: 0;
   font-family: $font-family;
+  background: $page;
+  color: $darker;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
@@ -26,6 +28,7 @@ button {
   border: none;
   background: none;
   border-radius: 0;
+  font-family: inherit;
 }
 
 .small_screen {
@@ -109,7 +112,7 @@ a:not(.link) {
 }
 
 .content_container {
-  background: $darker;
+  background: $page;
   color: $darker;
   display: flex;
   flex: 1;
@@ -179,4 +182,8 @@ a:not(.link) {
 
 svg {
   font-size: 24px;
+}
+
+::selection {
+  background: rgba($action, 0.35);
 }

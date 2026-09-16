@@ -1,4 +1,4 @@
-@import '../../styles/variables'; 
+@import '../../styles/variables';
 
 .app {
   display: flex;
@@ -6,6 +6,7 @@
   flex: 1;
   width: 100%;
   height: 100%;
+  background: $page;
 }
 
 :root {
@@ -18,16 +19,16 @@
 }
 
 .Toastify__toast {
- align-items: center !important;
- svg {
-  fill: $dark !important;
- }
+  align-items: center !important;
+  svg {
+    fill: $dark !important;
+  }
 }
 
 .Toastify__toast-container--bottom-left {
- bottom: 3em !important;
+  bottom: 3em !important;
 }
 
 .Toastify__toast-container--top-left {
- top: 3em !important;
+  top: 3em !important;
 }
